@@ -6,11 +6,12 @@ class Monstre{
 private:
 	Vect pos ; 
 	float vitesse ;
-	int entier ; 
+	int vie ; 
 	int etape ;
 
 public:
-	Monstre();
+	
+	Monstre(const int & v , const float & vit , const Vect & p );
 	void perdreVie(const int & n );
 	
 }
