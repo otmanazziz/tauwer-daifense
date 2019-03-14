@@ -15,13 +15,13 @@ int main(){
 	v3.afficheVect();
 	v4.afficheVect();
 
-	// Tour t1;
-	// Tour t2(4.8, 5, v3);
-	// Tour t3(t2);
+	Tour t1;
+	Tour t2(4.8, 5, v3);
+	Tour t3(t2);
 
-	// t1.affiche();
-	// t2.affiche();
-	// t3.affiche();
+	t1.affiche();
+	t2.affiche();
+	t3.affiche();
 
 	return 0;
 }

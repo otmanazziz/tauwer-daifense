@@ -3,7 +3,7 @@ all: main.out
 main.out: main.o Vect.o Tour.o
 	g++ -g main.o Vect.o Tour.o -o main.out
 
-main.o: main.cpp Vect.h Tour.h
+main.o: main.cpp Vect.h
 	g++ -g -Wall -c main.cpp
 
 Tour.o: Tour.h Tour.cpp Vect.h

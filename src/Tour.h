@@ -1,5 +1,5 @@
-#ifndef Tour
-#define Tour
+#ifndef TOUR
+#define TOUR
 
 #include "Vect.h"
 

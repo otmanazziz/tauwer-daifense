@@ -1,5 +1,5 @@
-#ifndef Vect
-#define Vect
+#ifndef VECT
+#define VECT
 
 /**
 @brief Class Vect
