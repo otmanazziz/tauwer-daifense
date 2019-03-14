@@ -1,7 +1,7 @@
 all: main.out
 
-main.out: main.o Vect.o Tour.o Base.o Couleur.o
-	g++ -g main.o Vect.o Tour.o Base.o Couleur.o -o main.out
+main.out: main.o Vect.o Tour.o Base.o Couleur.o Bouton.o
+	g++ -g main.o Vect.o Tour.o Base.o Couleur.o Bouton.o -o main.out
 
 main.o: main.cpp Vect.h Tour.h Base.h
 	g++ -g -Wall -c main.cpp
@@ -11,6 +11,9 @@ Tour.o: Tour.h Tour.cpp Vect.h
 
 Base.o: Base.h Base.cpp Vect.h
 	g++ -g -Wall -c Base.cpp
+
+Bouton.o: Bouton.h Bouton.cpp Vect.h
+	g++ -g -Wall -c Bouton.cpp
 
 Vect.o: Vect.h Vect.cpp
 	g++ -g -Wall -c Vect.cpp

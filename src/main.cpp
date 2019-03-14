@@ -1,50 +1,48 @@
 #include <iostream>
+#include <string>
 #include "Vect.h"
 #include "Tour.h"
 #include "Base.h"
 #include "Couleur.h"
+#include "Bouton.h"
 
 using namespace std;
 
 int main(){
-	// Vect v1;
-	// Vect v2(4, -6);
-	// Vect v3(v2);
-	// Vect v4 = v2 * v3;
+	Vect v1;
+	Vect v2(100, 150);
+	Vect v3(50, 20);
+	Vect v4(10, 10);
+	Vect v5(v2);
+	v1 = v3;
+	Vect v6 = v1 + v3;
 
-	// v1.afficheVect();
-	// v2.afficheVect();
-	// v3.afficheVect();
-	// v4.afficheVect();
+	Bouton b;
+	Bouton b1("Premier bouton", v2, v3);
+	Bouton b2("Second bouton", v2, v4);
+	Bouton b3(b1);
 
-	// Tour t1;
-	// Tour t2(4.8, 5, v3);
-	// Tour t3(t2);
+	Vect v7(50, 130);
+	Vect v8(50, 170);
+	Vect v9(150, 170);
+	Vect v10(150, 130);
 
-	// t1.affiche();
-	// t2.affiche();
-	// t3.affiche();
+	Vect v11(140, 154);
+	Vect v12(49, 131);
 
-	// Base b1;
-	// Base b2(150, v2);
-	// cout << b2.getVie() << endl;
-	// b2.perdreVie(50);
-	// cout << b2.getVie() << endl;
-	// b2.perdreVie(50);
-	// cout << b2.getVie() << endl;
-	// b2.perdreVie(50);
-	// cout << b2.getVie() << endl;
-	// b2.perdreVie(50);
-	// cout << b2.getVie() << endl;
+	if (b1.clique(v7)) cout << "Vrai.\n";
+	else cout << "False.\n";
+	if (b1.clique(v8)) cout << "Vrai.\n";
+	else cout << "False.\n";
+	if (b1.clique(v9)) cout << "Vrai.\n";
+	else cout << "False.\n";
+	if (b1.clique(v10)) cout << "Vrai.\n";
+	else cout << "False.\n";
+	if (b1.clique(v11)) cout << "Vrai.\n";
+	else cout << "False.\n";
+	if (b1.clique(v12)) cout << "Vrai.\n";
+	else cout << "False.\n";
 
-	cout << "Creation des couleurs c, c1, c2...\n";
-	Couleur c;
-	Couleur c1(150, 200, 42, 0.6);
-	Couleur c2(800, 600, 400, 0.9);
-
-	cout << "Affectation de c a c1, et de c1 a c2...\n";
-	c = c1;
-	c1 = c2;
 
 	return 0;
 }
