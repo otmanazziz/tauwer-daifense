@@ -5,6 +5,7 @@
 #include "Base.h"
 #include "Couleur.h"
 #include "Bouton.h"
+#include "Menu.h"
 
 using namespace std;
 
