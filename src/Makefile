@@ -1,7 +1,7 @@
 all: main.out
 
-main.out: main.o Vect.o Tour.o Base.o
-	g++ -g main.o Vect.o Tour.o Base.o -o main.out
+main.out: main.o Vect.o Tour.o Base.o Couleur.o
+	g++ -g main.o Vect.o Tour.o Base.o Couleur.o -o main.out
 
 main.o: main.cpp Vect.h Tour.h Base.h
 	g++ -g -Wall -c main.cpp
@@ -14,6 +14,9 @@ Base.o: Base.h Base.cpp Vect.h
 
 Vect.o: Vect.h Vect.cpp
 	g++ -g -Wall -c Vect.cpp
+
+Couleur.o: Couleur.h Couleur.cpp
+	g++ -g -Wall -c Couleur.cpp
 
 clean:
 	rm *.o
