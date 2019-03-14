@@ -10,6 +10,7 @@ private:
 	int etape ;
 
 public:
+	Monstre();
 	void perdreVie(const int & n );
 	
 }
