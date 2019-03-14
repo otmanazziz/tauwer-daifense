@@ -1,5 +1,4 @@
 #include "Tour.h"
-#include "Vect.h"
 #include <iostream>
 
 	Tour::Tour(){

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Vect.h"
 #include "Tour.h"
+#include "Base.h"
 
 using namespace std;
 
@@ -22,6 +23,18 @@ int main(){
 	t1.affiche();
 	t2.affiche();
 	t3.affiche();
+
+	Base b1;
+	Base b2(150, v2);
+	cout << b2.getVie() << endl;
+	b2.perdreVie(50);
+	cout << b2.getVie() << endl;
+	b2.perdreVie(50);
+	cout << b2.getVie() << endl;
+	b2.perdreVie(50);
+	cout << b2.getVie() << endl;
+	b2.perdreVie(50);
+	cout << b2.getVie() << endl;
 
 	return 0;
 }
