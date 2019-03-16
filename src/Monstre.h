@@ -4,7 +4,6 @@
 #include "Vect.h"
 class Monstre{
 private:
-<<<<<<< HEAD
 	Vect pos; 
 	float vitesse;
 	int entier; 

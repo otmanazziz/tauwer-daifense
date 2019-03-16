@@ -3,24 +3,28 @@
 
 Bouton::Bouton(){
 	Vect v(0, 0);
-	pos.setVect(v);
-	taille.setVect(v);
+	pos = v;
+	taille = v;
 }
 
 Bouton::Bouton(const Bouton &_Bouton){
 	nom = _Bouton.nom;
-	pos.setVect(_Bouton.pos);
-	taille.setVect(_Bouton.pos);
+	pos = _Bouton.pos;
+	taille = _Bouton.taille;
 }
 
 Bouton::Bouton(const std::string &_nom, const Vect &_pos, const Vect &_taille){
 	nom = _nom;
-	pos.setVect(_pos);
-	taille.setVect(_taille);
+	pos = _pos;
+	taille = _taille;
 }
 
 Bouton::~Bouton(){
-	std::cout << "Le bouton a bien ete supprime...\n";
+	nom = "";
+	Vect v(0, 0);
+	pos = v;
+	taille = v;
+	std::cout << "Bouton supprimé.\n";
 }
 
 std::string Bouton::getNom(){
@@ -40,11 +44,11 @@ void Bouton::setNom(const std::string &_nom){
 }
 
 void Bouton::setPos(const Vect &_pos){
-	pos.setVect(_pos);
+	pos = _pos;
 }
 
 void Bouton::setTaille(const Vect &_taille){
-	taille.setVect(_taille);
+	taille = _taille;
 }
 
 bool Bouton::clique(const Vect &_pos){

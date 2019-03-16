@@ -10,40 +10,40 @@
 using namespace std;
 
 int main(){
+	
 	Vect v1;
 	Vect v2(100, 150);
 	Vect v3(50, 20);
 	Vect v4(10, 10);
 	Vect v5(v2);
-	v1 = v3;
-	Vect v6 = v1 + v3;
-
-	Bouton b;
-	Bouton b1("Premier bouton", v2, v3);
-	Bouton b2("Second bouton", v2, v4);
-	Bouton b3(b1);
-
 	Vect v7(50, 130);
 	Vect v8(50, 170);
 	Vect v9(150, 170);
 	Vect v10(150, 130);
-
 	Vect v11(140, 154);
 	Vect v12(49, 131);
 
-	if (b1.clique(v7)) cout << "Vrai.\n";
-	else cout << "False.\n";
-	if (b1.clique(v8)) cout << "Vrai.\n";
-	else cout << "False.\n";
-	if (b1.clique(v9)) cout << "Vrai.\n";
-	else cout << "False.\n";
-	if (b1.clique(v10)) cout << "Vrai.\n";
-	else cout << "False.\n";
-	if (b1.clique(v11)) cout << "Vrai.\n";
-	else cout << "False.\n";
-	if (b1.clique(v12)) cout << "Vrai.\n";
-	else cout << "False.\n";
-
-
+	Bouton b("Premier bouton", v1, v2);
+	Bouton b1("Second bouton", v1, v3);
+	Bouton b2("Troisieme bouton", v4, v12);
+	Bouton b3("Quatrieme bouton", v4, v11);
+	Bouton b4("Cinquieme bouton", v5, v10);
+	Bouton b5("Sixieme bouton", v5, v11);
+	Bouton b6("Septieme bouton", v7, v3);
+	Bouton b7("Huitieme bouton", v8, v9);
+	Bouton b8("Neuvieme bouton", v8, v12);
+	
+	Menu m;
+	m.ajouterBouton(b);
+	m.ajouterBouton(b1);
+	m.ajouterBouton(b2);
+	m.ajouterBouton(b3);
+	m.ajouterBouton(b4);
+	m.ajouterBouton(b5);
+	m.ajouterBouton(b6);
+	m.ajouterBouton(b7);
+	m.ajouterBouton(b8);
+	m.afficherTabBouton();
+	cout << "Allo\n";
 	return 0;
 }

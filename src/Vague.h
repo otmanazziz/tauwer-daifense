@@ -5,12 +5,12 @@
 
 class Vague{
 	private : 
-		std::Vector<Monstre> monstres ; 
+		std::vector<Monstre> monstres ; 
 		float temps ; 
 		int nbMonstreRestant;
 	public:
 	
 	
-}
+};
 
 #endif
