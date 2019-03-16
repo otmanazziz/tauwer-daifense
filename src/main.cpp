@@ -6,6 +6,7 @@
 #include "Couleur.h"
 #include "Bouton.h"
 #include "Menu.h"
+#include "Effet.h"
 
 using namespace std;
 
@@ -32,7 +33,9 @@ int main(){
 	Bouton b6("Septieme bouton", v7, v3);
 	Bouton b7("Huitieme bouton", v8, v9);
 	Bouton b8("Neuvieme bouton", v8, v12);
-	
+	Effet e1(3);
+	e1.afficheEffet();
+
 	Menu m;
 	m.ajouterBouton(b);
 	m.ajouterBouton(b1);
@@ -45,5 +48,6 @@ int main(){
 	m.ajouterBouton(b8);
 	m.afficherTabBouton();
 	cout << "Allo\n";
+
 	return 0;
 }
