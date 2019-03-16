@@ -73,7 +73,8 @@ void Menu::afficherTabBouton(){
 }
 
 void Menu::supprimerBoutonIndice(const int &indice){
-	tabBouton.erase(tabBouton.begin() + (indice-1));
+	tabBouton.erase(tabBouton.begin() + indice);
+	nbBouton --;
 }
 
 //JE TERMINERAIS LE WE : OTMAN

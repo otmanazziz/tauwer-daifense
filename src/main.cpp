@@ -42,10 +42,11 @@ int main(){
 	m.ajouterBouton(b2);
 	m.ajouterBouton(b3);
 	m.ajouterBouton(b4);
-	m.ajouterBouton(b5);
-	m.ajouterBouton(b6);
-	m.ajouterBouton(b7);
-	m.ajouterBouton(b8);
+	m.afficherTabBouton();
+	m.supprimerBoutonIndice(1);
+	m.supprimerBoutonIndice(2);
+	m.supprimerBoutonIndice(1);
+
 	m.afficherTabBouton();
 	cout << "Allo\n";
 
