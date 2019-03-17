@@ -2,13 +2,14 @@
 #define TOUR
 
 #include "Vect.h"
+#include "Attaque.h"
 
 class Tour{
 private:
 	float vitesseAtq;
 	int portee;
 	Vect position;
-	//Attaque attaque;
+	Attaque attaque;
 public:
 	Tour();
 	Tour(const Tour &_tour);

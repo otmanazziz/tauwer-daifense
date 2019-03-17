@@ -13,6 +13,9 @@ bool Carte::reinit(){
 		//erreur
 		return false ;
 	}
+	tabTour.clear();
+	tabVague.clear();
+	tabChemin.clear();
 	std::string ligne;
 	std::vector<std::string> l;
 	int i = 0;
@@ -21,7 +24,7 @@ bool Carte::reinit(){
 		l = split(ligne,':');
 		
 			if(l[0] ==  "tour"){
-				
+				tabTour.push_back(Tour(std::stof(l[1]),std::stoi(l[2]),Vect(std::stof(l[3]),std::stof(l[4]))));
 			}
 			else if(l[0] ==  "vague"){
 				
@@ -29,7 +32,7 @@ bool Carte::reinit(){
 			else if(l[0] ==  "Chemin"){
 				
 			} else {}
-		
+		 
 		i++;
 	}
 	f.close();
