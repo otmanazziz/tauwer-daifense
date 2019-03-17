@@ -33,22 +33,24 @@ int main(){
 	Bouton b6("Septieme bouton", v7, v3);
 	Bouton b7("Huitieme bouton", v8, v9);
 	Bouton b8("Neuvieme bouton", v8, v12);
-	Effet e1(3);
+
+	Effet e1;
+	Effet e2(e1);
+	Effet e3(12);
 	e1.afficheEffet();
+	e2.afficheEffet();
+	e3.afficheEffet();
+	e2.setValeur(45);
+	e2.afficheEffet();
 
 	Menu m;
+	m.afficherTabBouton();
 	m.ajouterBouton(b);
 	m.ajouterBouton(b1);
 	m.ajouterBouton(b2);
-	m.ajouterBouton(b3);
-	m.ajouterBouton(b4);
 	m.afficherTabBouton();
-	m.supprimerBoutonIndice(1);
-	m.supprimerBoutonIndice(2);
-	m.supprimerBoutonIndice(1);
-
+	m.setBoutonIndice(1, b8);
 	m.afficherTabBouton();
-	cout << "Allo\n";
 
 	return 0;
 }

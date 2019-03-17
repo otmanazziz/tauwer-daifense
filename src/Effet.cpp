@@ -10,7 +10,7 @@
 		valeur = _effet.valeur;
 	}
 
-	Effet::Effet(const int &_val){//const int* &_ptrEffet){
+	Effet::Effet(const int &_val){
 		valeur = _val;
 	}
 
@@ -27,5 +27,5 @@
 	}
 
 	void Effet::afficheEffet(){
-		std::cout << "Les effets sont de" << valeur; 
+		std::cout << "Les effets sont de " << valeur << "\n"; 
 	}

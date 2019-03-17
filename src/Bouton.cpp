@@ -24,7 +24,6 @@ Bouton::~Bouton(){
 	Vect v(0, 0);
 	pos = v;
 	taille = v;
-	std::cout << "Bouton supprimé.\n";
 }
 
 std::string Bouton::getNom(){

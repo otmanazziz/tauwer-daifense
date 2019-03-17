@@ -1,34 +1,23 @@
 #include "Menu.h"
 
 Menu::Menu(){
-	nbBouton = 0;
+	
 }
 
 Menu::Menu(const Menu &_Menu){
-	nbBouton = _Menu.nbBouton;
 	tabBouton = _Menu.tabBouton;
 }
 
-Menu::Menu(const int &_nbBouton, const std::vector<Bouton> &_tabBouton){
-	nbBouton = _nbBouton;
+Menu::Menu(const std::vector<Bouton> &_tabBouton){
 	tabBouton = _tabBouton;
 }
 
 Menu::~Menu(){
-	nbBouton = 0;
 	tabBouton.clear();
-}
-
-int Menu::getNbBouton(){
-	return nbBouton;
 }
 
 std::vector<Bouton> Menu::getTabBouton(){
 	return tabBouton;
-}
-
-void Menu::setNbBouton(const int &_nbBouton){
-	nbBouton = _nbBouton;
 }
 
 void Menu::setTabBouton(const std::vector<Bouton> &_tabBouton){
@@ -41,7 +30,7 @@ void Menu::setBoutonIndice(const int &indice, Bouton bouton){
 	tabBouton[indice].setTaille(bouton.getTaille());
 }
 
-Bouton Menu::getBoutonIneice(const int &indice){
+Bouton Menu::getBoutonIndice(const int &indice){
 	Bouton bouton;
 	bouton.setNom(tabBouton[indice].getNom());
 	bouton.setPos(tabBouton[indice].getPos());
@@ -51,30 +40,34 @@ Bouton Menu::getBoutonIneice(const int &indice){
 
 void Menu::ajouterBouton(Bouton _bouton){
 	tabBouton.push_back(_bouton);
-	nbBouton++;
 }
 
 void Menu::afficherTabBouton(){
-	Vect _pos;
-	Vect _taille;
-	std::cout << "Vous avez actuellement " << nbBouton << " boutons dans votre menu..\n";
-	for (int i = 0; i < nbBouton; i++){
-		std::cout << "Affichage du bouton " << i << "\n";
-		std::cout << tabBouton[i].getNom() << "\n";
-		_pos = tabBouton[i].getPos();
-		_taille = tabBouton[i].getTaille();
-		std::cout << "Position : ";
-		_pos.afficheVect();
-		std::cout << "Taille : ";
-		_taille.afficheVect();
-		std::cout << "Fin de l'affichage du bouton " << i << "\n\n";
-	}
-	std::cout << "\n\n";
+	if (tabBouton.size() > 0){
+		Vect _pos;
+		Vect _taille;
+		std::cout << "Vous avez actuellement " << tabBouton.size() << " boutons dans votre menu..\n";
+
+		for (unsigned int i = 0; i < tabBouton.size(); i++){
+			std::cout << "Affichage du bouton " << i << "\n";
+			std::cout << tabBouton[i].getNom() << "\n";
+
+			_pos = tabBouton[i].getPos();
+			_taille = tabBouton[i].getTaille();
+
+			std::cout << "Position : ";
+			_pos.afficheVect();
+			std::cout << "Taille : ";
+			_taille.afficheVect();
+
+			std::cout << "Fin de l'affichage du bouton " << i << "\n\n";
+		}
+		std::cout << "\n\n";
+	} else std::cout << "Ce menu ne contient aucun bouton\n\n";
 }
 
 void Menu::supprimerBoutonIndice(const int &indice){
 	tabBouton.erase(tabBouton.begin() + indice);
-	nbBouton --;
 }
 
 //JE TERMINERAIS LE WE : OTMAN
