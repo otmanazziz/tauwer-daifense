@@ -1,7 +1,7 @@
 all: main.out
 
-main.out: main.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o
-	g++ -g main.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o -o main.out
+main.out: main.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o
+	g++ -g main.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o -o main.out
 
 main.o: main.cpp Vect.h Tour.h Base.h
 	g++ -g -Wall -c main.cpp
@@ -33,6 +33,12 @@ Menu.o: Menu.h Menu.cpp Bouton.h Vect.h
 Effet.o: Effet.h Effet.cpp
 	g++ -g -Wall -c Effet.cpp
 
+Attaque.o: Attaque.h Attaque.cpp Effet.h
+	g++ -g -Wall -c Attaque.cpp
+
+Sort.o: Sort.h Sort.cpp Attaque.h
+	g++ -g -Wall -c Sort.cpp
+	
 clean:
 	rm *.o
 
