@@ -14,9 +14,26 @@ bool Carte::reinit(){
 		return false ;
 	}
 	string ligne;
+	vector<string> l;
+	int i = 0;
 	while(!f.eof()) {
 		getLine(f,ligne);
-		
+		l = split(ligne,':');
+		switch(l[0]){
+			case "tour" :
+				break;
+			case "tour" :
+				break;
+			case "tour" :
+				break;
+			case "tour" :
+				break;
+				
+				
+				
+				
+		}
+		i++;
 	}
 	f.close();
 	return true;
