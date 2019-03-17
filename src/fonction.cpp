@@ -11,7 +11,7 @@ std::vector<std::string> split(const std::string & s , const char & c ){
 			v.push_back(s.substr(pos,len));
 			pos = t+1 ;
 		}
-		if(last < s.size) v.push_back(s.substr(pos));
+		if(last < s.size()) v.push_back(s.substr(pos));
 		return v;
 	}
 	else {

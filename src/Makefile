@@ -1,6 +1,6 @@
 all: main.out
 
-main.out: main.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o fonction.o Carte.o Chemin.o
+main.out: main.o fonction.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o  Chemin.o Carte.o 
 	g++ -g main.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o -o main.out
 
 main.o: main.cpp Vect.h Tour.h Base.h
@@ -47,6 +47,7 @@ fonction.o: fonction.h
 
 Chemin.o: Chemin.h Chemin.cpp Vect.h
 	g++ -g -Wall -c Chemin.cpp
+	
 clean:
 	rm *.o
 

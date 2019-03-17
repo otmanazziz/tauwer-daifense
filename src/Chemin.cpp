@@ -1,6 +1,8 @@
 #include "Chemin.h"
 
-Chemin::Chemin(const vector<Vect> t ){
+
+
+Chemin::Chemin(const std::vector<Vect> & t ){
 		tabEtape = t ; 		
 }
 

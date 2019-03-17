@@ -4,21 +4,22 @@
 #include "Chemin.h"
 #include "Base.h"
 #include "Vague.h"
+#include "fonction.h"
 #include <vector>
 #include <string>
 #include <iostream>
 #include <fstream>
 class Carte{
 	private: 
-		vector<Tour> tabTour;
-		vector<Chemin> tabChemin;
-		vector<Vague> tabVague;
+		std::vector<Tour> tabTour;
+		std::vector<Chemin> tabChemin;
+		std::vector<Vague> tabVague;
 		Base base;
-		string fichier;
+		std::string fichier;
 	public :
-		Carte(const string & f);
+		Carte(const std::string & f);
 		bool reinit();
-}
+};
 
 #endif
 

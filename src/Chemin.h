@@ -2,15 +2,15 @@
 #define CHEMIN
 #include <vector>
 #include "Vect.h"
-class chemin{
+class Chemin{
 	private : 
 		std::vector<Vect> tabEtape ; 
-	public:
-		Chemin(const vector<Vect>);
+	public :
+		Chemin(const std::vector<Vect> &  v);
 		void ajouterEtape(const Vect & v);
 		Vect prochaineEtape(const int & e );
 		
 	
-}
+};
 
 #endif
