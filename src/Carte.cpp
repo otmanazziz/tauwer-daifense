@@ -5,6 +5,12 @@ Carte::Carte(const std::string & f){
 	reinit();
 }
 
+Carte::~Carte(){
+	tabTour.clear();
+	tabChemin.clear();
+	tabVague.clear();
+}
+
 bool Carte::reinit(){
 	//a coder le fait daller chercher dans un fichier 
 	std::ifstream f ; 

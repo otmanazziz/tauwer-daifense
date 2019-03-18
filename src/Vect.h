@@ -77,7 +77,7 @@ class Vect{
 		@param none
 		@return x: coordonnée du vecteur privé
 		@code
-			getX();
+			v.getX();
 		@endcode
 		*/
 		float getX() const;
@@ -87,7 +87,7 @@ class Vect{
 		@param none
 		@return y: coordonnée du vecteur privé
 		@code
-			getY();
+			v.getY();
 		@endcode
 		*/
 		float getY() const;
@@ -97,7 +97,7 @@ class Vect{
 		@param vector: Un autre vecteur
 		@return none
 		@code
-			setVect(vecteur1);
+			v.setVect(vecteur1);
 		@endcode
 		*/
 		void setVect(const Vect &vector);

@@ -7,6 +7,7 @@ class Chemin{
 		std::vector<Vect> tabEtape ; 
 	public :
 		Chemin(const std::vector<Vect> &  v);
+		~Chemin();
 		void ajouterEtape(const Vect & v);
 		Vect prochaineEtape(const int & e );
 		
