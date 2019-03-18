@@ -31,7 +31,7 @@ public:
 		Permet de créer le constructeur de l'attaque avec les données privées de la fonction
 		@param Entier, Classe Effet, Entier
 		@code
-			Attaque a2(1 , e1 , 1)
+			Attaque a2(1 , e2 , 1)
 		@endcode	
 
 	*/
@@ -42,7 +42,14 @@ public:
 
 	*/
 	~Attaque();
-	
+	/**
+		@brief Fonction: getZone
+		Permet de retourner l'entier dd la zone
+		@return Entier
+		@code
+			a2.getZone();
+		@endcode	
+	*/
 
 	int getZone();
 	/**
