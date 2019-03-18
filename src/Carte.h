@@ -9,6 +9,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+
 class Carte{
 	private: 
 		std::vector<Tour> tabTour;
@@ -16,8 +17,9 @@ class Carte{
 		std::vector<Vague> tabVague;
 		Base base;
 		std::string fichier;
-	public :
+	public:
 		Carte(const std::string & f);
+		~Carte();
 		bool reinit();
 };
 
