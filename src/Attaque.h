@@ -27,7 +27,7 @@ public:
  	*/	
 	Attaque(const Attaque &_Attaque);
 	/**
-		@brief Constructeur:Tour
+		@brief Constructeur:Attaque
 		Permet de créer le constructeur de l'attaque avec les données privées de la fonction
 		@param Entier, Classe Effet, Entier
 		@code
@@ -42,16 +42,7 @@ public:
 
 	*/
 	~Attaque();
-	/**
-		@brief Fonction:getZone
-		Permet de retourner l'entier représentant la zone d'attaque
-		@return Entier
-		@code
-			a2.getZone();
-		@endcode	
-
-
-	*/
+	
 
 	int getZone();
 	/**

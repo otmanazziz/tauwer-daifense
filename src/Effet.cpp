@@ -3,15 +3,17 @@
 
 	Effet::Effet(){
 		valeur = 0;
-		//_ptrEffet= valeur;
+		
 	}
 	
 	Effet::Effet(const Effet &_effet){
 		valeur = _effet.valeur;
+		
 	}
 
 	Effet::Effet(const int &_val){
 		valeur = _val;
+		
 	}
 
 	Effet::~Effet(){
