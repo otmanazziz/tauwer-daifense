@@ -38,7 +38,7 @@ public:
 			Monstre m2(  45,1.6, 1 , vect);
 		@endcode
 	*/
-	Monstre(const int &_vie, const float &_vitesse,const float &_numChemin ,const Vect &_pos);
+	Monstre(const int &_vie, const float &_vitesse,const int &_numChemin ,const Vect &_pos);
 	/**
 		@brief Destructeur: Monstre
 		Détruit la classe Monstre

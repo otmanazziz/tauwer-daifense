@@ -13,7 +13,7 @@ Monstre::Monstre(const Monstre &_monstre){
 	pos = _monstre.pos;
 }
 
-Monstre::Monstre(const int &_vie, const float &_vitesse,const float &_numChemin ,const Vect &_pos){
+Monstre::Monstre(const int &_vie, const float &_vitesse,const int &_numChemin ,const Vect &_pos){
 	vie = _vie;
 	vitesse = _vitesse;
 	pos = _pos;
