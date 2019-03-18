@@ -101,7 +101,7 @@ class Vect{
 			v3 == v2;
 		@endcode
 		*/
-		Vect operator==(const Vect &vector2);
+		bool operator==(const Vect &vector2);
 		/**
 		@brief Fonction: getX
 		Permet de retourner le vecteur X

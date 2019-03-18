@@ -56,11 +56,9 @@ Vect Vect::operator=(const Vect &vector2){
 	return v;
 }
 
-Vect Vect::operator==(const Vect &vector2){
-	Vect v;
-	v.x = vector2.x;
-	v.y = vector2.y;
-	return v;
+bool Vect::operator==(const Vect &vector2){
+	
+	return vector2.x == x && vector2.y == y ;
 }
 
 float Vect::getX() const{
