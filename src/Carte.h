@@ -23,6 +23,7 @@ class Carte{
 		~Carte();
 		bool reinit();
 		Tour tourIndice(const int & i); 
+		Vague vagueIndice(const int & i);
 };
 
 #endif

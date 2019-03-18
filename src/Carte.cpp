@@ -62,3 +62,8 @@ Tour Carte::tourIndice(const int & i){
 	
 return tabTour[i];	
 }
+
+Vague Carte::vagueIndice(const int & i){
+	
+return tabVague[i];	
+}
