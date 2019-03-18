@@ -5,6 +5,7 @@
 #include "Base.h"
 #include "Vague.h"
 #include "fonction.h"
+#include "Monstre.h"
 #include <vector>
 #include <string>
 #include <iostream>

@@ -13,11 +13,12 @@ Monstre::Monstre(const Monstre &_monstre){
 	pos = _monstre.pos;
 }
 
-Monstre::Monstre(const Vect &_pos, const float &_vitesse, const int &_vie, const int &_etape){
+Monstre::Monstre(const int &_vie, const float &_vitesse,const float &_numChemin ,const Vect &_pos){
 	vie = _vie;
 	vitesse = _vitesse;
 	pos = _pos;
-	etape = _etape;
+	numChem = _numChemin;
+	etape = 0;
 }
 
 Monstre::~Monstre(){
@@ -74,7 +75,7 @@ void Monstre::test(){
 	Monstre m;
 	Vect v(1.5, 6.3);
 	Monstre m1(m);
-	Monstre m2(v, 4.5, 12, 16);
+	Monstre m2( 4.5, 12, 16,v);
 	std::cout << m1.vie << " " << m2.etape;
 	m2.perdreVie(8);
 	std::cout << "\n" << m2.vie;
@@ -82,4 +83,8 @@ void Monstre::test(){
 		m2.perdreVie(1);
 		std::cout << "\n" << m2.vie;
 	} while (!m2.estMort());
+}
+
+int Monstre::getChemin(){
+	return numChem ;		
 }

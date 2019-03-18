@@ -10,6 +10,7 @@ private:
 	float vitesse;
 	int vie; 
 	int etape;
+	int numChem;
 
 public:
 	/**
@@ -34,10 +35,10 @@ public:
 		Construit par copie la classe Monstre avec les valeurs
 		@param Classe Vecteur, Réel, 2 entiers
 		@code
-			Monstre m2(vect, 1.6, 45, 4);
+			Monstre m2(  45,1.6, 1 , vect);
 		@endcode
 	*/
-	Monstre(const Vect &_pos, const float &_vitesse, const int &_vie, const int &_etape);
+	Monstre(const int &_vie, const float &_vitesse,const float &_numChemin ,const Vect &_pos);
 	/**
 		@brief Destructeur: Monstre
 		Détruit la classe Monstre
@@ -136,7 +137,7 @@ public:
 		@endcode
 	*/
 	bool estMort();
-
+	int getChemin();
 	void test();
 	
 };
