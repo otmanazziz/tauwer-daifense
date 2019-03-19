@@ -45,7 +45,7 @@ class Vague{
 		*/
 		~Vague();
 		/**
-			@brief Tableau de Vague: getVague
+			@brief Tableau de Monstre: getVague
 			Permet de retourner un tableau de vagues d'ennemis
 			@return Tableau de Vague
 			@code
