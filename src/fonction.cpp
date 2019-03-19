@@ -4,7 +4,8 @@ std::vector<std::string> split(const std::string & s , const char & c ){
 	std::vector<std::string> v ; 
 	if(s != ""){
 		
-		int pos = 0 , len = 0 ,t , last = s.find_last_of(c);
+		int pos = 0 , len = 0 ,t;
+		unsigned int last = s.find_last_of(c);
 		while (pos <= last){
 			t= s.find(c , pos);
 			len = t-pos;

@@ -1,12 +1,21 @@
 #include <iostream>
 #include <string>
-#include "Vect.h"
-#include "Tour.h"
+
+#include "Attaque.h"
 #include "Base.h"
-#include "Couleur.h"
 #include "Bouton.h"
-#include "Menu.h"
+#include "Carte.h"
+#include "Chemin.h"
+#include "Couleur.h"
 #include "Effet.h"
+#include "fonction.h"
+#include "Hero.h"
+#include "Menu.h"
+#include "Monstre.h"
+#include "Sort.h"
+#include "Tour.h"
+#include "Vague.h"
+#include "Vect.h"
 
 using namespace std;
 

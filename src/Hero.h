@@ -13,4 +13,6 @@ public:
 	Hero(const std::vector<Sort> &_tabSort);
 	~Hero();
 
-}
+};
+
+#endif
