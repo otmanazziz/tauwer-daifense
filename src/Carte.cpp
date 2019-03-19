@@ -44,3 +44,8 @@ bool Carte::reinit(){
 	f.close();
 	return true;
 }
+
+Tour Carte::tourIndice(const int & i){
+	
+return tabTour[i];	
+}
