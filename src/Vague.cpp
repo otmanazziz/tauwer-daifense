@@ -53,16 +53,12 @@ void Vague::setTempsVague(const float &_tempsVague){
 bool Vague::vagueVide(){
 	return monstres.empty();
 }
-
 //ON peut le switch en booléen pour plus tard, si nécessaire
 void Vague::ennemiMort(){
 	if (!vagueVide()){
 		for (unsigned int i = 0; i < monstres.size(); i++){
-			/*
-			if (monstres[i].estMort()){
-				monstres[i].erase(i);
-			}
-			*/
+			if (monstres[i].estMort())
+				monstres.erase(monstres.begin()+i);
 		}
 		//return true;
 	} //return false;

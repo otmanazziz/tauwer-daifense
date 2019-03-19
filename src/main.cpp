@@ -60,6 +60,7 @@ int main(){
 	m.afficherTabBouton();
 	m.setBoutonIndice(1, b8);
 	m.afficherTabBouton();*/
+	
 	Carte c("test");
 	c.tourIndice(0).affiche();
 

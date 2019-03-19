@@ -1,15 +1,85 @@
 #include "Monstre.h"
-#include "Vect.h"
 
-/*
-Monstre::Monstre(const int & v , const float & vit , const Vect & p ){
-	vie = v ;
-	vitesse = vit ;
-	pos = p;
+Monstre::Monstre(){
+	vie = 0;
 	etape = 0;
+	vitesse = 0;
 }
+
+Monstre::Monstre(const Monstre &_monstre){
+	vie = _monstre.vie;
+	etape = _monstre.etape;
+	vitesse = _monstre.vitesse;
+	pos = _monstre.pos;
+}
+
+Monstre::Monstre(const Vect &_pos, const float &_vitesse, const int &_vie, const int &_etape){
+	vie = _vie;
+	vitesse = _vitesse;
+	pos = _pos;
+	etape = _etape;
+}
+
+Monstre::~Monstre(){
+	Vect v;
+	vie = 0;
+	etape = 0;
+	vitesse = 0;
+	pos.setVect(v);
+}
+
+Vect Monstre::getPos(){
+	return pos;
+}
+
+float Monstre::getVitesse(){
+	return vitesse;
+}
+
+int Monstre::getVie(){
+	return vie;
+}
+
+int Monstre::getEtape(){
+	return etape;
+}
+
+
+void Monstre::setPos(const Vect &_pos){
+	pos.setVect(_pos);
+}
+
+void Monstre::setVitesse(const float &_vitesse){
+	vitesse = _vitesse;
+}
+
+void Monstre::setVie(const int &_vie){
+	vie = _vie;
+}
+
+void Monstre::setEtape(const int &_etape){
+	etape = _etape;
+}
+
 
 void Monstre::perdreVie(const int &n){
 	vie -= n;
 }
-*/
+
+bool Monstre::estMort(){
+	return (vie == 0);
+}
+
+void Monstre::test(){
+	Monstre m;
+	Vect v(1.5, 6.3);
+	Monstre m1(m);
+	Monstre m2(v, 4.5, 12, 16);
+	std::cout << m1.vie << " " << m2.etape;
+	m2.perdreVie(8);
+	std::cout << "\n" << m2.vie;
+	do{
+		m2.perdreVie(1);
+		std::cout << "\n" << m2.vie;
+	} while (!m2.estMort());
+}
