@@ -12,7 +12,6 @@ Attaque::Attaque(const Attaque &_Attaque){
 	degats = _Attaque.degats;
 }
 
-<<<<<<< HEAD
 Attaque::Attaque(const int &_zone, /*const Effet &_effet,*/ int &_degats){
 	zone = _zone;
 	/*effet = _effet;*/

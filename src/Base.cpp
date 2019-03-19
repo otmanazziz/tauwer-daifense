@@ -5,10 +5,6 @@ Base::Base(){	//Aucune affectation de coordonnées au constructeur.
 	vie = 100;
 }
 
-Base::Base(const Vect &_position){
-	position.setVect(_position);
-}
-
 Base::Base(const int &_vie, const Vect &_position){
 	vie = _vie;
 	position.setVect(_position);

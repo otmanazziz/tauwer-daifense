@@ -44,7 +44,7 @@ public:
 	~Attaque();
 	/**
 		@brief Fonction: getZone
-		Permet de retourner l'entier dd la zone
+		Permet de retourner l'entier dela zone
 		@return Entier
 		@code
 			a2.getZone();
