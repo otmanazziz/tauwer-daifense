@@ -4,6 +4,10 @@
 #include <string>
 #include "Vect.h"
 
+/**
+	@brief Class Bouton
+	Classe de boutons, permettant de gérer les positions des boutons, leurs tailles et le nom des boutons
+*/
 class Bouton{
 private:
 	std::string nom;
