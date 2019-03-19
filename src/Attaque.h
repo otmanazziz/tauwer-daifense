@@ -1,7 +1,7 @@
 #ifndef ATTAQUE
 #define ATTAQUE
 
-#include"Effet.h"
+#include "Effet.h"
 
 class Attaque{
 private:
@@ -53,17 +53,6 @@ public:
 
 	int getZone();
 	/**
-		@brief Effet: getEffet
-		Permet de retourner l'effet de l'attaque
-		@return Effet
-		@code
-			a2.getEffet();
-		@endcode	
-
-
-	*/
-	/*Effet getEffet();*/
-	/**
 		@brief Fonction: getDegats
 		Permet de retourner l'entier des dégats
 		@return Entier
@@ -82,16 +71,6 @@ public:
 	*/
 
 	void setZone(const int &_zone);
-	/**
-		@brief Procédure: setEffet
-		Permet de modifier l'effet
-		@param Effet
-		@code
-			a2.setEffet(e1);
-		@endcode	
-
-	*/
-	/*void setEffet(const Effet &_effet);*/
 	/**
 		@brief Procédure: setDegats
 		Permet de modifier les dégats

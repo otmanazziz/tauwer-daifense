@@ -3,7 +3,6 @@
 
 Attaque::Attaque(){
 	zone = 0;
-	/*effet = 0;*/
 	degats = 0;	
 }
 
@@ -13,6 +12,7 @@ Attaque::Attaque(const Attaque &_Attaque){
 	degats = _Attaque.degats;
 }
 
+<<<<<<< HEAD
 Attaque::Attaque(const int &_zone, /*const Effet &_effet,*/ int &_degats){
 	zone = _zone;
 	/*effet = _effet;*/
@@ -20,7 +20,8 @@ Attaque::Attaque(const int &_zone, /*const Effet &_effet,*/ int &_degats){
 }
 
 Attaque::~Attaque(){
-	//
+	zone = 0;
+	degats = 0;
 }
 
 int Attaque::getZone(){

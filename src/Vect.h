@@ -14,18 +14,27 @@ class Vect{
 		/**
 		@brief Constructeur par défaut: Vect
 		Permet de créer le vecteur par défaut
+		@code
+			Vect v;
+		@endcode
 		*/
 		Vect();
 		/**
 		@brief Constructeur par copie: Vect
 		Permet de créer le vecteur par copie
 		@param vect: Vecteur
+		@code
+			Vect v1(v);
+		@endcode
 		*/
 		Vect(const Vect &vec);
 		/**
 		@brief Constructeur: Vect
 		Permet de créer le vecteur avec des coordonnées
 		@param xV: coordonnée x, xY: coordonnée y
+		@code
+			Vect v2(4.8, 5.6);
+		@endcode
 		*/
 		Vect(const float &xV, const float &yV);
 		/**
@@ -38,6 +47,9 @@ class Vect{
 		Permet de retourner la somme de 2 vecteurs
 		@param vector2: Un autre vecteur
 		@return La somme de 2 vecteurs
+		@code
+			Vect v3 = v1 + v2;
+		@endcode
 		*/
 		Vect operator+(const Vect &vector2);
 		/**
@@ -46,7 +58,7 @@ class Vect{
 		@param vector2: Un autre vecteur
 		@return La somme de 2 vecteurs
 		@code
-		
+			Vect v3 = v1 * v2;
 		@endcode
 		*/
 		Vect operator*(const Vect &vector2);
@@ -55,6 +67,9 @@ class Vect{
 		Permet de retourner la différence de 2 vecteurs
 		@param vector2: Un autre vecteur
 		@return La somme de 2 vecteurs
+		@code
+			Vect v3 = v1 - v2;
+		@endcode
 		*/
 		Vect operator-(const Vect &vector2);
 		/**
@@ -62,6 +77,9 @@ class Vect{
 		Permet de retourner le quotient de 2 vecteurs
 		@param vector2: Un autre vecteur
 		@return La somme de 2 vecteurs
+		@code
+			Vect v3 = v1 / v2;
+		@endcode
 		*/
 		Vect operator/(const Vect &vector2);
 		/**
@@ -69,6 +87,9 @@ class Vect{
 		Permet d'affecter un vecteur à un autre'
 		@param vector2: Un autre vecteur
 		@return none
+		@code
+			Vect v3 = v2;
+		@endcode
 		*/
 		void operator=(const Vect &vector2);
 		/**
