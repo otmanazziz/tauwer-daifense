@@ -2,6 +2,8 @@
 #define VAGUE
 #include <vector>
 #include "Monstre.h"
+#include "Chemin.h"
+#include "Vect.h"
 
 /**
 @brief Class Vague
@@ -118,6 +120,15 @@ class Vague{
 			@endcode
 		*/
 		void ennemiMort();
+		/**
+			@brief Procédure: avancementEtape			
+			Permet de vérifier l'avancement des étapes des ennemis en fonction de son chemin à prendre
+			@param Tableau de Classes Chemin
+			@code
+				v2.avancementEtape(tabChemin2);
+			@endcode
+		*/
+		void avancementEtape(std::vector<Chemin> &tabChemin);
 
 
 

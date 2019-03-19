@@ -63,3 +63,14 @@ void Vague::ennemiMort(){
 		//return true;
 	} //return false;
 }
+
+void Vague::avancementEtape(std::vector<Chemin> &tabChemin){
+	Vect etapeMonstre;
+	int valeurEtapeMonstre;
+	for (unsigned int i = 0; i < monstres.size(); i++){
+		etapeMonstre = monstres[i].getPos();
+		valeurEtapeMonstre = monstres[i].getEtape();
+		if (tabChemin[monstres[i].getChemin()].prochaineEtape(valeurEtapeMonstre) == etapeMonstre)
+			monstres[i].setEtape(valeurEtapeMonstre + 1);
+	}
+}

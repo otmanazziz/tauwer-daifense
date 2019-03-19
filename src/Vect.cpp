@@ -49,9 +49,18 @@ Vect Vect::operator/(const Vect &vector2){
 	return vRes;
 }
 
-void Vect::operator=(const Vect &vector2){
-	x = vector2.x;
-	y = vector2.y;
+Vect Vect::operator=(const Vect &vector2){
+	Vect v;
+	v.x = vector2.x;
+	v.y = vector2.y;
+	return v;
+}
+
+Vect Vect::operator==(const Vect &vector2){
+	Vect v;
+	v.x = vector2.x;
+	v.y = vector2.y;
+	return v;
 }
 
 float Vect::getX() const{
