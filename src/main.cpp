@@ -21,7 +21,7 @@ using namespace std;
 
 int main(){
 	
-	Vect v1;
+	/*Vect v1;
 	Vect v2(100, 150);
 	Vect v3(50, 20);
 	Vect v4(10, 10);
@@ -59,7 +59,9 @@ int main(){
 	m.ajouterBouton(b2);
 	m.afficherTabBouton();
 	m.setBoutonIndice(1, b8);
-	m.afficherTabBouton();
+	m.afficherTabBouton();*/
+	Carte c("test");
+	c.tourIndice(0).affiche();
 
 	return 0;
 }

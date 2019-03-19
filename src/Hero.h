@@ -3,6 +3,7 @@
 
 #include "Sort.h"
 #include <iostream>
+#include <vector>
 
 class Hero{
 private:
@@ -41,7 +42,33 @@ public:
 
 	*/
 	~Hero();
-
+	/**
+		@brief Fonction: getTabSort
+		Permet de retourner le tableau de sort
+		@return Tableau de Sort
+		@code
+			h2.getTabSort();
+		@endcode	
+	*/
+	std::vector<Sort> getTabSort();
+	/**
+		@brief Procédure: setTabSort
+		Permet de modifier le tableau de sort
+		@param Tableau de sort
+		@code
+			h2.setTabSort(tabSort);
+		@endcode	
+	*/
+	void setTabSort(const std::vector<Sort> &_tabSort);
+		/**
+		@brief Procédure: setTabSort
+		Permet de modifier l'indice du héros
+		@param Entier indice, Classz Sort
+		@code
+			h2.setHeroIndice(indice, sort);
+		@endcode	
+	*/
+	void setHeroIndice(const int &indice, Sort sort);
 };
 
 #endif

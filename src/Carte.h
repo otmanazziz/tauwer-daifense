@@ -21,6 +21,7 @@ class Carte{
 		Carte(const std::string & f);
 		~Carte();
 		bool reinit();
+		Tour tourIndice(const int & i); 
 };
 
 #endif

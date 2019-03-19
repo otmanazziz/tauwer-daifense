@@ -6,7 +6,7 @@
 class Attaque{
 private:
 	int zone;
-	Effet effet;
+	//Effet effet;
 	int degats;
 public:
 	/**
@@ -35,7 +35,7 @@ public:
 		@endcode	
 
 	*/
-	Attaque(const int &_zone, const Effet &_effet, int &_degats);
+	Attaque(const int &_zone, /*const Effet &_effet,*/ int &_degats);
 	/** 
 		@brief Destructeur
 		Permet de détruire l'attaque
@@ -52,17 +52,6 @@ public:
 	*/
 
 	int getZone();
-	/**
-		@brief Effet: getEffet
-		Permet de retourner l'effet de l'attaque
-		@return Effet
-		@code
-			a2.getEffet();
-		@endcode	
-
-
-	*/
-	Effet getEffet();
 	/**
 		@brief Fonction: getDegats
 		Permet de retourner l'entier des dégats
@@ -82,16 +71,6 @@ public:
 	*/
 
 	void setZone(const int &_zone);
-	/**
-		@brief Procédure: setEffet
-		Permet de modifier l'effet
-		@param Effet
-		@code
-			a2.setEffet(e1);
-		@endcode	
-
-	*/
-	void setEffet(const Effet &_effet);
 	/**
 		@brief Procédure: setDegats
 		Permet de modifier les dégats

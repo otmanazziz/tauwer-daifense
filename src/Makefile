@@ -1,9 +1,9 @@
 all: main.out
 
 
-main.out: main.o fonction.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o  Chemin.o Carte.o 
+main.out: main.o fonction.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o  Chemin.o Carte.o Hero.o
 
-	g++ -g main.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o -o main.out
+	g++ -g main.o fonction.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o Chemin.o Carte.o Hero.o -o main.out
 
 main.o: main.cpp Vect.h Tour.h Base.h
 	g++ -g -Wall -c main.cpp
@@ -41,8 +41,8 @@ Attaque.o: Attaque.h Attaque.cpp Effet.h
 Sort.o: Sort.h Sort.cpp Attaque.h
 	g++ -g -Wall -c Sort.cpp
 
-#Hero.o: Hero.h Hero.cpp Sort.h Vect.h
-	#g++ -g -Wall -c Hero.cpp
+Hero.o: Hero.h Hero.cpp Sort.h Vect.h
+	g++ -g -Wall -c Hero.cpp
 	
 Carte.o: Carte.h Carte.cpp Tour.h Vague.h Chemin.h Vect.h
 	g++ -g -Wall -c Carte.cpp
