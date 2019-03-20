@@ -40,7 +40,7 @@ class Vague{
 				Vague v2(tabMonstrosaure, 4.8, 6);
 			@endcode
 		*/
-		Vague(const float &_tempsEnnemi, const float &_tempsVague, const std::vector<Monstre> _monstres);
+		Vague(const float &_tempsEnnemi, const float &_tempsVague, const std::vector<Monstre> &_monstres);
 		/**
 			@brief Destructeur: Vague
 			Détruit la classe Vague
@@ -129,7 +129,8 @@ class Vague{
 			@endcode
 		*/
 		void avancementEtape(std::vector<Chemin> &tabChemin);
-
+		
+		void affiche();
 
 
 

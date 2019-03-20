@@ -11,7 +11,7 @@ Vague::Vague(const Vague &v){
 	monstres = v.monstres;
 }
 
-Vague::Vague(const float &_tempsEnnemi, const float &_tempsVague, const std::vector<Monstre> _monstres){
+Vague::Vague(const float &_tempsEnnemi, const float &_tempsVague, const std::vector<Monstre> &_monstres){
 	tempsEnnemi = _tempsEnnemi;
 	tempsVague = _tempsVague;
 	monstres = _monstres;
@@ -73,4 +73,9 @@ void Vague::avancementEtape(std::vector<Chemin> &tabChemin){
 		if (tabChemin[monstres[i].getChemin()].prochaineEtape(valeurEtapeMonstre) == etapeMonstre)
 			monstres[i].setEtape(valeurEtapeMonstre + 1);
 	}
+}
+
+void Vague::affiche(){
+	std::cout<<"TempE : "<<tempsEnnemi<< " TempV : "<<tempsVague<<std::endl;
+	for (unsigned int i = 0 ; i < monstres.size();i++) monstres[i].affiche();
 }

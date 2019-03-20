@@ -62,8 +62,8 @@ int main(){
 	m.afficherTabBouton();*/
 	
 	Carte c("test");
-	c.tourIndice(0).affiche();
-
+	//c.tourIndice(0).affiche();
+	c.vagueIndice(0).affiche();
 
 	return 0;
 }

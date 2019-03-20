@@ -49,11 +49,9 @@ Vect Vect::operator/(const Vect &vector2){
 	return vRes;
 }
 
-Vect Vect::operator=(const Vect &vector2){
-	Vect v;
-	v.x = vector2.x;
-	v.y = vector2.y;
-	return v;
+void Vect::operator=(const Vect &vector2){
+	x = vector2.x;
+	y = vector2.y;
 }
 
 bool Vect::operator==(const Vect &vector2){

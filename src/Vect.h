@@ -91,7 +91,7 @@ class Vect{
 			Vect v3 = v2;
 		@endcode
 		*/
-		Vect operator=(const Vect &vector2);
+		void operator=(const Vect &vector2);
 		/**
 		@brief Vecteur: Opérateur ==
 		Permet de vérifier si un vecteur est égal à un autre

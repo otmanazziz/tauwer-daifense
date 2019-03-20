@@ -10,6 +10,7 @@ Monstre::Monstre(const Monstre &_monstre){
 	vie = _monstre.vie;
 	etape = _monstre.etape;
 	vitesse = _monstre.vitesse;
+	numChem = _monstre.numChem;
 	pos = _monstre.pos;
 }
 
@@ -22,11 +23,9 @@ Monstre::Monstre(const int &_vie, const float &_vitesse,const int &_numChemin ,c
 }
 
 Monstre::~Monstre(){
-	Vect v;
 	vie = 0;
 	etape = 0;
 	vitesse = 0;
-	pos.setVect(v);
 }
 
 Vect Monstre::getPos(){
@@ -88,3 +87,14 @@ void Monstre::test(){
 int Monstre::getChemin(){
 	return numChem ;		
 }
+                                                                       
+void Monstre::affiche(){
+	std::cout<<std::endl<<" Vie : "<< vie<<" - Position : "<< pos.getX() << "   " << pos.getY() <<" - Vitesse : "<<vitesse<<" -Etape : "<<etape <<" - numChem : "<< numChem <<std::endl; 
+}	
+	
+	
+	
+	
+	
+	
+	

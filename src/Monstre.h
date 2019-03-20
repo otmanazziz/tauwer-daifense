@@ -139,7 +139,7 @@ public:
 	bool estMort();
 	int getChemin();
 	void test();
-	
+	void affiche();
 };
 
 #endif
