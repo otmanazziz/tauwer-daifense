@@ -1,5 +1,14 @@
 #include "Carte.h"
 
+Carte::Carte(const Carte & c){
+	tabTour = c.tabTour;
+	tabVague = c.tabVague;
+	tabChemin = c.tabChemin;
+}
+
+Carte::Carte(){
+}
+
 Carte::Carte(const std::string & f){
 	fichier = f ;
 	reinit();

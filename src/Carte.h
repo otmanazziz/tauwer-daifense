@@ -14,11 +14,13 @@
 class Carte{
 	private: 
 		std::vector<Tour> tabTour;
-		
+		std::vector<Chemin> tabChemin;
 		std::vector<Vague> tabVague;
 		Base base;
 		std::string fichier;
-	public:std::vector<Chemin> tabChemin;
+	public:
+		Carte();
+		Carte(const Carte & c);
 		Carte(const std::string & f);
 		~Carte();
 		bool reinit();
