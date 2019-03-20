@@ -40,6 +40,7 @@ class Chemin{
 	*/
 		Vect prochaineEtape(const int & e );
 		
+	void affiche();
 	
 };
 

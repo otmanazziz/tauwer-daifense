@@ -133,6 +133,8 @@ class Vect{
 		*/
 		void setVect(const Vect &vector);
 		void afficheVect();
+	
+		float module();
 };
 
 

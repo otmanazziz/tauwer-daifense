@@ -55,7 +55,6 @@ void Vect::operator=(const Vect &vector2){
 }
 
 bool Vect::operator==(const Vect &vector2){
-	
 	return vector2.x == x && vector2.y == y ;
 }
 
@@ -70,6 +69,10 @@ float Vect::getY() const{
 void Vect::setVect(const Vect &vector){
 	x = vector.x;
 	y = vector.y;
+}
+
+float Vect::module(){
+	return sqrt((x*x)+(y*y));
 }
 
 void Vect::afficheVect(){

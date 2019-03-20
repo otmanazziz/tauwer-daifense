@@ -17,3 +17,7 @@ void Chemin::ajouterEtape(const Vect & v){
 Vect Chemin::prochaineEtape(const int & e){
 	return tabEtape[e];
 }
+
+void  Chemin::affiche(){
+	for (unsigned int i = 0 ; i < tabEtape.size();i++) tabEtape[int(i)].afficheVect();
+}

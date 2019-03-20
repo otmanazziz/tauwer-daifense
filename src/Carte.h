@@ -14,16 +14,17 @@
 class Carte{
 	private: 
 		std::vector<Tour> tabTour;
-		std::vector<Chemin> tabChemin;
+		
 		std::vector<Vague> tabVague;
 		Base base;
 		std::string fichier;
-	public:
+	public:std::vector<Chemin> tabChemin;
 		Carte(const std::string & f);
 		~Carte();
 		bool reinit();
 		Tour tourIndice(const int & i); 
 		Vague vagueIndice(const int & i);
+		Chemin cheminIndice(const int & i);
 };
 
 #endif

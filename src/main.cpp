@@ -63,7 +63,7 @@ int main(){
 	
 	Carte c("test");
 	//c.tourIndice(0).affiche();
-	c.vagueIndice(0).affiche();
-
+	//c.vagueIndice(0).affiche();
+	c.cheminIndice(0).affiche();
 	return 0;
 }
