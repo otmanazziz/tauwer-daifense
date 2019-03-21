@@ -2,21 +2,22 @@
 #define NIVEAU
 #include "Carte.h"
 #include "Hero.h"
+#include <vector>
 #include <string>
+#include <iostream>
+#include <fstream>
 class Niveau{
 	private : 
 		Carte carte;
 		Hero * hero;
-		int Or;
+		unsigned int Or;
 		int score;
 		int difficulter;
 	public :
 	
 		Niveau();
 		Niveau(const std::string & f);
-	
-	
-	
+		Carte getCarte();
 };
 
 #endif
