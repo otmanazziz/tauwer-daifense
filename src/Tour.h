@@ -104,6 +104,16 @@ public:
 		@endcode
 	*/
 	void affiche();
+	/**
+	@brief Booléen: estAPortee
+	Vérifie si la tour a détecté un ennemi (ici des coordonnées d'un vecteur) dans sa portée
+	@param Classe Vect
+	@return Booléen
+	@code
+		t.estAPortee(v);
+	@endcode
+	*/
+	bool estAPortee(Vect &pos);
 
 };
 

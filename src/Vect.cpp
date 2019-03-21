@@ -80,3 +80,37 @@ void Vect::afficheVect(){
 		std::cout << "Votre vecteur vaut: " << x << " " << y << "\n";
 	else std::cout << "Votre vecteur vaut: " << x << " + " << y << "\n";
 }
+
+void Vect::testRegression(){
+	//Déclaration des vecteurs
+	Vect v;
+	Vect v1(12.3, 14.5);
+	Vect v2(v1);
+	//Premier test de régression
+	assert(v.getX() == 0 && v.getX() == v.getY());
+	assert(v1.getX() == v1.x && v1.getY() == v1.y);
+	assert(v1 == v2);
+
+	//Modification de certains vecteurs
+	Vect v3(-15, 0.03);
+	Vect v4 = v1;
+	v2.setVect(v3);
+	//Second test de régression
+	assert(v4 == v1);
+	assert(v2 == v3);
+	assert(v1 - v4 == v);
+
+	//Opérateurs
+	v4 = v1 / v2;
+	v2 = v4 * v3;
+	Vect v5 = (v3 + v4 - v2) * v;
+	//Troisième test de régression
+	assert(v4 == v1 / v2);
+	assert(v2 == v4 * v3);
+	assert(v5 == v);
+
+	//Dernier test de régression
+	assert(v.module() == 0);
+	assert(v1.module() > 0);
+	assert(v4.module() - v2.module() < 0);
+}
