@@ -18,6 +18,8 @@ class Niveau{
 		Niveau();
 		Niveau(const std::string & f);
 		Carte getCarte();
+		void ajouterOr(unsigned int o);
+		void retirerOr(unsigned int o);
 };
 
 #endif
