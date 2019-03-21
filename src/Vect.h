@@ -1,6 +1,8 @@
 #ifndef VECT
 #define VECT
 
+#include <assert.h>
+
 /**
 @brief Class Vect
 Classe de vecteurs, permettant de gérer les coordonnées dans un espace en 2D
@@ -132,9 +134,31 @@ class Vect{
 		@endcode
 		*/
 		void setVect(const Vect &vector);
+		/**
+		@brief Procédure: afficheVect
+		Permet d'afficher les coordonnées du vecteur
+		@code
+			v.afficheVect();
+		@endcode
+		*/
 		void afficheVect();
-	
+		/**
+		@brief Réel: module
+		Retourne le module d'un vecteur
+		@return Réel
+		@code
+			v.module();
+		@endcode
+		*/
 		float module();
+		/**
+		@brief Procédure: testRegression
+		Fait des tests de Régression
+		@code
+			v.testRegression();
+		@endcode
+		*/
+		void testRegression();
 };
 
 

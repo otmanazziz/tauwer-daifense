@@ -68,5 +68,7 @@ int main(){
 	//c.tourIndice(0).affiche();
 	//c.vagueIndice(0).affiche();
 	c.cheminIndice(0).affiche();
+	Vect vTest;
+	vTest.testRegression();
 	return 0;
 }

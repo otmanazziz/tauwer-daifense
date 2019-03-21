@@ -51,3 +51,7 @@
 		std::cout << "Votre portee est de " << portee << "\n";
 		position.afficheVect();
 	}
+
+	bool Tour::estAPortee(Vect &pos){
+		return pos.module() <= portee;
+	}
