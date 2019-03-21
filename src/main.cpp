@@ -20,6 +20,9 @@
 using namespace std;
 
 int main(){
+
+	Couleur c1(10,20,30,40);
+	c1.testRegression();
 	
 	/*Vect v1;
 	Vect v2(100, 150);

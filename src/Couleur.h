@@ -123,6 +123,8 @@ public:
 		@endcode	
 	*/
 	void setOpacity(const float &_opacity);
+
+	void testRegression();
 };
 
 #endif

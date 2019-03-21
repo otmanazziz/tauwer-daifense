@@ -1,5 +1,6 @@
 #include "Couleur.h"
 #include <iostream>
+#include <assert.h>
 
 Couleur::Couleur(){
 	r = 0;
@@ -65,4 +66,22 @@ void Couleur::setB(const unsigned char &_b){
 
 void Couleur::setOpacity(const float &_opacity){
 	opacity = _opacity;
+}
+
+void Couleur::testRegression(){
+	Couleur c;
+	Couleur c1(180, 150, 20, 10);
+	Couleur c2(c1);
+	int a = 180;
+	assert(c1.r == a);
+	assert(c1.getR() == 180 && c1.getV() == 150 && c1.getB() == 20 && c1.getOpacity() == 10 );
+	assert(c2.getR() == 180 && c2.getV() == 150 && c2.getB() == 20 && c2.getOpacity() == 10);
+
+
+	c.setR(c1.getR());
+	c.setB(c1.getB());
+	c.setV(c1.getV());
+	c.setOpacity(c1.getOpacity());
+
+	assert(c.getR() == c1.getR() && c.getV() == c1.getV() && c.getB() == c1.getB() && c.getOpacity() == c1.getOpacity());
 }
