@@ -79,10 +79,10 @@ int main(){
 	//Vect vTest;
 	//vTest.testRegression();
 	
-	//termClear();
+	termClear();
 	Jeu j;
 	j.getNiveau()->getCarte().getBase().affiche();
 	txtBoucle(j);
-	//termClear();
+	termClear();
 	return 0;
 }

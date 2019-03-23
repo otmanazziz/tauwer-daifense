@@ -9,12 +9,12 @@
 #include "Jeu.h"
 
 
-void txtAff(WinTXT & win,  Jeu &jeu){
+void txtAff(WinTXT & win,  Jeu jeu){
 	unsigned int nbTourDansNiveau = jeu.getNiveau()->getCarte().tailleTabTour();
 	unsigned int nbCheminDansNiveau = jeu.getNiveau()->getCarte().tailleTabChemin();
 	Vect v;
 
-	//win.clear();
+	win.clear();
 	for( int i = 0 ; i < 40 ; i++) for( int j = 0 ; j < 40 ; j++)win.print(i,j,'/');
 	for (unsigned int i = 0; i < nbTourDansNiveau; i++){
 		v = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
@@ -29,9 +29,9 @@ void txtAff(WinTXT & win,  Jeu &jeu){
 		win.print(v.getX(), v.getY(), 'X');
 		}
 	}
-	//v = jeu.getNiveau()->getCarte().cheminIndice(0).prochaineEtape(int(jeu.getNiveau()->getCarte().cheminIndice(0).tailleChemin())-1);
+	v =jeu.getNiveau()->getCarte().vagueIndice(0).getVague()[0].getPos(); 
 	win.print(v.getX(), v.getY(),'B');
-	//win.draw();
+	win.draw();
 }
 
 void txtBoucle(Jeu & jeu){
