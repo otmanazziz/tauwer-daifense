@@ -1,9 +1,9 @@
 all: main.out
 
 
-main.out: main.o fonction.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o  Chemin.o Carte.o Hero.o Niveau.o Jeu.o txtJeu.o
+main.out: main.o fonction.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o  Chemin.o Carte.o Hero.o Niveau.o Jeu.o txtJeu.o WinTXT.o
 
-	g++ -g main.o fonction.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o Chemin.o Carte.o Hero.o Niveau.o Jeu.o txtJeu.o -o main.out
+	g++ -g main.o fonction.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o Chemin.o Carte.o Hero.o Niveau.o Jeu.o txtJeu.o WinTXT.o -o main.out
 
 main.o: main.cpp Vect.h Tour.h Base.h
 	g++ -g -Wall -c main.cpp
@@ -59,8 +59,11 @@ Niveau.o: Niveau.h Niveau.cpp Carte.h
 Jeu.o: Jeu.h Jeu.cpp Niveau.h
 	g++ -g -Wall -c Jeu.cpp
 	
-txtJeu.o: txtJeu.h txtJeu.cpp Jeu.h
+txtJeu.o: txtJeu.h txtJeu.cpp Jeu.h WinTXT.h
 	g++ -g -Wall -c txtJeu.cpp
+	
+WinTXT.o: WinTXT.h WinTXT.cpp 
+	g++ -g -Wall -c WinTXT.cpp
 	
 clean:
 	rm *.o
