@@ -9,7 +9,7 @@
 #include "Jeu.h"
 
 
-void txtAff(WinTXT & win, const Jeu &jeu){
+void txtAff(WinTXT & win,  Jeu &jeu){
 	unsigned int nbTourDansNiveau = jeu.getNiveau()->getCarte().tailleTabTour();
 	Vect laTour;
 
