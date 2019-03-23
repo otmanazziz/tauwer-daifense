@@ -18,11 +18,17 @@ Jeu::Jeu(){
          
         closedir(rep);
     }
+	*niv = Niveau(tabLienCarte[0]);
 }
 
 void Jeu::afficheCarteDispo(){
 	for(unsigned int i = 0 ; i < tabLienCarte.size() ; i++){
 		std::cout<< tabLienCarte[i] << std::endl;
 	}
+}
+
+Niveau*  Jeu::getNiveau(){
+	
+	return niv;
 	
 }
