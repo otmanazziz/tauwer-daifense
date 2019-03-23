@@ -9,27 +9,31 @@
 #include "Jeu.h"
 
 
-void txtAff(WinTXT & win,  Jeu jeu){
-	unsigned int nbTourDansNiveau = jeu.getNiveau()->getCarte().tailleTabTour();
-	unsigned int nbCheminDansNiveau = jeu.getNiveau()->getCarte().tailleTabChemin();
+void txtAff(WinTXT & win, Jeu &jeu){
+	unsigned int nbTourDansNiveau = jeu.getNiveau().getCarte().tailleTabTour();
+	unsigned int nbCheminDansNiveau = jeu.getNiveau().getCarte().tailleTabChemin();
 	Vect v;
 
 	win.clear();
 	for( int i = 0 ; i < 40 ; i++) for( int j = 0 ; j < 40 ; j++)win.print(i,j,'/');
 	for (unsigned int i = 0; i < nbTourDansNiveau; i++){
-		v = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
+		v = jeu.getNiveau().getCarte().tourIndice(i).getPosition();
 		//std::cout << "Coordonnees de la tour " << i + 1 << ".";
 		win.print(v.getX(), v.getY(), 'T');
 	}
 	for (unsigned int i = 0; i < nbCheminDansNiveau; i++){
-		for( int j = 0 ; j < int(jeu.getNiveau()->getCarte().cheminIndice(i).tailleChemin()) ; j++){
-			v = jeu.getNiveau()->getCarte().cheminIndice(i).prochaineEtape(j);
+		for( int j = 0 ; j < int(jeu.getNiveau().getCarte().cheminIndice(i).tailleChemin()) ; j++){
+			v = jeu.getNiveau().getCarte().cheminIndice(int(i)).prochaineEtape(j);
 
 		//std::cout << "Coordonnees de la tour " << i + 1 << ".";
 		win.print(v.getX(), v.getY(), 'X');
 		}
 	}
-	v =jeu.getNiveau()->getCarte().vagueIndice(0).getVague()[0].getPos(); 
+	for(unsigned int i = 0 ; i < jeu.getNiveau().getCarte().vagueIndice(0).getVague().size();i++){
+	v =jeu.getNiveau().getCarte().vagueIndice(0).getVague()[i].getPos(); 
+	win.print(v.getX(), v.getY(),'M');
+	}
+	v = jeu.getNiveau().getCarte().getBase().getPosition();
 	win.print(v.getX(), v.getY(),'B');
 	win.draw();
 }

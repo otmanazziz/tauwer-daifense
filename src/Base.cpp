@@ -3,10 +3,11 @@
 
 Base::Base(){	//Aucune affectation de coordonnées au constructeur.
 	vie = 0 ;
-	position = Vect(2,2);
+	position = Vect(0,0);
 }
 
 Base::Base(const int &_vie, const Vect &_position){
+	std::cout<<"test"<<std::endl;
 	vie = _vie;
 	position.setVect(_position);
 	

@@ -1,16 +1,17 @@
 #include "Niveau.h"
 
-Niveau::Niveau(){
+Niveau::Niveau(): carte() {
 	Or = 0;
 	score = 0;
 	hero = NULL;
+	
 }
 
-Niveau::Niveau(const std::string & f){
+Niveau::Niveau(const std::string & f):carte(f){
 	Or = 0;
 	score = 0;
 	hero = NULL;
-	carte.setFichier(f);
+	
 	//carte.getBase().affiche();
 	
 }

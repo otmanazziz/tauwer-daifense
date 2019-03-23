@@ -9,7 +9,7 @@ Carte::Carte(const Carte & c){
 Carte::Carte(){
 }
 
-Carte::Carte(const std::string & f){
+Carte::Carte(const std::string & f):base(100, Vect(25,25)){
 	fichier = f ;
 	reinit();
 }
@@ -76,8 +76,9 @@ bool Carte::reinit(){
 			else if(l[0] ==  "base"){
 				
 				vms = split(l[1],',');//std::cout<<vms.size()<<std::endl;
-				base.setPosition(Vect(std::stof(vms[0]),std::stof(vms[1])));
-				base.setVie(100);
+				base = Base(100, Vect(25,25));
+				/*base.setPosition(Vect(std::stof(vms[0]),std::stof(vms[1])));
+				base.setVie(100);*/
 				base.affiche();
 				for( unsigned int i = 0 ; i < tabChemin.size() ; i++) tabChemin[i].ajouterEtape(Vect(std::stof(vms[0]),std::stof(vms[1])));
 				vms.clear();
