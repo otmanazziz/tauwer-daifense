@@ -14,6 +14,8 @@ class Niveau{
 	
 		Niveau();
 		Niveau(const std::string & f);
+
+		Carte getCarte();
 	
 	
 	

@@ -77,16 +77,23 @@ bool Carte::reinit(){
 }
 
 Tour Carte::tourIndice(const int & i){
-	
-return tabTour[i];	
+	return tabTour[i];	
 }
 
 Vague Carte::vagueIndice(const int & i){
-	
-return tabVague[i];	
+	return tabVague[i];	
 }
 
 Chemin Carte::cheminIndice(const int & i){
-	
-return tabChemin[i];	
+	return tabChemin[i];	
+}
+
+std::vector<Tour> Carte::getTabTour(){
+	return tabTour;
+}
+std::vector<Chemin> Carte::getChemin(){
+	return tabChemin;
+}
+std::vector<Vague> Carte::getVague(){
+	return tabVague;
 }

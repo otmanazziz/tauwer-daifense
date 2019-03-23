@@ -9,3 +9,7 @@ Niveau::Niveau(){
 Niveau::Niveau(const std::string & f){
 	
 }
+
+Carte Niveau::getCarte(){
+	return carte;
+}
