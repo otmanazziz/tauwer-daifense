@@ -11,20 +11,31 @@
 
 void txtAff(WinTXT & win,  Jeu &jeu){
 	unsigned int nbTourDansNiveau = jeu.getNiveau()->getCarte().tailleTabTour();
-	Vect laTour;
+	unsigned int nbCheminDansNiveau = jeu.getNiveau()->getCarte().tailleTabChemin();
+	Vect v;
 
-	win.clear();
-
+	//win.clear();
+	for( int i = 0 ; i < 40 ; i++) for( int j = 0 ; j < 40 ; j++)win.print(i,j,'/');
 	for (unsigned int i = 0; i < nbTourDansNiveau; i++){
-		laTour = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
-
-		std::cout << "Coordonnees de la tour " << i + 1 << ".\n";
-		win.print(laTour.getX(), laTour.getY(), 'T');
+		v = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
+		//std::cout << "Coordonnees de la tour " << i + 1 << ".";
+		win.print(v.getX(), v.getY(), 'T');
 	}
+	for (unsigned int i = 0; i < nbCheminDansNiveau; i++){
+		for( int j = 0 ; j < int(jeu.getNiveau()->getCarte().cheminIndice(i).tailleChemin()) ; j++){
+			v = jeu.getNiveau()->getCarte().cheminIndice(i).prochaineEtape(j);
+
+		//std::cout << "Coordonnees de la tour " << i + 1 << ".";
+		win.print(v.getX(), v.getY(), 'X');
+		}
+	}
+	//v = jeu.getNiveau()->getCarte().cheminIndice(0).prochaineEtape(int(jeu.getNiveau()->getCarte().cheminIndice(0).tailleChemin())-1);
+	win.print(v.getX(), v.getY(),'B');
+	//win.draw();
 }
 
 void txtBoucle(Jeu & jeu){
-	WinTXT win (1000, 1000);
+	WinTXT win (40, 40);
 
 	bool ok = true;
 	int c;
@@ -33,9 +44,9 @@ void txtBoucle(Jeu & jeu){
 	    txtAff(win,jeu);
 
         #ifdef _WIN32
-        Sleep(100);
+        Sleep(200);
 		#else
-		usleep(100000);
+		usleep(200000);
         #endif // WIN32
         c = win.getCh();
         switch(c){
@@ -45,6 +56,6 @@ void txtBoucle(Jeu & jeu){
 
         }
 
-	} while (ok);
+	} while (false);
 
 }

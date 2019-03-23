@@ -18,6 +18,8 @@
 #include "Vect.h"
 #include "Niveau.h"
 #include "Jeu.h"
+#include "txtJeu.h"
+#include "WinTXT.h"
 using namespace std;
 
 int main(){
@@ -71,10 +73,16 @@ int main(){
 	//c.cheminIndice(0).affiche();
 	//Niveau niv("test");
 	//niv.getCarte().tourIndice(0).affiche();
+	//Jeu j;
+	//j.afficheCarteDispo();
+	//j.getNiveau()->getCarte().addrTourIndice(0)->affiche();;
+	//Vect vTest;
+	//vTest.testRegression();
+	
+	//termClear();
 	Jeu j;
-	j.afficheCarteDispo();
-	j.getNiveau()->getCarte().addrTourIndice(0)->affiche();;
-	Vect vTest;
-	vTest.testRegression();
+	j.getNiveau()->getCarte().getBase().affiche();
+	txtBoucle(j);
+	//termClear();
 	return 0;
 }

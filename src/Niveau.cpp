@@ -10,11 +10,13 @@ Niveau::Niveau(const std::string & f){
 	Or = 0;
 	score = 0;
 	hero = NULL;
-	carte = Carte(f);
+	carte.setFichier(f);
+	//carte.getBase().affiche();
 	
 }
 
 Carte Niveau::getCarte(){
+	//std::cout <<" getCarte"; carte.getBase().affiche();
 	return carte;
 }
 

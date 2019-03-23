@@ -37,6 +37,9 @@ class Carte{
 		Vague * addrVagueIndice(const int & i);
 
 		Chemin * addrCheminIndice(const int & i);
+	
+		Base getBase();
+		void setFichier(const std::string & f);
 };
 
 #endif

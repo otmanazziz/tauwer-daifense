@@ -90,7 +90,8 @@ public:
 
 
 	void perdreVie(const int &viePerdue);
-
+	
+	void affiche();
 };
 
 #endif

@@ -2,12 +2,14 @@
 #include <iostream>
 
 Base::Base(){	//Aucune affectation de coordonnées au constructeur.
-	vie = 100;
+	vie = 0 ;
+	position = Vect(0,0);
 }
 
 Base::Base(const int &_vie, const Vect &_position){
 	vie = _vie;
 	position.setVect(_position);
+	
 }
 
 Base::Base(const Base &_Base){
@@ -37,4 +39,10 @@ void Base::setPosition(const Vect &_position){
 void Base::perdreVie(const int &viePerdue){
 	if (vie - viePerdue <= 0) vie = 0;
 	else vie -= viePerdue;
+}
+
+void Base::affiche(){
+std::cout<<" Position : "<<std::endl;
+	position.afficheVect();
+std::cout<<" Vie : "<<vie <<std::endl;
 }

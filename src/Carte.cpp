@@ -20,6 +20,11 @@ Carte::~Carte(){
 	tabVague.clear();
 }
 
+void Carte::setFichier(const std::string & f){
+	fichier = f ;
+	reinit();
+}
+
 bool Carte::reinit(){
 	//a coder le fait daller chercher dans un fichier 
 	std::ifstream f ; 
@@ -67,12 +72,22 @@ bool Carte::reinit(){
 				vms.clear();
 				tabChemin.emplace_back(cms);
 				cms.clear();
-			} else {}
+			}
+			else if(l[0] ==  "base"){
+				
+				vms = split(l[1],',');//std::cout<<vms.size()<<std::endl;
+				base.setPosition(Vect(std::stof(vms[0]),std::stof(vms[1])));
+				base.setVie(100);
+				base.affiche();
+				for( unsigned int i = 0 ; i < tabChemin.size() ; i++) tabChemin[i].ajouterEtape(Vect(std::stof(vms[0]),std::stof(vms[1])));
+				vms.clear();
+			}else {}
 		 
 		
 		l.clear();
 	}
 	f.close();
+	
 	return true;
 }
 
@@ -108,4 +123,9 @@ Vague * Carte::addrVagueIndice(const int & i){
 
 Chemin * Carte::addrCheminIndice(const int & i){
 	return &tabChemin[i];	
+}
+
+Base Carte::getBase(){
+	std::cout<<"getbase "; base.affiche();
+	return base;
 }
