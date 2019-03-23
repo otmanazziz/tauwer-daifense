@@ -88,12 +88,24 @@ Chemin Carte::cheminIndice(const int & i){
 	return tabChemin[i];	
 }
 
-std::vector<Tour> Carte::getTabTour(){
-	return tabTour;
+unsigned int Carte::tailleTabTour(){
+	return tabTour.length();
 }
-std::vector<Chemin> Carte::getChemin(){
-	return tabChemin;
+unsigned int Carte::tailleTabChemin(){
+	return tabChemin.length();
 }
-std::vector<Vague> Carte::getVague(){
-	return tabVague;
+unsigned int CartetailleTabVague(){
+	return tabVague.length();
+}
+
+&Tour Carte::tourIndice(const int & i){
+	return &tabTour[i];	
+}
+
+&Vague Carte::vagueIndice(const int & i){
+	return &tabVague[i];	
+}
+
+&Chemin Carte::cheminIndice(const int & i){
+	return &tabChemin[i];	
 }

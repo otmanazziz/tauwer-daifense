@@ -28,9 +28,15 @@ class Carte{
 		Vague vagueIndice(const int & i);
 		Chemin cheminIndice(const int & i);
 
-		std::vector<Tour> getTabTour();
-		std::vector<Chemin> getChemin();
-		std::vector<Vague> getVague();
+		unsigned int tailleTabTour();
+		unsigned int tailleTabChemin();
+		unsigned int tailleTabVague();
+
+		&Tour addrTourIndice(const int & i)
+
+		&Vague addrVagueIndice(const int & i)
+
+		&Chemin addrCheminIndice(const int & i);
 };
 
 #endif
