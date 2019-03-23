@@ -1,12 +1,20 @@
-#include "Jeu.h"
-#include <windows.h>
-#include "winTxt.h"
-#include <unistd.h>
 #include <iostream>
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <unistd.h>
+#endif // WIN32
+#include "winTxt.h"
+
+#include "Jeu.h"
+
 
 void txtAff(WinTXT & win, const Jeu &jeu){
 	unsigned int nbTourDansNiveau = jeu.getNiveau()->getCarte().tailleTabTour();
 	Vect laTour;
+
+	win.clear();
+
 	for (unsigned int i = 0; i < nbTourDansNiveau; i++){
 		laTour = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
 
@@ -34,7 +42,7 @@ void txtBoucle(Jeu & jeu){
         	case 'q':
         		ok = false;
         		break;
-        	
+
         }
 
 	} while (ok);
