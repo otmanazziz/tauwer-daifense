@@ -35,7 +35,7 @@ void txtAff(WinTXT & win, Jeu &jeu){
 	}
 	v = jeu.getNiveau().getCarte().getBase().getPosition();
 	win.print(v.getX(), v.getY(),'B');
-	win.draw();
+	win.draw(); 
 }
 
 void txtBoucle(Jeu & jeu){
