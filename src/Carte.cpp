@@ -89,23 +89,23 @@ Chemin Carte::cheminIndice(const int & i){
 }
 
 unsigned int Carte::tailleTabTour(){
-	return tabTour.length();
+	return tabTour.size();
 }
 unsigned int Carte::tailleTabChemin(){
-	return tabChemin.length();
+	return tabChemin.size();
 }
-unsigned int CartetailleTabVague(){
-	return tabVague.length();
+unsigned int Carte::tailleTabVague(){
+	return tabVague.size();
 }
 
-Tour & Carte::tourIndice(const int & i){
+Tour * Carte::addrTourIndice(const int & i){
 	return &tabTour[i];	
 }
 
-Vague & Carte::vagueIndice(const int & i){
+Vague * Carte::addrVagueIndice(const int & i){
 	return &tabVague[i];	
 }
 
-Chemin & Carte::cheminIndice(const int & i){
+Chemin * Carte::addrCheminIndice(const int & i){
 	return &tabChemin[i];	
 }

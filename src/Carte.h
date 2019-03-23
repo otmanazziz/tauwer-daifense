@@ -32,11 +32,11 @@ class Carte{
 		unsigned int tailleTabChemin();
 		unsigned int tailleTabVague();
 
-		Tour& addrTourIndice(const int & i);
+		Tour * addrTourIndice(const int & i);
 
-		Vague & addrVagueIndice(const int & i);
+		Vague * addrVagueIndice(const int & i);
 
-		Chemin & addrCheminIndice(const int & i);
+		Chemin * addrCheminIndice(const int & i);
 };
 
 #endif
