@@ -6,7 +6,7 @@ Carte::Carte(const Carte & c){
 	tabChemin = c.tabChemin;
 }
 
-Carte::Carte(){
+Carte::Carte():base(){
 }
 
 Carte::Carte(const std::string & f):base(100, Vect(25,25)){
