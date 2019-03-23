@@ -1,8 +1,8 @@
-#ifndef TXTJEU
-#define TXTJEU
+#ifndef _TXTJEU_H
+#define _TXTJEU_H
 
 #include "Jeu.h"
 
-void txtBoucle (Jeu & jeu);
+void txtBoucle (Jeu & j);
 
 #endif
