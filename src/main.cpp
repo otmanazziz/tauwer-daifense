@@ -22,8 +22,8 @@ using namespace std;
 
 int main(){
 
-	Couleur c1(10,20,30,40);
-	c1.testRegression();
+	//Couleur c1(10,20,30,40);
+	//c1.testRegression();
 	
 	/*Vect v1;
 	Vect v2(100, 150);
@@ -73,7 +73,7 @@ int main(){
 	//niv.getCarte().tourIndice(0).affiche();
 	Jeu j;
 	j.afficheCarteDispo();
-	//j.getNiveau()->getCarte.addrTourIndice(0)->affiche();;
+	j.getNiveau()->getCarte().addrTourIndice(0)->affiche();;
 	Vect vTest;
 	vTest.testRegression();
 	return 0;

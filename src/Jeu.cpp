@@ -18,7 +18,7 @@ Jeu::Jeu(){
          
         closedir(rep);
     }
-	*niv = Niveau(tabLienCarte[0]);
+	niv = new Niveau(tabLienCarte[0]);
 }
 
 void Jeu::afficheCarteDispo(){
