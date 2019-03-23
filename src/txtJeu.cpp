@@ -45,7 +45,7 @@ void txtBoucle(Jeu & jeu){
 	int c;
 
 	do {
-	    txtAff(win,jeu);
+	   // txtAff(win,jeu);
 
         #ifdef _WIN32
         Sleep(200);
