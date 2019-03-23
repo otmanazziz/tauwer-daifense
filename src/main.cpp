@@ -16,7 +16,8 @@
 #include "Tour.h"
 #include "Vague.h"
 #include "Vect.h"
-
+#include "Niveau.h"
+#include "Jeu.h"
 using namespace std;
 
 int main(){
@@ -64,10 +65,14 @@ int main(){
 	m.setBoutonIndice(1, b8);
 	m.afficherTabBouton();*/
 	
-	Carte c("test");
+	//Carte c("test");
 	//c.tourIndice(0).affiche();
 	//c.vagueIndice(0).affiche();
-	c.cheminIndice(0).affiche();
+	//c.cheminIndice(0).affiche();
+	//Niveau niv("test");
+	//niv.getCarte().tourIndice(0).affiche();
+	Jeu j;
+	j.afficheCarteDispo();
 	Vect vTest;
 	vTest.testRegression();
 	return 0;
