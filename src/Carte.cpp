@@ -98,14 +98,14 @@ unsigned int CartetailleTabVague(){
 	return tabVague.length();
 }
 
-&Tour Carte::tourIndice(const int & i){
+Tour & Carte::tourIndice(const int & i){
 	return &tabTour[i];	
 }
 
-&Vague Carte::vagueIndice(const int & i){
+Vague & Carte::vagueIndice(const int & i){
 	return &tabVague[i];	
 }
 
-&Chemin Carte::cheminIndice(const int & i){
+Chemin & Carte::cheminIndice(const int & i){
 	return &tabChemin[i];	
 }

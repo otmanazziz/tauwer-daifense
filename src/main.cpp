@@ -73,7 +73,7 @@ int main(){
 	//niv.getCarte().tourIndice(0).affiche();
 	Jeu j;
 	j.afficheCarteDispo();
-	j.getNiveau();
+	//j.getNiveau()->getCarte.addrTourIndice(0)->affiche();;
 	Vect vTest;
 	vTest.testRegression();
 	return 0;
