@@ -1,4 +1,4 @@
-#include "winTxt.h"
+#include "WinTXT.h"
 #include <cassert>
 #include <stdlib.h>
 #include <stdarg.h>
