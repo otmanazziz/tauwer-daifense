@@ -18,7 +18,8 @@ class Niveau{
 		Niveau(const std::string & f);
 
 		Carte getCarte();
-
+		Carte *addrGetCarte();
+		
 		void ajouterOr(unsigned int o);
 		void retirerOr(unsigned int o);
 		void affiche();

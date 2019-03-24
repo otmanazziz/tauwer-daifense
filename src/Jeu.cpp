@@ -18,7 +18,7 @@ Jeu::Jeu(){
          
         closedir(rep);
     }
-	niv = Niveau(tabLienCarte[0]);
+	niv = new Niveau(tabLienCarte[0]);
 	//niv->getCarte().getBase().affiche();
 }
 
@@ -28,7 +28,7 @@ void Jeu::afficheCarteDispo(){
 	}
 }
 
-Niveau  Jeu::getNiveau(){
+Niveau *Jeu::getNiveau(){
 	
 	return niv;
 	

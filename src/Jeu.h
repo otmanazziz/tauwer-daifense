@@ -10,12 +10,12 @@ class Jeu{
 	private:
 		std::vector<std::string> tabLienCarte;
 		Menu principale;
-		Niveau   niv;
+		Niveau *niv;
 	public :
 	
 		Jeu();
 		void afficheCarteDispo();
-		Niveau  getNiveau(); 
+		Niveau *getNiveau(); 
 };
 
 #endif

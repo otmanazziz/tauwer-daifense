@@ -56,6 +56,9 @@ class Vague{
 		*/
 
 		std::vector<Monstre> getVague();
+		std::vector<Monstre> * addrGetVague();
+		Monstre getIndiceMonstre(const int & n);
+		Monstre * addrGetIndiceMonstre(const int & n);
 		/**
 			@brief Réel: getTempsEnnemi
 			Permet de retourner la valeur du temps

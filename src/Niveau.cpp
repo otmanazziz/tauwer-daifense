@@ -18,6 +18,11 @@ Carte Niveau::getCarte(){
 	return carte;
 }
 
+Carte *Niveau::addrGetCarte(){
+	return &carte;
+}
+
+
 void Niveau::ajouterOr(unsigned int o){
 	Or =+ o;
 }

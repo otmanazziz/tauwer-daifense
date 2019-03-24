@@ -27,6 +27,17 @@ Vague::~Vague(){
 std::vector<Monstre> Vague::getVague(){
 	return monstres;
 }
+std::vector<Monstre> * Vague::addrGetVague(){
+	return &monstres;
+}
+
+Monstre Vague::getIndiceMonstre(const int & n){
+	return monstres[n];
+}
+
+Monstre * Vague::addrGetIndiceMonstre(const int & n){
+	return &monstres[n];
+}
 
 float Vague::getTempsEnnemi(){
 	return tempsEnnemi;
