@@ -1,12 +1,22 @@
-all: main.out
+all: sdl txt
+
+sdl: main_sdl.o  Vect.o fonction.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o  Chemin.o Carte.o Hero.o Niveau.o Jeu.o sdlJeu.o 
+
+	g++ -g main_sdl.o  Vect.o fonction.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o Chemin.o Carte.o Hero.o Niveau.o Jeu.o  sdlJeu.o  -o sdl -lSDL2 -lSDL2_ttf -lSDL2_image -lSDL2_mixer
+	
+main_sdl.o: main_sdl.cpp Jeu.h sdlJeu.h sdlJeu.cpp 
+	g++ -g -Wall -c -I/usr/include/SDL2 main_sdl.cpp
+	
+sdlJeu.o: sdlJeu.h sdlJeu.cpp Jeu.h 
+	g++ -g -Wall -c -I/usr/include/SDL2 sdlJeu.cpp
 
 
-main.out: main.o  Vect.o fonction.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o  Chemin.o Carte.o Hero.o Niveau.o Jeu.o WinTXT.o txtJeu.o 
+txt: main_txt.o  Vect.o fonction.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o  Chemin.o Carte.o Hero.o Niveau.o Jeu.o WinTXT.o txtJeu.o 
 
-	g++ -g main.o  Vect.o fonction.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o Chemin.o Carte.o Hero.o Niveau.o Jeu.o WinTXT.o txtJeu.o  -o main.out
+	g++ -g main_txt.o  Vect.o fonction.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o Chemin.o Carte.o Hero.o Niveau.o Jeu.o WinTXT.o txtJeu.o  -o txt
 
-main.o: main.cpp Vect.h Tour.h Base.h
-	g++ -g -Wall -c main.cpp
+main_txt.o: main_txt.cpp Jeu.h txtJeu.h txtJeu.cpp 
+	g++ -g -Wall -c main_txt.cpp
 
 Tour.o: Tour.h Tour.cpp Vect.h
 	g++ -g -Wall -c Tour.cpp
