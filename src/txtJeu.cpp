@@ -33,7 +33,7 @@ void txtAff(WinTXT & win, Jeu &jeu){
 	v =jeu.getNiveau()->getCarte().vagueIndice(0).getVague()[i].getPos(); 
 	win.print(v.getX(), v.getY(),'M');
 	}
-	v = jeu.getNiveau()->getCarte().getBase().getPosition();
+	v = jeu.getNiveau()->addrGetCarte()->getBase().getPosition();
 	win.print(v.getX(), v.getY(),'B');
 	win.draw(); 
 	std::cout<<std::endl;
