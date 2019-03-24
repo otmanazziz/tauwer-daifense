@@ -14,8 +14,10 @@ class Jeu{
 	public :
 	
 		Jeu();
+		~Jeu();
 		void afficheCarteDispo();
 		Niveau *getNiveau(); 
+		void actionAuto();
 };
 
 #endif

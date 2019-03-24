@@ -19,7 +19,7 @@ class Niveau{
 
 		Carte getCarte();
 		Carte *addrGetCarte();
-		
+		void maj();
 		void ajouterOr(unsigned int o);
 		void retirerOr(unsigned int o);
 		void affiche();

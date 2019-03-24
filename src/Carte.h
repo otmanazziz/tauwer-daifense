@@ -37,7 +37,7 @@ class Carte{
 		Vague * addrVagueIndice(const int & i);
 
 		Chemin * addrCheminIndice(const int & i);
-	
+		void maj();
 		Base getBase();
 		void setFichier(const std::string & f);
 		void affiche();

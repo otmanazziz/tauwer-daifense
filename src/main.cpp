@@ -83,6 +83,9 @@ int main(){
 	Jeu j;
 	//j.getNiveau().getCarte().getBase().affiche();
 	txtBoucle(j);
-	//termClear();
+	termClear();
+	//Monstre m(0,3,0,Vect(5,5));
+	//m.avancer(Vect(0,5));
+	//m.affiche();
 	return 0;
 }

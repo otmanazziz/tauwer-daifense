@@ -4,6 +4,7 @@ Monstre::Monstre(){
 	vie = 0;
 	etape = 0;
 	vitesse = 0;
+	spawn = false;
 }
 
 Monstre::Monstre(const Monstre &_monstre){
@@ -12,6 +13,7 @@ Monstre::Monstre(const Monstre &_monstre){
 	vitesse = _monstre.vitesse;
 	numChem = _monstre.numChem;
 	pos = _monstre.pos;
+	spawn = false;
 }
 
 Monstre::Monstre(const int &_vie, const float &_vitesse,const int &_numChemin ,const Vect &_pos){
@@ -19,7 +21,8 @@ Monstre::Monstre(const int &_vie, const float &_vitesse,const int &_numChemin ,c
 	vitesse = _vitesse;
 	pos = _pos;
 	numChem = _numChemin;
-	etape = 0;
+	etape = 1;
+	spawn = false;
 }
 
 Monstre::~Monstre(){
@@ -28,19 +31,19 @@ Monstre::~Monstre(){
 	vitesse = 0;
 }
 
-Vect Monstre::getPos(){
+Vect Monstre::getPos()const{
 	return pos;
 }
 
-float Monstre::getVitesse(){
+float Monstre::getVitesse()const{
 	return vitesse;
 }
 
-int Monstre::getVie(){
+int Monstre::getVie()const{
 	return vie;
 }
 
-int Monstre::getEtape(){
+int Monstre::getEtape()const{
 	return etape;
 }
 
@@ -67,9 +70,14 @@ void Monstre::perdreVie(const int &n){
 }
 
 bool Monstre::estMort(){
-	return (vie == 0);
+	return vie == 0;
 }
-
+bool Monstre::getSpawn()const{
+	return spawn;
+}
+void Monstre::spawner(){
+	spawn = true;
+}
 void Monstre::test(){
 	Monstre m;
 	Vect v(1.5, 6.3);
@@ -84,15 +92,23 @@ void Monstre::test(){
 	} while (!m2.estMort());
 }
 
-int Monstre::getChemin(){
-	return numChem ;		
+
+void Monstre::avancer(const Vect & v){
+	if(pos == v);
+	else{		
+		if(avancerVers(vitesse,pos, v)){
+			etape ++;	
+		}
+	}
 }
                                                                        
 void Monstre::affiche(){
-	std::cout<<std::endl<<" Vie : "<< vie<<" - Position : "<< pos.getX() << "   " << pos.getY() <<" - Vitesse : "<<vitesse<<" -Etape : "<<etape <<" - numChem : "<< numChem <<std::endl; 
+	std::cout<<std::endl<<" Vie : "<< vie<<" - Position : "<< pos.getX() << "   " << pos.getY() <<" - Vitesse : "<<vitesse<<" -Etape : "<<etape <<" - numChem : "<< numChem <<" - spawner : "<< spawn<<std::endl; 
 }	
 	
-	
+int Monstre::getNumChem()const{
+	return numChem;
+}
 	
 	
 	

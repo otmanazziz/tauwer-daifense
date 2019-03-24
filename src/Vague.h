@@ -55,9 +55,9 @@ class Vague{
 			@endcode
 		*/
 
-		std::vector<Monstre> getVague();
+		std::vector<Monstre> getVague()const;
 		std::vector<Monstre> * addrGetVague();
-		Monstre getIndiceMonstre(const int & n);
+		Monstre getIndiceMonstre(const int & n)const;
 		Monstre * addrGetIndiceMonstre(const int & n);
 		/**
 			@brief Réel: getTempsEnnemi
@@ -67,7 +67,7 @@ class Vague{
 				v2.getTempsEnnemi();
 			@endcode
 		*/
-		float getTempsEnnemi();
+		float getTempsEnnemi()const;
 		/**
 			@brief Réel: getTempsVague
 			Permet de retourner la valeur du temps
@@ -76,7 +76,7 @@ class Vague{
 				v2.getTempsVague();
 			@endcode
 		*/
-		float getTempsVague();
+		float getTempsVague()const ;
 		/**
 			@brief Entier: getnbMonstreRestant
 			Permet de retourner le nombre de monstres restant
@@ -132,6 +132,10 @@ class Vague{
 			@endcode
 		*/
 		void avancementEtape(std::vector<Chemin> &tabChemin);
+	
+		void avancerMonstre(const std::vector<Chemin> &tabChemin);
+	
+		void spawnerMonstre();
 		
 		void affiche();
 

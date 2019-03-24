@@ -152,6 +152,17 @@ void Carte::affiche(){
 	base.affiche();
 }
 
+void Carte::maj(){
+	if(!tabVague.empty()){
+		if(!tabVague[0].getVague().empty()){
+			tabVague[0].avancerMonstre(tabChemin);
+			tabVague[0].spawnerMonstre();
+		}
+		else{
+		tabVague.erase(tabVague.begin());
+		}
+	}
+}
 
 
 

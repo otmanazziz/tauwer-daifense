@@ -38,7 +38,7 @@ class Chemin{
 			c1.prochaineEtape(e);
 		@endcode	
 	*/
-		Vect prochaineEtape(const int & e );
+		Vect prochaineEtape(const int & e )const;
 	
 		unsigned int tailleChemin();
 		

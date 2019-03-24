@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include "Vect.h"
-
+#include "fonction.h"
 class Monstre{
 private:
 	Vect pos; 
@@ -11,6 +11,7 @@ private:
 	int vie; 
 	int etape;
 	int numChem;
+	bool spawn;
 
 public:
 	/**
@@ -53,7 +54,7 @@ public:
 			m.getPos();
 		@endcode
 	*/
-	Vect getPos();
+	Vect getPos()const;
 	/**
 		@brief Réel: getVitesse
 		Permet de retourner la vitesse du monstre
@@ -62,7 +63,7 @@ public:
 			m.getVitesse();
 		@endcode
 	*/
-	float getVitesse();
+	float getVitesse()const;
 	/**
 		@brief Entier: getVie
 		Permet de retourner la vie du monstre
@@ -71,7 +72,7 @@ public:
 			m.getVie();
 		@endcode
 	*/
-	int getVie();
+	int getVie()const;
 	/**
 		@brief Entier: getEtape
 		Permet de retourner les étapes du monstre
@@ -80,7 +81,7 @@ public:
 			m.getEtape();
 		@endcode
 	*/
-	int getEtape();
+	int getEtape()const;
 
 	/**
 		@brief Procédure: setPos
@@ -137,7 +138,10 @@ public:
 		@endcode
 	*/
 	bool estMort();
-	int getChemin();
+	int getNumChem()const;
+	bool getSpawn()const;
+	void spawner();
+	void avancer(const Vect & v );
 	void test();
 	void affiche();
 };

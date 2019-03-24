@@ -28,11 +28,15 @@ void Niveau::ajouterOr(unsigned int o){
 }
 
 void Niveau::retirerOr(unsigned int o){
-	Or =- o;
+	Or = ((int(Or)- int(o)) <= 0) ? 0 : Or - o;
 }
 
 void Niveau::affiche(){
 	std::cout<<"Or : "<<Or<<std::endl<<"Score : "<<score<<std::endl;
 	carte.affiche();
 	
+}
+
+void Niveau::maj(){
+	carte.maj();
 }
