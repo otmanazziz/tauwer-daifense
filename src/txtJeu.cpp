@@ -42,8 +42,8 @@ void txtAff(WinTXT & win, Jeu &jeu){
 	v = jeu.getNiveau()->addrGetCarte()->getBase().getPosition();
 	win.print(v.getX(), v.getY(),'B');
 	win.draw(); 
-	std::cout<<std::endl;
-	jeu.getNiveau()->affiche();
+	//std::cout<<std::endl;
+	//jeu.getNiveau()->affiche();
 }
 
 void txtBoucle(Jeu & jeu){
