@@ -157,6 +157,7 @@ void Carte::maj(){
 		if(!tabVague[0].getVague().empty()){
 			tabVague[0].avancerMonstre(tabChemin);
 			tabVague[0].spawnerMonstre();
+			tabVague[0].monstresBase(base);
 		}
 		else{
 		tabVague.erase(tabVague.begin());

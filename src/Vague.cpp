@@ -73,21 +73,21 @@ void Vague::ennemiMort(){
 		//return true;
 	} //return false;
 }
-/*
-void Vague::avancementEtape(std::vector<Chemin> &tabChemin){
-	Vect etapeMonstre;
-	int valeurEtapeMonstre;
-	for (unsigned int i = 0; i < monstres.size(); i++){
-		etapeMonstre = monstres[i].getPos();
-		valeurEtapeMonstre = monstres[i].getEtape();
-		if (tabChemin[monstres[i].getChemin()].prochaineEtape(valeurEtapeMonstre) == etapeMonstre)
-			monstres[i].setEtape(valeurEtapeMonstre + 1);
-	}
-}*/
+
 
 void Vague::avancerMonstre(const std::vector<Chemin> &tabChemin){
 	for( unsigned int i = 0 ; i < monstres.size(); i++){
-		if( monstres[i].getSpawn() )monstres[i].avancer(tabChemin[monstres[i].getNumChem()].prochaineEtape(monstres[i].getEtape()));
+		if( monstres[i].getSpawn()){
+			monstres[i].avancer(tabChemin[monstres[i].getNumChem()].prochaineEtape(monstres[i].getEtape()));
+		}
+	}
+}
+
+void Vague::monstresBase(Base & b){
+	for( unsigned int i = 0 ; i < monstres.size(); i++){
+		if( monstres[i].getPos() == b.getPosition()){
+			monstres.erase(monstres.begin()+i);
+		}
 	}
 }
 

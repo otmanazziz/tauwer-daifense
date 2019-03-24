@@ -74,7 +74,7 @@ void Jeu::actionAuto(){
 				std::cout << "Il perd donc " << niv->getCarte().tourIndice(k).getAttaque().getDegats() << " points de vie et il lui reste " << niv->getCarte().vagueIndice(0).getVague()[j].getVie() << " points de vie.\n";
 				if (niv->getCarte().vagueIndice(0).getVague()[j].estMort()){
 					std::cout << "L'ennemi " << j + 1 << " est mort.\n";
-					niv->getCarte().vagueIndice(0).ennemiMort();
+					niv->addrGetCarte()->addrVagueIndice(0).ennemiMort();
 					j--;
 				}
 			}

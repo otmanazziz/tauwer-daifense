@@ -4,7 +4,7 @@
 #include "Monstre.h"
 #include "Chemin.h"
 #include "Vect.h"
-
+#include "Base.h"
 /**
 @brief Class Vague
 Classe de vagues, permettant de gérer les vagues d'ennemis
@@ -138,7 +138,8 @@ class Vague{
 		void spawnerMonstre();
 		
 		void affiche();
-
+	
+		void monstresBase(Base & b);
 
 
 
