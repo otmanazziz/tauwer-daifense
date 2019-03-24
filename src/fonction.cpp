@@ -21,3 +21,11 @@ std::vector<std::string> split(const std::string & s , const char & c ){
 
 	}
 }
+
+bool avancerVect(float v ,Vect & m, const Vect & e){
+	Vect vv(m-e);
+	float mod = vv.module();
+	//x = m.getX()+ (v.getX()/mod) * ;
+	float y = m.getY();return true;
+	
+}

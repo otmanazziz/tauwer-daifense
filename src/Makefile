@@ -1,9 +1,9 @@
 all: main.out
 
 
-main.out: main.o fonction.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o  Chemin.o Carte.o Hero.o Niveau.o Jeu.o WinTXT.o txtJeu.o 
+main.out: main.o  Vect.o fonction.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o  Chemin.o Carte.o Hero.o Niveau.o Jeu.o WinTXT.o txtJeu.o 
 
-	g++ -g main.o fonction.o Vect.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o Chemin.o Carte.o Hero.o Niveau.o Jeu.o WinTXT.o txtJeu.o  -o main.out
+	g++ -g main.o  Vect.o fonction.o Tour.o Base.o Couleur.o Monstre.o Vague.o Bouton.o Menu.o Effet.o Attaque.o Sort.o Chemin.o Carte.o Hero.o Niveau.o Jeu.o WinTXT.o txtJeu.o  -o main.out
 
 main.o: main.cpp Vect.h Tour.h Base.h
 	g++ -g -Wall -c main.cpp

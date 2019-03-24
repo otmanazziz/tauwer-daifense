@@ -48,7 +48,7 @@ bool Carte::reinit(){
 		l = split(ligne,':');
 		
 			if(l[0] ==  "tour"){
-				tabTour.push_back(Tour(std::stof(l[1]),std::stoi(l[2]),Vect(std::stof(l[3]),std::stof(l[4]))));
+				tabTour.emplace_back(std::stof(l[1]),std::stoi(l[2]),Vect(std::stof(l[3]),std::stof(l[4])) , std::stoi(l[5]) ,std::stoi(l[6]) );
 				
 			}
 			else if(l[0] ==  "vague"){

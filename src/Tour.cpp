@@ -1,7 +1,7 @@
 #include "Tour.h"
 #include <iostream>
 
-	Tour::Tour(){
+	Tour::Tour():attaque(){
 		vitesseAtq = 0;
 		portee = 0;
 		Vect v(0, 0);
@@ -12,9 +12,10 @@
 		vitesseAtq = _tour.vitesseAtq;
 		portee = _tour.portee;
 		position.setVect(_tour.position);
+		attaque = _tour.attaque;
 	}
 
-	Tour::Tour(const float &_vitesseAtq, const int &_portee, const Vect _position){
+	Tour::Tour(const float &_vitesseAtq, const int &_portee, const Vect &_position , const int &z , const int & d): attaque(z,d){
 		vitesseAtq = _vitesseAtq;
 		portee = _portee;
 		position.setVect(_position);

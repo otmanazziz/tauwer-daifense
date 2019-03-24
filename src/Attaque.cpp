@@ -12,7 +12,7 @@ Attaque::Attaque(const Attaque &_Attaque){
 	degats = _Attaque.degats;
 }
 
-Attaque::Attaque(const int &_zone, /*const Effet &_effet,*/ int &_degats){
+Attaque::Attaque(const int &_zone,  const int &_degats){
 	zone = _zone;
 	/*effet = _effet;*/
 	degats = _degats;

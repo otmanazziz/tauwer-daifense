@@ -35,7 +35,7 @@ public:
 		@endcode	
 
 	*/
-	Attaque(const int &_zone, /*const Effet &_effet,*/ int &_degats);
+	Attaque(const int &_zone, const int &_degats);
 	/** 
 		@brief Destructeur
 		Permet de détruire l'attaque
