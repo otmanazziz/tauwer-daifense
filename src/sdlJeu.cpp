@@ -2,11 +2,11 @@
 #include <time.h>
 #include "sdlJeu.h"
 #include <stdlib.h>
-
+#include "Vect.h"
 #include <iostream>
 using namespace std;
 
-const int TAILLE_SPRITE = 32;
+const int TAILLE_SPRITE = 20;
 
 float temps () {
     return float(SDL_GetTicks()) / CLOCKS_PER_SEC;  // conversion des ms en secondes en divisant par 1000
@@ -106,21 +106,20 @@ sdlJeu::sdlJeu () {
 	
 
     // Creation de la fenetre
-   // window = SDL_CreateWindow("Pacman", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, dimx, dimy, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
-   /* if (window == NULL) {
+    window = SDL_CreateWindow("Tauwer Daifense", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1000, 1000, SDL_WINDOW_SHOWN );
+    if (window == NULL) {
         cout << "Erreur lors de la creation de la fenetre : " << SDL_GetError() << endl; SDL_Quit(); exit(1);
     }
 
     renderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
 
     // IMAGES
-    im_pacman.loadFromFile("data/pacman.png",renderer);
-    im_mur.loadFromFile("data/mur.png",renderer);
-    im_pastille.loadFromFile("data/pastille.png",renderer);
-    im_fantome.loadFromFile("data/fantome.png",renderer);
+    monstre.loadFromFile("monstre.png",renderer);
+    base.loadFromFile("base.png",renderer);
+	tour.loadFromFile("tour.png",renderer);
 
     // FONTS
-    font = TTF_OpenFont("data/DejaVuSansCondensed.ttf",50);
+    font = TTF_OpenFont("DejaVuSansCondensed.ttf",50);
     if (font == NULL) {
             cout << "Failed to load DejaVuSansCondensed.ttf! SDL_TTF Error: " << TTF_GetError() << endl; SDL_Quit(); exit(1);
 	}
@@ -131,11 +130,11 @@ sdlJeu::sdlJeu () {
     // SONS
     if (withSound)
     {
-        sound = Mix_LoadWAV("data/son.wav");
+        sound = Mix_LoadWAV("son.wav");
         if (sound == NULL) {
                 cout << "Failed to load son.wav! SDL_mixer Error: " << Mix_GetError() << endl; SDL_Quit(); exit(1);
         }
-    }*/
+    }
 }
 
 sdlJeu::~sdlJeu () {
@@ -152,7 +151,33 @@ void sdlJeu::sdlAff () {
     SDL_SetRenderDrawColor(renderer, 230, 240, 255, 255);
     SDL_RenderClear(renderer);
 
-
+	
+	unsigned int nbTourDansNiveau = jeu.getNiveau()->getCarte().tailleTabTour();
+	Vect v;
+	for (unsigned int i = 0; i < nbTourDansNiveau; i++){
+		v = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
+		tour.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
+	}
+	if (jeu.getNiveau()->addrGetCarte()->tailleTabVague() > 0){
+		for(unsigned int i = 0 ; i < jeu.getNiveau()->getCarte().vagueIndice(0).getVague().size();i++){
+			if(jeu.getNiveau()->addrGetCarte()->addrVagueIndice(0)->addrGetIndiceMonstre(i)->getSpawn()){
+				
+				v =jeu.getNiveau()->getCarte().vagueIndice(0).getVague()[i].getPos(); 
+				monstre.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
+			}
+		}
+	}
+	v = jeu.getNiveau()->addrGetCarte()->getBase().getPosition();
+	base.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
+	
+	
+	
+	
+	
+	
+	
+	
+	
     // Afficher les sprites des murs et des pastilles
 	/*for (x=0;x<ter.getDimX();++x)
 		for (y=0;y<ter.getDimY();++y)
@@ -171,6 +196,42 @@ void sdlJeu::sdlAff () {
     SDL_Rect positionTitre;
     positionTitre.x = 270;positionTitre.y = 49;positionTitre.w = 100;positionTitre.h = 30;
     SDL_RenderCopy(renderer,font_im.getTexture(),NULL,&positionTitre);*/
+	
+	
+	
+	/*
+
+
+	win.clear();
+	for( int i = 0 ; i < 40 ; i++) for( int j = 0 ; j < 40 ; j++)win.print(i,j,'.');
+	for (unsigned int i = 0; i < nbTourDansNiveau; i++){
+		v = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
+		//std::cout << "Coordonnees de la tour " << i + 1 << ".";
+		win.print(v.getX(), v.getY(), 'T');
+	}
+
+	for (unsigned int i = 0; i < nbCheminDansNiveau; i++){
+		for( int j = 0 ; j < int(jeu.getNiveau()->getCarte().cheminIndice(i).tailleChemin()) ; j++){
+			v = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j);
+
+		//std::cout << "Coordonnees de la tour " << i + 1 << ".";
+		win.print(v.getX(), v.getY(), 'X');
+		}
+	}
+	if (jeu.getNiveau()->addrGetCarte()->tailleTabVague() > 0){
+		for(unsigned int i = 0 ; i < jeu.getNiveau()->getCarte().vagueIndice(0).getVague().size();i++){
+			if(jeu.getNiveau()->addrGetCarte()->addrVagueIndice(0)->addrGetIndiceMonstre(i)->getSpawn()){
+				
+				v =jeu.getNiveau()->getCarte().vagueIndice(0).getVague()[i].getPos(); 
+				win.print(v.getX(), v.getY(), 'M');
+			}
+		}
+	}
+	v = jeu.getNiveau()->addrGetCarte()->getBase().getPosition();
+	win.print(v.getX(), v.getY(),'B');
+	win.draw(); 
+	std::cout<<std::endl;
+	jeu.getNiveau()->affiche();*/
 
 }
 

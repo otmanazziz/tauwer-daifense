@@ -47,10 +47,9 @@ private :
     Mix_Chunk * sound;
     bool withSound;
 
-    Image im_pacman;
-    Image im_mur;
-    Image im_pastille;
-    Image im_fantome;
+    Image tour;
+	Image base;
+	Image monstre;
 
 
 public :
