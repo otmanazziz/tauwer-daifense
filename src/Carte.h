@@ -40,6 +40,7 @@ class Carte{
 	
 		Base getBase();
 		void setFichier(const std::string & f);
+		void affiche();
 };
 
 #endif

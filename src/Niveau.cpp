@@ -12,12 +12,9 @@ Niveau::Niveau(const std::string & f):carte(f){
 	score = 0;
 	hero = NULL;
 	
-	//carte.getBase().affiche();
-	
 }
 
 Carte Niveau::getCarte(){
-	//std::cout <<" getCarte"; carte.getBase().affiche();
 	return carte;
 }
 
@@ -29,3 +26,8 @@ void Niveau::retirerOr(unsigned int o){
 	Or =- o;
 }
 
+void Niveau::affiche(){
+	std::cout<<"Or : "<<Or<<std::endl<<"Score : "<<score<<std::endl;
+	carte.affiche();
+	
+}

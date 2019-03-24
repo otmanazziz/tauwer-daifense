@@ -12,7 +12,6 @@ class Niveau{
 		Hero * hero;
 		unsigned int Or;
 		int score;
-		int difficulter;
 	public :
 	
 		Niveau();
@@ -22,6 +21,7 @@ class Niveau{
 
 		void ajouterOr(unsigned int o);
 		void retirerOr(unsigned int o);
+		void affiche();
 
 };
 

@@ -1,6 +1,6 @@
 #include <iostream>
 #ifdef _WIN32
-#include <windows.h>
+#include <windows.h> 
 #else
 #include <unistd.h>
 #endif // WIN32
@@ -36,6 +36,8 @@ void txtAff(WinTXT & win, Jeu &jeu){
 	v = jeu.getNiveau().getCarte().getBase().getPosition();
 	win.print(v.getX(), v.getY(),'B');
 	win.draw(); 
+	std::cout<<std::endl;
+	jeu.getNiveau().affiche();
 }
 
 void txtBoucle(Jeu & jeu){

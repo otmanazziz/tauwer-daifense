@@ -55,7 +55,7 @@ bool Carte::reinit(){
 				vms = split(l[3],',');
 				for( j = 0 ; j < vms.size() ; j++){
 					vmss = split(vms[int(j)],'/');
-					tms.emplace_back( std::stoi(vmss[2]), std::stof(vmss[1]), std::stoi(vmss[2]),Vect(std::stof(vmss[3]),std::stof(vmss[4]))); 
+					tms.emplace_back( std::stoi(vmss[0]), std::stof(vmss[1]), std::stoi(vmss[2]),tabChemin[std::stoi(vmss[2])].prochaineEtape(0)); 
 					vmss.clear();
 				}
 				tabVague.emplace_back(std::stof(l[1]) , std::stof(l[2]) ,tms);
@@ -65,7 +65,7 @@ bool Carte::reinit(){
 			}
 			else if(l[0] ==  "chemin"){
 				for(j = 1 ; j < l.size() ; j++){
-					vms = split(l[int(j)],',');//std::cout<<vms.size()<<std::endl;
+					vms = split(l[int(j)],',');
 					cms.emplace_back(std::stof(vms[0]),std::stof(vms[1]));
 					vms.clear();
 				}
@@ -75,10 +75,10 @@ bool Carte::reinit(){
 			}
 			else if(l[0] ==  "base"){
 				
-				vms = split(l[1],',');//std::cout<<vms.size()<<std::endl;
-				base = Base(100, Vect(25,25));
-				/*base.setPosition(Vect(std::stof(vms[0]),std::stof(vms[1])));
-				base.setVie(100);*/
+				vms = split(l[1],',');
+				
+				base.setPosition(Vect(std::stof(vms[0]),std::stof(vms[1])));
+				base.setVie(100);
 				base.affiche();
 				for( unsigned int i = 0 ; i < tabChemin.size() ; i++) tabChemin[i].ajouterEtape(Vect(std::stof(vms[0]),std::stof(vms[1])));
 				vms.clear();
@@ -127,6 +127,35 @@ Chemin * Carte::addrCheminIndice(const int & i){
 }
 
 Base Carte::getBase(){
-	std::cout<<"getbase "; base.affiche();
+	//std::cout<<"getbase "; base.affiche();
 	return base;
 }
+
+void Carte::affiche(){
+	unsigned int i;
+	std::cout<<std::endl<<"Affichage des Tours :"<<std::endl<<std::endl;
+	for (i = 0 ; i < tabTour.size();i++){
+		std::cout<<"	tour n°"<<i<<std::endl;
+		tabTour[i].affiche();
+	}
+	std::cout<<std::endl<<"Affichage des Vagues :"<<std::endl<<std::endl;
+	for (i = 0 ; i < tabVague.size();i++){
+		tabVague[i].affiche();
+	}
+	std::cout<<std::endl<<"Affichage des Chemins :"<<std::endl<<std::endl;
+	for (i = 0 ; i < tabChemin.size();i++){
+		std::cout<<"	chemin n°"<<i<<std::endl;
+		tabChemin[i].affiche();
+	}
+	
+	std::cout<<std::endl<<"Affichage de la base :"<<std::endl<<std::endl;
+	base.affiche();
+}
+
+
+
+
+
+
+
+

@@ -81,8 +81,8 @@ int main(){
 	
 	termClear();
 	Jeu j;
-	j.getNiveau().getCarte().getBase().affiche();
+	//j.getNiveau().getCarte().getBase().affiche();
 	txtBoucle(j);
-	termClear();
+	//termClear();
 	return 0;
 }
