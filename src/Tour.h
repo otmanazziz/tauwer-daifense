@@ -113,8 +113,8 @@ public:
 		t.estAPortee(v);
 	@endcode
 	*/
-	bool estAPortee(Vect &pos);
-
+	bool estAPortee(const Vect &pos)const;
+	int getDegat();
 };
 
 #endif

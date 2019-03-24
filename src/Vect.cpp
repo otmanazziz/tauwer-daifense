@@ -21,28 +21,28 @@ Vect::~Vect(){
 
 }
 
-Vect Vect::operator+(const Vect &vector2){
+Vect Vect::operator+(const Vect &vector2)const{
 	Vect vRes;
 	vRes.x = x + vector2.x;
 	vRes.y = y + vector2.y;
 	return vRes;
 }
 
-Vect Vect::operator*(const Vect &vector2){
+Vect Vect::operator*(const Vect &vector2)const{
 	Vect vRes;
 	vRes.x = (x * vector2.x) - (y * vector2.y);
 	vRes.y = (x * vector2.y) + (vector2.x * y);
 	return vRes;
 }
 
-Vect Vect::operator-(const Vect &vector2){
+Vect Vect::operator-(const Vect &vector2)const{
 	Vect vRes;
 	vRes.x = x - vector2.x;
 	vRes.y = y - vector2.y;
 	return vRes;
 }
 
-Vect Vect::operator/(const Vect &vector2){
+Vect Vect::operator/(const Vect &vector2)const{
 	Vect vRes;
 	vRes.x = (((x * vector2.x) + (y * vector2.y)) / (pow(vector2.x, 2) + pow(vector2.y, 2)));
 	vRes.y = (((y * vector2.x) - (x * vector2.y)) / (pow(vector2.x, 2) + pow(vector2.y, 2)));
@@ -54,7 +54,7 @@ void Vect::operator=(const Vect &vector2){
 	y = vector2.y;
 }
 
-bool Vect::operator==(const Vect &vector2){
+bool Vect::operator==(const Vect &vector2)const{
 	return vector2.x == x && vector2.y == y ;
 }
 
@@ -71,7 +71,7 @@ void Vect::setVect(const Vect &vector){
 	y = vector.y;
 }
 
-float Vect::module(){
+float Vect::module()const{
 	return sqrt((x*x)+(y*y));
 }
 

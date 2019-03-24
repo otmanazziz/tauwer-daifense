@@ -10,7 +10,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-
+class Niveau;
 class Carte{
 	private: 
 		std::vector<Tour> tabTour;
@@ -37,7 +37,7 @@ class Carte{
 		Vague * addrVagueIndice(const int & i);
 
 		Chemin * addrCheminIndice(const int & i);
-		void maj();
+		void maj(Niveau & n);
 		Base getBase();
 		void setFichier(const std::string & f);
 		void affiche();

@@ -33,6 +33,10 @@
 		return portee;
 	}
 
+	int Tour::getDegat(){
+		return attaque.getDegats();
+	}
+
 	Vect Tour::getPosition(){
 		return position;
 	}
@@ -53,6 +57,6 @@
 		position.afficheVect();
 	}
 
-	bool Tour::estAPortee(Vect &pos){
-		return pos.module() <= portee;
+	bool Tour::estAPortee(const Vect &pos)const {
+		return (pos-position).module() <= portee;
 	}

@@ -128,7 +128,7 @@ public:
 			m.perdreVie(15);
 		@endcode
 	*/
-	void perdreVie(const int &n);
+	bool perdreVie(const int &n);
 	/**
 		@brief Booléen: estMort
 		Permet de vérifier si le monstre est mort (points de vie a 0)

@@ -38,5 +38,5 @@ void Niveau::affiche(){
 }
 
 void Niveau::maj(){
-	carte.maj();
+	carte.maj(*this);
 }

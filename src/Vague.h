@@ -114,7 +114,7 @@ class Vague{
 			@endcode
 		*/
 
-		bool vagueVide();
+		bool vagueVide()const;
 		/**
 			@brief Procédure: ennemiMort			
 			Permet d'actualiser la taille du tableau de monstres, si un monstre est mort
@@ -122,7 +122,7 @@ class Vague{
 				v2.ennemiMort();
 			@endcode
 		*/
-		void ennemiMort();
+		int ennemiMort(const int & i);
 		/**
 			@brief Procédure: avancementEtape			
 			Permet de vérifier l'avancement des étapes des ennemis en fonction de son chemin à prendre
@@ -141,6 +141,7 @@ class Vague{
 	
 		void monstresBase(Base & b);
 
+		unsigned int tailleVague()const;
 
 
 };

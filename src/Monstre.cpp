@@ -65,8 +65,11 @@ void Monstre::setEtape(const int &_etape){
 }
 
 
-void Monstre::perdreVie(const int &n){
+bool Monstre::perdreVie(const int &n){
+	
 	vie -= n;
+	return vie <= 0;
+	
 }
 
 bool Monstre::estMort(){

@@ -60,18 +60,17 @@ void Vague::setTempsVague(const float &_tempsVague){
 }
 
 
-bool Vague::vagueVide(){
+bool Vague::vagueVide()const{
 	return monstres.empty();
 }
+unsigned int Vague::tailleVague()const{
+	return monstres.size();
+}
 //ON peut le switch en booléen pour plus tard, si nécessaire
-void Vague::ennemiMort(){
-	if (!vagueVide()){
-		for (unsigned int i = 0; i < monstres.size(); i++){
-			if (monstres[i].estMort())
-				monstres.erase(monstres.begin()+i);
-		}
-		//return true;
-	} //return false;
+int Vague::ennemiMort(const int & i){
+	int o = monstres[i].getVie()/10 ;
+	monstres.erase(monstres.begin() + i);
+	return o;
 }
 
 
@@ -87,6 +86,8 @@ void Vague::monstresBase(Base & b){
 	for( unsigned int i = 0 ; i < monstres.size(); i++){
 		if( monstres[i].getPos() == b.getPosition()){
 			monstres.erase(monstres.begin()+i);
+			i--;
+			b.perdreVie(1);
 		}
 	}
 }

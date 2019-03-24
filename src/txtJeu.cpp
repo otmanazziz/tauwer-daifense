@@ -29,7 +29,7 @@ void txtAff(WinTXT & win, Jeu &jeu){
 		win.print(v.getX(), v.getY(), 'X');
 		}
 	}
-	for(unsigned int i = 0 ; i < jeu.getNiveau()->getCarte().vagueIndice(0).getVague().size();i++){//std::cout<<jeu.getNiveau()->addrGetCarte()->addrVagueIndice(0)->getVague()[i].getSpawn()<<std::endl;
+	for(unsigned int i = 0 ; i < jeu.getNiveau()->getCarte().vagueIndice(0).getVague().size();i++){
 		//if(jeu.getNiveau()->getCarte().vagueIndice(0).getVague()[i].getSpawn()){
 			
 			v =jeu.getNiveau()->getCarte().vagueIndice(0).getVague()[i].getPos(); 
@@ -51,6 +51,7 @@ void txtBoucle(Jeu & jeu){
 
 	do {
 	    txtAff(win,jeu);
+	
 		
         #ifdef _WIN32
         Sleep(200);

@@ -53,7 +53,7 @@ class Vect{
 			Vect v3 = v1 + v2;
 		@endcode
 		*/
-		Vect operator+(const Vect &vector2);
+		Vect operator+(const Vect &vector2)const;
 		/**
 		@brief Vecteur: Opérateur *
 		Permet de retourner le produit de 2 vecteurs
@@ -63,7 +63,7 @@ class Vect{
 			Vect v3 = v1 * v2;
 		@endcode
 		*/
-		Vect operator*(const Vect &vector2);
+		Vect operator*(const Vect &vector2)const;
 		/**
 		@brief Vecteur: Opérateur -
 		Permet de retourner la différence de 2 vecteurs
@@ -73,7 +73,7 @@ class Vect{
 			Vect v3 = v1 - v2;
 		@endcode
 		*/
-		Vect operator-(const Vect &vector2);
+		Vect operator-(const Vect &vector2)const;
 		/**
 		@brief Vecteur: Opérateur /
 		Permet de retourner le quotient de 2 vecteurs
@@ -83,7 +83,7 @@ class Vect{
 			Vect v3 = v1 / v2;
 		@endcode
 		*/
-		Vect operator/(const Vect &vector2);
+		Vect operator/(const Vect &vector2)const;
 		/**
 		@brief Vecteur: Opérateur =
 		Permet d'affecter un vecteur à un autre'
@@ -103,7 +103,7 @@ class Vect{
 			v3 == v2;
 		@endcode
 		*/
-		bool operator==(const Vect &vector2);
+		bool operator==(const Vect &vector2)const;
 		/**
 		@brief Fonction: getX
 		Permet de retourner le vecteur X
@@ -150,7 +150,7 @@ class Vect{
 			v.module();
 		@endcode
 		*/
-		float module();
+		float module()const;
 		/**
 		@brief Procédure: testRegression
 		Fait des tests de Régression
