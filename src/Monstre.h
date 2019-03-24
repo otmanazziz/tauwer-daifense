@@ -11,6 +11,7 @@ private:
 	int vie; 
 	int etape;
 	int numChem;
+	int gold;
 	bool spawn;
 
 public:
@@ -82,6 +83,15 @@ public:
 		@endcode
 	*/
 	int getEtape()const;
+	/**
+		@brief Entier: getGold
+		Permet de retourner l'or donné par le monstre
+		@return Entier
+		@code
+			m.getGold();
+		@endcode
+	*/
+	int getGold()const;
 
 	/**
 		@brief Procédure: setPos

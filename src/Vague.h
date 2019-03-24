@@ -56,7 +56,6 @@ class Vague{
 		*/
 
 		std::vector<Monstre> getVague()const;
-		std::vector<Monstre> * addrGetVague();
 		Monstre getIndiceMonstre(const int & n)const;
 		Monstre * addrGetIndiceMonstre(const int & n);
 		/**

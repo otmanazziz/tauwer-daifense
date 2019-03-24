@@ -26,9 +26,7 @@ Vague::~Vague(){
 std::vector<Monstre> Vague::getVague()const{
 	return monstres;
 }
-std::vector<Monstre> * Vague::addrGetVague(){
-	return &monstres;
-}
+
 
 Monstre Vague::getIndiceMonstre(const int & n)const{
 	return monstres[n];
@@ -68,7 +66,7 @@ unsigned int Vague::tailleVague()const{
 }
 //ON peut le switch en booléen pour plus tard, si nécessaire
 int Vague::ennemiMort(const int & i){
-	int o = monstres[i].getVie()/10 ;
+	int o = monstres[i].getGold();
 	monstres.erase(monstres.begin() + i);
 	return o;
 }

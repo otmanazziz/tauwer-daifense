@@ -4,6 +4,7 @@ Monstre::Monstre(){
 	vie = 0;
 	etape = 0;
 	vitesse = 0;
+	gold = 0;
 	spawn = false;
 }
 
@@ -13,6 +14,7 @@ Monstre::Monstre(const Monstre &_monstre){
 	vitesse = _monstre.vitesse;
 	numChem = _monstre.numChem;
 	pos = _monstre.pos;
+	gold = _monstre.gold;
 	spawn = false;
 }
 
@@ -23,12 +25,14 @@ Monstre::Monstre(const int &_vie, const float &_vitesse,const int &_numChemin ,c
 	numChem = _numChemin;
 	etape = 1;
 	spawn = false;
+	gold = vie / 10;
 }
 
 Monstre::~Monstre(){
 	vie = 0;
 	etape = 0;
 	vitesse = 0;
+	gold = 0;
 }
 
 Vect Monstre::getPos()const{
@@ -46,7 +50,9 @@ int Monstre::getVie()const{
 int Monstre::getEtape()const{
 	return etape;
 }
-
+int Monstre::getGold()const{
+	return gold;
+}
 
 void Monstre::setPos(const Vect &_pos){
 	pos.setVect(_pos);
@@ -106,7 +112,7 @@ void Monstre::avancer(const Vect & v){
 }
                                                                        
 void Monstre::affiche(){
-	std::cout<<std::endl<<" Vie : "<< vie<<" - Position : "<< pos.getX() << "   " << pos.getY() <<" - Vitesse : "<<vitesse<<" -Etape : "<<etape <<" - numChem : "<< numChem <<" - spawner : "<< spawn<<std::endl; 
+	std::cout<<std::endl<<" Vie : "<< vie<<" - Position : "<< pos.getX() << "   " << pos.getY() <<" - Vitesse : "<<vitesse<<" -Etape : "<<etape <<" - numChem : "<< numChem <<" - spawner : "<< spawn<<" gold: "<<gold<<std::endl; 
 }	
 	
 int Monstre::getNumChem()const{

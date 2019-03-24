@@ -24,7 +24,7 @@ Carte *Niveau::addrGetCarte(){
 
 
 void Niveau::ajouterOr(unsigned int o){
-	Or =+ o;
+	Or += o;
 }
 
 void Niveau::retirerOr(unsigned int o){
