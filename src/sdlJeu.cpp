@@ -114,9 +114,9 @@ sdlJeu::sdlJeu () {
     renderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
 
     // IMAGES
-    monstre.loadFromFile("../images/monster.png",renderer);
-    base.loadFromFile("../images/base.png",renderer);
-	tour.loadFromFile("../images/tower.png",renderer);
+    monstre.loadFromFile("monster.png",renderer);
+    base.loadFromFile("base.png",renderer);
+	tour.loadFromFile("tower.png",renderer);
 
     // FONTS
     font = TTF_OpenFont("DejaVuSansCondensed.ttf",50);
