@@ -41,7 +41,8 @@ private :
     SDL_Renderer * renderer;
 
     TTF_Font * font;
-    Image font_im;
+    Image font_vie;
+	Image font_or;
     SDL_Color font_color;
 
     Mix_Chunk * sound;

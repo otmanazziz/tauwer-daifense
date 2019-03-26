@@ -6,7 +6,7 @@
 #include <iostream>
 using namespace std;
 
-const int TAILLE_SPRITE = 20;
+const int TAILLE_SPRITE = 25;
 
 float temps () {
     return float(SDL_GetTicks()) / CLOCKS_PER_SEC;  // conversion des ms en secondes en divisant par 1000
@@ -123,9 +123,8 @@ sdlJeu::sdlJeu () {
     if (font == NULL) {
             cout << "Failed to load DejaVuSansCondensed.ttf! SDL_TTF Error: " << TTF_GetError() << endl; SDL_Quit(); exit(1);
 	}
-	font_color.r = 50;font_color.g = 50;font_color.b = 255;
-	font_im.setSurface(TTF_RenderText_Solid(font,"Pacman",font_color));
-	font_im.loadFromCurrentSurface(renderer);
+	font_color.r = 0;font_color.g = 0;font_color.b = 0;
+	
 
     // SONS
     if (withSound)
@@ -148,12 +147,28 @@ sdlJeu::~sdlJeu () {
 
 void sdlJeu::sdlAff () {
 	//Remplir l'cran de blanc
-    SDL_SetRenderDrawColor(renderer, 230, 240, 255, 255);
+    SDL_SetRenderDrawColor(renderer, 230, 255, 240, 255);
     SDL_RenderClear(renderer);
 
 	
 	unsigned int nbTourDansNiveau = jeu.getNiveau()->getCarte().tailleTabTour();
-	Vect v;
+	unsigned int nbCheminDansNiveau = jeu.getNiveau()->getCarte().tailleTabChemin();
+	Vect v , vv;
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+	for (unsigned int i = 0; i < nbCheminDansNiveau; i++){
+		for( int j = 1 ; j < int(jeu.getNiveau()->getCarte().cheminIndice(i).tailleChemin()) ; j++){
+			v = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j-1);
+			vv = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j);
+			SDL_RenderDrawLine(renderer,
+                                  v.getX()*TAILLE_SPRITE+TAILLE_SPRITE/2,
+                                 v.getY()*TAILLE_SPRITE+TAILLE_SPRITE/2,
+                                  vv.getX()*TAILLE_SPRITE+TAILLE_SPRITE/2,
+                                  vv.getY()*TAILLE_SPRITE+TAILLE_SPRITE/2);
+
+			
+		}
+	}
+	
 	for (unsigned int i = 0; i < nbTourDansNiveau; i++){
 		v = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
 		tour.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
@@ -171,9 +186,16 @@ void sdlJeu::sdlAff () {
 	base.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
 	
 	
+	font_vie.setSurface(TTF_RenderText_Solid(font,("Vie :"+to_string(jeu.getNiveau()->addrGetCarte()->getBase().getVie())).c_str(),font_color));
+	font_vie.loadFromCurrentSurface(renderer);
+	font_or.setSurface(TTF_RenderText_Solid(font,("Or : "+to_string(jeu.getNiveau()->getOr())).c_str(),font_color));
+	font_or.loadFromCurrentSurface(renderer);
 	
-	
-	
+	SDL_Rect pos;
+    pos.x = 0;pos.y =0 ;pos.w = 100;pos.h = 30;
+    SDL_RenderCopy(renderer,font_vie.getTexture(),NULL,&pos);
+	pos.x = 0;pos.y =40 ;pos.w = 100;pos.h = 30;
+	SDL_RenderCopy(renderer,font_or.getTexture(),NULL,&pos);
 	
 	
 	
@@ -245,7 +267,7 @@ void sdlJeu::sdlBoucle () {
 	while (!quit) {
 
         nt = SDL_GetTicks();
-        if (nt-t>500) {
+        if (nt-t>200) {
             jeu.actionAuto();
             t = nt;
         }
