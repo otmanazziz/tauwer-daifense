@@ -91,10 +91,12 @@ void Vague::monstresBase(Base & b){
 	}
 }
 
-void Vague::spawnerMonstre(){
+void Vague::spawnerMonstre(float delta){
+	cooldownSpawn -= delta;
 	for( unsigned int i = 0 ; i < monstres.size(); i++){
-		if( !monstres[i].getSpawn() ){
+		if( !monstres[i].getSpawn() && cooldownSpawn <= 0 ){
 			monstres[i].spawner();
+			cooldownSpawn = tempsEnnemi;
 			break;
 		}
 	}
