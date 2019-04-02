@@ -1,0 +1,231 @@
+\hypertarget{classBouton}{}\section{Bouton Class Reference}
+\label{classBouton}\index{Bouton@{Bouton}}
+
+
+Class \hyperlink{classBouton}{Bouton} Classe de boutons, permettant de gérer les positions des boutons, leurs tailles et le nom des boutons.  
+
+
+
+
+{\ttfamily \#include $<$Bouton.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBouton_ad1e4f684cad81db47393df0be7a65658}{Bouton} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classBouton}{Bouton} Permet de créer le bouton par défaut. \end{DoxyCompactList}\item 
+\hyperlink{classBouton_adbbccfea61e26714d2271f1ce097b353}{Bouton} (const \hyperlink{classBouton}{Bouton} \&\+\_\+\+Bouton)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classBouton}{Bouton} Permet de créer par copie un nouveau bouton. \end{DoxyCompactList}\item 
+\hyperlink{classBouton_aeb26a7a212241ab7ce4de225e72c856d}{Bouton} (const std\+::string \&\+\_\+nom, const \hyperlink{classVect}{Vect} \&\+\_\+pos, const \hyperlink{classVect}{Vect} \&\+\_\+taille)
+\begin{DoxyCompactList}\small\item\em Constructeur\+:\hyperlink{classBouton}{Bouton} Permet de créer le constructeur du bouton avec les données privées de la fonction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBouton_a0976697439f9e96911b4c399d1a69b4b}\label{classBouton_a0976697439f9e96911b4c399d1a69b4b}} 
+\hyperlink{classBouton_a0976697439f9e96911b4c399d1a69b4b}{$\sim$\+Bouton} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire le bouton. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classBouton_a84818c161e6ea4ee6d58ccc53d57d802}{get\+Nom} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Nom Permet de retourner le nom du bouton. \end{DoxyCompactList}\item 
+\hyperlink{classVect}{Vect} \hyperlink{classBouton_a98c3ba829a653f51ef8079395bbe061c}{get\+Pos} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Pos Permet de retourner la position du bouton. \end{DoxyCompactList}\item 
+\hyperlink{classVect}{Vect} \hyperlink{classBouton_af8d5683f32e115bd8d709bbfd6965b54}{get\+Taille} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Taille Permet de retourner la taille du bouton. \end{DoxyCompactList}\item 
+void \hyperlink{classBouton_a4bdd74233fa0a3f6fe67d463b75d3f4a}{set\+Nom} (const std\+::string \&\+\_\+nom)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Nom Permet de modifier le nom représentant la base. \end{DoxyCompactList}\item 
+void \hyperlink{classBouton_a393e195ff7d1ff7a5d3c79edc922b0cd}{set\+Pos} (const \hyperlink{classVect}{Vect} \&\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Pos Permet de modifier la position du bouton. \end{DoxyCompactList}\item 
+void \hyperlink{classBouton_a972600e88d0a65431c27bec898fbba36}{set\+Taille} (const \hyperlink{classVect}{Vect} \&\+\_\+taille)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Taille Permet de modifier la taille du bouton. \end{DoxyCompactList}\item 
+bool \hyperlink{classBouton_a3a5187a073d75fb8afc44704908d5117}{clique} (const \hyperlink{classVect}{Vect} \&\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Booléen\+: clique Permet de savoir si le curseur est sur le bouton ou pas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classBouton}{Bouton} Classe de boutons, permettant de gérer les positions des boutons, leurs tailles et le nom des boutons. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBouton_ad1e4f684cad81db47393df0be7a65658}\label{classBouton_ad1e4f684cad81db47393df0be7a65658}} 
+\index{Bouton@{Bouton}!Bouton@{Bouton}}
+\index{Bouton@{Bouton}!Bouton@{Bouton}}
+\subsubsection{\texorpdfstring{Bouton()}{Bouton()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Bouton\+::\+Bouton (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut\+: \hyperlink{classBouton}{Bouton} Permet de créer le bouton par défaut. 
+
+
+\begin{DoxyCode}
+\hyperlink{classBouton}{Bouton} b;
+\end{DoxyCode}
+ \mbox{\Hypertarget{classBouton_adbbccfea61e26714d2271f1ce097b353}\label{classBouton_adbbccfea61e26714d2271f1ce097b353}} 
+\index{Bouton@{Bouton}!Bouton@{Bouton}}
+\index{Bouton@{Bouton}!Bouton@{Bouton}}
+\subsubsection{\texorpdfstring{Bouton()}{Bouton()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Bouton\+::\+Bouton (\begin{DoxyParamCaption}\item[{const \hyperlink{classBouton}{Bouton} \&}]{\+\_\+\+Bouton }\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie\+: \hyperlink{classBouton}{Bouton} Permet de créer par copie un nouveau bouton. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classBouton}{Bouton}} & b 
+\begin{DoxyCode}
+\hyperlink{classBouton}{Bouton} b1(b);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBouton_aeb26a7a212241ab7ce4de225e72c856d}\label{classBouton_aeb26a7a212241ab7ce4de225e72c856d}} 
+\index{Bouton@{Bouton}!Bouton@{Bouton}}
+\index{Bouton@{Bouton}!Bouton@{Bouton}}
+\subsubsection{\texorpdfstring{Bouton()}{Bouton()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Bouton\+::\+Bouton (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+nom,  }\item[{const \hyperlink{classVect}{Vect} \&}]{\+\_\+pos,  }\item[{const \hyperlink{classVect}{Vect} \&}]{\+\_\+taille }\end{DoxyParamCaption})}
+
+
+
+Constructeur\+:\hyperlink{classBouton}{Bouton} Permet de créer le constructeur du bouton avec les données privées de la fonction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Chaîne} & de caractère Nom, Vecteur Position, Vecteur Taille 
+\begin{DoxyCode}
+\hyperlink{classBouton}{Bouton} b2(Chaîne de caractère , Vecteur Position , Vecteur Taille)
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBouton_a3a5187a073d75fb8afc44704908d5117}\label{classBouton_a3a5187a073d75fb8afc44704908d5117}} 
+\index{Bouton@{Bouton}!clique@{clique}}
+\index{clique@{clique}!Bouton@{Bouton}}
+\subsubsection{\texorpdfstring{clique()}{clique()}}
+{\footnotesize\ttfamily bool Bouton\+::clique (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Booléen\+: clique Permet de savoir si le curseur est sur le bouton ou pas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vecteur} & Pos 
+\begin{DoxyCode}
+b2.clique(Pos);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBouton_a84818c161e6ea4ee6d58ccc53d57d802}\label{classBouton_a84818c161e6ea4ee6d58ccc53d57d802}} 
+\index{Bouton@{Bouton}!get\+Nom@{get\+Nom}}
+\index{get\+Nom@{get\+Nom}!Bouton@{Bouton}}
+\subsubsection{\texorpdfstring{get\+Nom()}{getNom()}}
+{\footnotesize\ttfamily std\+::string Bouton\+::get\+Nom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Nom Permet de retourner le nom du bouton. 
+
+\begin{DoxyReturn}{Returns}
+Chaîne de caractère N\+Om 
+\begin{DoxyCode}
+b2.getNom();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBouton_a98c3ba829a653f51ef8079395bbe061c}\label{classBouton_a98c3ba829a653f51ef8079395bbe061c}} 
+\index{Bouton@{Bouton}!get\+Pos@{get\+Pos}}
+\index{get\+Pos@{get\+Pos}!Bouton@{Bouton}}
+\subsubsection{\texorpdfstring{get\+Pos()}{getPos()}}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Bouton\+::get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Pos Permet de retourner la position du bouton. 
+
+\begin{DoxyReturn}{Returns}
+Vecteur Position 
+\begin{DoxyCode}
+b2.getPos();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBouton_af8d5683f32e115bd8d709bbfd6965b54}\label{classBouton_af8d5683f32e115bd8d709bbfd6965b54}} 
+\index{Bouton@{Bouton}!get\+Taille@{get\+Taille}}
+\index{get\+Taille@{get\+Taille}!Bouton@{Bouton}}
+\subsubsection{\texorpdfstring{get\+Taille()}{getTaille()}}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Bouton\+::get\+Taille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Taille Permet de retourner la taille du bouton. 
+
+\begin{DoxyReturn}{Returns}
+Vecteur Taille 
+\begin{DoxyCode}
+b2.getTaille();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBouton_a4bdd74233fa0a3f6fe67d463b75d3f4a}\label{classBouton_a4bdd74233fa0a3f6fe67d463b75d3f4a}} 
+\index{Bouton@{Bouton}!set\+Nom@{set\+Nom}}
+\index{set\+Nom@{set\+Nom}!Bouton@{Bouton}}
+\subsubsection{\texorpdfstring{set\+Nom()}{setNom()}}
+{\footnotesize\ttfamily void Bouton\+::set\+Nom (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+nom }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Nom Permet de modifier le nom représentant la base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Chaîne} & de caractère nom 
+\begin{DoxyCode}
+b2.setNom(Nom);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBouton_a393e195ff7d1ff7a5d3c79edc922b0cd}\label{classBouton_a393e195ff7d1ff7a5d3c79edc922b0cd}} 
+\index{Bouton@{Bouton}!set\+Pos@{set\+Pos}}
+\index{set\+Pos@{set\+Pos}!Bouton@{Bouton}}
+\subsubsection{\texorpdfstring{set\+Pos()}{setPos()}}
+{\footnotesize\ttfamily void Bouton\+::set\+Pos (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Pos Permet de modifier la position du bouton. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vecteur} & Pos 
+\begin{DoxyCode}
+b2.setZone(Pos);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBouton_a972600e88d0a65431c27bec898fbba36}\label{classBouton_a972600e88d0a65431c27bec898fbba36}} 
+\index{Bouton@{Bouton}!set\+Taille@{set\+Taille}}
+\index{set\+Taille@{set\+Taille}!Bouton@{Bouton}}
+\subsubsection{\texorpdfstring{set\+Taille()}{setTaille()}}
+{\footnotesize\ttfamily void Bouton\+::set\+Taille (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{\+\_\+taille }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Taille Permet de modifier la taille du bouton. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vecteur} & Taille 
+\begin{DoxyCode}
+b2.setZone(Taille);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/otman/\+Bureau/project/lifap4/src/Bouton.\+h\item 
+/home/otman/\+Bureau/project/lifap4/src/Bouton.\+cpp\end{DoxyCompactItemize}

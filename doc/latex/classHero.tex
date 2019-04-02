@@ -1,0 +1,139 @@
+\hypertarget{classHero}{}\section{Hero Class Reference}
+\label{classHero}\index{Hero@{Hero}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHero_ab5920677a4b5cb59d6f513922d037dca}{Hero} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classHero}{Hero} Permet de créer le héros par défaut. \end{DoxyCompactList}\item 
+\hyperlink{classHero_aaf432046f7dcf546db3e24c7976e8df7}{Hero} (const \hyperlink{classHero}{Hero} \&\+\_\+\+Hero)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classHero}{Hero} Permet de créer par copie un nouveau héros. \end{DoxyCompactList}\item 
+\hyperlink{classHero_a2fab78b80b87c8aa7a45b1ba38272795}{Hero} (const std\+::vector$<$ \hyperlink{classSort}{Sort} $>$ \&\+\_\+tab\+Sort)
+\begin{DoxyCompactList}\small\item\em Constructeur\+:\hyperlink{classHero}{Hero} Permet de créer le constructeur de \hyperlink{classHero}{Hero} avec les données privées de la fonction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHero_a5aeef41ede5a80dc29c5acd7b553c4da}\label{classHero_a5aeef41ede5a80dc29c5acd7b553c4da}} 
+\hyperlink{classHero_a5aeef41ede5a80dc29c5acd7b553c4da}{$\sim$\+Hero} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire le héros. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classSort}{Sort} $>$ \hyperlink{classHero_ab596535fb4e3aeb836bd23780220455b}{get\+Tab\+Sort} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Tab\+Sort Permet de retourner le tableau de sort. \end{DoxyCompactList}\item 
+void \hyperlink{classHero_ae7c967e805c745f63534fa342b395954}{set\+Tab\+Sort} (const std\+::vector$<$ \hyperlink{classSort}{Sort} $>$ \&\+\_\+tab\+Sort)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Tab\+Sort Permet de modifier le tableau de sort. \end{DoxyCompactList}\item 
+void \hyperlink{classHero_a48cd72ba539d261504a582a63d7c9e5f}{set\+Hero\+Indice} (const int \&indice, \hyperlink{classSort}{Sort} sort)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Tab\+Sort Permet de modifier l\textquotesingle{}indice du héros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHero_ab5920677a4b5cb59d6f513922d037dca}\label{classHero_ab5920677a4b5cb59d6f513922d037dca}} 
+\index{Hero@{Hero}!Hero@{Hero}}
+\index{Hero@{Hero}!Hero@{Hero}}
+\subsubsection{\texorpdfstring{Hero()}{Hero()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Hero\+::\+Hero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut\+: \hyperlink{classHero}{Hero} Permet de créer le héros par défaut. 
+
+
+\begin{DoxyCode}
+\hyperlink{classHero}{Hero} h;
+\end{DoxyCode}
+ \mbox{\Hypertarget{classHero_aaf432046f7dcf546db3e24c7976e8df7}\label{classHero_aaf432046f7dcf546db3e24c7976e8df7}} 
+\index{Hero@{Hero}!Hero@{Hero}}
+\index{Hero@{Hero}!Hero@{Hero}}
+\subsubsection{\texorpdfstring{Hero()}{Hero()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Hero\+::\+Hero (\begin{DoxyParamCaption}\item[{const \hyperlink{classHero}{Hero} \&}]{\+\_\+\+Hero }\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie\+: \hyperlink{classHero}{Hero} Permet de créer par copie un nouveau héros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Classe} & \hyperlink{classHero}{Hero} 
+\begin{DoxyCode}
+\hyperlink{classHero}{Hero} h1(h);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHero_a2fab78b80b87c8aa7a45b1ba38272795}\label{classHero_a2fab78b80b87c8aa7a45b1ba38272795}} 
+\index{Hero@{Hero}!Hero@{Hero}}
+\index{Hero@{Hero}!Hero@{Hero}}
+\subsubsection{\texorpdfstring{Hero()}{Hero()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Hero\+::\+Hero (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classSort}{Sort} $>$ \&}]{\+\_\+tab\+Sort }\end{DoxyParamCaption})}
+
+
+
+Constructeur\+:\hyperlink{classHero}{Hero} Permet de créer le constructeur de \hyperlink{classHero}{Hero} avec les données privées de la fonction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tableau} & de sort 
+\begin{DoxyCode}
+\hyperlink{classHero}{Hero} h2(tabS1)
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classHero_ab596535fb4e3aeb836bd23780220455b}\label{classHero_ab596535fb4e3aeb836bd23780220455b}} 
+\index{Hero@{Hero}!get\+Tab\+Sort@{get\+Tab\+Sort}}
+\index{get\+Tab\+Sort@{get\+Tab\+Sort}!Hero@{Hero}}
+\subsubsection{\texorpdfstring{get\+Tab\+Sort()}{getTabSort()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{classSort}{Sort} $>$ Hero\+::get\+Tab\+Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Tab\+Sort Permet de retourner le tableau de sort. 
+
+\begin{DoxyReturn}{Returns}
+Tableau de \hyperlink{classSort}{Sort} 
+\begin{DoxyCode}
+h2.getTabSort();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHero_a48cd72ba539d261504a582a63d7c9e5f}\label{classHero_a48cd72ba539d261504a582a63d7c9e5f}} 
+\index{Hero@{Hero}!set\+Hero\+Indice@{set\+Hero\+Indice}}
+\index{set\+Hero\+Indice@{set\+Hero\+Indice}!Hero@{Hero}}
+\subsubsection{\texorpdfstring{set\+Hero\+Indice()}{setHeroIndice()}}
+{\footnotesize\ttfamily void Hero\+::set\+Hero\+Indice (\begin{DoxyParamCaption}\item[{const int \&}]{indice,  }\item[{\hyperlink{classSort}{Sort}}]{sort }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Tab\+Sort Permet de modifier l\textquotesingle{}indice du héros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & indice, Classz \hyperlink{classSort}{Sort} 
+\begin{DoxyCode}
+h2.setHeroIndice(indice, sort);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classHero_ae7c967e805c745f63534fa342b395954}\label{classHero_ae7c967e805c745f63534fa342b395954}} 
+\index{Hero@{Hero}!set\+Tab\+Sort@{set\+Tab\+Sort}}
+\index{set\+Tab\+Sort@{set\+Tab\+Sort}!Hero@{Hero}}
+\subsubsection{\texorpdfstring{set\+Tab\+Sort()}{setTabSort()}}
+{\footnotesize\ttfamily void Hero\+::set\+Tab\+Sort (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classSort}{Sort} $>$ \&}]{\+\_\+tab\+Sort }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Tab\+Sort Permet de modifier le tableau de sort. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tableau} & de sort 
+\begin{DoxyCode}
+h2.setTabSort(tabSort);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/otman/\+Bureau/project/lifap4/src/Hero.\+h\item 
+/home/otman/\+Bureau/project/lifap4/src/Hero.\+cpp\end{DoxyCompactItemize}

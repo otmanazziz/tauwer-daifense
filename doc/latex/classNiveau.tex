@@ -1,0 +1,190 @@
+\hypertarget{classNiveau}{}\section{Niveau Class Reference}
+\label{classNiveau}\index{Niveau@{Niveau}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNiveau_abf99be59a575d462a25c4ade5c124431}{Niveau} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classNiveau}{Niveau} Permet de créer le niveau par défaut. \end{DoxyCompactList}\item 
+\hyperlink{classNiveau_a5f59a46da066f15b0c21154cbf583490}{Niveau} (const std\+::string \&f)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classNiveau}{Niveau} Permet de créer par copie un nouveau niveau. \end{DoxyCompactList}\item 
+\hyperlink{classCarte}{Carte} \hyperlink{classNiveau_a503e0b7db795e1f9bf3ea76cc4fd9e99}{get\+Carte} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Carte Permet de retourner la carte. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classNiveau_a86202965dadd70b9f13c4e5e78a46542}{get\+Or} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Or Permet de retourner le nombre d\textquotesingle{}or. \end{DoxyCompactList}\item 
+\hyperlink{classCarte}{Carte} $\ast$ \hyperlink{classNiveau_a47ea8b8f36e27be8ad0d3f534a956260}{addr\+Get\+Carte} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: addr\+Get\+Carte Permet de retourner le pointeur de carte. \end{DoxyCompactList}\item 
+void \hyperlink{classNiveau_a4434c142b17c0299d2d7744b2ea11e99}{maj} (float delta)
+\begin{DoxyCompactList}\small\item\em Procédure\+: maj Permet de faire la mise à jour de la carte. \end{DoxyCompactList}\item 
+void \hyperlink{classNiveau_aca63b4ff95491069ebf5a8931ffc6d03}{ajouter\+Or} (unsigned int o)
+\begin{DoxyCompactList}\small\item\em Procédure\+: ajouter\+Or Permet de gagner de l\textquotesingle{}or en tuant des ennemis. \end{DoxyCompactList}\item 
+void \hyperlink{classNiveau_a3192b7514716cfddac9ff465f9ad1f2f}{retirer\+Or} (unsigned int o)
+\begin{DoxyCompactList}\small\item\em Procédure\+: retirer\+Or Permet de perdre de l\textquotesingle{}or en tuant des ennemis. \end{DoxyCompactList}\item 
+void \hyperlink{classNiveau_a945a71fd635f9ab1e15dbae04afa5e5d}{affiche} ()
+\begin{DoxyCompactList}\small\item\em Procédure\+: affiche Permet d\textquotesingle{}afficher le niveau. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNiveau_abf99be59a575d462a25c4ade5c124431}\label{classNiveau_abf99be59a575d462a25c4ade5c124431}} 
+\index{Niveau@{Niveau}!Niveau@{Niveau}}
+\index{Niveau@{Niveau}!Niveau@{Niveau}}
+\subsubsection{\texorpdfstring{Niveau()}{Niveau()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Niveau\+::\+Niveau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut\+: \hyperlink{classNiveau}{Niveau} Permet de créer le niveau par défaut. 
+
+
+\begin{DoxyCode}
+\hyperlink{classNiveau}{Niveau} n;
+\end{DoxyCode}
+ \mbox{\Hypertarget{classNiveau_a5f59a46da066f15b0c21154cbf583490}\label{classNiveau_a5f59a46da066f15b0c21154cbf583490}} 
+\index{Niveau@{Niveau}!Niveau@{Niveau}}
+\index{Niveau@{Niveau}!Niveau@{Niveau}}
+\subsubsection{\texorpdfstring{Niveau()}{Niveau()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Niveau\+::\+Niveau (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{f }\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie\+: \hyperlink{classNiveau}{Niveau} Permet de créer par copie un nouveau niveau. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Chaîne} & de caractère f 
+\begin{DoxyCode}
+\hyperlink{classNiveau}{Niveau} n1(Chaîne de caractère f);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNiveau_a47ea8b8f36e27be8ad0d3f534a956260}\label{classNiveau_a47ea8b8f36e27be8ad0d3f534a956260}} 
+\index{Niveau@{Niveau}!addr\+Get\+Carte@{addr\+Get\+Carte}}
+\index{addr\+Get\+Carte@{addr\+Get\+Carte}!Niveau@{Niveau}}
+\subsubsection{\texorpdfstring{addr\+Get\+Carte()}{addrGetCarte()}}
+{\footnotesize\ttfamily \hyperlink{classCarte}{Carte} $\ast$ Niveau\+::addr\+Get\+Carte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: addr\+Get\+Carte Permet de retourner le pointeur de carte. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCarte}{Carte} carte 
+\begin{DoxyCode}
+n2->addrGetCarte();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNiveau_a945a71fd635f9ab1e15dbae04afa5e5d}\label{classNiveau_a945a71fd635f9ab1e15dbae04afa5e5d}} 
+\index{Niveau@{Niveau}!affiche@{affiche}}
+\index{affiche@{affiche}!Niveau@{Niveau}}
+\subsubsection{\texorpdfstring{affiche()}{affiche()}}
+{\footnotesize\ttfamily void Niveau\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: affiche Permet d\textquotesingle{}afficher le niveau. 
+
+
+\begin{DoxyCode}
+n2.affiche();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classNiveau_aca63b4ff95491069ebf5a8931ffc6d03}\label{classNiveau_aca63b4ff95491069ebf5a8931ffc6d03}} 
+\index{Niveau@{Niveau}!ajouter\+Or@{ajouter\+Or}}
+\index{ajouter\+Or@{ajouter\+Or}!Niveau@{Niveau}}
+\subsubsection{\texorpdfstring{ajouter\+Or()}{ajouterOr()}}
+{\footnotesize\ttfamily void Niveau\+::ajouter\+Or (\begin{DoxyParamCaption}\item[{unsigned int}]{o }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: ajouter\+Or Permet de gagner de l\textquotesingle{}or en tuant des ennemis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & positif o 
+\begin{DoxyCode}
+n2.ajouterOr(o);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNiveau_a503e0b7db795e1f9bf3ea76cc4fd9e99}\label{classNiveau_a503e0b7db795e1f9bf3ea76cc4fd9e99}} 
+\index{Niveau@{Niveau}!get\+Carte@{get\+Carte}}
+\index{get\+Carte@{get\+Carte}!Niveau@{Niveau}}
+\subsubsection{\texorpdfstring{get\+Carte()}{getCarte()}}
+{\footnotesize\ttfamily \hyperlink{classCarte}{Carte} Niveau\+::get\+Carte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Carte Permet de retourner la carte. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCarte}{Carte} carte 
+\begin{DoxyCode}
+n2.getCarte();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNiveau_a86202965dadd70b9f13c4e5e78a46542}\label{classNiveau_a86202965dadd70b9f13c4e5e78a46542}} 
+\index{Niveau@{Niveau}!get\+Or@{get\+Or}}
+\index{get\+Or@{get\+Or}!Niveau@{Niveau}}
+\subsubsection{\texorpdfstring{get\+Or()}{getOr()}}
+{\footnotesize\ttfamily unsigned int Niveau\+::get\+Or (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Or Permet de retourner le nombre d\textquotesingle{}or. 
+
+\begin{DoxyReturn}{Returns}
+Entier positif or 
+\begin{DoxyCode}
+n2.getOr();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNiveau_a4434c142b17c0299d2d7744b2ea11e99}\label{classNiveau_a4434c142b17c0299d2d7744b2ea11e99}} 
+\index{Niveau@{Niveau}!maj@{maj}}
+\index{maj@{maj}!Niveau@{Niveau}}
+\subsubsection{\texorpdfstring{maj()}{maj()}}
+{\footnotesize\ttfamily void Niveau\+::maj (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: maj Permet de faire la mise à jour de la carte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & delta 
+\begin{DoxyCode}
+n2.maj(delta);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNiveau_a3192b7514716cfddac9ff465f9ad1f2f}\label{classNiveau_a3192b7514716cfddac9ff465f9ad1f2f}} 
+\index{Niveau@{Niveau}!retirer\+Or@{retirer\+Or}}
+\index{retirer\+Or@{retirer\+Or}!Niveau@{Niveau}}
+\subsubsection{\texorpdfstring{retirer\+Or()}{retirerOr()}}
+{\footnotesize\ttfamily void Niveau\+::retirer\+Or (\begin{DoxyParamCaption}\item[{unsigned int}]{o }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: retirer\+Or Permet de perdre de l\textquotesingle{}or en tuant des ennemis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & positif o 
+\begin{DoxyCode}
+n2.ajouterOr(o);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/otman/\+Bureau/project/lifap4/src/Niveau.\+h\item 
+/home/otman/\+Bureau/project/lifap4/src/Niveau.\+cpp\end{DoxyCompactItemize}

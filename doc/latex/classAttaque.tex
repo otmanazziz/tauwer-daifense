@@ -1,0 +1,158 @@
+\hypertarget{classAttaque}{}\section{Attaque Class Reference}
+\label{classAttaque}\index{Attaque@{Attaque}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAttaque_a1683db1342d1d26f9fc2162ef1975b23}{Attaque} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classAttaque}{Attaque} Permet de créer l\textquotesingle{}attaque par défaut. \end{DoxyCompactList}\item 
+\hyperlink{classAttaque_a1a6b78c3649a5860530da68f9c6bbfbf}{Attaque} (const \hyperlink{classAttaque}{Attaque} \&\+\_\+\+Attaque)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classAttaque}{Attaque} Permet de créer par copie une nouvelle attaque. \end{DoxyCompactList}\item 
+\hyperlink{classAttaque_a103553de7b33d7f8682f9beaa51d878a}{Attaque} (const float \&\+\_\+zone, const int \&\+\_\+degats)
+\begin{DoxyCompactList}\small\item\em Constructeur\+:\hyperlink{classAttaque}{Attaque} Permet de créer le constructeur de l\textquotesingle{}attaque avec les données privées de la fonction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAttaque_a1053986fc93c91f74ea60c898e6fc289}\label{classAttaque_a1053986fc93c91f74ea60c898e6fc289}} 
+\hyperlink{classAttaque_a1053986fc93c91f74ea60c898e6fc289}{$\sim$\+Attaque} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire l\textquotesingle{}attaque. \end{DoxyCompactList}\item 
+float \hyperlink{classAttaque_a84b1813598ac33dfcb76652d7ad4ebd4}{get\+Zone} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Zone Permet de retourner l\textquotesingle{}entier dela zone. \end{DoxyCompactList}\item 
+int \hyperlink{classAttaque_a56856e2880988e4cf9b051d32ca427a3}{get\+Degats} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Degats Permet de retourner l\textquotesingle{}entier des dégats. \end{DoxyCompactList}\item 
+void \hyperlink{classAttaque_ae6dc5afd850f4518e937b8a2c08ac764}{set\+Zone} (const float \&\+\_\+zone)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Zone Permet de modifier l\textquotesingle{}entier représentant la zone d\textquotesingle{}attaque. \end{DoxyCompactList}\item 
+void \hyperlink{classAttaque_ad1af4e5ae848c40c7879fa4f9a56c674}{set\+Degats} (const int \&\+\_\+degats)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Degats Permet de modifier les dégats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAttaque_a1683db1342d1d26f9fc2162ef1975b23}\label{classAttaque_a1683db1342d1d26f9fc2162ef1975b23}} 
+\index{Attaque@{Attaque}!Attaque@{Attaque}}
+\index{Attaque@{Attaque}!Attaque@{Attaque}}
+\subsubsection{\texorpdfstring{Attaque()}{Attaque()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Attaque\+::\+Attaque (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut\+: \hyperlink{classAttaque}{Attaque} Permet de créer l\textquotesingle{}attaque par défaut. 
+
+
+\begin{DoxyCode}
+\hyperlink{classAttaque}{Attaque} a;
+\end{DoxyCode}
+ \mbox{\Hypertarget{classAttaque_a1a6b78c3649a5860530da68f9c6bbfbf}\label{classAttaque_a1a6b78c3649a5860530da68f9c6bbfbf}} 
+\index{Attaque@{Attaque}!Attaque@{Attaque}}
+\index{Attaque@{Attaque}!Attaque@{Attaque}}
+\subsubsection{\texorpdfstring{Attaque()}{Attaque()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Attaque\+::\+Attaque (\begin{DoxyParamCaption}\item[{const \hyperlink{classAttaque}{Attaque} \&}]{\+\_\+\+Attaque }\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie\+: \hyperlink{classAttaque}{Attaque} Permet de créer par copie une nouvelle attaque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Classe} & \hyperlink{classAttaque}{Attaque} 
+\begin{DoxyCode}
+\hyperlink{classAttaque}{Attaque} a1(a);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAttaque_a103553de7b33d7f8682f9beaa51d878a}\label{classAttaque_a103553de7b33d7f8682f9beaa51d878a}} 
+\index{Attaque@{Attaque}!Attaque@{Attaque}}
+\index{Attaque@{Attaque}!Attaque@{Attaque}}
+\subsubsection{\texorpdfstring{Attaque()}{Attaque()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Attaque\+::\+Attaque (\begin{DoxyParamCaption}\item[{const float \&}]{\+\_\+zone,  }\item[{const int \&}]{\+\_\+degats }\end{DoxyParamCaption})}
+
+
+
+Constructeur\+:\hyperlink{classAttaque}{Attaque} Permet de créer le constructeur de l\textquotesingle{}attaque avec les données privées de la fonction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier,Classe} & \hyperlink{classEffet}{Effet}, Entier 
+\begin{DoxyCode}
+\hyperlink{classAttaque}{Attaque} a2(1 , e2 , 1)
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAttaque_a56856e2880988e4cf9b051d32ca427a3}\label{classAttaque_a56856e2880988e4cf9b051d32ca427a3}} 
+\index{Attaque@{Attaque}!get\+Degats@{get\+Degats}}
+\index{get\+Degats@{get\+Degats}!Attaque@{Attaque}}
+\subsubsection{\texorpdfstring{get\+Degats()}{getDegats()}}
+{\footnotesize\ttfamily int Attaque\+::get\+Degats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Degats Permet de retourner l\textquotesingle{}entier des dégats. 
+
+\begin{DoxyReturn}{Returns}
+Entier 
+\begin{DoxyCode}
+a2.getDegats();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAttaque_a84b1813598ac33dfcb76652d7ad4ebd4}\label{classAttaque_a84b1813598ac33dfcb76652d7ad4ebd4}} 
+\index{Attaque@{Attaque}!get\+Zone@{get\+Zone}}
+\index{get\+Zone@{get\+Zone}!Attaque@{Attaque}}
+\subsubsection{\texorpdfstring{get\+Zone()}{getZone()}}
+{\footnotesize\ttfamily float Attaque\+::get\+Zone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Zone Permet de retourner l\textquotesingle{}entier dela zone. 
+
+\begin{DoxyReturn}{Returns}
+Entier 
+\begin{DoxyCode}
+a2.getZone();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAttaque_ad1af4e5ae848c40c7879fa4f9a56c674}\label{classAttaque_ad1af4e5ae848c40c7879fa4f9a56c674}} 
+\index{Attaque@{Attaque}!set\+Degats@{set\+Degats}}
+\index{set\+Degats@{set\+Degats}!Attaque@{Attaque}}
+\subsubsection{\texorpdfstring{set\+Degats()}{setDegats()}}
+{\footnotesize\ttfamily void Attaque\+::set\+Degats (\begin{DoxyParamCaption}\item[{const int \&}]{\+\_\+degats }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Degats Permet de modifier les dégats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & 
+\begin{DoxyCode}
+a2.setDegats(5);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAttaque_ae6dc5afd850f4518e937b8a2c08ac764}\label{classAttaque_ae6dc5afd850f4518e937b8a2c08ac764}} 
+\index{Attaque@{Attaque}!set\+Zone@{set\+Zone}}
+\index{set\+Zone@{set\+Zone}!Attaque@{Attaque}}
+\subsubsection{\texorpdfstring{set\+Zone()}{setZone()}}
+{\footnotesize\ttfamily void Attaque\+::set\+Zone (\begin{DoxyParamCaption}\item[{const float \&}]{\+\_\+zone }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Zone Permet de modifier l\textquotesingle{}entier représentant la zone d\textquotesingle{}attaque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & 
+\begin{DoxyCode}
+a2.setZone(2);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/otman/\+Bureau/project/lifap4/src/Attaque.\+h\item 
+/home/otman/\+Bureau/project/lifap4/src/Attaque.\+cpp\end{DoxyCompactItemize}

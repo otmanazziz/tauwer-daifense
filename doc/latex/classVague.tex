@@ -1,0 +1,362 @@
+\hypertarget{classVague}{}\section{Vague Class Reference}
+\label{classVague}\index{Vague@{Vague}}
+
+
+Class \hyperlink{classVague}{Vague} Classe de vagues, permettant de gérer les vagues d\textquotesingle{}ennemis.  
+
+
+
+
+{\ttfamily \#include $<$Vague.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVague_ab1e4786aa02ad641431b56658dbbaac3}{Vague} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classVague}{Vague} Construit par défaut la classe \hyperlink{classVague}{Vague}. \end{DoxyCompactList}\item 
+\hyperlink{classVague_aa1c2e536319c3b66880a5d7dd7cbb444}{Vague} (const \hyperlink{classVague}{Vague} \&v)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classVague}{Vague} Construit par copie la classe \hyperlink{classVague}{Vague} avec une autre classe \hyperlink{classVague}{Vague}. \end{DoxyCompactList}\item 
+\hyperlink{classVague_a676fd5a235236ec1bb0b9b6a974c3296}{Vague} (const float \&\+\_\+temps\+Ennemi, const float \&\+\_\+temps\+Vague, const std\+::vector$<$ \hyperlink{classMonstre}{Monstre} $>$ \&\+\_\+monstres)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classVague}{Vague} Construit par copie la classe \hyperlink{classVague}{Vague} avec les autres données de la classe \hyperlink{classVague}{Vague}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVague_a72eb74bd6b6cc6de266fa4b8f77e56d4}\label{classVague_a72eb74bd6b6cc6de266fa4b8f77e56d4}} 
+\hyperlink{classVague_a72eb74bd6b6cc6de266fa4b8f77e56d4}{$\sim$\+Vague} ()
+\begin{DoxyCompactList}\small\item\em Destructeur\+: \hyperlink{classVague}{Vague} Détruit la classe \hyperlink{classVague}{Vague}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classMonstre}{Monstre} $>$ \hyperlink{classVague_a9a23bacd87181f297f522152adb51c36}{get\+Vague} () const
+\begin{DoxyCompactList}\small\item\em Tableau de \hyperlink{classMonstre}{Monstre}\+: get\+Vague Permet de retourner un tableau de vagues d\textquotesingle{}ennemis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVague_af1356b21ff8e2eb3ed40e7c3a0419711}\label{classVague_af1356b21ff8e2eb3ed40e7c3a0419711}} 
+\hyperlink{classMonstre}{Monstre} {\bfseries get\+Indice\+Monstre} (const int \&n) const
+\item 
+\mbox{\Hypertarget{classVague_ab177d208c78c64cb636e3746431a4d16}\label{classVague_ab177d208c78c64cb636e3746431a4d16}} 
+\hyperlink{classMonstre}{Monstre} $\ast$ {\bfseries addr\+Get\+Indice\+Monstre} (const int \&n)
+\item 
+float \hyperlink{classVague_a71f47253f6f4db49d994338a8088985c}{get\+Temps\+Ennemi} () const
+\begin{DoxyCompactList}\small\item\em Réel\+: get\+Temps\+Ennemi Permet de retourner la valeur du temps. \end{DoxyCompactList}\item 
+float \hyperlink{classVague_af665b6b2ec76931ebb9d5423446cfee8}{get\+Temps\+Vague} () const
+\begin{DoxyCompactList}\small\item\em Réel\+: get\+Temps\+Vague Permet de retourner la valeur du temps. \end{DoxyCompactList}\item 
+void \hyperlink{classVague_af6bc246e66011691775c3ceb9356ffc8}{set\+Vague} (const std\+::vector$<$ \hyperlink{classMonstre}{Monstre} $>$ \&\+\_\+monstres)
+\begin{DoxyCompactList}\small\item\em Entier\+: getnb\+Monstre\+Restant Permet de retourner le nombre de monstres restant. \end{DoxyCompactList}\item 
+void \hyperlink{classVague_ae9e45cad0c4a4da804f749e03952545c}{set\+Temps\+Ennemi} (const float \&\+\_\+temps\+Ennemi)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Temps\+Ennemi Permet de définir le temps entre chaque ennemi dans la carte dans la classe sélectionnée. \end{DoxyCompactList}\item 
+void \hyperlink{classVague_a3c9775c8351b1581afba79c0fd87171a}{set\+Temps\+Vague} (const float \&\+\_\+temps\+Vague)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Temps\+Vague Permet de définir le temps avant la prochaine vague dans la classe sélectionnée. \end{DoxyCompactList}\item 
+bool \hyperlink{classVague_aaa31d3deb82c73be899c478a55a6724f}{vague\+Vide} () const
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Nb\+Monstre\+Restant Permet de définir le nombre d\textquotesingle{}ennemis restants dans la classe sélectionnée. \end{DoxyCompactList}\item 
+int \hyperlink{classVague_ad732fb032c4b02416946736b1e25dcc8}{ennemi\+Mort} (const int \&i)
+\begin{DoxyCompactList}\small\item\em Procédure\+: ennemi\+Mort Permet d\textquotesingle{}actualiser la taille du tableau de monstres, si un monstre est mort. \end{DoxyCompactList}\item 
+void \hyperlink{classVague_ab61cff7242c22ec90c6cb4858b5a0bc6}{avancement\+Etape} (std\+::vector$<$ \hyperlink{classChemin}{Chemin} $>$ \&tab\+Chemin)
+\begin{DoxyCompactList}\small\item\em Procédure\+: avancement\+Etape Permet de vérifier l\textquotesingle{}avancement des étapes des ennemis en fonction de son chemin à prendre. \end{DoxyCompactList}\item 
+void \hyperlink{classVague_a2a81df1228dfa2ad84109612ef378d4c}{avancer\+Monstre} (const std\+::vector$<$ \hyperlink{classChemin}{Chemin} $>$ \&tab\+Chemin, float delta)
+\begin{DoxyCompactList}\small\item\em Procédure\+: avancer\+Monstre Permet de faire avancer le monstre. \end{DoxyCompactList}\item 
+void \hyperlink{classVague_a0cfa903ba06db46ba3d45ceae6a89052}{spawner\+Monstre} ()
+\begin{DoxyCompactList}\small\item\em Procédure\+: spawner\+Monstre Permet de créer des monstres dans la vague. \end{DoxyCompactList}\item 
+void \hyperlink{classVague_adec201ad91a86f65bf6aaf0ddb73bd20}{affiche} ()
+\begin{DoxyCompactList}\small\item\em Procédure\+: affiche Permet d\textquotesingle{}afficher des monstre dans la vague. \end{DoxyCompactList}\item 
+void \hyperlink{classVague_ad9d543a1eafc579d8a4de88d278a53a7}{monstres\+Base} (\hyperlink{classBase}{Base} \&b)
+\begin{DoxyCompactList}\small\item\em Procédure\+: monstres\+Base Permet de faire disparaitre le monstre quand il arrive à la base et d\textquotesingle{}enlever un point de vie à la base. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classVague_a00fd363241fbfd6ed6819d408155a6ee}{taille\+Vague} () const
+\begin{DoxyCompactList}\small\item\em Fonction\+: taille\+Vague Permet de retourner la taille de la vague. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classVague}{Vague} Classe de vagues, permettant de gérer les vagues d\textquotesingle{}ennemis. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVague_ab1e4786aa02ad641431b56658dbbaac3}\label{classVague_ab1e4786aa02ad641431b56658dbbaac3}} 
+\index{Vague@{Vague}!Vague@{Vague}}
+\index{Vague@{Vague}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{Vague()}{Vague()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Vague\+::\+Vague (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut\+: \hyperlink{classVague}{Vague} Construit par défaut la classe \hyperlink{classVague}{Vague}. 
+
+
+\begin{DoxyCode}
+\hyperlink{classVague}{Vague} v;
+\end{DoxyCode}
+ \mbox{\Hypertarget{classVague_aa1c2e536319c3b66880a5d7dd7cbb444}\label{classVague_aa1c2e536319c3b66880a5d7dd7cbb444}} 
+\index{Vague@{Vague}!Vague@{Vague}}
+\index{Vague@{Vague}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{Vague()}{Vague()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Vague\+::\+Vague (\begin{DoxyParamCaption}\item[{const \hyperlink{classVague}{Vague} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie\+: \hyperlink{classVague}{Vague} Construit par copie la classe \hyperlink{classVague}{Vague} avec une autre classe \hyperlink{classVague}{Vague}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Classe} & \hyperlink{classVague}{Vague}\+: v 
+\begin{DoxyCode}
+\hyperlink{classVague}{Vague} v1(v);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVague_a676fd5a235236ec1bb0b9b6a974c3296}\label{classVague_a676fd5a235236ec1bb0b9b6a974c3296}} 
+\index{Vague@{Vague}!Vague@{Vague}}
+\index{Vague@{Vague}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{Vague()}{Vague()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Vague\+::\+Vague (\begin{DoxyParamCaption}\item[{const float \&}]{\+\_\+temps\+Ennemi,  }\item[{const float \&}]{\+\_\+temps\+Vague,  }\item[{const std\+::vector$<$ \hyperlink{classMonstre}{Monstre} $>$ \&}]{\+\_\+monstres }\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie\+: \hyperlink{classVague}{Vague} Construit par copie la classe \hyperlink{classVague}{Vague} avec les autres données de la classe \hyperlink{classVague}{Vague}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tableau} & de \hyperlink{classMonstre}{Monstre}\+: \+\_\+monstres, réel\+: \+\_\+temps, entier\+: \+\_\+nb\+Monstre\+Restant 
+\begin{DoxyCode}
+\hyperlink{classVague}{Vague} v2(tabMonstrosaure, 4.8, 6);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classVague_adec201ad91a86f65bf6aaf0ddb73bd20}\label{classVague_adec201ad91a86f65bf6aaf0ddb73bd20}} 
+\index{Vague@{Vague}!affiche@{affiche}}
+\index{affiche@{affiche}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{affiche()}{affiche()}}
+{\footnotesize\ttfamily void Vague\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: affiche Permet d\textquotesingle{}afficher des monstre dans la vague. 
+
+
+\begin{DoxyCode}
+v2.affiche();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classVague_ab61cff7242c22ec90c6cb4858b5a0bc6}\label{classVague_ab61cff7242c22ec90c6cb4858b5a0bc6}} 
+\index{Vague@{Vague}!avancement\+Etape@{avancement\+Etape}}
+\index{avancement\+Etape@{avancement\+Etape}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{avancement\+Etape()}{avancementEtape()}}
+{\footnotesize\ttfamily void Vague\+::avancement\+Etape (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{classChemin}{Chemin} $>$ \&}]{tab\+Chemin }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: avancement\+Etape Permet de vérifier l\textquotesingle{}avancement des étapes des ennemis en fonction de son chemin à prendre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tableau} & de Classes \hyperlink{classChemin}{Chemin} 
+\begin{DoxyCode}
+v2.avancementEtape(tabChemin2);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVague_a2a81df1228dfa2ad84109612ef378d4c}\label{classVague_a2a81df1228dfa2ad84109612ef378d4c}} 
+\index{Vague@{Vague}!avancer\+Monstre@{avancer\+Monstre}}
+\index{avancer\+Monstre@{avancer\+Monstre}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{avancer\+Monstre()}{avancerMonstre()}}
+{\footnotesize\ttfamily void Vague\+::avancer\+Monstre (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classChemin}{Chemin} $>$ \&}]{tab\+Chemin,  }\item[{float}]{delta }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: avancer\+Monstre Permet de faire avancer le monstre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classChemin}{Chemin}} & tab\+Chemin, Réel delta 
+\begin{DoxyCode}
+v2.avancerMonstre(tabChemin, delta);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVague_ad732fb032c4b02416946736b1e25dcc8}\label{classVague_ad732fb032c4b02416946736b1e25dcc8}} 
+\index{Vague@{Vague}!ennemi\+Mort@{ennemi\+Mort}}
+\index{ennemi\+Mort@{ennemi\+Mort}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{ennemi\+Mort()}{ennemiMort()}}
+{\footnotesize\ttfamily int Vague\+::ennemi\+Mort (\begin{DoxyParamCaption}\item[{const int \&}]{i }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: ennemi\+Mort Permet d\textquotesingle{}actualiser la taille du tableau de monstres, si un monstre est mort. 
+
+
+\begin{DoxyCode}
+v2.ennemiMort();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classVague_a71f47253f6f4db49d994338a8088985c}\label{classVague_a71f47253f6f4db49d994338a8088985c}} 
+\index{Vague@{Vague}!get\+Temps\+Ennemi@{get\+Temps\+Ennemi}}
+\index{get\+Temps\+Ennemi@{get\+Temps\+Ennemi}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{get\+Temps\+Ennemi()}{getTempsEnnemi()}}
+{\footnotesize\ttfamily float Vague\+::get\+Temps\+Ennemi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Réel\+: get\+Temps\+Ennemi Permet de retourner la valeur du temps. 
+
+\begin{DoxyReturn}{Returns}
+Réel 
+\begin{DoxyCode}
+v2.getTempsEnnemi();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVague_af665b6b2ec76931ebb9d5423446cfee8}\label{classVague_af665b6b2ec76931ebb9d5423446cfee8}} 
+\index{Vague@{Vague}!get\+Temps\+Vague@{get\+Temps\+Vague}}
+\index{get\+Temps\+Vague@{get\+Temps\+Vague}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{get\+Temps\+Vague()}{getTempsVague()}}
+{\footnotesize\ttfamily float Vague\+::get\+Temps\+Vague (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Réel\+: get\+Temps\+Vague Permet de retourner la valeur du temps. 
+
+\begin{DoxyReturn}{Returns}
+Réel 
+\begin{DoxyCode}
+v2.getTempsVague();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVague_a9a23bacd87181f297f522152adb51c36}\label{classVague_a9a23bacd87181f297f522152adb51c36}} 
+\index{Vague@{Vague}!get\+Vague@{get\+Vague}}
+\index{get\+Vague@{get\+Vague}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{get\+Vague()}{getVague()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{classMonstre}{Monstre} $>$ Vague\+::get\+Vague (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Tableau de \hyperlink{classMonstre}{Monstre}\+: get\+Vague Permet de retourner un tableau de vagues d\textquotesingle{}ennemis. 
+
+\begin{DoxyReturn}{Returns}
+Tableau de \hyperlink{classVague}{Vague} 
+\begin{DoxyCode}
+v2.getVague();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVague_ad9d543a1eafc579d8a4de88d278a53a7}\label{classVague_ad9d543a1eafc579d8a4de88d278a53a7}} 
+\index{Vague@{Vague}!monstres\+Base@{monstres\+Base}}
+\index{monstres\+Base@{monstres\+Base}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{monstres\+Base()}{monstresBase()}}
+{\footnotesize\ttfamily void Vague\+::monstres\+Base (\begin{DoxyParamCaption}\item[{\hyperlink{classBase}{Base} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: monstres\+Base Permet de faire disparaitre le monstre quand il arrive à la base et d\textquotesingle{}enlever un point de vie à la base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classBase}{Base}} & b 
+\begin{DoxyCode}
+v2.monstresBase(b);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVague_ae9e45cad0c4a4da804f749e03952545c}\label{classVague_ae9e45cad0c4a4da804f749e03952545c}} 
+\index{Vague@{Vague}!set\+Temps\+Ennemi@{set\+Temps\+Ennemi}}
+\index{set\+Temps\+Ennemi@{set\+Temps\+Ennemi}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{set\+Temps\+Ennemi()}{setTempsEnnemi()}}
+{\footnotesize\ttfamily void Vague\+::set\+Temps\+Ennemi (\begin{DoxyParamCaption}\item[{const float \&}]{\+\_\+temps\+Ennemi }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Temps\+Ennemi Permet de définir le temps entre chaque ennemi dans la carte dans la classe sélectionnée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Réel} & 
+\begin{DoxyCode}
+v2.setTempsEnnemi(1);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVague_a3c9775c8351b1581afba79c0fd87171a}\label{classVague_a3c9775c8351b1581afba79c0fd87171a}} 
+\index{Vague@{Vague}!set\+Temps\+Vague@{set\+Temps\+Vague}}
+\index{set\+Temps\+Vague@{set\+Temps\+Vague}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{set\+Temps\+Vague()}{setTempsVague()}}
+{\footnotesize\ttfamily void Vague\+::set\+Temps\+Vague (\begin{DoxyParamCaption}\item[{const float \&}]{\+\_\+temps\+Vague }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Temps\+Vague Permet de définir le temps avant la prochaine vague dans la classe sélectionnée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Réel} & 
+\begin{DoxyCode}
+v2.setTempsVague(10);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVague_af6bc246e66011691775c3ceb9356ffc8}\label{classVague_af6bc246e66011691775c3ceb9356ffc8}} 
+\index{Vague@{Vague}!set\+Vague@{set\+Vague}}
+\index{set\+Vague@{set\+Vague}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{set\+Vague()}{setVague()}}
+{\footnotesize\ttfamily void Vague\+::set\+Vague (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classMonstre}{Monstre} $>$ \&}]{\+\_\+monstres }\end{DoxyParamCaption})}
+
+
+
+Entier\+: getnb\+Monstre\+Restant Permet de retourner le nombre de monstres restant. 
+
+\begin{DoxyReturn}{Returns}
+Entier 
+\begin{DoxyCode}
+v2.getNbMonstreRestant();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVague_a0cfa903ba06db46ba3d45ceae6a89052}\label{classVague_a0cfa903ba06db46ba3d45ceae6a89052}} 
+\index{Vague@{Vague}!spawner\+Monstre@{spawner\+Monstre}}
+\index{spawner\+Monstre@{spawner\+Monstre}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{spawner\+Monstre()}{spawnerMonstre()}}
+{\footnotesize\ttfamily void Vague\+::spawner\+Monstre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: spawner\+Monstre Permet de créer des monstres dans la vague. 
+
+
+\begin{DoxyCode}
+v2.spawnerMonstre();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classVague_a00fd363241fbfd6ed6819d408155a6ee}\label{classVague_a00fd363241fbfd6ed6819d408155a6ee}} 
+\index{Vague@{Vague}!taille\+Vague@{taille\+Vague}}
+\index{taille\+Vague@{taille\+Vague}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{taille\+Vague()}{tailleVague()}}
+{\footnotesize\ttfamily unsigned int Vague\+::taille\+Vague (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction\+: taille\+Vague Permet de retourner la taille de la vague. 
+
+
+\begin{DoxyCode}
+v2.tailleVague();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classVague_aaa31d3deb82c73be899c478a55a6724f}\label{classVague_aaa31d3deb82c73be899c478a55a6724f}} 
+\index{Vague@{Vague}!vague\+Vide@{vague\+Vide}}
+\index{vague\+Vide@{vague\+Vide}!Vague@{Vague}}
+\subsubsection{\texorpdfstring{vague\+Vide()}{vagueVide()}}
+{\footnotesize\ttfamily bool Vague\+::vague\+Vide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Procédure\+: set\+Nb\+Monstre\+Restant Permet de définir le nombre d\textquotesingle{}ennemis restants dans la classe sélectionnée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & 
+\begin{DoxyCode}
+v2.setNbMonstreRestant(6);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/otman/\+Bureau/project/lifap4/src/Vague.\+h\item 
+/home/otman/\+Bureau/project/lifap4/src/Vague.\+cpp\end{DoxyCompactItemize}

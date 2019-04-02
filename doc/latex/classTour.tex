@@ -1,0 +1,244 @@
+\hypertarget{classTour}{}\section{Tour Class Reference}
+\label{classTour}\index{Tour@{Tour}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTour_a85e0f0e2346d1e42a09a80c1cd6d19c4}{Tour} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classTour}{Tour} Permet de créer la tour par défaut. \end{DoxyCompactList}\item 
+\hyperlink{classTour_a3e25a64c74446192ac71283e08db4e49}{Tour} (const \hyperlink{classTour}{Tour} \&\+\_\+tour)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classTour}{Tour} Permet de créer par copie une nouvelle tour. \end{DoxyCompactList}\item 
+\hyperlink{classTour_abb21d80605aacb220f1ab7ac92119ce4}{Tour} (const float \&\+\_\+vitesse\+Atq, const int \&\+\_\+portee, const \hyperlink{classVect}{Vect} \&\+\_\+position, const int \&z, const int \&d)
+\begin{DoxyCompactList}\small\item\em Constructeur\+: \hyperlink{classTour}{Tour} Permet de créer le constructeur de la tour avec les données privées de la fonction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTour_a6d692d4b1a687bf34f6b38828d86512e}\label{classTour_a6d692d4b1a687bf34f6b38828d86512e}} 
+\hyperlink{classTour_a6d692d4b1a687bf34f6b38828d86512e}{$\sim$\+Tour} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire la \hyperlink{classTour}{Tour}. \end{DoxyCompactList}\item 
+float \hyperlink{classTour_a41fc157f749f571732100fa0daa1ad25}{get\+Vit\+Atq} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Vit\+Atq Permet de retourner le réel de la vitesse d\textquotesingle{}attaque. \end{DoxyCompactList}\item 
+int \hyperlink{classTour_a4c0b40ef85678f12cc7a3e78588094e8}{get\+Portee} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Portee Permet de retourner l\textquotesingle{}entier de la portée. \end{DoxyCompactList}\item 
+\hyperlink{classVect}{Vect} \hyperlink{classTour_a2283f61d6b088bf41c53c882f4a72864}{get\+Position} ()
+\begin{DoxyCompactList}\small\item\em Vecteur\+: get\+Position Permet de retourner le vecteur de la position. \end{DoxyCompactList}\item 
+void \hyperlink{classTour_a110c73fc4160189cdafbb700f3999a39}{set\+Vit\+Atq} (const float \&\+\_\+vitesse\+Atq)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Vit\+Atq Permet de modifier le réel de la vitesse d\textquotesingle{}attaque. \end{DoxyCompactList}\item 
+void \hyperlink{classTour_a7f9a17a8138ebd8afe72520d7d8a18db}{set\+Portee} (const float \&\+\_\+portee)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Portee Permet de modifier l\textquotesingle{}entier de la portée. \end{DoxyCompactList}\item 
+void \hyperlink{classTour_a1db07b7ed15a7b0d11e96bb67831feba}{set\+Position} (const \hyperlink{classVect}{Vect} \&\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Position Permet de modifier le vecteur de la position. \end{DoxyCompactList}\item 
+void \hyperlink{classTour_a418908de2fcbb83e8e9459a999f98aa6}{affiche} ()
+\begin{DoxyCompactList}\small\item\em Procédure\+: affiche Permet d\textquotesingle{}afficher la vitesse d\textquotesingle{}attaque, la portée, la position et ses attaques. \end{DoxyCompactList}\item 
+bool \hyperlink{classTour_ad9f4d42370374f373f48f7d0fb36559a}{est\+A\+Portee} (const \hyperlink{classVect}{Vect} \&pos) const
+\begin{DoxyCompactList}\small\item\em Booléen\+: est\+A\+Portee Vérifie si la tour a détecté un ennemi (ici des coordonnées d\textquotesingle{}un vecteur) dans sa portée. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTour_a19e9adc634af6ed58dac224ade1986b8}\label{classTour_a19e9adc634af6ed58dac224ade1986b8}} 
+int {\bfseries get\+Degat} ()
+\item 
+\mbox{\Hypertarget{classTour_a647b54e61e3ee195a5e830b3cd677197}\label{classTour_a647b54e61e3ee195a5e830b3cd677197}} 
+\hyperlink{classAttaque}{Attaque} {\bfseries get\+Attaque} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTour_a85e0f0e2346d1e42a09a80c1cd6d19c4}\label{classTour_a85e0f0e2346d1e42a09a80c1cd6d19c4}} 
+\index{Tour@{Tour}!Tour@{Tour}}
+\index{Tour@{Tour}!Tour@{Tour}}
+\subsubsection{\texorpdfstring{Tour()}{Tour()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Tour\+::\+Tour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut\+: \hyperlink{classTour}{Tour} Permet de créer la tour par défaut. 
+
+
+\begin{DoxyCode}
+\hyperlink{classTour}{Tour} t;
+\end{DoxyCode}
+ \mbox{\Hypertarget{classTour_a3e25a64c74446192ac71283e08db4e49}\label{classTour_a3e25a64c74446192ac71283e08db4e49}} 
+\index{Tour@{Tour}!Tour@{Tour}}
+\index{Tour@{Tour}!Tour@{Tour}}
+\subsubsection{\texorpdfstring{Tour()}{Tour()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Tour\+::\+Tour (\begin{DoxyParamCaption}\item[{const \hyperlink{classTour}{Tour} \&}]{\+\_\+tour }\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie\+: \hyperlink{classTour}{Tour} Permet de créer par copie une nouvelle tour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Classe} & \hyperlink{classTour}{Tour} 
+\begin{DoxyCode}
+\hyperlink{classTour}{Tour} t1(t);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTour_abb21d80605aacb220f1ab7ac92119ce4}\label{classTour_abb21d80605aacb220f1ab7ac92119ce4}} 
+\index{Tour@{Tour}!Tour@{Tour}}
+\index{Tour@{Tour}!Tour@{Tour}}
+\subsubsection{\texorpdfstring{Tour()}{Tour()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Tour\+::\+Tour (\begin{DoxyParamCaption}\item[{const float \&}]{\+\_\+vitesse\+Atq,  }\item[{const int \&}]{\+\_\+portee,  }\item[{const \hyperlink{classVect}{Vect} \&}]{\+\_\+position,  }\item[{const int \&}]{z,  }\item[{const int \&}]{d }\end{DoxyParamCaption})}
+
+
+
+Constructeur\+: \hyperlink{classTour}{Tour} Permet de créer le constructeur de la tour avec les données privées de la fonction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Réel,Entier,Classe} & Vecteur, Classe \hyperlink{classAttaque}{Attaque} 
+\begin{DoxyCode}
+\hyperlink{classTour}{Tour} t2(1.32, 4, v1, a1);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTour_a418908de2fcbb83e8e9459a999f98aa6}\label{classTour_a418908de2fcbb83e8e9459a999f98aa6}} 
+\index{Tour@{Tour}!affiche@{affiche}}
+\index{affiche@{affiche}!Tour@{Tour}}
+\subsubsection{\texorpdfstring{affiche()}{affiche()}}
+{\footnotesize\ttfamily void Tour\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: affiche Permet d\textquotesingle{}afficher la vitesse d\textquotesingle{}attaque, la portée, la position et ses attaques. 
+
+
+\begin{DoxyCode}
+t2.affiche();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classTour_ad9f4d42370374f373f48f7d0fb36559a}\label{classTour_ad9f4d42370374f373f48f7d0fb36559a}} 
+\index{Tour@{Tour}!est\+A\+Portee@{est\+A\+Portee}}
+\index{est\+A\+Portee@{est\+A\+Portee}!Tour@{Tour}}
+\subsubsection{\texorpdfstring{est\+A\+Portee()}{estAPortee()}}
+{\footnotesize\ttfamily bool Tour\+::est\+A\+Portee (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+Booléen\+: est\+A\+Portee Vérifie si la tour a détecté un ennemi (ici des coordonnées d\textquotesingle{}un vecteur) dans sa portée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Classe} & \hyperlink{classVect}{Vect} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Booléen 
+\begin{DoxyCode}
+t.\hyperlink{classTour_ad9f4d42370374f373f48f7d0fb36559a}{estAPortee}(v);
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTour_a4c0b40ef85678f12cc7a3e78588094e8}\label{classTour_a4c0b40ef85678f12cc7a3e78588094e8}} 
+\index{Tour@{Tour}!get\+Portee@{get\+Portee}}
+\index{get\+Portee@{get\+Portee}!Tour@{Tour}}
+\subsubsection{\texorpdfstring{get\+Portee()}{getPortee()}}
+{\footnotesize\ttfamily int Tour\+::get\+Portee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Portee Permet de retourner l\textquotesingle{}entier de la portée. 
+
+\begin{DoxyReturn}{Returns}
+Entier 
+\begin{DoxyCode}
+t2.getPortee();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTour_a2283f61d6b088bf41c53c882f4a72864}\label{classTour_a2283f61d6b088bf41c53c882f4a72864}} 
+\index{Tour@{Tour}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Tour@{Tour}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Tour\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vecteur\+: get\+Position Permet de retourner le vecteur de la position. 
+
+\begin{DoxyReturn}{Returns}
+Vecteur 
+\begin{DoxyCode}
+t2.getPosition();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTour_a41fc157f749f571732100fa0daa1ad25}\label{classTour_a41fc157f749f571732100fa0daa1ad25}} 
+\index{Tour@{Tour}!get\+Vit\+Atq@{get\+Vit\+Atq}}
+\index{get\+Vit\+Atq@{get\+Vit\+Atq}!Tour@{Tour}}
+\subsubsection{\texorpdfstring{get\+Vit\+Atq()}{getVitAtq()}}
+{\footnotesize\ttfamily float Tour\+::get\+Vit\+Atq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Vit\+Atq Permet de retourner le réel de la vitesse d\textquotesingle{}attaque. 
+
+\begin{DoxyReturn}{Returns}
+Réel 
+\begin{DoxyCode}
+t2.getVitAtq();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTour_a7f9a17a8138ebd8afe72520d7d8a18db}\label{classTour_a7f9a17a8138ebd8afe72520d7d8a18db}} 
+\index{Tour@{Tour}!set\+Portee@{set\+Portee}}
+\index{set\+Portee@{set\+Portee}!Tour@{Tour}}
+\subsubsection{\texorpdfstring{set\+Portee()}{setPortee()}}
+{\footnotesize\ttfamily void Tour\+::set\+Portee (\begin{DoxyParamCaption}\item[{const float \&}]{\+\_\+portee }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Portee Permet de modifier l\textquotesingle{}entier de la portée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & 
+\begin{DoxyCode}
+t2.setPortee(2);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTour_a1db07b7ed15a7b0d11e96bb67831feba}\label{classTour_a1db07b7ed15a7b0d11e96bb67831feba}} 
+\index{Tour@{Tour}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Tour@{Tour}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Tour\+::set\+Position (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Position Permet de modifier le vecteur de la position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vecteur} & 
+\begin{DoxyCode}
+t2.setPosition(v1);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTour_a110c73fc4160189cdafbb700f3999a39}\label{classTour_a110c73fc4160189cdafbb700f3999a39}} 
+\index{Tour@{Tour}!set\+Vit\+Atq@{set\+Vit\+Atq}}
+\index{set\+Vit\+Atq@{set\+Vit\+Atq}!Tour@{Tour}}
+\subsubsection{\texorpdfstring{set\+Vit\+Atq()}{setVitAtq()}}
+{\footnotesize\ttfamily void Tour\+::set\+Vit\+Atq (\begin{DoxyParamCaption}\item[{const float \&}]{\+\_\+vitesse\+Atq }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Vit\+Atq Permet de modifier le réel de la vitesse d\textquotesingle{}attaque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Réel} & 
+\begin{DoxyCode}
+t2.setVitAtq(4.8);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/otman/\+Bureau/project/lifap4/src/Tour.\+h\item 
+/home/otman/\+Bureau/project/lifap4/src/Tour.\+cpp\end{DoxyCompactItemize}

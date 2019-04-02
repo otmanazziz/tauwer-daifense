@@ -1,0 +1,182 @@
+\hypertarget{classBase}{}\section{Base Class Reference}
+\label{classBase}\index{Base@{Base}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBase_a5ffe0568374d8b9b4c4ec32953fd6453}{Base} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classBase}{Base} Permet de créer la base par défaut. \end{DoxyCompactList}\item 
+\hyperlink{classBase_aa56feb99f89924004cbb864cce83ccc0}{Base} (const int \&\+\_\+vie, const \hyperlink{classVect}{Vect} \&\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Constructeur\+:\hyperlink{classBase}{Base} Permet de créer le constructeur de la base avec les données privées de la fonction. \end{DoxyCompactList}\item 
+\hyperlink{classBase_a8520b7acb2f08e4c892a7ea3213539a7}{Base} (const \hyperlink{classBase}{Base} \&\+\_\+\+Base)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classBase}{Base} Permet de créer par copie une nouvelle base. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBase_a722da881b6c70cfcbde9243abcfbf334}\label{classBase_a722da881b6c70cfcbde9243abcfbf334}} 
+\hyperlink{classBase_a722da881b6c70cfcbde9243abcfbf334}{$\sim$\+Base} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire la base. \end{DoxyCompactList}\item 
+int \hyperlink{classBase_a922b45a3578821dd6ab666206b1a637e}{get\+Vie} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Vie Permet de retourner l\textquotesingle{}entier de la vie. \end{DoxyCompactList}\item 
+\hyperlink{classVect}{Vect} \hyperlink{classBase_a16d0ed1836dfedfb51d54308d22b4a38}{get\+Position} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Position Permet de retourner le vecteur position. \end{DoxyCompactList}\item 
+void \hyperlink{classBase_a92e0991ffd34efb2f2d6db3f3bd4093d}{set\+Vie} (const int \&\+\_\+vie)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Vie Permet de modifier l\textquotesingle{}entier représentant la vie de la base. \end{DoxyCompactList}\item 
+void \hyperlink{classBase_afe9eb29bdaf866dc20af0b833209e29e}{set\+Position} (const \hyperlink{classVect}{Vect} \&\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Position Permet de modifier le vecteur poisition de la base. \end{DoxyCompactList}\item 
+void \hyperlink{classBase_a0471688678ab6e2aba5ee69d290c2e20}{perdre\+Vie} (const int \&vie\+Perdue)
+\begin{DoxyCompactList}\small\item\em Procédure\+: perdre\+Vie Permet de modifier la vie de la base. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBase_a90f460bea595fc507cab1b6a2131350c}\label{classBase_a90f460bea595fc507cab1b6a2131350c}} 
+void {\bfseries affiche} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBase_a5ffe0568374d8b9b4c4ec32953fd6453}\label{classBase_a5ffe0568374d8b9b4c4ec32953fd6453}} 
+\index{Base@{Base}!Base@{Base}}
+\index{Base@{Base}!Base@{Base}}
+\subsubsection{\texorpdfstring{Base()}{Base()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Base\+::\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut\+: \hyperlink{classBase}{Base} Permet de créer la base par défaut. 
+
+
+\begin{DoxyCode}
+\hyperlink{classBase}{Base} b;
+\end{DoxyCode}
+ \mbox{\Hypertarget{classBase_aa56feb99f89924004cbb864cce83ccc0}\label{classBase_aa56feb99f89924004cbb864cce83ccc0}} 
+\index{Base@{Base}!Base@{Base}}
+\index{Base@{Base}!Base@{Base}}
+\subsubsection{\texorpdfstring{Base()}{Base()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Base\+::\+Base (\begin{DoxyParamCaption}\item[{const int \&}]{\+\_\+vie,  }\item[{const \hyperlink{classVect}{Vect} \&}]{\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Constructeur\+:\hyperlink{classBase}{Base} Permet de créer le constructeur de la base avec les données privées de la fonction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & vie, Vec Position 
+\begin{DoxyCode}
+\hyperlink{classBase}{Base} b2(100 ,Position)
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBase_a8520b7acb2f08e4c892a7ea3213539a7}\label{classBase_a8520b7acb2f08e4c892a7ea3213539a7}} 
+\index{Base@{Base}!Base@{Base}}
+\index{Base@{Base}!Base@{Base}}
+\subsubsection{\texorpdfstring{Base()}{Base()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Base\+::\+Base (\begin{DoxyParamCaption}\item[{const \hyperlink{classBase}{Base} \&}]{\+\_\+\+Base }\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie\+: \hyperlink{classBase}{Base} Permet de créer par copie une nouvelle base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Classe} & \hyperlink{classBase}{Base} 
+\begin{DoxyCode}
+\hyperlink{classBase}{Base} b1(b);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBase_a16d0ed1836dfedfb51d54308d22b4a38}\label{classBase_a16d0ed1836dfedfb51d54308d22b4a38}} 
+\index{Base@{Base}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Base@{Base}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Base\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Position Permet de retourner le vecteur position. 
+
+\begin{DoxyReturn}{Returns}
+Vecteur position 
+\begin{DoxyCode}
+b2.getPosition();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBase_a922b45a3578821dd6ab666206b1a637e}\label{classBase_a922b45a3578821dd6ab666206b1a637e}} 
+\index{Base@{Base}!get\+Vie@{get\+Vie}}
+\index{get\+Vie@{get\+Vie}!Base@{Base}}
+\subsubsection{\texorpdfstring{get\+Vie()}{getVie()}}
+{\footnotesize\ttfamily int Base\+::get\+Vie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Vie Permet de retourner l\textquotesingle{}entier de la vie. 
+
+\begin{DoxyReturn}{Returns}
+Entier vie 
+\begin{DoxyCode}
+b2.getVie();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBase_a0471688678ab6e2aba5ee69d290c2e20}\label{classBase_a0471688678ab6e2aba5ee69d290c2e20}} 
+\index{Base@{Base}!perdre\+Vie@{perdre\+Vie}}
+\index{perdre\+Vie@{perdre\+Vie}!Base@{Base}}
+\subsubsection{\texorpdfstring{perdre\+Vie()}{perdreVie()}}
+{\footnotesize\ttfamily void Base\+::perdre\+Vie (\begin{DoxyParamCaption}\item[{const int \&}]{vie\+Perdue }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: perdre\+Vie Permet de modifier la vie de la base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & vie perdue 
+\begin{DoxyCode}
+b2.perdeVie(10);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBase_afe9eb29bdaf866dc20af0b833209e29e}\label{classBase_afe9eb29bdaf866dc20af0b833209e29e}} 
+\index{Base@{Base}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Base@{Base}}
+\subsubsection{\texorpdfstring{set\+Position()}{setPosition()}}
+{\footnotesize\ttfamily void Base\+::set\+Position (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Position Permet de modifier le vecteur poisition de la base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vecteur} & Position 
+\begin{DoxyCode}
+b2.setPosition(Position);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBase_a92e0991ffd34efb2f2d6db3f3bd4093d}\label{classBase_a92e0991ffd34efb2f2d6db3f3bd4093d}} 
+\index{Base@{Base}!set\+Vie@{set\+Vie}}
+\index{set\+Vie@{set\+Vie}!Base@{Base}}
+\subsubsection{\texorpdfstring{set\+Vie()}{setVie()}}
+{\footnotesize\ttfamily void Base\+::set\+Vie (\begin{DoxyParamCaption}\item[{const int \&}]{\+\_\+vie }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Vie Permet de modifier l\textquotesingle{}entier représentant la vie de la base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & vie 
+\begin{DoxyCode}
+b2.setVie(200);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/otman/\+Bureau/project/lifap4/src/Base.\+h\item 
+/home/otman/\+Bureau/project/lifap4/src/Base.\+cpp\end{DoxyCompactItemize}

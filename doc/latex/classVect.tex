@@ -1,0 +1,357 @@
+\hypertarget{classVect}{}\section{Vect Class Reference}
+\label{classVect}\index{Vect@{Vect}}
+
+
+Class \hyperlink{classVect}{Vect} Classe de vecteurs, permettant de gérer les coordonnées dans un espace en 2D.  
+
+
+
+
+{\ttfamily \#include $<$Vect.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVect_a1c153510458899146850b79a7277630b}{Vect} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classVect}{Vect} Permet de créer le vecteur par défaut. \end{DoxyCompactList}\item 
+\hyperlink{classVect_af8a503f3e10b3ec27582e47fbbf3c66f}{Vect} (const \hyperlink{classVect}{Vect} \&vec)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classVect}{Vect} Permet de créer le vecteur par copie. \end{DoxyCompactList}\item 
+\hyperlink{classVect_a12b53ecc7a5ba733c85bacc1c6deac28}{Vect} (const float \&xV, const float \&yV)
+\begin{DoxyCompactList}\small\item\em Constructeur\+: \hyperlink{classVect}{Vect} Permet de créer le vecteur avec des coordonnées. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVect_a3df4e75343958eba8516d1cdc0077ecd}\label{classVect_a3df4e75343958eba8516d1cdc0077ecd}} 
+\hyperlink{classVect_a3df4e75343958eba8516d1cdc0077ecd}{$\sim$\+Vect} ()
+\begin{DoxyCompactList}\small\item\em Destructeur\+: \hyperlink{classVect}{Vect} Permet de détruire le vecteur. \end{DoxyCompactList}\item 
+\hyperlink{classVect}{Vect} \hyperlink{classVect_a7b55d7a81e3a6770d03cbe50b9fcf1cf}{operator+} (const \hyperlink{classVect}{Vect} \&vector2) const
+\begin{DoxyCompactList}\small\item\em Vecteur\+: Opérateur + Permet de retourner la somme de 2 vecteurs. \end{DoxyCompactList}\item 
+\hyperlink{classVect}{Vect} \hyperlink{classVect_ab3dce1a30e0626a88cd726aa0d4f78e5}{operator$\ast$} (const \hyperlink{classVect}{Vect} \&vector2) const
+\begin{DoxyCompactList}\small\item\em Vecteur\+: Opérateur $\ast$ Permet de retourner le produit de 2 vecteurs. \end{DoxyCompactList}\item 
+\hyperlink{classVect}{Vect} \hyperlink{classVect_a6d4d06eb29739cfc9ab0a658ba534254}{operator-\/} (const \hyperlink{classVect}{Vect} \&vector2) const
+\begin{DoxyCompactList}\small\item\em Vecteur\+: Opérateur -\/ Permet de retourner la différence de 2 vecteurs. \end{DoxyCompactList}\item 
+\hyperlink{classVect}{Vect} \hyperlink{classVect_a08e7e684ad85024233a59aff86eb5c83}{operator/} (const \hyperlink{classVect}{Vect} \&vector2) const
+\begin{DoxyCompactList}\small\item\em Vecteur\+: Opérateur / Permet de retourner le quotient de 2 vecteurs. \end{DoxyCompactList}\item 
+void \hyperlink{classVect_a3218ca29a8bf2bc95e99600b2cf385f5}{operator=} (const \hyperlink{classVect}{Vect} \&vector2)
+\begin{DoxyCompactList}\small\item\em Vecteur\+: Opérateur = Permet d\textquotesingle{}affecter un vecteur à un autre\textquotesingle{}. \end{DoxyCompactList}\item 
+bool \hyperlink{classVect_a4a436a5c1301158cebed48d624aa4a9c}{operator==} (const \hyperlink{classVect}{Vect} \&vector2) const
+\begin{DoxyCompactList}\small\item\em Vecteur\+: Opérateur == Permet de vérifier si un vecteur est égal à un autre. \end{DoxyCompactList}\item 
+float \hyperlink{classVect_a8925192fe8666b52b2385ff006ab3213}{getX} () const
+\begin{DoxyCompactList}\small\item\em Fonction\+: getX Permet de retourner le vecteur X. \end{DoxyCompactList}\item 
+float \hyperlink{classVect_a2e44111683aae147cd053ac6002f5992}{getY} () const
+\begin{DoxyCompactList}\small\item\em Fonction\+: getY Permet de retourner le vecteur Y. \end{DoxyCompactList}\item 
+void \hyperlink{classVect_a28408435bc900905d3416aef70140cd9}{set\+Vect} (const \hyperlink{classVect}{Vect} \&vector)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Vect Permet de définir le vecteur privé \end{DoxyCompactList}\item 
+void \hyperlink{classVect_afba6ce27d6700dddeb9272cdf39c66e3}{affiche\+Vect} ()
+\begin{DoxyCompactList}\small\item\em Procédure\+: affiche\+Vect Permet d\textquotesingle{}afficher les coordonnées du vecteur. \end{DoxyCompactList}\item 
+float \hyperlink{classVect_aa61c71b79a4d2f2cda092648a7268c4f}{module} () const
+\begin{DoxyCompactList}\small\item\em Réel\+: module Retourne le module d\textquotesingle{}un vecteur. \end{DoxyCompactList}\item 
+void \hyperlink{classVect_a734074001bba32f3d76e5cee612864f1}{test\+Regression} ()
+\begin{DoxyCompactList}\small\item\em Procédure\+: test\+Regression Fait des tests de Régression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classVect}{Vect} Classe de vecteurs, permettant de gérer les coordonnées dans un espace en 2D. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVect_a1c153510458899146850b79a7277630b}\label{classVect_a1c153510458899146850b79a7277630b}} 
+\index{Vect@{Vect}!Vect@{Vect}}
+\index{Vect@{Vect}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{Vect()}{Vect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Vect\+::\+Vect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut\+: \hyperlink{classVect}{Vect} Permet de créer le vecteur par défaut. 
+
+
+\begin{DoxyCode}
+\hyperlink{classVect}{Vect} v;
+\end{DoxyCode}
+ \mbox{\Hypertarget{classVect_af8a503f3e10b3ec27582e47fbbf3c66f}\label{classVect_af8a503f3e10b3ec27582e47fbbf3c66f}} 
+\index{Vect@{Vect}!Vect@{Vect}}
+\index{Vect@{Vect}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{Vect()}{Vect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Vect\+::\+Vect (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie\+: \hyperlink{classVect}{Vect} Permet de créer le vecteur par copie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vect} & Vecteur 
+\begin{DoxyCode}
+\hyperlink{classVect}{Vect} v1(v);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVect_a12b53ecc7a5ba733c85bacc1c6deac28}\label{classVect_a12b53ecc7a5ba733c85bacc1c6deac28}} 
+\index{Vect@{Vect}!Vect@{Vect}}
+\index{Vect@{Vect}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{Vect()}{Vect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Vect\+::\+Vect (\begin{DoxyParamCaption}\item[{const float \&}]{xV,  }\item[{const float \&}]{yV }\end{DoxyParamCaption})}
+
+
+
+Constructeur\+: \hyperlink{classVect}{Vect} Permet de créer le vecteur avec des coordonnées. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xV} & coordonnée x, xY\+: coordonnée y 
+\begin{DoxyCode}
+\hyperlink{classVect}{Vect} v2(4.8, 5.6);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classVect_afba6ce27d6700dddeb9272cdf39c66e3}\label{classVect_afba6ce27d6700dddeb9272cdf39c66e3}} 
+\index{Vect@{Vect}!affiche\+Vect@{affiche\+Vect}}
+\index{affiche\+Vect@{affiche\+Vect}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{affiche\+Vect()}{afficheVect()}}
+{\footnotesize\ttfamily void Vect\+::affiche\+Vect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: affiche\+Vect Permet d\textquotesingle{}afficher les coordonnées du vecteur. 
+
+
+\begin{DoxyCode}
+v.\hyperlink{classVect_afba6ce27d6700dddeb9272cdf39c66e3}{afficheVect}();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classVect_a8925192fe8666b52b2385ff006ab3213}\label{classVect_a8925192fe8666b52b2385ff006ab3213}} 
+\index{Vect@{Vect}!getX@{getX}}
+\index{getX@{getX}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{get\+X()}{getX()}}
+{\footnotesize\ttfamily float Vect\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction\+: getX Permet de retourner le vecteur X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+x\+: coordonnée du vecteur privé 
+\begin{DoxyCode}
+v.\hyperlink{classVect_a8925192fe8666b52b2385ff006ab3213}{getX}();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVect_a2e44111683aae147cd053ac6002f5992}\label{classVect_a2e44111683aae147cd053ac6002f5992}} 
+\index{Vect@{Vect}!getY@{getY}}
+\index{getY@{getY}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{get\+Y()}{getY()}}
+{\footnotesize\ttfamily float Vect\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction\+: getY Permet de retourner le vecteur Y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+y\+: coordonnée du vecteur privé 
+\begin{DoxyCode}
+v.\hyperlink{classVect_a2e44111683aae147cd053ac6002f5992}{getY}();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVect_aa61c71b79a4d2f2cda092648a7268c4f}\label{classVect_aa61c71b79a4d2f2cda092648a7268c4f}} 
+\index{Vect@{Vect}!module@{module}}
+\index{module@{module}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{module()}{module()}}
+{\footnotesize\ttfamily float Vect\+::module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Réel\+: module Retourne le module d\textquotesingle{}un vecteur. 
+
+\begin{DoxyReturn}{Returns}
+Réel 
+\begin{DoxyCode}
+v.\hyperlink{classVect_aa61c71b79a4d2f2cda092648a7268c4f}{module}();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVect_ab3dce1a30e0626a88cd726aa0d4f78e5}\label{classVect_ab3dce1a30e0626a88cd726aa0d4f78e5}} 
+\index{Vect@{Vect}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{vector2 }\end{DoxyParamCaption}) const}
+
+
+
+Vecteur\+: Opérateur $\ast$ Permet de retourner le produit de 2 vecteurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector2} & Un autre vecteur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La somme de 2 vecteurs 
+\begin{DoxyCode}
+\hyperlink{classVect}{Vect} v3 = v1 * v2;
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVect_a7b55d7a81e3a6770d03cbe50b9fcf1cf}\label{classVect_a7b55d7a81e3a6770d03cbe50b9fcf1cf}} 
+\index{Vect@{Vect}!operator+@{operator+}}
+\index{operator+@{operator+}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{vector2 }\end{DoxyParamCaption}) const}
+
+
+
+Vecteur\+: Opérateur + Permet de retourner la somme de 2 vecteurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector2} & Un autre vecteur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La somme de 2 vecteurs 
+\begin{DoxyCode}
+\hyperlink{classVect}{Vect} v3 = v1 + v2;
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVect_a6d4d06eb29739cfc9ab0a658ba534254}\label{classVect_a6d4d06eb29739cfc9ab0a658ba534254}} 
+\index{Vect@{Vect}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{vector2 }\end{DoxyParamCaption}) const}
+
+
+
+Vecteur\+: Opérateur -\/ Permet de retourner la différence de 2 vecteurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector2} & Un autre vecteur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La somme de 2 vecteurs 
+\begin{DoxyCode}
+\hyperlink{classVect}{Vect} v3 = v1 - v2;
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVect_a08e7e684ad85024233a59aff86eb5c83}\label{classVect_a08e7e684ad85024233a59aff86eb5c83}} 
+\index{Vect@{Vect}!operator/@{operator/}}
+\index{operator/@{operator/}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{vector2 }\end{DoxyParamCaption}) const}
+
+
+
+Vecteur\+: Opérateur / Permet de retourner le quotient de 2 vecteurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector2} & Un autre vecteur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La somme de 2 vecteurs 
+\begin{DoxyCode}
+\hyperlink{classVect}{Vect} v3 = v1 / v2;
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVect_a3218ca29a8bf2bc95e99600b2cf385f5}\label{classVect_a3218ca29a8bf2bc95e99600b2cf385f5}} 
+\index{Vect@{Vect}!operator=@{operator=}}
+\index{operator=@{operator=}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void Vect\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{vector2 }\end{DoxyParamCaption})}
+
+
+
+Vecteur\+: Opérateur = Permet d\textquotesingle{}affecter un vecteur à un autre\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector2} & Un autre vecteur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\begin{DoxyCode}
+\hyperlink{classVect}{Vect} v3 = v2;
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVect_a4a436a5c1301158cebed48d624aa4a9c}\label{classVect_a4a436a5c1301158cebed48d624aa4a9c}} 
+\index{Vect@{Vect}!operator==@{operator==}}
+\index{operator==@{operator==}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Vect\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{vector2 }\end{DoxyParamCaption}) const}
+
+
+
+Vecteur\+: Opérateur == Permet de vérifier si un vecteur est égal à un autre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector2} & Un autre vecteur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\begin{DoxyCode}
+v3 == v2;
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVect_a28408435bc900905d3416aef70140cd9}\label{classVect_a28408435bc900905d3416aef70140cd9}} 
+\index{Vect@{Vect}!set\+Vect@{set\+Vect}}
+\index{set\+Vect@{set\+Vect}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{set\+Vect()}{setVect()}}
+{\footnotesize\ttfamily void Vect\+::set\+Vect (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{vector }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Vect Permet de définir le vecteur privé 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & Un autre vecteur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\begin{DoxyCode}
+v.\hyperlink{classVect_a28408435bc900905d3416aef70140cd9}{setVect}(vecteur1);
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVect_a734074001bba32f3d76e5cee612864f1}\label{classVect_a734074001bba32f3d76e5cee612864f1}} 
+\index{Vect@{Vect}!test\+Regression@{test\+Regression}}
+\index{test\+Regression@{test\+Regression}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{test\+Regression()}{testRegression()}}
+{\footnotesize\ttfamily void Vect\+::test\+Regression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: test\+Regression Fait des tests de Régression. 
+
+
+\begin{DoxyCode}
+v.\hyperlink{classVect_a734074001bba32f3d76e5cee612864f1}{testRegression}();
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/otman/\+Bureau/project/lifap4/src/Vect.\+h\item 
+/home/otman/\+Bureau/project/lifap4/src/Vect.\+cpp\end{DoxyCompactItemize}

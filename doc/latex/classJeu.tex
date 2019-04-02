@@ -1,0 +1,87 @@
+\hypertarget{classJeu}{}\section{Jeu Class Reference}
+\label{classJeu}\index{Jeu@{Jeu}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classJeu_acc5795ee00edf75516d3dfe65be3e6d6}{Jeu} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classJeu}{Jeu} Permet de créer le jeu par défaut. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classJeu_a9cd19e73df169d7f09397be61ba8548c}\label{classJeu_a9cd19e73df169d7f09397be61ba8548c}} 
+\hyperlink{classJeu_a9cd19e73df169d7f09397be61ba8548c}{$\sim$\+Jeu} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire le jeu. \end{DoxyCompactList}\item 
+void \hyperlink{classJeu_a4f8c73b225819fb5a6ba342adc2f1fa4}{affiche\+Carte\+Dispo} ()
+\begin{DoxyCompactList}\small\item\em Procédure\+: affiche\+Carte\+Dispo Permet d\textquotesingle{}afficher la carte. \end{DoxyCompactList}\item 
+\hyperlink{classNiveau}{Niveau} $\ast$ \hyperlink{classJeu_a71bf0b5329ade330d95318b50d1e2f12}{get\+Niveau} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Niveau Permet de retourner le pointeur de niveau. \end{DoxyCompactList}\item 
+void \hyperlink{classJeu_a8d2a0773d8edcb42d5e055785ad4b71a}{action\+Auto} (float delta)
+\begin{DoxyCompactList}\small\item\em Procédure\+: action\+Auto Permet d\textquotesingle{}avoir des actions automatiques. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classJeu_acc5795ee00edf75516d3dfe65be3e6d6}\label{classJeu_acc5795ee00edf75516d3dfe65be3e6d6}} 
+\index{Jeu@{Jeu}!Jeu@{Jeu}}
+\index{Jeu@{Jeu}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{Jeu()}{Jeu()}}
+{\footnotesize\ttfamily Jeu\+::\+Jeu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut\+: \hyperlink{classJeu}{Jeu} Permet de créer le jeu par défaut. 
+
+
+\begin{DoxyCode}
+\hyperlink{classJeu}{Jeu} j;
+\end{DoxyCode}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classJeu_a8d2a0773d8edcb42d5e055785ad4b71a}\label{classJeu_a8d2a0773d8edcb42d5e055785ad4b71a}} 
+\index{Jeu@{Jeu}!action\+Auto@{action\+Auto}}
+\index{action\+Auto@{action\+Auto}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{action\+Auto()}{actionAuto()}}
+{\footnotesize\ttfamily void Jeu\+::action\+Auto (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: action\+Auto Permet d\textquotesingle{}avoir des actions automatiques. 
+
+
+\begin{DoxyCode}
+i2.actionAuto();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classJeu_a4f8c73b225819fb5a6ba342adc2f1fa4}\label{classJeu_a4f8c73b225819fb5a6ba342adc2f1fa4}} 
+\index{Jeu@{Jeu}!affiche\+Carte\+Dispo@{affiche\+Carte\+Dispo}}
+\index{affiche\+Carte\+Dispo@{affiche\+Carte\+Dispo}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{affiche\+Carte\+Dispo()}{afficheCarteDispo()}}
+{\footnotesize\ttfamily void Jeu\+::affiche\+Carte\+Dispo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: affiche\+Carte\+Dispo Permet d\textquotesingle{}afficher la carte. 
+
+
+\begin{DoxyCode}
+j2.afficheCarteDispo();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classJeu_a71bf0b5329ade330d95318b50d1e2f12}\label{classJeu_a71bf0b5329ade330d95318b50d1e2f12}} 
+\index{Jeu@{Jeu}!get\+Niveau@{get\+Niveau}}
+\index{get\+Niveau@{get\+Niveau}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{get\+Niveau()}{getNiveau()}}
+{\footnotesize\ttfamily \hyperlink{classNiveau}{Niveau} $\ast$ Jeu\+::get\+Niveau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Niveau Permet de retourner le pointeur de niveau. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classNiveau}{Niveau} niv 
+\begin{DoxyCode}
+j2->getNiveau();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/otman/\+Bureau/project/lifap4/src/Jeu.\+h\item 
+/home/otman/\+Bureau/project/lifap4/src/Jeu.\+cpp\end{DoxyCompactItemize}

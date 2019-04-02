@@ -1,0 +1,112 @@
+\hypertarget{classCarte}{}\section{Carte Class Reference}
+\label{classCarte}\index{Carte@{Carte}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCarte_a06daaca86c31c80f8308f4a81d46dc9b}{Carte} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classCarte}{Carte} Permet de créer la carte par défaut. \end{DoxyCompactList}\item 
+\hyperlink{classCarte_afe56c0ec89cb3cf0332755204b576a2d}{Carte} (const \hyperlink{classCarte}{Carte} \&c)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classCarte}{Carte} Permet de créer par copie une nouvelle carte. \end{DoxyCompactList}\item 
+\hyperlink{classCarte_acf6679e07683a19586bd9dc0f699d8b4}{Carte} (const std\+::string \&f)
+\begin{DoxyCompactList}\small\item\em Constructeur\+:\hyperlink{classCarte}{Carte} Permet de créer le constructeur de la carte avec les données privées de la fonction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCarte_a63300ff55c58b5d5b1674a3fc8f25910}\label{classCarte_a63300ff55c58b5d5b1674a3fc8f25910}} 
+\hyperlink{classCarte_a63300ff55c58b5d5b1674a3fc8f25910}{$\sim$\+Carte} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire la carte. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCarte_a80741d7228490a91565f33977355da92}\label{classCarte_a80741d7228490a91565f33977355da92}} 
+bool {\bfseries reinit} ()
+\item 
+\mbox{\Hypertarget{classCarte_ae4eaa2ff8488218767a9f68232f066d4}\label{classCarte_ae4eaa2ff8488218767a9f68232f066d4}} 
+\hyperlink{classTour}{Tour} {\bfseries tour\+Indice} (const int \&i)
+\item 
+\mbox{\Hypertarget{classCarte_a042044f8d54a0f85953a5f61a0d38c86}\label{classCarte_a042044f8d54a0f85953a5f61a0d38c86}} 
+\hyperlink{classVague}{Vague} {\bfseries vague\+Indice} (const int \&i)
+\item 
+\mbox{\Hypertarget{classCarte_aaab8126dc81caed5a8e38772d84b60e4}\label{classCarte_aaab8126dc81caed5a8e38772d84b60e4}} 
+\hyperlink{classChemin}{Chemin} {\bfseries chemin\+Indice} (const int \&i)
+\item 
+\mbox{\Hypertarget{classCarte_a34264cb9ab59c19b9bd7ad1eeae324b0}\label{classCarte_a34264cb9ab59c19b9bd7ad1eeae324b0}} 
+unsigned int {\bfseries taille\+Tab\+Tour} ()
+\item 
+\mbox{\Hypertarget{classCarte_aa55a81ad0d51af69b0a34dcc544b678d}\label{classCarte_aa55a81ad0d51af69b0a34dcc544b678d}} 
+unsigned int {\bfseries taille\+Tab\+Chemin} ()
+\item 
+\mbox{\Hypertarget{classCarte_a17cf9a92bb7d81cf3279b50bb40b0891}\label{classCarte_a17cf9a92bb7d81cf3279b50bb40b0891}} 
+unsigned int {\bfseries taille\+Tab\+Vague} ()
+\item 
+\mbox{\Hypertarget{classCarte_a573a9aa2b9917152357b710fe0be6ecc}\label{classCarte_a573a9aa2b9917152357b710fe0be6ecc}} 
+\hyperlink{classTour}{Tour} $\ast$ {\bfseries addr\+Tour\+Indice} (const int \&i)
+\item 
+\mbox{\Hypertarget{classCarte_a21708cf932e4d0e74ed0222f7950582a}\label{classCarte_a21708cf932e4d0e74ed0222f7950582a}} 
+\hyperlink{classVague}{Vague} $\ast$ {\bfseries addr\+Vague\+Indice} (const int \&i)
+\item 
+\mbox{\Hypertarget{classCarte_a16a507cb5eb10f57f0d34052db75689c}\label{classCarte_a16a507cb5eb10f57f0d34052db75689c}} 
+\hyperlink{classChemin}{Chemin} $\ast$ {\bfseries addr\+Chemin\+Indice} (const int \&i)
+\item 
+\mbox{\Hypertarget{classCarte_a6d721dfc81b3a45f038c73d20e80d545}\label{classCarte_a6d721dfc81b3a45f038c73d20e80d545}} 
+void {\bfseries maj} (\hyperlink{classNiveau}{Niveau} \&n, float delta)
+\item 
+\mbox{\Hypertarget{classCarte_af76239ad9a307cf94ba0916ea477a331}\label{classCarte_af76239ad9a307cf94ba0916ea477a331}} 
+\hyperlink{classBase}{Base} {\bfseries get\+Base} ()
+\item 
+\mbox{\Hypertarget{classCarte_a66c41e01a4a8730630bd77b6dd1b670e}\label{classCarte_a66c41e01a4a8730630bd77b6dd1b670e}} 
+void {\bfseries set\+Fichier} (const std\+::string \&f)
+\item 
+\mbox{\Hypertarget{classCarte_aef8696f9e6017496583bf32fb7cceb80}\label{classCarte_aef8696f9e6017496583bf32fb7cceb80}} 
+void {\bfseries affiche} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCarte_a06daaca86c31c80f8308f4a81d46dc9b}\label{classCarte_a06daaca86c31c80f8308f4a81d46dc9b}} 
+\index{Carte@{Carte}!Carte@{Carte}}
+\index{Carte@{Carte}!Carte@{Carte}}
+\subsubsection{\texorpdfstring{Carte()}{Carte()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Carte\+::\+Carte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut\+: \hyperlink{classCarte}{Carte} Permet de créer la carte par défaut. 
+
+
+\begin{DoxyCode}
+\hyperlink{classCarte}{Carte} c;
+\end{DoxyCode}
+ \mbox{\Hypertarget{classCarte_afe56c0ec89cb3cf0332755204b576a2d}\label{classCarte_afe56c0ec89cb3cf0332755204b576a2d}} 
+\index{Carte@{Carte}!Carte@{Carte}}
+\index{Carte@{Carte}!Carte@{Carte}}
+\subsubsection{\texorpdfstring{Carte()}{Carte()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Carte\+::\+Carte (\begin{DoxyParamCaption}\item[{const \hyperlink{classCarte}{Carte} \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie\+: \hyperlink{classCarte}{Carte} Permet de créer par copie une nouvelle carte. 
+
+
+\begin{DoxyCode}
+\hyperlink{classCarte}{Carte} c1(c);
+\end{DoxyCode}
+ \mbox{\Hypertarget{classCarte_acf6679e07683a19586bd9dc0f699d8b4}\label{classCarte_acf6679e07683a19586bd9dc0f699d8b4}} 
+\index{Carte@{Carte}!Carte@{Carte}}
+\index{Carte@{Carte}!Carte@{Carte}}
+\subsubsection{\texorpdfstring{Carte()}{Carte()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Carte\+::\+Carte (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{f }\end{DoxyParamCaption})}
+
+
+
+Constructeur\+:\hyperlink{classCarte}{Carte} Permet de créer le constructeur de la carte avec les données privées de la fonction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Chaîne} & de caractère f 
+\begin{DoxyCode}
+\hyperlink{classCarte}{Carte} c2(Chaîne de caractère)
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/otman/\+Bureau/project/lifap4/src/Carte.\+h\item 
+/home/otman/\+Bureau/project/lifap4/src/Carte.\+cpp\end{DoxyCompactItemize}

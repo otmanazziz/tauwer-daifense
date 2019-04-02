@@ -1,0 +1,291 @@
+\hypertarget{classImage}{}\section{Image Class Reference}
+\label{classImage}\index{Image@{Image}}
+
+
+Pour grer une image avec S\+D\+L2.  
+
+
+
+
+{\ttfamily \#include $<$sdl\+Jeu.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classImage_a58edd1c45b4faeb5f789b0d036d02313}{Image} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classImage}{Image} Permet de créer l\textquotesingle{}image par défaut. \end{DoxyCompactList}\item 
+\hyperlink{classImage_a18dba28d7d81f51cabf37e0044bd2d6c}{Image} (const \hyperlink{classImage}{Image} \&\+\_\+image)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classImage}{Image} Permet de créer par copie une nouvelle image. \end{DoxyCompactList}\item 
+\hyperlink{classImage_ae8b4bc2d9cf6b0591f9c16829e0b1dad}{Image} (const std\+::vectore$<$ \hyperlink{classCouleur}{Couleur} $>$ \&\+\_\+tab\+Couleur, const \hyperlink{classVect}{Vect} \&\+\_\+dim)
+\begin{DoxyCompactList}\small\item\em Constructeur par copie\+:\hyperlink{classImage}{Image} Construit par copie la classe \hyperlink{classImage}{Image} avec les valeurs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classImage_a0294f63700543e11c0f0da85601c7ae5}\label{classImage_a0294f63700543e11c0f0da85601c7ae5}} 
+\hyperlink{classImage_a0294f63700543e11c0f0da85601c7ae5}{$\sim$\+Image} ()
+\begin{DoxyCompactList}\small\item\em Destructeur\+: \hyperlink{classImage}{Image} Détruit la classe \hyperlink{classImage}{Image}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classCouleur}{Couleur} $>$ \hyperlink{classImage_a61a9499054fb7982ca74f7e408617df5}{get\+Tab\+Couleur} ()
+\begin{DoxyCompactList}\small\item\em Tableau de \hyperlink{classCouleur}{Couleur}\+: get\+Tab\+Couleur Permet de retourner un tableau de couleur. \end{DoxyCompactList}\item 
+\hyperlink{classVect}{Vect} \hyperlink{classImage_a19886e6e2f661123224101aebdab0659}{get\+Dim} ()
+\begin{DoxyCompactList}\small\item\em Classe Vecteur\+: get\+Dim Permet de retourner le vecteur de dim. \end{DoxyCompactList}\item 
+void \hyperlink{classImage_a17feecebcbde65970ffa419ba9f0465a}{set\+Tab\+Couleur} (const std\+::vector$<$ \hyperlink{classCouleur}{Couleur} $>$ \&\+\_\+tab\+Couleur)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Tab\+Couleur Permet de modifier le tableau de couleur. \end{DoxyCompactList}\item 
+void \hyperlink{classImage_a9561b601b84ece813a9b87b881b8fc24}{set\+Dim} (const Vec \&\+\_\+dim)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Dim Permet de modifier la dimension. \end{DoxyCompactList}\item 
+\hyperlink{classImage_a58edd1c45b4faeb5f789b0d036d02313}{Image} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classImage}{Image} Permet de créer l\textquotesingle{}image par défaut. \end{DoxyCompactList}\item 
+void \hyperlink{classImage_aa276b5183099671ddeaf8f083068046c}{load\+From\+File} (const char $\ast$filename, S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Procédure\+: load\+From\+File Permet de charger une image à partir d\textquotesingle{}un fichier. \end{DoxyCompactList}\item 
+void \hyperlink{classImage_aee71e67e123b6fdd1d3c91caa2892792}{load\+From\+Current\+Surface} (S\+D\+L\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Procédure\+: load\+From\+Current\+Surface Permet de charger texture d\textquotesingle{}une surface. \end{DoxyCompactList}\item 
+void \hyperlink{classImage_a82d6936d466ba0161d8b9cbacf613de5}{draw} (S\+D\+L\+\_\+\+Renderer $\ast$renderer, int x, int y, int w=-\/1, int h=-\/1)
+\begin{DoxyCompactList}\small\item\em Procédure\+: draw Permet de dessiner l\textquotesingle{}image. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Texture $\ast$ \hyperlink{classImage_ae9e27e310b4322d04366f2882f3a4242}{get\+Texture} () const
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Texture Permet de retourner la texture de l\textquotesingle{}image. \end{DoxyCompactList}\item 
+void \hyperlink{classImage_a833f5d3b4b9f905320c6dffcc9b84b95}{set\+Surface} (S\+D\+L\+\_\+\+Surface $\ast$surf)
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Surface Permet de modifier la surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Pour grer une image avec S\+D\+L2. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classImage_a58edd1c45b4faeb5f789b0d036d02313}\label{classImage_a58edd1c45b4faeb5f789b0d036d02313}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut\+: \hyperlink{classImage}{Image} Permet de créer l\textquotesingle{}image par défaut. 
+
+
+\begin{DoxyCode}
+\hyperlink{classImage}{Image} i
+\end{DoxyCode}
+ \mbox{\Hypertarget{classImage_a18dba28d7d81f51cabf37e0044bd2d6c}\label{classImage_a18dba28d7d81f51cabf37e0044bd2d6c}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const \hyperlink{classImage}{Image} \&}]{\+\_\+image }\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie\+: \hyperlink{classImage}{Image} Permet de créer par copie une nouvelle image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Classe} & \hyperlink{classImage}{Image} 
+\begin{DoxyCode}
+\hyperlink{classImage}{Image} i1(i);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_ae8b4bc2d9cf6b0591f9c16829e0b1dad}\label{classImage_ae8b4bc2d9cf6b0591f9c16829e0b1dad}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const std\+::vectore$<$ \hyperlink{classCouleur}{Couleur} $>$ \&}]{\+\_\+tab\+Couleur,  }\item[{const \hyperlink{classVect}{Vect} \&}]{\+\_\+dim }\end{DoxyParamCaption})}
+
+
+
+Constructeur par copie\+:\hyperlink{classImage}{Image} Construit par copie la classe \hyperlink{classImage}{Image} avec les valeurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tableau} & de \hyperlink{classCouleur}{Couleur}, Vecteur dimension 
+\begin{DoxyCode}
+\hyperlink{classImage}{Image} i2( Tableau de couleur, dimension);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_a58edd1c45b4faeb5f789b0d036d02313}\label{classImage_a58edd1c45b4faeb5f789b0d036d02313}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\subsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut\+: \hyperlink{classImage}{Image} Permet de créer l\textquotesingle{}image par défaut. 
+
+
+\begin{DoxyCode}
+\hyperlink{classImage}{Image} i
+\end{DoxyCode}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classImage_a82d6936d466ba0161d8b9cbacf613de5}\label{classImage_a82d6936d466ba0161d8b9cbacf613de5}} 
+\index{Image@{Image}!draw@{draw}}
+\index{draw@{draw}!Image@{Image}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Image\+::draw (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w = {\ttfamily -\/1},  }\item[{int}]{h = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: draw Permet de dessiner l\textquotesingle{}image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Renderer} & renderer, Entier x, Entier y,Entier w, Entier h) 
+\begin{DoxyCode}
+i2.draw(renderer, x, y, w, h);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_a19886e6e2f661123224101aebdab0659}\label{classImage_a19886e6e2f661123224101aebdab0659}} 
+\index{Image@{Image}!get\+Dim@{get\+Dim}}
+\index{get\+Dim@{get\+Dim}!Image@{Image}}
+\subsubsection{\texorpdfstring{get\+Dim()}{getDim()}}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Image\+::get\+Dim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Classe Vecteur\+: get\+Dim Permet de retourner le vecteur de dim. 
+
+\begin{DoxyReturn}{Returns}
+Vecteur dim 
+\begin{DoxyCode}
+i2.getDim();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_a61a9499054fb7982ca74f7e408617df5}\label{classImage_a61a9499054fb7982ca74f7e408617df5}} 
+\index{Image@{Image}!get\+Tab\+Couleur@{get\+Tab\+Couleur}}
+\index{get\+Tab\+Couleur@{get\+Tab\+Couleur}!Image@{Image}}
+\subsubsection{\texorpdfstring{get\+Tab\+Couleur()}{getTabCouleur()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{classCouleur}{Couleur} $>$ Image\+::get\+Tab\+Couleur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tableau de \hyperlink{classCouleur}{Couleur}\+: get\+Tab\+Couleur Permet de retourner un tableau de couleur. 
+
+\begin{DoxyReturn}{Returns}
+Tableau de \hyperlink{classCouleur}{Couleur} 
+\begin{DoxyCode}
+i2.getTabCouleur();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_ae9e27e310b4322d04366f2882f3a4242}\label{classImage_ae9e27e310b4322d04366f2882f3a4242}} 
+\index{Image@{Image}!get\+Texture@{get\+Texture}}
+\index{get\+Texture@{get\+Texture}!Image@{Image}}
+\subsubsection{\texorpdfstring{get\+Texture()}{getTexture()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Texture $\ast$ Image\+::get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction\+: get\+Texture Permet de retourner la texture de l\textquotesingle{}image. 
+
+\begin{DoxyReturn}{Returns}
+S\+D\+L\+\_\+\+Texture texture 
+\begin{DoxyCode}
+i2->getTexture();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_aee71e67e123b6fdd1d3c91caa2892792}\label{classImage_aee71e67e123b6fdd1d3c91caa2892792}} 
+\index{Image@{Image}!load\+From\+Current\+Surface@{load\+From\+Current\+Surface}}
+\index{load\+From\+Current\+Surface@{load\+From\+Current\+Surface}!Image@{Image}}
+\subsubsection{\texorpdfstring{load\+From\+Current\+Surface()}{loadFromCurrentSurface()}}
+{\footnotesize\ttfamily void Image\+::load\+From\+Current\+Surface (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: load\+From\+Current\+Surface Permet de charger texture d\textquotesingle{}une surface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Renderer} & renderer 
+\begin{DoxyCode}
+i2.loadFromCurrentSurface(renderer);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_aa276b5183099671ddeaf8f083068046c}\label{classImage_aa276b5183099671ddeaf8f083068046c}} 
+\index{Image@{Image}!load\+From\+File@{load\+From\+File}}
+\index{load\+From\+File@{load\+From\+File}!Image@{Image}}
+\subsubsection{\texorpdfstring{load\+From\+File()}{loadFromFile()}}
+{\footnotesize\ttfamily void Image\+::load\+From\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: load\+From\+File Permet de charger une image à partir d\textquotesingle{}un fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Chaîne} & de caractère filename,S\+D\+L\+\_\+\+Renderer renderer 
+\begin{DoxyCode}
+i2.loadFromFile(filename, renderer);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_a9561b601b84ece813a9b87b881b8fc24}\label{classImage_a9561b601b84ece813a9b87b881b8fc24}} 
+\index{Image@{Image}!set\+Dim@{set\+Dim}}
+\index{set\+Dim@{set\+Dim}!Image@{Image}}
+\subsubsection{\texorpdfstring{set\+Dim()}{setDim()}}
+{\footnotesize\ttfamily void Image\+::set\+Dim (\begin{DoxyParamCaption}\item[{const Vec \&}]{\+\_\+dim }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Dim Permet de modifier la dimension. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vecteur} & dim 
+\begin{DoxyCode}
+i2.setDim(dim);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_a833f5d3b4b9f905320c6dffcc9b84b95}\label{classImage_a833f5d3b4b9f905320c6dffcc9b84b95}} 
+\index{Image@{Image}!set\+Surface@{set\+Surface}}
+\index{set\+Surface@{set\+Surface}!Image@{Image}}
+\subsubsection{\texorpdfstring{set\+Surface()}{setSurface()}}
+{\footnotesize\ttfamily void Image\+::set\+Surface (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{surf }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Surface Permet de modifier la surface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Surface} & surf 
+\begin{DoxyCode}
+i2.setSurface(surf);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_a17feecebcbde65970ffa419ba9f0465a}\label{classImage_a17feecebcbde65970ffa419ba9f0465a}} 
+\index{Image@{Image}!set\+Tab\+Couleur@{set\+Tab\+Couleur}}
+\index{set\+Tab\+Couleur@{set\+Tab\+Couleur}!Image@{Image}}
+\subsubsection{\texorpdfstring{set\+Tab\+Couleur()}{setTabCouleur()}}
+{\footnotesize\ttfamily void Image\+::set\+Tab\+Couleur (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classCouleur}{Couleur} $>$ \&}]{\+\_\+tab\+Couleur }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: set\+Tab\+Couleur Permet de modifier le tableau de couleur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tableau} & de couleur 
+\begin{DoxyCode}
+i2.setTabCouleur(Tabl de Couleur);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/otman/\+Bureau/project/lifap4/src/Image.\+h\item 
+/home/otman/\+Bureau/project/lifap4/src/sdl\+Jeu.\+h\item 
+/home/otman/\+Bureau/project/lifap4/src/Image.\+cpp\item 
+/home/otman/\+Bureau/project/lifap4/src/sdl\+Jeu.\+cpp\end{DoxyCompactItemize}
