@@ -65,7 +65,7 @@ class Carte{
 		Vague * addrVagueIndice(const int & i);
 
 		Chemin * addrCheminIndice(const int & i);
-		void maj(Niveau & n);
+		void maj(Niveau & n, float delta);
 		Base getBase();
 		void setFichier(const std::string & f);
 		void affiche();

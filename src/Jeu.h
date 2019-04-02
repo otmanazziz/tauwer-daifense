@@ -50,7 +50,7 @@ class Jeu{
 				i2.actionAuto();
 			@endcode	
 		*/
-		void actionAuto();
+		void actionAuto(float delta);
 };
 
 #endif

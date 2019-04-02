@@ -182,7 +182,7 @@ public:
 				m.avancer(v);
 			@endcode	
 	*/
-	void avancer(const Vect & v );
+	void avancer(const Vect & v , float delta );
 	/**
 			@brief Procédure: test
 			Permet de tester la perte de vie d'un monstre

@@ -132,7 +132,7 @@ class Vague{
 		*/
 		void avancementEtape(std::vector<Chemin> &tabChemin);
 	
-		void avancerMonstre(const std::vector<Chemin> &tabChemin);
+		void avancerMonstre(const std::vector<Chemin> &tabChemin , float delta);
 	
 		void spawnerMonstre();
 		

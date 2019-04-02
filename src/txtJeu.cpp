@@ -67,7 +67,7 @@ void txtBoucle(Jeu & jeu){
         		ok = false;
         		break;
         	case 't':
-        jeu.actionAuto();
+        jeu.actionAuto(200);
         		break;
 
         }

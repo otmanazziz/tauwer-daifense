@@ -152,11 +152,11 @@ void Carte::affiche(){
 	base.affiche();
 }
 
-void Carte::maj(Niveau & n){
+void Carte::maj(Niveau & n , float delta){
 	Attaque attaque;
 	if(!tabVague.empty()){
 		if(!tabVague[0].getVague().empty()){
-			tabVague[0].avancerMonstre(tabChemin);
+			tabVague[0].avancerMonstre(tabChemin,delta);
 			tabVague[0].spawnerMonstre();
 			tabVague[0].monstresBase(base);
 		}

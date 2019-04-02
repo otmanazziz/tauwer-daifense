@@ -73,10 +73,10 @@ int Vague::ennemiMort(const int & i){
 }
 
 
-void Vague::avancerMonstre(const std::vector<Chemin> &tabChemin){
+void Vague::avancerMonstre(const std::vector<Chemin> &tabChemin, float delta){
 	for( unsigned int i = 0 ; i < monstres.size(); i++){
 		if( monstres[i].getSpawn()){
-			monstres[i].avancer(tabChemin[monstres[i].getNumChem()].prochaineEtape(monstres[i].getEtape()));
+			monstres[i].avancer(tabChemin[monstres[i].getNumChem()].prochaineEtape(monstres[i].getEtape()), delta);
 		}
 	}
 }

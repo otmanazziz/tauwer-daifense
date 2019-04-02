@@ -40,7 +40,7 @@ Niveau *Jeu::getNiveau(){
 
 
 
-void Jeu::actionAuto(){
-		niv->maj();
+void Jeu::actionAuto(float delta){
+		niv->maj(delta/1000.0);
 }
 

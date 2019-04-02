@@ -20,7 +20,7 @@ class Niveau{
 		Carte getCarte();
 		unsigned int getOr();
 		Carte *addrGetCarte();
-		void maj();
+		void maj(float delta);
 		void ajouterOr(unsigned int o);
 		void retirerOr(unsigned int o);
 		void affiche();

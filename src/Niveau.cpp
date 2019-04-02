@@ -41,6 +41,6 @@ void Niveau::affiche(){
 	
 }
 
-void Niveau::maj(){
-	carte.maj(*this);
+void Niveau::maj(float delta){
+	carte.maj(*this, delta);
 }

@@ -45,6 +45,7 @@ void Image::loadFromFile (const char* filename, SDL_Renderer * renderer) {
         cout << "Error: problem to create the texture of "<< filename<< endl;
         exit(1);
     }
+	SDL_FreeSurface(surfaceCorrectPixelFormat);
 }
 
 void Image::loadFromCurrentSurface (SDL_Renderer * renderer) {
@@ -268,7 +269,7 @@ void sdlJeu::sdlBoucle () {
 
         nt = SDL_GetTicks();
         if (nt-t>200) {
-            jeu.actionAuto();
+            jeu.actionAuto(float(nt-t));
             t = nt;
         }
 

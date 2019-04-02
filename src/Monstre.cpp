@@ -102,10 +102,10 @@ void Monstre::test(){
 }
 
 
-void Monstre::avancer(const Vect & v){
+void Monstre::avancer(const Vect & v , float delta){
 	if(pos == v);
 	else{		
-		if(avancerVers(vitesse,pos, v)){
+		if(avancerVers(vitesse* delta,pos, v)){
 			etape ++;	
 		}
 	}
