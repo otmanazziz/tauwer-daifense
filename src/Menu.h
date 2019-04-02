@@ -5,7 +5,10 @@
 #include "Bouton.h"
 #include <vector>
 #include <iostream>
-
+/**
+	@brief Class Menu
+	Classe de Menu, permettant de gérer le nombre de boutons du menu
+*/
 class Menu{
 private:
 	std::vector<Bouton> tabBouton;
@@ -45,7 +48,7 @@ public:
 	~Menu();
 	/**
 		@brief Fonction: getTabBouton
-		Permet de retourner lz tableau de bouton
+		Permet de retourner le tableau de bouton
 		@return Tableau de Bouton tabBouton
 		@code
 			m2.getTabBouton();

@@ -33,6 +33,6 @@ var searchData=
   ['setzone',['setZone',['../classAttaque.html#ae6dc5afd850f4518e937b8a2c08ac764',1,'Attaque']]],
   ['sort',['Sort',['../classSort.html#a89ab0e273ec62afb2c1a3b7fc5671503',1,'Sort::Sort()'],['../classSort.html#a0b765452defe7f6f0c6fe4dbec471e7c',1,'Sort::Sort(const Sort &amp;_Sort)'],['../classSort.html#ac50c836a5f2a6a74665a898d4af24e0a',1,'Sort::Sort(const std::string &amp;_nom, const Attaque &amp;_attaque)']]],
   ['spawner',['spawner',['../classMonstre.html#a26db17b29af1a99278e7d21bc91f1532',1,'Monstre']]],
-  ['spawnermonstre',['spawnerMonstre',['../classVague.html#a0cfa903ba06db46ba3d45ceae6a89052',1,'Vague']]],
+  ['spawnermonstre',['spawnerMonstre',['../classVague.html#a08f321266ddbf3e852b9d48975849f98',1,'Vague']]],
   ['supprimerboutonindice',['supprimerBoutonIndice',['../classMenu.html#a1ed5172963be698f6fbabcf5a87ff664',1,'Menu']]]
 ];

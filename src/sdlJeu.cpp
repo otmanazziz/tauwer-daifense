@@ -261,6 +261,7 @@ void sdlJeu::sdlAff () {
 void sdlJeu::sdlBoucle () {
     SDL_Event events;
 	bool quit = false;
+	int x, y;
 
     Uint32 t = SDL_GetTicks(), nt;
 
@@ -268,9 +269,6 @@ void sdlJeu::sdlBoucle () {
 	while (!quit) {
 
         nt = SDL_GetTicks();
-        
-            jeu.actionAuto(float(nt-t));
-            t = nt;
        
 
 		// tant qu'il y a des evenements  traiter (cette boucle n'est pas bloquante)
@@ -298,6 +296,17 @@ void sdlJeu::sdlBoucle () {
 				}
 				
 			}
+
+			else if (events.type == SDL_MOUSEBUTTONDOWN) {              // Si l'utilisateur à cliqué
+				if (SDL_BUTTON(SDL_BUTTON_LEFT)){
+					SDL_GetMouseState(&x, &y);
+				}else{
+					x = -1;
+					y = -1;
+				}
+			}
+			jeu.actionAuto(float(nt-t), x, y);
+            t = nt;
 		}
 
 		// on affiche le jeu sur le buffer cach

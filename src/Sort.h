@@ -4,6 +4,10 @@
 #include "Attaque.h"
 #include <string>
 
+/**
+	@brief Class Sort
+	Classe de Sort, permettant de gérer le nom et l'attaque d'un sort
+*/
 class Sort{
 private:
 	std::string nom;

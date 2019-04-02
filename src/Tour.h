@@ -4,6 +4,10 @@
 #include "Vect.h"
 #include "Attaque.h"
 
+/**
+	@brief Class Tour
+	Classe de Tour permettant de gérer la vitesse d'attaque, la portée, la position et l'attaque d'une tour
+*/
 class Tour{
 private:
 	float vitesseAtq;

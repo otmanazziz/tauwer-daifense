@@ -5,6 +5,10 @@
 #include <iostream>
 #include <vector>
 
+/**
+	@brief Class Hero
+	Classe de Hero, permettant de gérer les sorts des différents héros
+*/
 class Hero{
 private:
 	std::vector<Sort> tabSort;
@@ -13,7 +17,7 @@ public:
 		@brief Constructeur par défaut: Hero
 		Permet de créer le héros par défaut
 		@code
-		Hero h;
+			Hero h;
 		@endcode
 	*/		
 	Hero();

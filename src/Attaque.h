@@ -2,7 +2,10 @@
 #define ATTAQUE
 
 #include "Effet.h"
-
+/**
+	@brief Class Attaque
+	Classe d'attaque, permettant de gérer l'attaque des tours, et la portée des attaques
+*/
 class Attaque{
 private:
 	float zone;
@@ -44,8 +47,8 @@ public:
 	~Attaque();
 	/**
 		@brief Fonction: getZone
-		Permet de retourner l'entier dela zone
-		@return Entier
+		Permet de retourner lé réel de la zone
+		@return Réel
 		@code
 			a2.getZone();
 		@endcode	
@@ -63,8 +66,8 @@ public:
 	int getDegats();
 	/**
 		@brief Procédure: setZone
-		Permet de modifier l'entier représentant la zone d'attaque
-		@param Entier
+		Permet de modifier le réel représentant la zone d'attaque
+		@param Réel
 		@code
 			a2.setZone(2);
 		@endcode	
@@ -73,7 +76,7 @@ public:
 	void setZone(const float &_zone);
 	/**
 		@brief Procédure: setDegats
-		Permet de modifier les dégats
+		Permet de modifier l'entier des dégats
 		@param Entier
 		@code
 			a2.setDegats(5);

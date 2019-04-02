@@ -6,6 +6,10 @@
 #include <iostream>
 #include <vector>
 
+/**
+	@brief Class Image
+	Classe d'Image permettant de gérer les couleurs de l'image et la taille
+*/
 class Image{
 private:
 	std::vectore<Couleur> tabCouleur;

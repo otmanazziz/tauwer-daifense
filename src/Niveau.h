@@ -6,6 +6,10 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+/**
+	@brief Class Niveau
+	Classe de Niveau permettant de gérer les caractéristique d'un niveau (la carte, le héro, l'or et le score)
+*/
 class Niveau{
 	private : 
 		Carte carte;

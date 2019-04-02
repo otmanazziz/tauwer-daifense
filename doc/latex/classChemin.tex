@@ -1,5 +1,14 @@
 \hypertarget{classChemin}{}\section{Chemin Class Reference}
 \label{classChemin}\index{Chemin@{Chemin}}
+
+
+Class \hyperlink{classChemin}{Chemin} Classe de \hyperlink{classChemin}{Chemin}, permettant de gérer les étapes constituant le chemin.  
+
+
+
+
+{\ttfamily \#include $<$Chemin.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -12,13 +21,15 @@ void \hyperlink{classChemin_a4cdbe032bca015c52dccbef4fa2cb647}{ajouter\+Etape} (
 \begin{DoxyCompactList}\small\item\em Procédure\+: ajouter\+Etape Permet d\textquotesingle{}ajouter une étape dans le chemin. \end{DoxyCompactList}\item 
 \hyperlink{classVect}{Vect} \hyperlink{classChemin_ad01a7ae60fd0b51cc18281c031ea9c97}{prochaine\+Etape} (const int \&e) const
 \begin{DoxyCompactList}\small\item\em Fonction\+: prochaine\+Etape Permet d\textquotesingle{}avoir la prochaine étape du chemin. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classChemin_a7153e040b29f294f30793a698cde23b3}\label{classChemin_a7153e040b29f294f30793a698cde23b3}} 
-unsigned int {\bfseries taille\+Chemin} ()
-\item 
+unsigned int \hyperlink{classChemin_a7153e040b29f294f30793a698cde23b3}{taille\+Chemin} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: taille\+Chemin Permet d\textquotesingle{}avoir l\textquotesingle{}entier positif de la taille du chemin. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classChemin_aca468327c0fc8ce57727bc13edfa741e}\label{classChemin_aca468327c0fc8ce57727bc13edfa741e}} 
 void {\bfseries affiche} ()
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Class \hyperlink{classChemin}{Chemin} Classe de \hyperlink{classChemin}{Chemin}, permettant de gérer les étapes constituant le chemin. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classChemin_acbb44d2dd9c7eda79740c3ddb2b435c5}\label{classChemin_acbb44d2dd9c7eda79740c3ddb2b435c5}} 
@@ -81,9 +92,23 @@ c1.prochaineEtape(e);
  \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classChemin_a7153e040b29f294f30793a698cde23b3}\label{classChemin_a7153e040b29f294f30793a698cde23b3}} 
+\index{Chemin@{Chemin}!taille\+Chemin@{taille\+Chemin}}
+\index{taille\+Chemin@{taille\+Chemin}!Chemin@{Chemin}}
+\subsubsection{\texorpdfstring{taille\+Chemin()}{tailleChemin()}}
+{\footnotesize\ttfamily unsigned int Chemin\+::taille\+Chemin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Fonction\+: taille\+Chemin Permet d\textquotesingle{}avoir l\textquotesingle{}entier positif de la taille du chemin. 
+
+
+\begin{DoxyCode}
+c1.tailleChemin();
+\end{DoxyCode}
+ 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/otman/\+Bureau/project/lifap4/src/Chemin.\+h\item 
-/home/otman/\+Bureau/project/lifap4/src/Chemin.\+cpp\end{DoxyCompactItemize}
+/home/samy/\+Projet/lifap4/src/Chemin.\+h\item 
+/home/samy/\+Projet/lifap4/src/Chemin.\+cpp\end{DoxyCompactItemize}
