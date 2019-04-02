@@ -36,7 +36,7 @@ class Jeu{
 		void afficheCarteDispo();
 		/**
 			@brief Fonction: getNiveau
-			Permet de retourner le niveau sous forme de pointeur
+			Permet de retourner le pointeur de niveau
 			@return Niveau niv
 			@code
 				j2->getNiveau();

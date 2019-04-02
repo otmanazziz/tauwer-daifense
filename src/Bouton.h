@@ -25,6 +25,7 @@ public:
 	 /**
  		@brief Constructeur par copie: Bouton
  		Permet de créer par copie un nouveau bouton
+ 		@param Bouton b
  		@code
  			Bouton b1(b);
  		@endcode	
