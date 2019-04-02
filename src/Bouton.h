@@ -35,7 +35,7 @@ public:
 		Permet de créer le constructeur du bouton avec les données privées de la fonction
 		@param Chaîne de caractère Nom, Vecteur Position, Vecteur Taille
 		@code
-			Bouton b2(Chaîne de caracatère , Vecteur Position , Vecteur Taille)
+			Bouton b2(Chaîne de caractère , Vecteur Position , Vecteur Taille)
 		@endcode	
 
 	*/

@@ -19,9 +19,37 @@ class Carte{
 		Base base;
 		std::string fichier;
 	public:
+		/**
+			@brief Constructeur par défaut: Carte
+			Permet de créer la carte par défaut
+			@code
+			Carte c;
+			@endcode
+		*/
 		Carte();
+		/**
+ 			@brief Constructeur par copie: Carte
+ 			Permet de créer par copie une nouvelle carte
+ 			@code
+ 			Carte c1(c);
+ 			@endcode	
+ 		*/	
 		Carte(const Carte & c);
+		/**
+			@brief Constructeur:Carte
+			Permet de créer le constructeur de la carte avec les données privées de la fonction
+			@param Chaîne de caractère f
+			@code
+			Carte c2(Chaîne de caractère)
+			@endcode	
+
+		*/
 		Carte(const std::string & f);
+		/** 
+			@brief Destructeur
+			Permet de détruire la carte
+
+		*/
 		~Carte();
 		bool reinit();
 		Tour tourIndice(const int & i); 

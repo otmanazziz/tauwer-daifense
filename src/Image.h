@@ -61,8 +61,25 @@ public:
 		@endcode
 	*/
 	Vect getDim();
+	/**
+		@brief Procédure: setTabCouleur
+		Permet de modifier le tableau de couleur
+		@param Tableau de couleur
+		@code
+			i2.setTabCouleur(Tabl de Couleur);
+		@endcode	
+	*/
 
 	void setTabCouleur(const std::vector<Couleur> &_tabCouleur);
+	/**
+		@brief Procédure: setDim
+		Permet de modifier la dimension
+		@param Vecteur dim
+		@code
+			i2.setDim(dim);
+		@endcode	
+	*/
+
 	void setDim(const Vec &_dim);
 
 };
