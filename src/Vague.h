@@ -14,6 +14,7 @@ class Vague{
 		std::vector<Monstre> monstres; 
 		float tempsEnnemi;
 		float tempsVague; 
+		float cooldownSpawn;
 	public:
 		/**
 			@brief Constructeur par défaut: Vague
@@ -147,7 +148,7 @@ class Vague{
 			v2.spawnerMonstre();
 		@endcode	
 	*/
-		void spawnerMonstre();
+		void spawnerMonstre(float delta);
 	/**
 		@brief Procédure: affiche
 		Permet d'afficher des monstre dans la vague

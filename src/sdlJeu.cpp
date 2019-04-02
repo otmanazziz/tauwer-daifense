@@ -268,10 +268,10 @@ void sdlJeu::sdlBoucle () {
 	while (!quit) {
 
         nt = SDL_GetTicks();
-        if (nt-t>200) {
+        
             jeu.actionAuto(float(nt-t));
             t = nt;
-        }
+       
 
 		// tant qu'il y a des evenements  traiter (cette boucle n'est pas bloquante)
 		while (SDL_PollEvent(&events)) {
