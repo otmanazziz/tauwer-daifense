@@ -131,15 +131,47 @@ class Vague{
 			@endcode
 		*/
 		void avancementEtape(std::vector<Chemin> &tabChemin);
-	
+	/**
+		@brief Procédure: avancerMonstre
+		Permet de faire avancer le monstre
+		@param Chemin tabChemin, Réel delta
+		@code
+			v2.avancerMonstre(tabChemin, delta);
+		@endcode	
+	*/
 		void avancerMonstre(const std::vector<Chemin> &tabChemin , float delta);
-	
+	/**
+		@brief Procédure: spawnerMonstre
+		Permet de créer des monstres dans la vague
+		@code
+			v2.spawnerMonstre();
+		@endcode	
+	*/
 		void spawnerMonstre();
-		
+	/**
+		@brief Procédure: affiche
+		Permet d'afficher des monstre dans la vague
+		@code
+			v2.affiche();
+		@endcode	
+	*/	
 		void affiche();
-	
+	/**
+		@brief Procédure: monstresBase
+		Permet de faire disparaitre le monstre quand il arrive à la base et d'enlever un point de vie à la base
+		@param Base b
+		@code
+			v2.monstresBase(b);
+		@endcode	
+	*/
 		void monstresBase(Base & b);
-
+	/**
+		@brief Fonction: tailleVague
+		Permet de retourner la taille de la vague
+		@code
+			v2.tailleVague();
+		@endcode	
+	*/
 		unsigned int tailleVague()const;
 
 
