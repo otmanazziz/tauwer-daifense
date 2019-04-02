@@ -2,6 +2,10 @@
 #define CHEMIN
 #include <vector>
 #include "Vect.h"
+/**
+	@brief Class Chemin
+	Classe de Chemin, permettant de gérer les étapes constituant le chemin
+*/
 class Chemin{
 	private : 
 		std::vector<Vect> tabEtape ; 
@@ -39,7 +43,13 @@ class Chemin{
 		@endcode	
 	*/
 		Vect prochaineEtape(const int & e )const;
-	
+	/**
+		@brief Fonction: tailleChemin
+		Permet d'avoir l'entier positif de la taille du chemin
+		@code
+			c1.tailleChemin();
+		@endcode	
+	*/
 		unsigned int tailleChemin();
 		
 	void affiche();

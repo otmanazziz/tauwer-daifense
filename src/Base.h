@@ -1,6 +1,10 @@
 #ifndef BASE
 #define BASE
 #include "Vect.h"
+/**
+	@brief Class Base
+	Classe de Base, permettant de gérer la vie de la base et sa position
+*/
 class Base{
 private:
 	int vie;
@@ -10,7 +14,7 @@ public:
 		@brief Constructeur par défaut: Base
 		Permet de créer la base par défaut
 		@code
-		Base b;
+			Base b;
 		@endcode
 	*/
 	Base();
@@ -39,7 +43,7 @@ public:
 
 	*/
 	~Base();
-		/**
+	/**
 		@brief Fonction: getVie
 		Permet de retourner l'entier de la vie
 		@return Entier vie
@@ -71,7 +75,7 @@ public:
 	void setVie(const int &_vie);
 	/**
 		@brief Procédure: setPosition
-		Permet de modifier le vecteur poisition de la base
+		Permet de modifier le vecteur position de la base
 		@param Vecteur Position
 		@code
 			b2.setPosition(Position);
@@ -90,7 +94,13 @@ public:
 
 
 	void perdreVie(const int &viePerdue);
-	
+	/**
+		@brief Procédure: affiche
+		Permet d'afficher les information de la base
+		@code
+			b2.affiche();
+		@endcode	
+	*/
 	void affiche();
 };
 
