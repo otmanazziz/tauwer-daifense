@@ -64,3 +64,7 @@
 	Attaque Tour::getAttaque(){
 		return attaque;
 	}
+
+	void Tour::setAAttaquer(bool b){
+		aAttaquer = b;
+	}

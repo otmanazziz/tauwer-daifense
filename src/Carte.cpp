@@ -164,10 +164,12 @@ void Carte::maj(Niveau & n , float delta){
 		tabVague.erase(tabVague.begin());
 		}
 	}
-	
+	for (unsigned int j = 0; j < tabVague[0].tailleVague(); j++) tabVague[0].getVague()[j].setEstAttaquer(false);
+	for (unsigned int k = 0; k < tabTour.size(); k++) tabTour[k].setAAttaquer(false);
 	for (unsigned int k = 0; k < tabTour.size(); k++){
-		for (unsigned int j = 0; j < tabVague[0].tailleVague(); j++){//tabVague[0].getVague()[j].getPos().afficheVect();tabTour[k].getPosition().afficheVect();std::cout<<
+		for (unsigned int j = 0; j < tabVague[0].tailleVague(); j++){
 			if (tabTour[k].estAPortee(tabVague[0].getVague()[j].getPos()) ){
+				tabTour[k].setAAttaquer(true);
 				attaque = tabTour[k].getAttaque();//Récupère l'attaque de la tour
 				if (attaque.getZone() > 0){
 					for (unsigned int i = 0; i < tabVague[0].tailleVague(); i++){

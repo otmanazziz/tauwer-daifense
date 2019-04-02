@@ -10,6 +10,7 @@ private:
 	int portee;
 	Vect position;
 	Attaque attaque;
+	bool aAttaquer;
 public:
 	/**
 		@brief Constructeur par défaut: Tour
@@ -116,6 +117,7 @@ public:
 	bool estAPortee(const Vect &pos)const;
 	int getDegat();
 	Attaque getAttaque();
+	void setAAttaquer(bool b);
 };
 
 #endif

@@ -13,7 +13,7 @@ private:
 	int numChem;
 	int gold;
 	bool spawn;
-
+	bool estAttaquer;
 public:
 	/**
 		@brief Constructeur par défaut: Monstre
@@ -199,6 +199,8 @@ public:
 			@endcode	
 	*/
 	void affiche();
+
+	void setEstAttaquer(bool b);
 };
 
 #endif

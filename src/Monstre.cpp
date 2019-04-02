@@ -72,7 +72,7 @@ void Monstre::setEtape(const int &_etape){
 
 
 bool Monstre::perdreVie(const int &n){
-	
+	estAttaquer = true;
 	vie -= n;
 	return vie <= 0;
 	
@@ -120,6 +120,9 @@ int Monstre::getNumChem()const{
 }
 	
 	
-	
+void Monstre::setEstAttaquer(bool b){
+
+	estAttaquer = b;
+}	
 	
 	
