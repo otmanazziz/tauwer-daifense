@@ -122,9 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a81df1228dfa2ad84109612ef378d4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVague.html#a2a81df1228dfa2ad84109612ef378d4c">avancerMonstre</a> (const std::vector&lt; <a class="el" href="classChemin.html">Chemin</a> &gt; &amp;tabChemin, float delta)</td></tr>
 <tr class="memdesc:a2a81df1228dfa2ad84109612ef378d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: avancerMonstre Permet de faire avancer le monstre.  <a href="#a2a81df1228dfa2ad84109612ef378d4c">More...</a><br /></td></tr>
 <tr class="separator:a2a81df1228dfa2ad84109612ef378d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cfa903ba06db46ba3d45ceae6a89052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVague.html#a0cfa903ba06db46ba3d45ceae6a89052">spawnerMonstre</a> ()</td></tr>
-<tr class="memdesc:a0cfa903ba06db46ba3d45ceae6a89052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: spawnerMonstre Permet de créer des monstres dans la vague.  <a href="#a0cfa903ba06db46ba3d45ceae6a89052">More...</a><br /></td></tr>
-<tr class="separator:a0cfa903ba06db46ba3d45ceae6a89052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08f321266ddbf3e852b9d48975849f98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVague.html#a08f321266ddbf3e852b9d48975849f98">spawnerMonstre</a> (float delta)</td></tr>
+<tr class="memdesc:a08f321266ddbf3e852b9d48975849f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: spawnerMonstre Permet de créer des monstres dans la vague.  <a href="#a08f321266ddbf3e852b9d48975849f98">More...</a><br /></td></tr>
+<tr class="separator:a08f321266ddbf3e852b9d48975849f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adec201ad91a86f65bf6aaf0ddb73bd20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVague.html#adec201ad91a86f65bf6aaf0ddb73bd20">affiche</a> ()</td></tr>
 <tr class="memdesc:adec201ad91a86f65bf6aaf0ddb73bd20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: affiche Permet d'afficher des monstre dans la vague.  <a href="#adec201ad91a86f65bf6aaf0ddb73bd20">More...</a><br /></td></tr>
 <tr class="separator:adec201ad91a86f65bf6aaf0ddb73bd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -264,7 +264,7 @@ Public Member Functions</h2></td></tr>
 <p>Procédure: avancementEtape Permet de vérifier l'avancement des étapes des ennemis en fonction de son chemin à prendre. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Tableau</td><td>de Classes <a class="el" href="classChemin.html">Chemin</a> <div class="fragment"><div class="line">v2.avancementEtape(tabChemin2);</div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">Tableau</td><td>de Classes <a class="el" href="classChemin.html" title="Class Chemin Classe de Chemin, permettant de gérer les étapes constituant le chemin. ">Chemin</a> <div class="fragment"><div class="line">v2.avancementEtape(tabChemin2);</div></div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -300,7 +300,7 @@ Public Member Functions</h2></td></tr>
 <p>Procédure: avancerMonstre Permet de faire avancer le monstre. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="classChemin.html">Chemin</a></td><td>tabChemin, Réel delta <div class="fragment"><div class="line">v2.avancerMonstre(tabChemin, delta);</div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname"><a class="el" href="classChemin.html" title="Class Chemin Classe de Chemin, permettant de gérer les étapes constituant le chemin. ">Chemin</a></td><td>tabChemin, Réel delta <div class="fragment"><div class="line">v2.avancerMonstre(tabChemin, delta);</div></div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -406,7 +406,7 @@ Public Member Functions</h2></td></tr>
 <p>Procédure: monstresBase Permet de faire disparaitre le monstre quand il arrive à la base et d'enlever un point de vie à la base. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="classBase.html">Base</a></td><td>b <div class="fragment"><div class="line">v2.monstresBase(b);</div></div><!-- fragment --> </td></tr>
+    <tr><td class="paramname"><a class="el" href="classBase.html" title="Class Base Classe de Base, permettant de gérer la vie de la base et sa position. ">Base</a></td><td>b <div class="fragment"><div class="line">v2.monstresBase(b);</div></div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -486,8 +486,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0cfa903ba06db46ba3d45ceae6a89052"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cfa903ba06db46ba3d45ceae6a89052">&#9670;&nbsp;</a></span>spawnerMonstre()</h2>
+<a id="a08f321266ddbf3e852b9d48975849f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08f321266ddbf3e852b9d48975849f98">&#9670;&nbsp;</a></span>spawnerMonstre()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -495,7 +495,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Vague::spawnerMonstre </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>delta</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -550,8 +551,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/otman/Bureau/project/lifap4/src/<a class="el" href="Vague_8h_source.html">Vague.h</a></li>
-<li>/home/otman/Bureau/project/lifap4/src/Vague.cpp</li>
+<li>/home/samy/Projet/lifap4/src/<a class="el" href="Vague_8h_source.html">Vague.h</a></li>
+<li>/home/samy/Projet/lifap4/src/Vague.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

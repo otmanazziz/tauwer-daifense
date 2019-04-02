@@ -1,5 +1,14 @@
 \hypertarget{classBase}{}\section{Base Class Reference}
 \label{classBase}\index{Base@{Base}}
+
+
+Class \hyperlink{classBase}{Base} Classe de \hyperlink{classBase}{Base}, permettant de gérer la vie de la base et sa position.  
+
+
+
+
+{\ttfamily \#include $<$Base.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,13 +28,15 @@ int \hyperlink{classBase_a922b45a3578821dd6ab666206b1a637e}{get\+Vie} ()
 void \hyperlink{classBase_a92e0991ffd34efb2f2d6db3f3bd4093d}{set\+Vie} (const int \&\+\_\+vie)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Vie Permet de modifier l\textquotesingle{}entier représentant la vie de la base. \end{DoxyCompactList}\item 
 void \hyperlink{classBase_afe9eb29bdaf866dc20af0b833209e29e}{set\+Position} (const \hyperlink{classVect}{Vect} \&\+\_\+position)
-\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Position Permet de modifier le vecteur poisition de la base. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Position Permet de modifier le vecteur position de la base. \end{DoxyCompactList}\item 
 void \hyperlink{classBase_a0471688678ab6e2aba5ee69d290c2e20}{perdre\+Vie} (const int \&vie\+Perdue)
 \begin{DoxyCompactList}\small\item\em Procédure\+: perdre\+Vie Permet de modifier la vie de la base. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classBase_a90f460bea595fc507cab1b6a2131350c}\label{classBase_a90f460bea595fc507cab1b6a2131350c}} 
-void {\bfseries affiche} ()
-\end{DoxyCompactItemize}
+void \hyperlink{classBase_a90f460bea595fc507cab1b6a2131350c}{affiche} ()
+\begin{DoxyCompactList}\small\item\em Procédure\+: affiche Permet d\textquotesingle{}afficher les information de la base. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Class \hyperlink{classBase}{Base} Classe de \hyperlink{classBase}{Base}, permettant de gérer la vie de la base et sa position. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classBase_a5ffe0568374d8b9b4c4ec32953fd6453}\label{classBase_a5ffe0568374d8b9b4c4ec32953fd6453}} 
@@ -83,7 +94,21 @@ Constructeur par copie\+: \hyperlink{classBase}{Base} Permet de créer par copie
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classBase_a16d0ed1836dfedfb51d54308d22b4a38}\label{classBase_a16d0ed1836dfedfb51d54308d22b4a38}} 
+\mbox{\Hypertarget{classBase_a90f460bea595fc507cab1b6a2131350c}\label{classBase_a90f460bea595fc507cab1b6a2131350c}} 
+\index{Base@{Base}!affiche@{affiche}}
+\index{affiche@{affiche}!Base@{Base}}
+\subsubsection{\texorpdfstring{affiche()}{affiche()}}
+{\footnotesize\ttfamily void Base\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: affiche Permet d\textquotesingle{}afficher les information de la base. 
+
+
+\begin{DoxyCode}
+b2.affiche();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classBase_a16d0ed1836dfedfb51d54308d22b4a38}\label{classBase_a16d0ed1836dfedfb51d54308d22b4a38}} 
 \index{Base@{Base}!get\+Position@{get\+Position}}
 \index{get\+Position@{get\+Position}!Base@{Base}}
 \subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
@@ -144,7 +169,7 @@ b2.perdeVie(10);
 
 
 
-Procédure\+: set\+Position Permet de modifier le vecteur poisition de la base. 
+Procédure\+: set\+Position Permet de modifier le vecteur position de la base. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -178,5 +203,5 @@ b2.setVie(200);
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/otman/\+Bureau/project/lifap4/src/Base.\+h\item 
-/home/otman/\+Bureau/project/lifap4/src/Base.\+cpp\end{DoxyCompactItemize}
+/home/samy/\+Projet/lifap4/src/Base.\+h\item 
+/home/samy/\+Projet/lifap4/src/Base.\+cpp\end{DoxyCompactItemize}

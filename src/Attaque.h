@@ -4,7 +4,7 @@
 #include "Effet.h"
 /**
 	@brief Class Attaque
-	Classe de d'attaque, permettant de gérer l'attaque des tours, et la portée des attaques
+	Classe d'attaque, permettant de gérer l'attaque des tours, et la portée des attaques
 */
 class Attaque{
 private:

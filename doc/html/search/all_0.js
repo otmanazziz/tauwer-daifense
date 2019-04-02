@@ -2,7 +2,7 @@ var searchData=
 [
   ['actionauto',['actionAuto',['../classJeu.html#a8d2a0773d8edcb42d5e055785ad4b71a',1,'Jeu']]],
   ['addrgetcarte',['addrGetCarte',['../classNiveau.html#a47ea8b8f36e27be8ad0d3f534a956260',1,'Niveau']]],
-  ['affiche',['affiche',['../classMonstre.html#ac6700482d005ec983746983f76ad0088',1,'Monstre::affiche()'],['../classNiveau.html#a945a71fd635f9ab1e15dbae04afa5e5d',1,'Niveau::affiche()'],['../classTour.html#a418908de2fcbb83e8e9459a999f98aa6',1,'Tour::affiche()'],['../classVague.html#adec201ad91a86f65bf6aaf0ddb73bd20',1,'Vague::affiche()']]],
+  ['affiche',['affiche',['../classBase.html#a90f460bea595fc507cab1b6a2131350c',1,'Base::affiche()'],['../classMonstre.html#ac6700482d005ec983746983f76ad0088',1,'Monstre::affiche()'],['../classNiveau.html#a945a71fd635f9ab1e15dbae04afa5e5d',1,'Niveau::affiche()'],['../classTour.html#a418908de2fcbb83e8e9459a999f98aa6',1,'Tour::affiche()'],['../classVague.html#adec201ad91a86f65bf6aaf0ddb73bd20',1,'Vague::affiche()']]],
   ['affichecartedispo',['afficheCarteDispo',['../classJeu.html#a4f8c73b225819fb5a6ba342adc2f1fa4',1,'Jeu']]],
   ['afficheeffet',['afficheEffet',['../classEffet.html#a038370be360fcb5e11f5d654e3506d42',1,'Effet']]],
   ['affichertabbouton',['afficherTabBouton',['../classMenu.html#af01f5f26519658b6e0fd92fdb8eda6fe',1,'Menu']]],
