@@ -148,11 +148,56 @@ public:
 		@endcode
 	*/
 	bool estMort();
+	/**
+		@brief Fonction: getNumChem
+		Permet de retourner le numéro du chemin
+		@return Entier numChem
+		@code
+			m.getNumChem();
+		@endcode	
+	*/
 	int getNumChem()const;
+	/**
+		@brief Booléen: getSpawn
+		Permet de savoir si le monstre réapparaît 
+		@return Booléen
+		@code
+			m.getSpawn();
+		@endcode	
+	*/
 	bool getSpawn()const;
+	/**
+			@brief Procédure: spawner
+			Permet d'avoir un endroit où les monstres apparaissent
+			@code
+				m.spawner();
+			@endcode	
+	*/
 	void spawner();
+	/**
+			@brief Procédure: avancer
+			Permet de faire avancer les monstres
+			@param Vecteur v
+			@code
+				m.avancer(v);
+			@endcode	
+	*/
 	void avancer(const Vect & v );
+	/**
+			@brief Procédure: test
+			Permet de tester la perte de vie d'un monstre
+			@code
+				m.test();
+			@endcode	
+	*/
 	void test();
+	/**
+			@brief Procédure: affiche
+			Permet d'afficher toutes les informations d'un monstre
+			@code
+				m.affiche();
+			@endcode	
+	*/
 	void affiche();
 };
 
