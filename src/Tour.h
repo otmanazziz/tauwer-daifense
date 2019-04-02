@@ -115,6 +115,7 @@ public:
 	*/
 	bool estAPortee(const Vect &pos)const;
 	int getDegat();
+	Attaque getAttaque();
 };
 
 #endif

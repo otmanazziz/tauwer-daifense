@@ -60,3 +60,7 @@
 	bool Tour::estAPortee(const Vect &pos)const {
 		return (pos-position).module() <= portee;
 	}
+
+	Attaque Tour::getAttaque(){
+		return attaque;
+	}

@@ -153,6 +153,7 @@ void Carte::affiche(){
 }
 
 void Carte::maj(Niveau & n){
+	Attaque attaque;
 	if(!tabVague.empty()){
 		if(!tabVague[0].getVague().empty()){
 			tabVague[0].avancerMonstre(tabChemin);
@@ -166,9 +167,18 @@ void Carte::maj(Niveau & n){
 	
 	for (unsigned int k = 0; k < tabTour.size(); k++){
 		for (unsigned int j = 0; j < tabVague[0].tailleVague(); j++){//tabVague[0].getVague()[j].getPos().afficheVect();tabTour[k].getPosition().afficheVect();std::cout<<
-			if (tabTour[k].estAPortee(tabVague[0].getVague()[j].getPos()) ){			
-				if(tabVague[0].addrGetIndiceMonstre(j)->perdreVie(tabTour[k].getDegat())){
-					n.ajouterOr((unsigned int)(tabVague[0].ennemiMort(int(j))));
+			if (tabTour[k].estAPortee(tabVague[0].getVague()[j].getPos()) ){
+				attaque = tabTour[k].getAttaque();//Récupère l'attaque de la tour
+				if (attaque.getZone() > 0){
+					for (unsigned int i = 0; i < tabVague[0].tailleVague(); i++){
+						if(tabVague[0].addrGetIndiceMonstre(i)->perdreVie(attaque.getDegats())){
+							n.ajouterOr((unsigned int)(tabVague[0].ennemiMort(int(i))));
+						}
+					}
+				}	else {	
+					if(tabVague[0].addrGetIndiceMonstre(j)->perdreVie(attaque.getDegats())){
+						n.ajouterOr((unsigned int)(tabVague[0].ennemiMort(int(j))));
+					}
 				}
 				break;	
 			}

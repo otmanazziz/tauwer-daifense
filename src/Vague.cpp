@@ -64,6 +64,7 @@ bool Vague::vagueVide()const{
 unsigned int Vague::tailleVague()const{
 	return monstres.size();
 }
+
 //ON peut le switch en booléen pour plus tard, si nécessaire
 int Vague::ennemiMort(const int & i){
 	int o = monstres[i].getGold();
@@ -103,3 +104,4 @@ void Vague::affiche(){
 	std::cout<<"Temps entre Ennemie : "<<tempsEnnemi<< " Temps de la Vague : "<<tempsVague<<std::endl;
 	for (unsigned int i = 0 ; i < monstres.size();i++) monstres[i].affiche();
 }
+

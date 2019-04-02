@@ -5,7 +5,7 @@
 
 class Attaque{
 private:
-	int zone;
+	float zone;
 	//Effet effet;
 	int degats;
 public:
@@ -35,7 +35,7 @@ public:
 		@endcode	
 
 	*/
-	Attaque(const int &_zone, const int &_degats);
+	Attaque(const float &_zone, const int &_degats);
 	/** 
 		@brief Destructeur
 		Permet de détruire l'attaque
@@ -51,7 +51,7 @@ public:
 		@endcode	
 	*/
 
-	int getZone();
+	float getZone();
 	/**
 		@brief Fonction: getDegats
 		Permet de retourner l'entier des dégats
@@ -70,7 +70,7 @@ public:
 		@endcode	
 	*/
 
-	void setZone(const int &_zone);
+	void setZone(const float &_zone);
 	/**
 		@brief Procédure: setDegats
 		Permet de modifier les dégats
