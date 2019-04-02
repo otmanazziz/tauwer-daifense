@@ -51,6 +51,7 @@ void txtBoucle(Jeu & jeu){
 
 	bool ok = true;
 	int c;
+	int x, y;
 
 	do {
 	    txtAff(win,jeu);
@@ -67,7 +68,7 @@ void txtBoucle(Jeu & jeu){
         		ok = false;
         		break;
         	case 't':
-        jeu.actionAuto(200);
+        jeu.actionAuto(200, x, y);
         		break;
 
         }
