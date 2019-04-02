@@ -6,6 +6,10 @@
 #include <iostream>
 #include "fonction.h"
 #include "Menu.h"
+/**
+	@brief Class Jeu
+	Classe de Jeu permettant de gérer le menu, les cartes et les niveaux
+*/
 class Jeu{
 	private:
 		std::vector<std::string> tabLienCarte;
@@ -16,7 +20,7 @@ class Jeu{
 			@brief Constructeur par défaut: Jeu
 			Permet de créer le jeu par défaut
 			@code
-			Jeu j;
+				Jeu j;
 			@endcode
 		*/	
 		Jeu();
@@ -46,6 +50,7 @@ class Jeu{
 		/**
 			@brief Procédure: actionAuto
 			Permet d'avoir des actions automatiques
+			@param Réel delta
 			@code
 				i2.actionAuto();
 			@endcode	

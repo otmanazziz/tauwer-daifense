@@ -4,6 +4,10 @@
 #include <iostream>
 #include "Vect.h"
 #include "fonction.h"
+/**
+	@brief Class Monstre
+	Classe de Monstre, permettant de gérer leurs positions, vitesse, vie, où ils apparaissent, comment et où ils se déplacent mais aussi le nombre d'or qu'ils donnent 
+*/
 class Monstre{
 private:
 	Vect pos; 
@@ -58,7 +62,7 @@ public:
 	Vect getPos()const;
 	/**
 		@brief Réel: getVitesse
-		Permet de retourner la vitesse du monstre
+		Permet de retourner le réel représentant la vitesse du monstre
 		@return Réel
 		@code
 			m.getVitesse();

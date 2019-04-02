@@ -8,7 +8,10 @@
 
 #include "Jeu.h"
 
-//! \brief Pour grer une image avec SDL2
+/**
+    @brief Class Image
+    Classe d'Image, permettant de créer une image avec SDL2
+*/
 class Image {
 
 private:
@@ -75,8 +78,10 @@ public:
 
 
 
+
 /**
-    La classe grant le jeu avec un affichage SDL
+    @brief Class sldJeu
+    Classe de sdlJeu, permettant d'afficher le jeu en SDL 
 */
 class sdlJeu {
 

@@ -1,6 +1,9 @@
 #ifndef COULEUR
 #define COULEUR
-
+/**
+	@brief Class Couleur
+	Classe de Couleur, permettant de gérer la couleur et l'opacité
+*/
 class Couleur{
 private:
 	unsigned char r;
@@ -12,7 +15,7 @@ public:
 		@brief Constructeur par défaut: Couleur
 		Permet de créer la couleur par défaut
 		@code
-		Couleur c;
+			Couleur c;
 		@endcode
 	*/	
 	Couleur();

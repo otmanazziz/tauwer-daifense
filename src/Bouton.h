@@ -76,7 +76,7 @@ public:
 	Vect getTaille();
 	/**
 		@brief Procédure: setNom
-		Permet de modifier le nom représentant la base
+		Permet de modifier le nom du bouton
 		@param Chaîne de caractère nom
 		@code
 			b2.setNom(Nom);

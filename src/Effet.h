@@ -1,5 +1,9 @@
 #ifndef EFFET
 #define EFFET
+/**
+	@brief Class Effet
+	Classe d'Effet, permettant de gérer l'effet 
+*/
 class Effet{
 private:
 	int valeur;
@@ -9,7 +13,7 @@ public:
 		@brief Constructeur par défaut: Effet
 		Permet de créer l'effet par défaut
 		@code
-		Effet e;
+			Effet e;
 		@endcode
 	*/	
 	Effet();

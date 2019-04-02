@@ -1,7 +1,10 @@
 #ifndef WINTXT_H
 #define WINTXT_H
 
-
+/**
+    @brief Class WinTXT
+    Classe WinTXT, permettant de gérer l'affichage
+*/
 class WinTXT {
 
 private:
