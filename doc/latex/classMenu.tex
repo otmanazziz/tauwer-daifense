@@ -1,5 +1,14 @@
 \hypertarget{classMenu}{}\section{Menu Class Reference}
 \label{classMenu}\index{Menu@{Menu}}
+
+
+Class \hyperlink{classMenu}{Menu} Classe de \hyperlink{classMenu}{Menu}, permettant de gérer le nombre de boutons du menu.  
+
+
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -13,7 +22,7 @@
 \hyperlink{classMenu_a831387f51358cfb88cd018e1777bc980}{$\sim$\+Menu} ()
 \begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire le menu. \end{DoxyCompactList}\item 
 std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ \hyperlink{classMenu_a6d80af8bd800d44072ddb63a80b911cd}{get\+Tab\+Bouton} ()
-\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Tab\+Bouton Permet de retourner lz tableau de bouton. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Tab\+Bouton Permet de retourner le tableau de bouton. \end{DoxyCompactList}\item 
 void \hyperlink{classMenu_a45b3fe1a4d7cca82acabd3102d8bfd7c}{set\+Tab\+Bouton} (const std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ \&\+\_\+tab\+Bouton)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Tab\+Bouton Permet de modifier le tableau de bouton. \end{DoxyCompactList}\item 
 void \hyperlink{classMenu_acedbb44af6fcc981aef033a585df2169}{set\+Bouton\+Indice} (const int \&indice, \hyperlink{classBouton}{Bouton} bouton)
@@ -27,6 +36,9 @@ void \hyperlink{classMenu_a1ed5172963be698f6fbabcf5a87ff664}{supprimer\+Bouton\+
 void \hyperlink{classMenu_af01f5f26519658b6e0fd92fdb8eda6fe}{afficher\+Tab\+Bouton} ()
 \begin{DoxyCompactList}\small\item\em Procédure\+: ajouter\+Bouton Permet d\textquotesingle{}afficher\textquotesingle{} un bouton dans le menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Class \hyperlink{classMenu}{Menu} Classe de \hyperlink{classMenu}{Menu}, permettant de gérer le nombre de boutons du menu. 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classMenu_ad466dd83355124a6ed958430450bfe94}\label{classMenu_ad466dd83355124a6ed958430450bfe94}} 
@@ -143,7 +155,7 @@ m2.getBoutonIndice();
 
 
 
-Fonction\+: get\+Tab\+Bouton Permet de retourner lz tableau de bouton. 
+Fonction\+: get\+Tab\+Bouton Permet de retourner le tableau de bouton. 
 
 \begin{DoxyReturn}{Returns}
 Tableau de \hyperlink{classBouton}{Bouton} tab\+Bouton 
