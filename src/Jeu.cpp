@@ -42,6 +42,6 @@ Niveau *Jeu::getNiveau(){
 
 void Jeu::actionAuto(float delta, int x, int y){
 		niv->maj(delta/1000.0);
-		Vect v(x, y);
+		std::cout<<x<<" "<<y<<std::endl;
 }
 
