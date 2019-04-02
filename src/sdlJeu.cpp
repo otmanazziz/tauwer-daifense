@@ -298,7 +298,7 @@ void sdlJeu::sdlBoucle () {
 			}
 
 			else if (events.type == SDL_MOUSEBUTTONDOWN) {              // Si l'utilisateur à cliqué
-				if (SDL_BUTTON(SDL_BUTTON_LEFT)){
+				if (events.button.button == SDL_BUTTON_LEFT){
 					SDL_GetMouseState(&x, &y);
 				}else{
 					x = -1;

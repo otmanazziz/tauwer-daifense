@@ -51,7 +51,8 @@ void txtBoucle(Jeu & jeu){
 
 	bool ok = true;
 	int c;
-	int x, y;
+	int x = -1;
+	int y = -1;
 
 	do {
 	    txtAff(win,jeu);
