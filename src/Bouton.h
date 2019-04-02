@@ -18,7 +18,7 @@ public:
 		@brief Constructeur par défaut: Bouton
 		Permet de créer le bouton par défaut
 		@code
-		Bouton b;
+			Bouton b;
 		@endcode
 	*/	
 	Bouton();

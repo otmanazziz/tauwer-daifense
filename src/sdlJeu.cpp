@@ -147,7 +147,7 @@ sdlJeu::~sdlJeu () {
 }
 
 void sdlJeu::sdlAff () {
-	//Remplir l'cran de blanc
+	//Remplir l'écran de blanc
     SDL_SetRenderDrawColor(renderer, 230, 255, 240, 255);
     SDL_RenderClear(renderer);
 

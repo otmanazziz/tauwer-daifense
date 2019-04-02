@@ -18,11 +18,58 @@ private:
     bool has_changed;
 
 public:
+    /**
+        @brief Constructeur par défaut: Image
+        Permet de créer l'image par défaut
+        @code
+            Image i
+        @endcode
+    */   
     Image () ;
+    /**
+        @brief Procédure: loadFromFile
+        Permet de charger une image à partir d'un fichier
+        @param Chaîne de caractère filename,SDL_Renderer renderer
+        @code
+            i2.loadFromFile(filename, renderer);
+        @endcode    
+    */
     void loadFromFile (const char* filename, SDL_Renderer * renderer);
+    /**
+        @brief Procédure: loadFromCurrentSurface
+        Permet de charger texture d'une surface
+        @param SDL_Renderer renderer
+        @code
+            i2.loadFromCurrentSurface(renderer);
+        @endcode    
+    */
     void loadFromCurrentSurface (SDL_Renderer * renderer);
+    /**
+        @brief Procédure: draw
+        Permet de dessiner l'image 
+        @param SDL_Renderer renderer, Entier x, Entier y,Entier w, Entier h)
+        @code
+            i2.draw(renderer, x, y, w, h);
+        @endcode    
+    */
     void draw (SDL_Renderer * renderer, int x, int y, int w=-1, int h=-1);
+    /**
+        @brief Fonction: getTexture
+        Permet de retourner la texture de l'image
+        @return SDL_Texture texture
+        @code
+            i2->getTexture();
+        @endcode    
+    */
     SDL_Texture * getTexture() const;
+     /**
+        @brief Procédure: setSurface
+        Permet de modifier la surface
+        @param SDL_Surface surf
+        @code
+            i2.setSurface(surf);
+        @endcode    
+    */
     void setSurface(SDL_Surface * surf);
 };
 
@@ -54,10 +101,35 @@ private :
 
 
 public :
-
+    /**
+        @brief Constructeur par défaut: sdlJeu
+        Permet de créer la sdl du jeu par défaut
+        @code
+            sdlJeu sj;
+        @endcode
+    */  
     sdlJeu ();
+    /** 
+        @brief Destructeur
+        Permet de détruire la sdl du jeu
+
+    */
     ~sdlJeu ();
+    /**
+        @brief Procédure: sdlBoucle
+        Permet de tout garder tant que ce n'est pas la fin
+        @code
+            sj.sdlBoucle();
+        @endcode    
+    */
     void sdlBoucle ();
+    /**
+        @brief Procédure: sdlAff
+        Permet de remplir l'écran
+        @code
+            sj.sdlAff();
+        @endcode    
+    */
     void sdlAff ();
 
 };
