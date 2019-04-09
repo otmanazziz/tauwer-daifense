@@ -262,9 +262,10 @@ void sdlJeu::sdlBoucle () {
     SDL_Event events;
 	bool quit = false;
 	int x, y;
-
+    int fps =0;
     Uint32 t = SDL_GetTicks(), nt;
-
+    Uint32 ta = SDL_GetTicks();
+    Uint32 tfps = SDL_GetTicks();
 	// tant que ce n'est pas la fin ...
 	while (!quit) {
 
@@ -310,8 +311,8 @@ void sdlJeu::sdlBoucle () {
        jeu.actionAuto(float(nt-t), x, y);
             t = nt;
 		// on affiche le jeu sur le buffer cach
-		sdlAff();
-
+		if(nt-ta > 1000.0/60.0){sdlAff();fps++;ta = nt;}
+        if(nt-tfps > 1000.0) {cout<<fps<<endl;fps=0;tfps =nt;}
 		// on permute les deux buffers (cette fonction ne doit se faire qu'une seule fois dans la boucle)
         SDL_RenderPresent(renderer);
 	}
