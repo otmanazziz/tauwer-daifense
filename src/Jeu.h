@@ -61,6 +61,7 @@ class Jeu{
 		void actionAuto(float delta);
 
 		void clique(int x, int y);
+		Tour * tourSelect();
 };
 
 #endif

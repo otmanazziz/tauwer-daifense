@@ -106,6 +106,7 @@ private :
 
 
 public :
+
     /**
         @brief Constructeur par défaut: sdlJeu
         Permet de créer la sdl du jeu par défaut
@@ -127,6 +128,7 @@ public :
             sj.sdlBoucle();
         @endcode    
     */
+   void affBouton( const Bouton &b);
     void sdlBoucle ();
     /**
         @brief Procédure: sdlAff

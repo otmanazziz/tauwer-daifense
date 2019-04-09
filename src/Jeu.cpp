@@ -76,3 +76,9 @@ void Jeu::clique(int x, int y){
 		}
 	}
 }
+
+ Tour * Jeu::tourSelect(){
+
+return tourSelectionne;
+
+}

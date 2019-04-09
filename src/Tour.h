@@ -42,7 +42,7 @@ public:
 			Tour t2(1.32, 4, v1, a1);
 		@endcode
 	*/
-	Tour(const float &_vitesseAtq, const int &_portee, const Vect &_position,const int &z ,const int &d, const bool &s);
+	Tour(const float &_vitesseAtq, const int &_portee, const Vect &_position,const int &z ,const int &d);
 	/**
 		@brief Destructeur
 		Permet de détruire la Tour

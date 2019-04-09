@@ -145,7 +145,16 @@ sdlJeu::~sdlJeu () {
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
-
+void sdlJeu::affBouton( const Bouton &b){
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    SDL_Rect v;
+    Bouton p = b;
+    v.x = p.getPos().getX();
+    v.y = p.getPos().getY();
+    v.w = p.getTaille().getX();
+    v.h = p.getTaille().getY();
+    
+}
 void sdlJeu::sdlAff () {
 	//Remplir l'écran de blanc
     SDL_SetRenderDrawColor(renderer, 230, 255, 240, 255);
@@ -162,7 +171,7 @@ void sdlJeu::sdlAff () {
 			vv = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j);
 			SDL_RenderDrawLine(renderer,
                                   v.getX()*TAILLE_SPRITE+TAILLE_SPRITE/2,
-                                 v.getY()*TAILLE_SPRITE+TAILLE_SPRITE/2,
+                                v.getY()*TAILLE_SPRITE+TAILLE_SPRITE/2,
                                   vv.getX()*TAILLE_SPRITE+TAILLE_SPRITE/2,
                                   vv.getY()*TAILLE_SPRITE+TAILLE_SPRITE/2);
 
@@ -185,7 +194,9 @@ void sdlJeu::sdlAff () {
 	}
 	v = jeu.getNiveau()->addrGetCarte()->getBase().getPosition();
 	base.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
-	
+    if(jeu.tourSelect() != NULL){
+	    
+    }
 	
 	font_vie.setSurface(TTF_RenderText_Solid(font,("Vie :"+to_string(jeu.getNiveau()->addrGetCarte()->getBase().getVie())).c_str(),font_color));
 	font_vie.loadFromCurrentSurface(renderer);
@@ -302,6 +313,7 @@ void sdlJeu::sdlBoucle () {
 				if (events.button.button == SDL_BUTTON_LEFT){
 					SDL_GetMouseState(&x, &y);
                     std::cout << x << " " << y << std::endl;
+                    jeu.clique(float(x)/float(TAILLE_SPRITE),float(y)/float(TAILLE_SPRITE));
 				}else{
 					x = -1;
 					y = -1;

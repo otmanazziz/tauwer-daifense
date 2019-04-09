@@ -17,11 +17,11 @@
 		spawn = _tour.spawn;
 	}
 
-	Tour::Tour(const float &_vitesseAtq, const int &_portee, const Vect &_position , const int &z , const int & d, const bool &s): attaque(z,d){
+	Tour::Tour(const float &_vitesseAtq, const int &_portee, const Vect &_position , const int &z , const int & d): attaque(z,d){
 		vitesseAtq = _vitesseAtq;
 		portee = _portee;
 		position.setVect(_position);
-		spawn = s;
+		spawn = false;
 	}
 
 	Tour::~Tour(){
