@@ -19,7 +19,23 @@ Jeu::Jeu(){
         closedir(rep);
     }
 	niv = new Niveau(tabLienCarte[0]);
-	tabBouton.push_back();
+
+	tourSelectionne = NULL;
+
+	//Pour placer les boutons d'amélioration
+	Vect v(0, 10);
+	Vect v1(0, 20);
+	Vect v2 (0, 30);
+	Vect t(10, 10);
+	tabBouton.emplace_back("", v, t);
+	tabBouton.emplace_back("", v1, t);
+	tabBouton.emplace_back("", v2, t);
+
+	Vect t2(25, 25); // Taille du sprite
+	for (unsigned int i = 0 ; i < niv->addrGetCarte()->tailleTabTour(); i++){
+		tabBoutonTour.emplace_back("", niv->addrGetCarte()->addrTourIndice(i)->getPosition(), t2);
+	}
+
 }
 
 Jeu::~Jeu(){
