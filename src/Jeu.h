@@ -59,6 +59,8 @@ class Jeu{
 			@endcode	
 		*/
 		void actionAuto(float delta);
+
+		void clique(int x, int y);
 };
 
 #endif

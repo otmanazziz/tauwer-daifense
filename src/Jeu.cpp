@@ -62,3 +62,17 @@ void Jeu::actionAuto(float delta){
 		//std::cout<<x<<" "<<y<<std::endl;
 }
 
+void Jeu::clique(int x, int y){
+	Vect v(x, y);
+	for (unsigned int i = 0; i < niv->addrGetCarte()->tailleTabTour(); i++){
+		if (tabBoutonTour[i].clique(v))
+			tourSelectionne = niv->addrGetCarte()->addrTourIndice(i);
+	}
+	if (tourSelectionne != NULL){
+		for (unsigned int j = 0; j < 3; j++){
+			if (tabBouton[j].clique(v))
+				std::cout<<"ouais.\n";
+				//ameliorerTour(j, )
+		}
+	}
+}

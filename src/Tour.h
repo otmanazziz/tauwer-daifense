@@ -15,6 +15,7 @@ private:
 	Vect position;
 	Attaque attaque;
 	bool aAttaquer;
+	bool spawn;
 public:
 	/**
 		@brief Constructeur par défaut: Tour
@@ -41,12 +42,21 @@ public:
 			Tour t2(1.32, 4, v1, a1);
 		@endcode
 	*/
-	Tour(const float &_vitesseAtq, const int &_portee, const Vect &_position,const int &z ,const int &d);
+	Tour(const float &_vitesseAtq, const int &_portee, const Vect &_position,const int &z ,const int &d, const bool &s);
 	/**
 		@brief Destructeur
 		Permet de détruire la Tour
 	*/
 	~Tour();
+	/**
+		@brief Booléen: getSpawn
+		Permet de retourner le spawn de la tour
+		@return Booléen
+		@code
+			t2.getSpawn();
+		@endcode
+	*/
+	bool getSpawn();
 	/**
 		@brief Fonction: getVitAtq
 		Permet de retourner le réel de la vitesse d'attaque
@@ -74,6 +84,15 @@ public:
 		@endcode
 	*/
 	Vect getPosition();
+	/**
+		@brief Procédure: setSpawn
+		Permet de modifier le booléen du spawn de la tour
+		@param Booléen
+		@code
+			t2.setSpawn(true);
+		@endcode
+	*/
+	void setSpawn();
 	/**
 		@brief Procédure: setVitAtq
 		Permet de modifier le réel de la vitesse d'attaque
