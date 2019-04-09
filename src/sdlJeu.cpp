@@ -298,9 +298,10 @@ void sdlJeu::sdlBoucle () {
 				
 			}
 
-			else if (events.type == SDL_MOUSEBUTTONDOWN) {              // Si l'utilisateur à cliqué
+			else if (events.type == SDL_MOUSEBUTTONUP) {              // Si l'utilisateur à cliqué
 				if (events.button.button == SDL_BUTTON_LEFT){
 					SDL_GetMouseState(&x, &y);
+                    std::cout << x << " " << y << std::endl;
 				}else{
 					x = -1;
 					y = -1;
@@ -308,7 +309,7 @@ void sdlJeu::sdlBoucle () {
 			}
 			
 		}
-       jeu.actionAuto(float(nt-t), x, y);
+       jeu.actionAuto(float(nt-t));
             t = nt;
 		// on affiche le jeu sur le buffer cach
 		if(nt-ta > 1000.0/60.0){sdlAff();fps++;ta = nt;}

@@ -19,10 +19,11 @@ Jeu::Jeu(){
         closedir(rep);
     }
 	niv = new Niveau(tabLienCarte[0]);
+	tabBouton.push_back();
 }
+
 Jeu::~Jeu(){
-delete niv;	
-	
+	delete niv;
 }
 void Jeu::afficheCarteDispo(){
 	for(unsigned int i = 0 ; i < tabLienCarte.size() ; i++){
@@ -40,7 +41,7 @@ Niveau *Jeu::getNiveau(){
 
 
 
-void Jeu::actionAuto(float delta, int x, int y){
+void Jeu::actionAuto(float delta){
 		niv->maj(delta/1000.0);
 		//std::cout<<x<<" "<<y<<std::endl;
 }

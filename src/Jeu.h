@@ -14,6 +14,9 @@ class Jeu{
 	private:
 		std::vector<std::string> tabLienCarte;
 		Menu principale;
+		Tour * tourSelectionne;
+		std::vector<Bouton> tabBouton;
+		std::vector<Bouton> tabBoutonTour;
 		Niveau *niv;
 	public :
 		/**
@@ -55,7 +58,7 @@ class Jeu{
 				i2.actionAuto();
 			@endcode	
 		*/
-		void actionAuto(float delta, int x, int y);
+		void actionAuto(float delta);
 };
 
 #endif
