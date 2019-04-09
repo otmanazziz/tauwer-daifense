@@ -305,10 +305,10 @@ void sdlJeu::sdlBoucle () {
 					y = -1;
 				}
 			}
-			jeu.actionAuto(float(nt-t), x, y);
-            t = nt;
+			
 		}
-
+       // jeu.actionAuto(float(nt-t), x, y);
+            t = nt;
 		// on affiche le jeu sur le buffer cach
 		sdlAff();
 
