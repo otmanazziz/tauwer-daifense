@@ -23,13 +23,13 @@ Jeu::Jeu(){
 	tourSelectionne = NULL;
 
 	//Pour placer les boutons d'amélioration
-	Vect v(0, 10);
-	Vect v1(0, 20);
-	Vect v2 (0, 30);
-	Vect t(10, 10);
-	tabBouton.emplace_back("", v, t);
-	tabBouton.emplace_back("", v1, t);
-	tabBouton.emplace_back("", v2, t);
+	Vect v(0, 50);
+	Vect v1(0, 105);
+	Vect v2 (0, 160);
+	Vect t(50, 50);
+	tabBouton.emplace_back("Attaque", v, t);
+	tabBouton.emplace_back("VitesseAtq", v1, t);
+	tabBouton.emplace_back("Portee", v2, t);
 
 	Vect t2(25, 25); // Taille du sprite
 	for (unsigned int i = 0 ; i < niv->addrGetCarte()->tailleTabTour(); i++){
@@ -80,5 +80,15 @@ void Jeu::clique(int x, int y){
  Tour * Jeu::tourSelect(){
 
 return tourSelectionne;
+
+}
+
+std::vector<Bouton> * Jeu::renvoieBoutonAmelioration(){
+	return &tabBouton;
+
+}
+
+std::vector<Bouton> * Jeu::renvoieBoutonTour(){
+	return &tabBoutonTour;
 
 }

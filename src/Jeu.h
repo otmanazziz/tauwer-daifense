@@ -62,6 +62,9 @@ class Jeu{
 
 		void clique(int x, int y);
 		Tour * tourSelect();
+		std::vector<Bouton> * renvoieBoutonAmelioration();
+
+		std::vector<Bouton> * renvoieBoutonTour();
 };
 
 #endif

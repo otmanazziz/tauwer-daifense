@@ -51,7 +51,10 @@ void Bouton::setTaille(const Vect &_taille){
 }
 
 bool Bouton::clique(const Vect &_pos){
-	if ((_pos.getX() >= (pos.getX() - taille.getX())) && (_pos.getX() <= (pos.getX() + taille.getX())) && (_pos.getY() >= (pos.getY() - taille.getY())) && (_pos.getY() <= (pos.getY() + taille.getY())))
+	if (_pos.getX() >= pos.getX() && 
+		(_pos.getX() <= (pos.getX() + taille.getX())) && 
+		_pos.getY() >= pos.getY() && 
+		(_pos.getY() <= (pos.getY() + taille.getY())))
 		return true;
 	return false;
 }

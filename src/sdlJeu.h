@@ -95,6 +95,7 @@ private :
     TTF_Font * font;
     Image font_vie;
 	Image font_or;
+    Image font_but;
     SDL_Color font_color;
 
     Mix_Chunk * sound;

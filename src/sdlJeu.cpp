@@ -153,7 +153,12 @@ void sdlJeu::affBouton( const Bouton &b){
     v.y = p.getPos().getY();
     v.w = p.getTaille().getX();
     v.h = p.getTaille().getY();
-    
+    SDL_RenderFillRect( renderer, &v );
+
+    font_but.setSurface(TTF_RenderText_Solid(font, p.getNom().c_str() ,font_color));
+	font_but.loadFromCurrentSurface(renderer);
+    SDL_RenderCopy(renderer,font_but.getTexture(),NULL,&v);
+	
 }
 void sdlJeu::sdlAff () {
 	//Remplir l'écran de blanc
@@ -195,7 +200,9 @@ void sdlJeu::sdlAff () {
 	v = jeu.getNiveau()->addrGetCarte()->getBase().getPosition();
 	base.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
     if(jeu.tourSelect() != NULL){
-	    
+        
+        for(unsigned int i = 0 ; i < jeu.renvoieBoutonAmelioration()->size();i++)
+	    affBouton(jeu.renvoieBoutonAmelioration()->at(i));
     }
 	
 	font_vie.setSurface(TTF_RenderText_Solid(font,("Vie :"+to_string(jeu.getNiveau()->addrGetCarte()->getBase().getVie())).c_str(),font_color));
