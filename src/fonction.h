@@ -1,5 +1,6 @@
 #ifndef FONCTION
 #define FONCTION
+#include <iostream>
 #include <vector>
 #include <string>
 #include <math.h>
