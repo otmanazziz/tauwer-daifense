@@ -19,10 +19,10 @@ Image::Image () {
     texture = NULL;
     has_changed = false;
 }
-Image::~Image(){
-    SDL_FreeSurface(surface);
-    SDL_DestroyTexture(texture);
-}
+/* Image::~Image(){
+    if(surface != NULL)SDL_FreeSurface(surface);
+    if(texture != NULL)SDL_DestroyTexture(texture);
+} */
 void Image::loadFromFile (const char* filename, SDL_Renderer * renderer) {
     surface = IMG_Load(filename);
     if (surface == NULL) {
@@ -157,10 +157,12 @@ void sdlJeu::affBouton( const Bouton &b){
     v.w = p.getTaille().getX();
     v.h = p.getTaille().getY();
     SDL_RenderFillRect( renderer, &v );
-
-    font_but.setSurface(TTF_RenderText_Solid(font, p.getNom().c_str() ,font_color));
+    SDL_Surface * text = TTF_RenderText_Solid(font, p.getNom().c_str() ,font_color);
+    font_but.setSurface(text);
 	font_but.loadFromCurrentSurface(renderer);
+    
     SDL_RenderCopy(renderer,font_but.getTexture(),NULL,&v);
+    SDL_FreeSurface(text);
 	
 }
 void sdlJeu::sdlAff () {
@@ -207,10 +209,12 @@ void sdlJeu::sdlAff () {
         for(unsigned int i = 0 ; i < jeu.renvoieBoutonAmelioration()->size();i++)
 	    affBouton(jeu.renvoieBoutonAmelioration()->at(i));
     }
-	
-	font_vie.setSurface(TTF_RenderText_Solid(font,("Vie :"+to_string(jeu.getNiveau()->addrGetCarte()->getBase().getVie())).c_str(),font_color));
+	SDL_Surface * text1= TTF_RenderText_Solid(font,("Vie :"+to_string(jeu.getNiveau()->addrGetCarte()->getBase().getVie())).c_str(),font_color);
+	font_vie.setSurface(text1);
 	font_vie.loadFromCurrentSurface(renderer);
-	font_or.setSurface(TTF_RenderText_Solid(font,("Or : "+to_string(jeu.getNiveau()->getOr())).c_str(),font_color));
+    
+    SDL_Surface * text2 = TTF_RenderText_Solid(font,("Or : "+to_string(jeu.getNiveau()->getOr())).c_str(),font_color);
+	font_or.setSurface(text2);
 	font_or.loadFromCurrentSurface(renderer);
 	
 	SDL_Rect pos;
@@ -218,7 +222,7 @@ void sdlJeu::sdlAff () {
     SDL_RenderCopy(renderer,font_vie.getTexture(),NULL,&pos);
 	pos.x = 0;pos.y =40 ;pos.w = 100;pos.h = 30;
 	SDL_RenderCopy(renderer,font_or.getTexture(),NULL,&pos);
-	
+	SDL_FreeSurface(text1);SDL_FreeSurface(text2);
 	
 	
 	
@@ -291,8 +295,8 @@ void sdlJeu::sdlBoucle () {
 	while (!quit) {
 
         nt = SDL_GetTicks();
-       
-
+       jeu.actionAuto(float(nt-t));
+t = nt;
 		// tant qu'il y a des evenements  traiter (cette boucle n'est pas bloquante)
 		while (SDL_PollEvent(&events)) {
 			if (events.type == SDL_QUIT) quit = true;           // Si l'utilisateur a clique sur la croix de fermeture
@@ -331,10 +335,10 @@ void sdlJeu::sdlBoucle () {
 			}
 			
 		}
-       jeu.actionAuto(float(nt-t));
-            t = nt;
+       
+            
 		// on affiche le jeu sur le buffer cach
-		if(nt-ta > 1000.0/60.0){sdlAff();fps++;ta = nt;}
+		if(nt-ta > 1000.0/30.0){sdlAff();fps++;ta = nt;}
         if(nt-tfps > 1000.0) {cout<<fps<<endl;fps=0;tfps =nt;}
 		// on permute les deux buffers (cette fonction ne doit se faire qu'une seule fois dans la boucle)
         SDL_RenderPresent(renderer);

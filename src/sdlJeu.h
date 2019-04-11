@@ -29,7 +29,7 @@ public:
         @endcode
     */   
     Image () ;
-    ~Image();
+    //~Image();
     /**
         @brief Procédure: loadFromFile
         Permet de charger une image à partir d'un fichier
