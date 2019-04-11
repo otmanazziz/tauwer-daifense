@@ -29,7 +29,6 @@ public:
         @endcode
     */   
     Image () ;
-    //~Image();
     /**
         @brief Procédure: loadFromFile
         Permet de charger une image à partir d'un fichier
@@ -94,9 +93,6 @@ private :
     SDL_Renderer * renderer;
 
     TTF_Font * font;
-    Image font_vie;
-	Image font_or;
-    Image font_but;
     SDL_Color font_color;
 
     Mix_Chunk * sound;

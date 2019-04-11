@@ -19,10 +19,6 @@ Image::Image () {
     texture = NULL;
     has_changed = false;
 }
-/* Image::~Image(){
-    if(surface != NULL)SDL_FreeSurface(surface);
-    if(texture != NULL)SDL_DestroyTexture(texture);
-} */
 void Image::loadFromFile (const char* filename, SDL_Renderer * renderer) {
     surface = IMG_Load(filename);
     if (surface == NULL) {
@@ -158,10 +154,11 @@ void sdlJeu::affBouton( const Bouton &b){
     v.h = p.getTaille().getY();
     SDL_RenderFillRect( renderer, &v );
     SDL_Surface * text = TTF_RenderText_Solid(font, p.getNom().c_str() ,font_color);
-    font_but.setSurface(text);
-	font_but.loadFromCurrentSurface(renderer);
+    Image f;
+    f.setSurface(text);
+	f.loadFromCurrentSurface(renderer);
     
-    SDL_RenderCopy(renderer,font_but.getTexture(),NULL,&v);
+    SDL_RenderCopy(renderer,f.getTexture(),NULL,&v);
     SDL_FreeSurface(text);
 	
 }
@@ -209,19 +206,23 @@ void sdlJeu::sdlAff () {
         for(unsigned int i = 0 ; i < jeu.renvoieBoutonAmelioration()->size();i++)
 	    affBouton(jeu.renvoieBoutonAmelioration()->at(i));
     }
+    Image f;
+    SDL_Rect pos;
 	SDL_Surface * text1= TTF_RenderText_Solid(font,("Vie :"+to_string(jeu.getNiveau()->addrGetCarte()->getBase().getVie())).c_str(),font_color);
-	font_vie.setSurface(text1);
-	font_vie.loadFromCurrentSurface(renderer);
+	f.setSurface(text1);
+	f.loadFromCurrentSurface(renderer);
+
+    pos.x = 0;pos.y =0 ;pos.w = 100;pos.h = 30;
+    SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
     
     SDL_Surface * text2 = TTF_RenderText_Solid(font,("Or : "+to_string(jeu.getNiveau()->getOr())).c_str(),font_color);
-	font_or.setSurface(text2);
-	font_or.loadFromCurrentSurface(renderer);
+	f.setSurface(text2);
+	f.loadFromCurrentSurface(renderer);
 	
-	SDL_Rect pos;
-    pos.x = 0;pos.y =0 ;pos.w = 100;pos.h = 30;
-    SDL_RenderCopy(renderer,font_vie.getTexture(),NULL,&pos);
+	
+    
 	pos.x = 0;pos.y =40 ;pos.w = 100;pos.h = 30;
-	SDL_RenderCopy(renderer,font_or.getTexture(),NULL,&pos);
+	SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
 	SDL_FreeSurface(text1);SDL_FreeSurface(text2);
 	
 	
