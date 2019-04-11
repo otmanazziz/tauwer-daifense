@@ -23,10 +23,10 @@ Jeu::Jeu(){
 	tourSelectionne = NULL;
 
 	//Pour placer les boutons d'amélioration
-	Vect v(0, 50);
-	Vect v1(0, 105);
-	Vect v2 (0, 160);
-	Vect t(50, 50);
+	Vect v(0, 120);
+	Vect v1(0, 180);
+	Vect v2 (0, 240);
+	Vect t(60, 60);
 	tabBouton.emplace_back("Attaque", v, t);
 	tabBouton.emplace_back("VitesseAtq", v1, t);
 	tabBouton.emplace_back("Portee", v2, t);

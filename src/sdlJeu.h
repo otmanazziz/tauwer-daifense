@@ -101,6 +101,11 @@ private :
     Image tour;
 	Image base;
 	Image monstre;
+    Image coin;
+    Image img_life;
+    Image img_upDamage;
+    Image img_upPortee;
+    Image img_upVitesseAtq;
 
 
 public :
@@ -127,6 +132,7 @@ public :
         @endcode    
     */
    void affBouton( const Bouton &b);
+   void affBouton(const Bouton &b, Image &im);
     void sdlBoucle ();
     /**
         @brief Procédure: sdlAff
