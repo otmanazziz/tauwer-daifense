@@ -1,2 +1,4 @@
 .vscode
 *.o
+src/sdl
+src/txt
