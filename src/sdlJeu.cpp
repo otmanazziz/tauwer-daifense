@@ -19,7 +19,10 @@ Image::Image () {
     texture = NULL;
     has_changed = false;
 }
-
+Image::~Image(){
+    SDL_FreeSurface(surface);
+    SDL_DestroyTexture(texture);
+}
 void Image::loadFromFile (const char* filename, SDL_Renderer * renderer) {
     surface = IMG_Load(filename);
     if (surface == NULL) {
