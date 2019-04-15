@@ -117,6 +117,11 @@ sdlJeu::sdlJeu () {
     monstre.loadFromFile("./data/image/monster.png",renderer);
     base.loadFromFile("./data/image/base.png",renderer);
 	tour.loadFromFile("./data/image/tower.png",renderer);
+	coin.loadFromFile("./data/image/coin.png",renderer);
+    img_life.loadFromFile("./data/image/life.png", renderer);
+    img_upDamage.loadFromFile("./data/image/upDamage.png",renderer);
+    img_upPortee.loadFromFile("./data/image/upPortee.png",renderer);
+    img_upVitesseAtq.loadFromFile("./data/image/upVitesse.png",renderer);
 
     // FONTS
     font = TTF_OpenFont("./data/font/DejaVuSansCondensed.ttf",50);
@@ -162,6 +167,17 @@ void sdlJeu::affBouton( const Bouton &b){
     SDL_FreeSurface(text);
 	
 }
+
+void sdlJeu::affBouton(const Bouton &b, Image &im){
+    SDL_Rect v;
+    Bouton p = b;
+    v.x = p.getPos().getX();
+    v.y = p.getPos().getY();
+    v.w = p.getTaille().getX();
+    v.h = p.getTaille().getY();
+    im.draw(renderer, v.x, v.y, v.w, v.h);
+}
+
 void sdlJeu::sdlAff () {
 	//Remplir l'écran de blanc
     SDL_SetRenderDrawColor(renderer, 230, 255, 240, 255);
@@ -202,28 +218,32 @@ void sdlJeu::sdlAff () {
 	v = jeu.getNiveau()->addrGetCarte()->getBase().getPosition();
 	base.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
     if(jeu.tourSelect() != NULL){
-        
-        for(unsigned int i = 0 ; i < jeu.renvoieBoutonAmelioration()->size();i++)
-	    affBouton(jeu.renvoieBoutonAmelioration()->at(i));
+	    affBouton(jeu.renvoieBoutonAmelioration()->at(0), img_upDamage);
+        affBouton(jeu.renvoieBoutonAmelioration()->at(2), img_upPortee);
+        affBouton(jeu.renvoieBoutonAmelioration()->at(1), img_upVitesseAtq);
     }
     Image f;
     SDL_Rect pos;
-	SDL_Surface * text1= TTF_RenderText_Solid(font,("Vie :"+to_string(jeu.getNiveau()->addrGetCarte()->getBase().getVie())).c_str(),font_color);
+
+    img_life.draw(renderer, 0, 0, 60, 60);
+	SDL_Surface * text1= TTF_RenderText_Solid(font,to_string(jeu.getNiveau()->addrGetCarte()->getBase().getVie()).c_str(),font_color);
 	f.setSurface(text1);
 	f.loadFromCurrentSurface(renderer);
 
-    pos.x = 0;pos.y =0 ;pos.w = 100;pos.h = 30;
+    pos.x = 60;pos.y =0 ;pos.w = 80;pos.h = 60;
     SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
-    
-    SDL_Surface * text2 = TTF_RenderText_Solid(font,("Or : "+to_string(jeu.getNiveau()->getOr())).c_str(),font_color);
+    SDL_FreeSurface(text1);
+
+    coin.draw(renderer, 0, 60, 60, 60);
+    SDL_Surface * text2 = TTF_RenderText_Solid(font,to_string(jeu.getNiveau()->getOr()).c_str(),font_color);
 	f.setSurface(text2);
 	f.loadFromCurrentSurface(renderer);
 	
 	
     
-	pos.x = 0;pos.y =40 ;pos.w = 100;pos.h = 30;
+	pos.x = 60;pos.y =60 ;pos.w = 50;pos.h = 60;
 	SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
-	SDL_FreeSurface(text1);SDL_FreeSurface(text2);
+	SDL_FreeSurface(text2);
 	
 	
 	
