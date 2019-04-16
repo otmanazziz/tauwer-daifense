@@ -132,13 +132,13 @@ sdlJeu::sdlJeu () {
 	
 
     // SONS
-    if (withSound)
+ /* if (withSound)
     {
-        sound = Mix_LoadWAV("./data/sound/son.wav");
+        sound = Mix_LoadWAV("1234.wav");
         if (sound == NULL) {
                 cout << "Failed to load son.wav! SDL_mixer Error: " << Mix_GetError() << endl; SDL_Quit(); exit(1);
         }
-    }
+    } */ 
 }
 
 sdlJeu::~sdlJeu () {
