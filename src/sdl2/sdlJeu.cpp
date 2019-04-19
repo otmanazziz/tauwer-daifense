@@ -158,13 +158,13 @@ void sdlJeu::affBouton( const Bouton &b){
     v.w = p.getTaille().getX();
     v.h = p.getTaille().getY();
     SDL_RenderFillRect( renderer, &v );
-    SDL_Surface * text = TTF_RenderText_Solid(font, p.getNom().c_str() ,font_color);
+    /* SDL_Surface * text = TTF_RenderText_Solid(font, p.getNom().c_str() ,font_color);
     Image f;
     f.setSurface(text);
 	f.loadFromCurrentSurface(renderer);
     
     SDL_RenderCopy(renderer,f.getTexture(),NULL,&v);
-    SDL_FreeSurface(text);
+    SDL_FreeSurface(text); */
 	
 }
 
@@ -193,10 +193,10 @@ void sdlJeu::sdlAff () {
 			v = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j-1);
 			vv = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j);
 			SDL_RenderDrawLine(renderer,
-                                  v.getX()*TAILLE_SPRITE+TAILLE_SPRITE/2,
+                                v.getX()*TAILLE_SPRITE+TAILLE_SPRITE/2,
                                 v.getY()*TAILLE_SPRITE+TAILLE_SPRITE/2,
-                                  vv.getX()*TAILLE_SPRITE+TAILLE_SPRITE/2,
-                                  vv.getY()*TAILLE_SPRITE+TAILLE_SPRITE/2);
+                                vv.getX()*TAILLE_SPRITE+TAILLE_SPRITE/2,
+                                vv.getY()*TAILLE_SPRITE+TAILLE_SPRITE/2);
 
 			
 		}
@@ -222,6 +222,10 @@ void sdlJeu::sdlAff () {
         affBouton(jeu.renvoieBoutonAmelioration()->at(2), img_upPortee);
         affBouton(jeu.renvoieBoutonAmelioration()->at(1), img_upVitesseAtq);
     }
+    for (unsigned int i = 0 ; i < jeu.renvoieBoutonTour()->size();i++)
+      affBouton(jeu.renvoieBoutonTour()->at(i));
+
+
     Image f;
     SDL_Rect pos;
 
@@ -314,7 +318,7 @@ void sdlJeu::sdlBoucle () {
     Uint32 tfps = SDL_GetTicks();
 	// tant que ce n'est pas la fin ...
 	while (!quit) {
-
+        
         nt = SDL_GetTicks();
        jeu.actionAuto(float(nt-t));
 t = nt;
@@ -347,8 +351,10 @@ t = nt;
 			else if (events.type == SDL_MOUSEBUTTONUP) {              // Si l'utilisateur à cliqué
 				if (events.button.button == SDL_BUTTON_LEFT){
 					SDL_GetMouseState(&x, &y);
+                    std::cout << x/TAILLE_SPRITE << " " << y/TAILLE_SPRITE << std::endl;
                     std::cout << x << " " << y << std::endl;
-                    jeu.clique(float(x)/float(TAILLE_SPRITE),float(y)/float(TAILLE_SPRITE));
+                    jeu.clique(x,y,TAILLE_SPRITE);
+                    //jeu.tourSelect()->affiche();
 				}else{
 					x = -1;
 					y = -1;

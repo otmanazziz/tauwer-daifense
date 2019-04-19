@@ -114,3 +114,10 @@ void Vect::testRegression(){
 	assert(v1.module() > 0);
 	assert(v4.module() - v2.module() - v2.module() < 0);
 }
+Vect Vect::operator*(float f)const{
+			return Vect(x*f,y*f);
+		}
+
+Vect Vect::operator/(float f)const{
+			return Vect(x/f,y/f);
+		}

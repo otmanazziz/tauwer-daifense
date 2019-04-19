@@ -61,6 +61,7 @@
 	void Tour::affiche(){
 		std::cout << "Votre vitesse d'attaque est de " << vitesseAtq << "\n";
 		std::cout << "Votre portee est de " << portee << "\n";
+		std::cout << "Vos degat sont de " << attaque.getDegats() << "\n";
 		position.afficheVect();
 	}
 
@@ -74,4 +75,7 @@
 
 	void Tour::setAAttaquer(bool b){
 		aAttaquer = b;
+	}
+	void Tour::addDegat(int d){
+		attaque.addDegat(d);
 	}

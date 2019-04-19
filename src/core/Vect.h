@@ -159,6 +159,8 @@ class Vect{
 		@endcode
 		*/
 		void testRegression();
+		Vect operator*(float f)const;
+		Vect operator/(float f)const;
 };
 
 

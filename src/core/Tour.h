@@ -141,6 +141,7 @@ public:
 	int getDegat();
 	Attaque getAttaque();
 	void setAAttaquer(bool b);
+	void addDegat(int d);
 };
 
 #endif

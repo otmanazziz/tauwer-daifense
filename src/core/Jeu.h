@@ -60,11 +60,12 @@ class Jeu{
 		*/
 		void actionAuto(float delta);
 
-		void clique(int x, int y);
+		void clique(int x, int y,int taille);
 		Tour * tourSelect();
 		std::vector<Bouton> * renvoieBoutonAmelioration();
 
 		std::vector<Bouton> * renvoieBoutonTour();
+
 };
 
 #endif

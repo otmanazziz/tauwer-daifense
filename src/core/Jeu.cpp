@@ -1,7 +1,7 @@
 #include "Jeu.h"
 #include <stdio.h>
 #include <dirent.h>
-
+#include <string>
 Jeu::Jeu(){
 	DIR * rep = opendir("./data/map");
     std::vector<std::string> s;
@@ -32,9 +32,11 @@ Jeu::Jeu(){
 	tabBouton.emplace_back("VitesseAtq", v1, t);
 	tabBouton.emplace_back("Portee", v2, t);
 
-	Vect t2(25, 25); // Taille du sprite
+	Vect t2(1,1); // Taille du sprite
 	for (unsigned int i = 0 ; i < niv->addrGetCarte()->tailleTabTour(); i++){
-		tabBoutonTour.emplace_back("", niv->addrGetCarte()->addrTourIndice(i)->getPosition(), t2);
+		tabBoutonTour.emplace_back(""+i, niv->addrGetCarte()->addrTourIndice(i)->getPosition(), t2);
+		tabBoutonTour.back().getTaille().afficheVect();
+		tabBoutonTour.back().getPos().afficheVect();
 	}
 
 }
@@ -63,18 +65,26 @@ void Jeu::actionAuto(float delta){
 		//std::cout<<x<<" "<<y<<std::endl;
 }
 
-void Jeu::clique(int x, int y){
+void Jeu::clique(int x, int y ,int  taille){
 	Vect v(x, y);
 	for (unsigned int i = 0; i < niv->addrGetCarte()->tailleTabTour(); i++){
-		if (tabBoutonTour[i].clique(v))
+		if (tabBoutonTour[i].clique(v/float(taille))){
 			tourSelectionne = niv->addrGetCarte()->addrTourIndice(i);
+			tourSelectionne->affiche();std::cout<<i<<std::endl;
+		}
 	}
 	if (tourSelectionne != NULL){
-		for (unsigned int j = 0; j < 3; j++){
-			if (tabBouton[j].clique(v))
-				std::cout<<"ouais.\n";
+		unsigned int nbGold;
+			if (tabBouton[0].clique(v)){
+				nbGold = 1.1 * tourSelectionne->getAttaque().getDegats();
+				if(nbGold <= niv->getOr()){
+					niv->retirerOr(nbGold);
+					tourSelectionne->addDegat(1);
+				}
+			}
+				
 				//ameliorerTour(j, )
-		}
+		
 	}
 }
 

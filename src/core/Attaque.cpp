@@ -46,3 +46,8 @@ void Attaque::setZone(const float &_zone){
 void Attaque::setDegats(const int &_degats){
 	degats = _degats;
 }
+
+void Attaque::addDegat(const int &d){
+	degats+=d;
+
+}
