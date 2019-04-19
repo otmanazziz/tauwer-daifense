@@ -16,6 +16,7 @@ private:
 	Attaque attaque;
 	bool aAttaquer;
 	bool spawn;
+	float cooldownAtq;
 public:
 	/**
 		@brief Constructeur par défaut: Tour
@@ -142,6 +143,9 @@ public:
 	Attaque getAttaque();
 	void setAAttaquer(bool b);
 	void addDegat(int d);
+	void addVitAtq(float f);
+	void addPortee(int p);
+	bool peutTirer(float d);
 };
 
 #endif

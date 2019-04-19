@@ -79,3 +79,20 @@
 	void Tour::addDegat(int d){
 		attaque.addDegat(d);
 	}
+
+	void Tour::addVitAtq(float f){
+		vitesseAtq += f;
+	}
+
+	void Tour::addPortee(int p){
+		portee += p;
+	}
+
+	bool Tour::peutTirer(float d){
+		cooldownAtq -= d;
+		if(cooldownAtq <= 0 ){
+			cooldownAtq = vitesseAtq;
+			return true;
+		}
+		else return false;
+	} 

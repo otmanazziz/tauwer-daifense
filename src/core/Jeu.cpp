@@ -81,8 +81,19 @@ void Jeu::clique(int x, int y ,int  taille){
 					niv->retirerOr(nbGold);
 					tourSelectionne->addDegat(1);
 				}
+			}else if(tabBouton[1].clique(v)){
+				nbGold = 100* tourSelectionne->getVitAtq();
+				if(nbGold <= niv->getOr()){
+					niv->retirerOr(nbGold);
+					tourSelectionne->addVitAtq(0.1);
+				}
+			}else if(tabBouton[2].clique(v)){
+				nbGold = 10* tourSelectionne->getPortee();
+				if(nbGold <= niv->getOr()){
+					niv->retirerOr(nbGold);
+					tourSelectionne->addPortee(1);
+				}
 			}
-				
 				//ameliorerTour(j, )
 		
 	}
