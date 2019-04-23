@@ -18,10 +18,10 @@ Jeu::Jeu(){
          
         closedir(rep);
     }
-	
-	niv = new Niveau(tabLienCarte[0]);
+	niv = NULL;
+	changerMap(0);
 
-	tourSelectionne = NULL;
+	
 
 	//Pour placer les boutons d'amélioration
 	Vect v(0, 120);
@@ -32,12 +32,7 @@ Jeu::Jeu(){
 	tabBouton.emplace_back("VitesseAtq", v1, t);
 	tabBouton.emplace_back("Portee", v2, t);
 
-	Vect t2(1,1); // Taille du sprite
-	for (unsigned int i = 0 ; i < niv->addrGetCarte()->tailleTabTour(); i++){
-		tabBoutonTour.emplace_back(""+i, niv->addrGetCarte()->addrTourIndice(i)->getPosition(), t2);
-		tabBoutonTour.back().getTaille().afficheVect();
-		tabBoutonTour.back().getPos().afficheVect();
-	}
+	
 
 }
 
@@ -61,11 +56,13 @@ Niveau *Jeu::getNiveau(){
 
 
 void Jeu::actionAuto(float delta){
+	if(!pause)
 		niv->maj(delta/1000.0);
 		//std::cout<<x<<" "<<y<<std::endl;
 }
 
 void Jeu::clique(int x, int y ,int  taille){
+	if(!pause){
 	Vect v(x, y);
 	for (unsigned int i = 0; i < niv->addrGetCarte()->tailleTabTour(); i++){
 		if (tabBoutonTour[i].clique(v/float(taille))){
@@ -82,7 +79,7 @@ void Jeu::clique(int x, int y ,int  taille){
 					tourSelectionne->addDegat(1);
 				}
 			}else if(tabBouton[1].clique(v)){
-				nbGold = 100* tourSelectionne->getVitAtq();
+				nbGold = 10* tourSelectionne->getVitAtq();
 				if(nbGold <= niv->getOr()){
 					niv->retirerOr(nbGold);
 					tourSelectionne->addVitAtq(0.1);
@@ -93,10 +90,13 @@ void Jeu::clique(int x, int y ,int  taille){
 					niv->retirerOr(nbGold);
 					tourSelectionne->addPortee(1);
 				}
-			}
-				//ameliorerTour(j, )
-		
+			}		
 	}
+	}else{
+
+
+	}
+
 }
 
  Tour * Jeu::tourSelect(){
@@ -112,5 +112,18 @@ std::vector<Bouton> * Jeu::renvoieBoutonAmelioration(){
 
 std::vector<Bouton> * Jeu::renvoieBoutonTour(){
 	return &tabBoutonTour;
+
+}
+
+void Jeu::changerMap(int m){
+	if(niv != NULL) delete niv ; 
+	niv = new Niveau(tabLienCarte[m]);
+	tourSelectionne = NULL;
+	Vect t2(1,1); // Taille du sprite
+	for (unsigned int i = 0 ; i < niv->addrGetCarte()->tailleTabTour(); i++){
+		tabBoutonTour.emplace_back(""+i, niv->addrGetCarte()->addrTourIndice(i)->getPosition(), t2);
+		tabBoutonTour.back().getTaille().afficheVect();
+		tabBoutonTour.back().getPos().afficheVect();
+	}
 
 }

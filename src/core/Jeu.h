@@ -18,6 +18,7 @@ class Jeu{
 		std::vector<Bouton> tabBouton;
 		std::vector<Bouton> tabBoutonTour;
 		Niveau *niv;
+		bool pause;
 	public :
 		/**
 			@brief Constructeur par défaut: Jeu
@@ -65,6 +66,7 @@ class Jeu{
 		std::vector<Bouton> * renvoieBoutonAmelioration();
 
 		std::vector<Bouton> * renvoieBoutonTour();
+		void changerMap(int m);
 
 };
 
