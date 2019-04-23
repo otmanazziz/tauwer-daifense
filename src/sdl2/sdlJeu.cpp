@@ -184,7 +184,7 @@ void sdlJeu::sdlAff () {
 	//Remplir l'écran de blanc
     SDL_SetRenderDrawColor(renderer, 230, 255, 240, 255);
     SDL_RenderClear(renderer);
-
+    //jeu.getNiveau()->affiche();
 	
 	unsigned int nbTourDansNiveau = jeu.getNiveau()->getCarte().tailleTabTour();
 	unsigned int nbCheminDansNiveau = jeu.getNiveau()->getCarte().tailleTabChemin();
