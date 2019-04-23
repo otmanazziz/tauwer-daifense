@@ -264,7 +264,7 @@ void sdlJeu::sdlAff () {
         res2 = 1;
         while (res >= 10){
             res2 ++ ;
-            res = res / 10.0;
+            res = res / 10.0;jiojpio
         }
 
         //Affichage du gold portée
