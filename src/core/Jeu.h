@@ -69,6 +69,7 @@ class Jeu{
 		std::vector<Bouton> * renvoieBoutonTour();
 		void changerMap(int m);
 		bool getPause();
+		Bouton getBoutonPause();
 
 };
 
