@@ -27,6 +27,7 @@ Jeu::Jeu(){
 	Vect v(0, 120);
 	Vect v1(0, 180);
 	Vect v2 (0, 240);
+
 	Vect t(60, 60);
 	tabBouton.emplace_back("Attaque", v, t);
 	tabBouton.emplace_back("VitesseAtq", v1, t);
@@ -62,8 +63,9 @@ void Jeu::actionAuto(float delta){
 }
 
 void Jeu::clique(int x, int y ,int  taille){
+Vect v(x, y);
 	if(!pause){
-	Vect v(x, y);
+	
 	for (unsigned int i = 0; i < niv->addrGetCarte()->tailleTabTour(); i++){
 		if (tabBoutonTour[i].clique(v/float(taille))){
 			tourSelectionne = niv->addrGetCarte()->addrTourIndice(i);
@@ -96,7 +98,10 @@ void Jeu::clique(int x, int y ,int  taille){
 
 
 	}
-
+	if(bpause.clique(v)){
+		if(pause) pause = false;
+		else true;
+	}
 }
 
  Tour * Jeu::tourSelect(){
@@ -126,4 +131,8 @@ void Jeu::changerMap(int m){
 		tabBoutonTour.back().getPos().afficheVect();
 	}
 
+}
+
+bool Jeu::getPause(){
+	return pause;
 }
