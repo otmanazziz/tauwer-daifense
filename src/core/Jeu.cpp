@@ -136,3 +136,8 @@ void Jeu::changerMap(int m){
 bool Jeu::getPause(){
 	return pause;
 }
+
+Bouton Jeu::getBoutonPause(){
+
+	return bpause;
+}
