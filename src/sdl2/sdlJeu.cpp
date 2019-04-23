@@ -122,6 +122,8 @@ sdlJeu::sdlJeu () {
     img_upDamage.loadFromFile("./data/image/upDamage.png",renderer);
     img_upPortee.loadFromFile("./data/image/upPortee.png",renderer);
     img_upVitesseAtq.loadFromFile("./data/image/upVitesse.png",renderer);
+    img_play.loadFromFile("./data/image/play.png",renderer);
+    img_pause.loadFromFile("./data/image/pause.png",renderer);
 
     // FONTS
     font = TTF_OpenFont("./data/font/DejaVuSansCondensed.ttf",50);
@@ -264,7 +266,7 @@ void sdlJeu::sdlAff () {
         res2 = 1;
         while (res >= 10){
             res2 ++ ;
-            res = res / 10.0;jiojpio
+            res = res / 10.0;
         }
 
         //Affichage du gold portée
@@ -279,6 +281,14 @@ void sdlJeu::sdlAff () {
         affBouton(jeu.renvoieBoutonAmelioration()->at(2), img_upPortee);
         affBouton(jeu.renvoieBoutonAmelioration()->at(1), img_upVitesseAtq);
     }
+
+    if (jeu.getPause()){
+        affBouton(jeu.getBoutonPause(), img_pause);
+    }
+    else{
+        affBouton(jeu.getBoutonPause(), img_play);
+    }
+
     for (unsigned int i = 0 ; i < jeu.renvoieBoutonTour()->size();i++)
       affBouton(jeu.renvoieBoutonTour()->at(i));
 

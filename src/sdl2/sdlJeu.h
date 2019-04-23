@@ -106,6 +106,8 @@ private :
     Image img_upDamage;
     Image img_upPortee;
     Image img_upVitesseAtq;
+    Image img_play;
+    Image img_pause;
 
 
 public :
