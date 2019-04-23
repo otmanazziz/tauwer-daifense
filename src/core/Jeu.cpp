@@ -20,7 +20,7 @@ Jeu::Jeu(){
     }
 	niv = NULL;
 	changerMap(0);
-
+	pause = true ; 
 	
 
 	//Pour placer les boutons d'amélioration
@@ -32,7 +32,7 @@ Jeu::Jeu(){
 	tabBouton.emplace_back("Attaque", v, t);
 	tabBouton.emplace_back("VitesseAtq", v1, t);
 	tabBouton.emplace_back("Portee", v2, t);
-
+	//bpause = Bouton("",Vect(940,0),t);
 	
 
 }
@@ -100,7 +100,7 @@ Vect v(x, y);
 	}
 	if(bpause.clique(v)){
 		if(pause) pause = false;
-		else true;
+		else pause = true;
 	}
 }
 
