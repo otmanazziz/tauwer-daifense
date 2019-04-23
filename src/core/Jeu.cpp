@@ -32,7 +32,7 @@ Jeu::Jeu(){
 	tabBouton.emplace_back("Attaque", v, t);
 	tabBouton.emplace_back("VitesseAtq", v1, t);
 	tabBouton.emplace_back("Portee", v2, t);
-	//bpause = Bouton("",Vect(940,0),t);
+	bpause = Bouton("",Vect(940,0),t);
 	
 
 }
