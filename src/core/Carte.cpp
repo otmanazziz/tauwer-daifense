@@ -26,11 +26,11 @@ void Carte::setFichier(const std::string & f){
 }
 
 bool Carte::reinit(){
-	//a coder le fait daller chercher dans un fichier 
+	
 	std::ifstream f ; 
 	f.open(("./data/map/"+fichier).c_str());
 	if(!f.is_open()) { 
-		//erreur
+		
 		return false ;
 	}
 	tabTour.clear();
@@ -167,22 +167,24 @@ void Carte::maj(Niveau & n , float delta){
 	for (unsigned int j = 0; j < tabVague[0].tailleVague(); j++) tabVague[0].getVague()[j].setEstAttaquer(false);
 	for (unsigned int k = 0; k < tabTour.size(); k++) tabTour[k].setAAttaquer(false);
 	for (unsigned int k = 0; k < tabTour.size(); k++){
-		for (unsigned int j = 0; j < tabVague[0].tailleVague(); j++){
-			if (tabTour[k].estAPortee(tabVague[0].getVague()[j].getPos()) && tabTour[k].peutTirer(delta) ){
-				tabTour[k].setAAttaquer(true);
-				attaque = tabTour[k].getAttaque();//Récupère l'attaque de la tour
-				if (attaque.getZone() > 0){
-					for (unsigned int i = 0; i < tabVague[0].tailleVague(); i++){
-						if(tabVague[0].addrGetIndiceMonstre(i)->perdreVie(attaque.getDegats())){
-							n.ajouterOr((unsigned int)(tabVague[0].ennemiMort(int(i))));
+		if(tabTour[k].getSpawn()){
+			for (unsigned int j = 0; j < tabVague[0].tailleVague(); j++){
+				if (tabTour[k].estAPortee(tabVague[0].getVague()[j].getPos()) && tabTour[k].peutTirer(delta) ){
+					tabTour[k].setAAttaquer(true);
+					attaque = tabTour[k].getAttaque();//Récupère l'attaque de la tour
+					if (attaque.getZone() > 0){
+						for (unsigned int i = 0; i < tabVague[0].tailleVague(); i++){
+							if(tabVague[0].addrGetIndiceMonstre(i)->perdreVie(attaque.getDegats())){
+								n.ajouterOr((unsigned int)(tabVague[0].ennemiMort(int(i))));
+							}
+						}
+					}	else {	
+						if(tabVague[0].addrGetIndiceMonstre(j)->perdreVie(attaque.getDegats())){
+							n.ajouterOr((unsigned int)(tabVague[0].ennemiMort(int(j))));
 						}
 					}
-				}	else {	
-					if(tabVague[0].addrGetIndiceMonstre(j)->perdreVie(attaque.getDegats())){
-						n.ajouterOr((unsigned int)(tabVague[0].ennemiMort(int(j))));
-					}
+					break;	
 				}
-				break;	
 			}
 		}
 	}

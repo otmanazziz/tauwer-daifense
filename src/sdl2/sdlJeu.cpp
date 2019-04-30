@@ -124,6 +124,7 @@ sdlJeu::sdlJeu () {
     img_upVitesseAtq.loadFromFile("./data/image/upVitesse.png",renderer);
     img_play.loadFromFile("./data/image/play.png",renderer);
     img_pause.loadFromFile("./data/image/pause.png",renderer);
+    emplacement.loadFromFile("./data/image/emplacement.png",renderer);
 
     // FONTS
     font = TTF_OpenFont("./data/font/DejaVuSansCondensed.ttf",50);
@@ -206,7 +207,8 @@ void sdlJeu::sdlAff () {
 	
 	for (unsigned int i = 0; i < nbTourDansNiveau; i++){
 		v = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
-		tour.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
+		if(jeu.getNiveau()->getCarte().tourIndice(i).getSpawn())tour.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
+        else emplacement.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE ,TAILLE_SPRITE,TAILLE_SPRITE);
 	}
 	if (jeu.getNiveau()->addrGetCarte()->tailleTabVague() > 0){
 		for(unsigned int i = 0 ; i < jeu.getNiveau()->getCarte().vagueIndice(0).getVague().size();i++){
@@ -227,9 +229,9 @@ void sdlJeu::sdlAff () {
     int res2;
 
     if(jeu.tourSelect() != NULL){
-        unsigned int nbGoldDegats = 1.1 * jeu.tourSelect()->getAttaque().getDegats();
-        unsigned int nbGoldVitesse = 10 * jeu.tourSelect()->getVitAtq();
-        unsigned int nbGoldPortee = 10 * jeu.tourSelect()->getPortee();
+        unsigned int nbGoldDegats = jeu.tourSelect()->getAttaque().getDegats();
+        unsigned int nbGoldVitesse = 2 * jeu.tourSelect()->getVitAtq();
+        unsigned int nbGoldPortee = 2 * jeu.tourSelect()->getPortee();
 
 
         res = (int)nbGoldDegats;
@@ -289,8 +291,8 @@ void sdlJeu::sdlAff () {
         affBouton(jeu.getBoutonPause(), img_play);
     }
 
-    for (unsigned int i = 0 ; i < jeu.renvoieBoutonTour()->size();i++)
-      affBouton(jeu.renvoieBoutonTour()->at(i));
+    //for (unsigned int i = 0 ; i < jeu.renvoieBoutonTour()->size();i++)
+    //  affBouton(jeu.renvoieBoutonTour()->at(i));
 
     res = jeu.getNiveau()->getOr();
     res2 = 1;
@@ -321,60 +323,7 @@ void sdlJeu::sdlAff () {
 	
 	
 	
-    // Afficher les sprites des murs et des pastilles
-	/*for (x=0;x<ter.getDimX();++x)
-		for (y=0;y<ter.getDimY();++y)
-			if (ter.getXY(x,y)=='#')
-				im_mur.draw(renderer,x*TAILLE_SPRITE,y*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
-			else if (ter.getXY(x,y)=='.')
-				im_pastille.draw(renderer,x*TAILLE_SPRITE,y*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
-
-	// Afficher le sprite de Pacman
-	im_pacman.draw(renderer,pac.getX()*TAILLE_SPRITE,pac.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
-
-	// Afficher le sprite du Fantome
-	im_fantome.draw(renderer,fan.getX()*TAILLE_SPRITE,fan.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
-
-    // Ecrire un titre par dessus
-    SDL_Rect positionTitre;
-    positionTitre.x = 270;positionTitre.y = 49;positionTitre.w = 100;positionTitre.h = 30;
-    SDL_RenderCopy(renderer,font_im.getTexture(),NULL,&positionTitre);*/
-	
-	
-	
-	/*
-
-
-	win.clear();
-	for( int i = 0 ; i < 40 ; i++) for( int j = 0 ; j < 40 ; j++)win.print(i,j,'.');
-	for (unsigned int i = 0; i < nbTourDansNiveau; i++){
-		v = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
-		//std::cout << "Coordonnees de la tour " << i + 1 << ".";
-		win.print(v.getX(), v.getY(), 'T');
-	}
-
-	for (unsigned int i = 0; i < nbCheminDansNiveau; i++){
-		for( int j = 0 ; j < int(jeu.getNiveau()->getCarte().cheminIndice(i).tailleChemin()) ; j++){
-			v = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j);
-
-		//std::cout << "Coordonnees de la tour " << i + 1 << ".";
-		win.print(v.getX(), v.getY(), 'X');
-		}
-	}
-	if (jeu.getNiveau()->addrGetCarte()->tailleTabVague() > 0){
-		for(unsigned int i = 0 ; i < jeu.getNiveau()->getCarte().vagueIndice(0).getVague().size();i++){
-			if(jeu.getNiveau()->addrGetCarte()->addrVagueIndice(0)->addrGetIndiceMonstre(i)->getSpawn()){
-				
-				v =jeu.getNiveau()->getCarte().vagueIndice(0).getVague()[i].getPos(); 
-				win.print(v.getX(), v.getY(), 'M');
-			}
-		}
-	}
-	v = jeu.getNiveau()->addrGetCarte()->getBase().getPosition();
-	win.print(v.getX(), v.getY(),'B');
-	win.draw(); 
-	std::cout<<std::endl;
-	jeu.getNiveau()->affiche();*/
+    
 
 }
 

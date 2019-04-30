@@ -96,3 +96,7 @@
 		}
 		else return false;
 	} 
+
+	void Tour::setSpawn(const bool & b ){
+		spawn = b;
+	}

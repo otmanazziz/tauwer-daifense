@@ -146,7 +146,9 @@ public:
 	void addVitAtq(float f);
 	void addPortee(int p);
 	bool peutTirer(float d);
+	void setSpawn(const bool & b );
 };
+
 
 #endif
 //AJOUTER LES ATTAQUES

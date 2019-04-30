@@ -8,7 +8,7 @@ Niveau::Niveau(): carte() {
 }
 
 Niveau::Niveau(const std::string & f):carte(f){
-	Or = 0;
+	Or = 100;
 	score = 0;
 	hero = NULL;
 	

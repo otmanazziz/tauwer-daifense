@@ -63,40 +63,45 @@ void Jeu::actionAuto(float delta){
 }
 
 void Jeu::clique(int x, int y ,int  taille){
-Vect v(x, y);
+	Vect v(x, y);
 	if(!pause){
-	
-	for (unsigned int i = 0; i < niv->addrGetCarte()->tailleTabTour(); i++){
-		if (tabBoutonTour[i].clique(v/float(taille))){
-			tourSelectionne = niv->addrGetCarte()->addrTourIndice(i);
-			tourSelectionne->affiche();std::cout<<i<<std::endl;
+		
+		for (unsigned int i = 0; i < niv->addrGetCarte()->tailleTabTour(); i++){
+			if (tabBoutonTour[i].clique(v/float(taille))){
+				tourSelectionne = niv->addrGetCarte()->addrTourIndice(i);
+				tourSelectionne->affiche();std::cout<<i<<std::endl;
+			}
 		}
-	}
-	if (tourSelectionne != NULL){
-		unsigned int nbGold;
-			if (tabBouton[0].clique(v)){
-				nbGold = 1.1 * tourSelectionne->getAttaque().getDegats();
-				if(nbGold <= niv->getOr()){
-					niv->retirerOr(nbGold);
-					tourSelectionne->addDegat(1);
+		if (tourSelectionne != NULL){
+			unsigned int nbGold;
+			if(tourSelectionne->getSpawn()){	
+					
+					if (tabBouton[0].clique(v)){
+						nbGold = 1.0 * tourSelectionne->getAttaque().getDegats();
+						if(nbGold <= niv->getOr()){
+							niv->retirerOr(nbGold);
+							tourSelectionne->addDegat(1);
+						}
+					}else if(tabBouton[1].clique(v)){
+						nbGold = 2* tourSelectionne->getVitAtq();
+						if(nbGold <= niv->getOr()){
+							niv->retirerOr(nbGold);
+							tourSelectionne->addVitAtq(0.1);
+						}
+					}else if(tabBouton[2].clique(v)){
+						nbGold = 2* tourSelectionne->getPortee();
+						if(nbGold <= niv->getOr()){
+							niv->retirerOr(nbGold);
+							tourSelectionne->addPortee(1);
+						}
+					}	
+			}else{
+				if(20 <= niv->getOr()){
+					niv->retirerOr(20);
+					tourSelectionne->setSpawn(true);
 				}
-			}else if(tabBouton[1].clique(v)){
-				nbGold = 10* tourSelectionne->getVitAtq();
-				if(nbGold <= niv->getOr()){
-					niv->retirerOr(nbGold);
-					tourSelectionne->addVitAtq(0.1);
-				}
-			}else if(tabBouton[2].clique(v)){
-				nbGold = 10* tourSelectionne->getPortee();
-				if(nbGold <= niv->getOr()){
-					niv->retirerOr(nbGold);
-					tourSelectionne->addPortee(1);
-				}
-			}		
-	}
-	}else{
-
-
+			}	
+		}
 	}
 	if(bpause.clique(v)){
 		if(pause) pause = false;

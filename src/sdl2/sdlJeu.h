@@ -99,6 +99,7 @@ private :
     bool withSound;
 
     Image tour;
+    Image emplacement;
 	Image base;
 	Image monstre;
     Image coin;
