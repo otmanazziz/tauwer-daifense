@@ -80,13 +80,13 @@ void Jeu::clique(int x, int y ,int  taille){
 						nbGold = 1.0 * tourSelectionne->getAttaque().getDegats();
 						if(nbGold <= niv->getOr()){
 							niv->retirerOr(nbGold);
-							tourSelectionne->addDegat(1);
+							tourSelectionne->addDegat(5);
 						}
 					}else if(tabBouton[1].clique(v)){
 						nbGold = 2* tourSelectionne->getVitAtq();
 						if(nbGold <= niv->getOr()){
 							niv->retirerOr(nbGold);
-							tourSelectionne->addVitAtq(0.1);
+							tourSelectionne->addVitAtq(0.3);
 						}
 					}else if(tabBouton[2].clique(v)){
 						nbGold = 2* tourSelectionne->getPortee();
