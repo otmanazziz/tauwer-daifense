@@ -109,6 +109,7 @@ private :
     Image img_upVitesseAtq;
     Image img_play;
     Image img_pause;
+    Image background;
 
 
 public :

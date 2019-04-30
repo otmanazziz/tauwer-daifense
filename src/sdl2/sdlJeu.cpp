@@ -125,7 +125,7 @@ sdlJeu::sdlJeu () {
     img_play.loadFromFile("./data/image/play.png",renderer);
     img_pause.loadFromFile("./data/image/pause.png",renderer);
     emplacement.loadFromFile("./data/image/emplacement.png",renderer);
-
+    background.loadFromFile("./data/image/ground.png",renderer);
     // FONTS
     font = TTF_OpenFont("./data/font/DejaVuSansCondensed.ttf",50);
     if (font == NULL) {
@@ -185,6 +185,7 @@ void sdlJeu::sdlAff () {
 	//Remplir l'écran de blanc
     SDL_SetRenderDrawColor(renderer, 230, 255, 240, 255);
     SDL_RenderClear(renderer);
+    background.draw(renderer,0,0,1000,1000);
     //jeu.getNiveau()->affiche();
 	
 	unsigned int nbTourDansNiveau = jeu.getNiveau()->getCarte().tailleTabTour();
