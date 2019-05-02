@@ -135,13 +135,13 @@ sdlJeu::sdlJeu () {
 	
 
     // SONS
- /* if (withSound)
+  if (withSound)
     {
-        sound = Mix_LoadWAV("1234.wav");
+        sound = Mix_LoadMUS("./data/sound/son.wav");
         if (sound == NULL) {
-                cout << "Failed to load son.wav! SDL_mixer Error: " << Mix_GetError() << endl; SDL_Quit(); exit(1);
+                cout << "Failed to load 1234.wav! SDL_mixer Error: " << Mix_GetError() << endl; SDL_Quit(); exit(1);
         }
-    } */ 
+    }  
 }
 
 sdlJeu::~sdlJeu () {
@@ -336,6 +336,7 @@ void sdlJeu::sdlBoucle () {
     Uint32 t = SDL_GetTicks(), nt;
     Uint32 ta = SDL_GetTicks();
     Uint32 tfps = SDL_GetTicks();
+    Mix_PlayMusic(sound, -1);
 	// tant que ce n'est pas la fin ...
 	while (!quit) {
         

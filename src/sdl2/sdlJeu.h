@@ -95,7 +95,7 @@ private :
     TTF_Font * font;
     SDL_Color font_color;
 
-    Mix_Chunk * sound;
+    struct _Mix_Music * sound;
     bool withSound;
 
     Image tour;
