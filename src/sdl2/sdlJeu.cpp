@@ -137,7 +137,7 @@ sdlJeu::sdlJeu () {
     // SONS
   if (withSound)
     {
-        sound = Mix_LoadMUS("./data/sound/son.wav");
+        sound = Mix_LoadMUS("./data/sound/BgMusic.wav");
         if (sound == NULL) {
                 cout << "Failed to load 1234.wav! SDL_mixer Error: " << Mix_GetError() << endl; SDL_Quit(); exit(1);
         }
