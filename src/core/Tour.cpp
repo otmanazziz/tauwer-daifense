@@ -7,6 +7,7 @@
 		Vect v(0, 0);
 		spawn = false;
 		position.setVect(v);
+		cooldownAtq = 0;
 	}
 
 	Tour::Tour(const Tour &_tour){
@@ -15,6 +16,7 @@
 		position.setVect(_tour.position);
 		attaque = _tour.attaque;
 		spawn = _tour.spawn;
+		cooldownAtq = 1/vitesseAtq;
 	}
 
 	Tour::Tour(const float &_vitesseAtq, const int &_portee, const Vect &_position , const int &z , const int & d): attaque(z,d){
@@ -22,6 +24,7 @@
 		portee = _portee;
 		position.setVect(_position);
 		spawn = false;
+		cooldownAtq = 1/vitesseAtq;
 	}
 
 	Tour::~Tour(){
@@ -91,7 +94,7 @@
 	bool Tour::peutTirer(float d){
 		cooldownAtq -= d;
 		if(cooldownAtq <= 0 ){
-			cooldownAtq = vitesseAtq;
+			cooldownAtq = 1/vitesseAtq;
 			return true;
 		}
 		else return false;

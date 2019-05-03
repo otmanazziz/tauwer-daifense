@@ -62,12 +62,13 @@ void Jeu::actionAuto(float delta){
 		//std::cout<<x<<" "<<y<<std::endl;
 }
 
-void Jeu::clique(int x, int y ,int  taille){
+void Jeu::clique(const int & x, const int & y , const int & taille){
+
 	Vect v(x, y);
 	if(!pause){
-		
 		for (unsigned int i = 0; i < niv->addrGetCarte()->tailleTabTour(); i++){
-			if (tabBoutonTour[i].clique(v/float(taille))){
+			 
+			if (tabBoutonTour[i].clique(v+(Vect(taille,taille)/2))){
 				tourSelectionne = niv->addrGetCarte()->addrTourIndice(i);
 				tourSelectionne->affiche();std::cout<<i<<std::endl;
 			}
@@ -83,10 +84,10 @@ void Jeu::clique(int x, int y ,int  taille){
 							tourSelectionne->addDegat(5);
 						}
 					}else if(tabBouton[1].clique(v)){
-						nbGold = 2* tourSelectionne->getVitAtq();
+						nbGold = 8* tourSelectionne->getVitAtq();
 						if(nbGold <= niv->getOr()){
 							niv->retirerOr(nbGold);
-							tourSelectionne->addVitAtq(0.3);
+							tourSelectionne->addVitAtq(0.5);
 						}
 					}else if(tabBouton[2].clique(v)){
 						nbGold = 2* tourSelectionne->getPortee();
@@ -129,9 +130,9 @@ void Jeu::changerMap(int m){
 	if(niv != NULL) delete niv ; 
 	niv = new Niveau(tabLienCarte[m]);
 	tourSelectionne = NULL;
-	Vect t2(1,1); // Taille du sprite
+	Vect t2(64,64); 
 	for (unsigned int i = 0 ; i < niv->addrGetCarte()->tailleTabTour(); i++){
-		tabBoutonTour.emplace_back(""+i, niv->addrGetCarte()->addrTourIndice(i)->getPosition(), t2);
+		tabBoutonTour.emplace_back(""+i, niv->addrGetCarte()->addrTourIndice(i)->getPosition()*20, t2);
 		tabBoutonTour.back().getTaille().afficheVect();
 		tabBoutonTour.back().getPos().afficheVect();
 	}

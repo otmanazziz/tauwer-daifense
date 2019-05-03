@@ -6,8 +6,9 @@
 #include <iostream>
 using namespace std;
 
-const int TAILLE_SPRITE = 25;
-
+const int TAILLE_SPRITE = 64;
+const int TAILLE_MAP = 50;
+const int TAILLE_FENETRE = 1000;
 float temps () {
     return float(SDL_GetTicks()) / CLOCKS_PER_SEC;  // conversion des ms en secondes en divisant par 1000
 }
@@ -180,7 +181,20 @@ void sdlJeu::affBouton(const Bouton &b, Image &im){
     v.h = p.getTaille().getY();
     im.draw(renderer, v.x, v.y, v.w, v.h);
 }
-
+void sdlJeu::sdlCircle(const Vect & vec,const int & radius ,const  int & width){
+    int radius_min = radius -1- float(width)/2 , radius_max = radius + float(width)/2;
+    int x = vec.getX(), y=vec.getY();
+    int r ;
+    for(int i = x - radius_max  ; i<x+radius_max;i++ ){
+        for(int j = y - radius_max  ; j<y+radius_max;j++ ){
+             r = (vec-Vect(i,j)).module();
+             
+             if(r<=radius_max && r >= radius_min)
+                SDL_RenderDrawPoint(renderer,i,j);
+        }
+    }
+   
+}
 void sdlJeu::sdlAff () {
 	//Remplir l'écran de blanc
     SDL_SetRenderDrawColor(renderer, 230, 255, 240, 255);
@@ -192,37 +206,53 @@ void sdlJeu::sdlAff () {
 	unsigned int nbCheminDansNiveau = jeu.getNiveau()->getCarte().tailleTabChemin();
 	Vect v , vv;
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-	for (unsigned int i = 0; i < nbCheminDansNiveau; i++){
+	for (unsigned int i = 0; i < nbCheminDansNiveau; i++){//    affiche les chemins
 		for( int j = 1 ; j < int(jeu.getNiveau()->getCarte().cheminIndice(i).tailleChemin()) ; j++){
 			v = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j-1);
 			vv = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j);
 			SDL_RenderDrawLine(renderer,
-                                v.getX()*TAILLE_SPRITE+TAILLE_SPRITE/2,
-                                v.getY()*TAILLE_SPRITE+TAILLE_SPRITE/2,
-                                vv.getX()*TAILLE_SPRITE+TAILLE_SPRITE/2,
-                                vv.getY()*TAILLE_SPRITE+TAILLE_SPRITE/2);
+                                v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP,
+                                v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP,
+                                vv.getX()*float(TAILLE_FENETRE)/TAILLE_MAP,
+                                vv.getY()*float(TAILLE_FENETRE)/TAILLE_MAP);
 
 			
 		}
 	}
 	
-	for (unsigned int i = 0; i < nbTourDansNiveau; i++){
+	for (unsigned int i = 0; i < nbTourDansNiveau; i++){//affiche les tours 
 		v = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
-		if(jeu.getNiveau()->getCarte().tourIndice(i).getSpawn())tour.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
-        else emplacement.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE ,TAILLE_SPRITE,TAILLE_SPRITE);
+		if(jeu.getNiveau()->getCarte().tourIndice(i).getSpawn())tour.draw(renderer,
+            v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/2,
+            v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/2,
+            TAILLE_SPRITE,
+            TAILLE_SPRITE);
+        else emplacement.draw(renderer,
+            v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/2,
+            v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/2,
+            TAILLE_SPRITE,
+            TAILLE_SPRITE);
 	}
-	if (jeu.getNiveau()->addrGetCarte()->tailleTabVague() > 0){
+	if (jeu.getNiveau()->addrGetCarte()->tailleTabVague() > 0){//affiche les monstres
 		for(unsigned int i = 0 ; i < jeu.getNiveau()->getCarte().vagueIndice(0).getVague().size();i++){
 			if(jeu.getNiveau()->addrGetCarte()->addrVagueIndice(0)->addrGetIndiceMonstre(i)->getSpawn()){
 				
 				v =jeu.getNiveau()->getCarte().vagueIndice(0).getVague()[i].getPos(); 
-				monstre.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
+				monstre.draw(renderer,
+                    v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/4,
+                    v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/4,
+                    TAILLE_SPRITE/2,
+                    TAILLE_SPRITE/2);
 			}
 		}
 	}
 	v = jeu.getNiveau()->addrGetCarte()->getBase().getPosition();
-	base.draw(renderer,v.getX()*TAILLE_SPRITE,v.getY()*TAILLE_SPRITE,TAILLE_SPRITE,TAILLE_SPRITE);
-
+	base.draw(renderer,
+        (v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP)-TAILLE_SPRITE,
+        (v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP)-TAILLE_SPRITE,
+        TAILLE_SPRITE*2,
+        TAILLE_SPRITE*2);//affiche la base
+    //sdlCircle(Vect((v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP),(v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP)),64,3);
     Image f;
     SDL_Rect pos;
 
@@ -231,9 +261,9 @@ void sdlJeu::sdlAff () {
 
     if(jeu.tourSelect() != NULL){
         unsigned int nbGoldDegats = jeu.tourSelect()->getAttaque().getDegats();
-        unsigned int nbGoldVitesse = 2 * jeu.tourSelect()->getVitAtq();
+        unsigned int nbGoldVitesse = 8 * jeu.tourSelect()->getVitAtq();
         unsigned int nbGoldPortee = 2 * jeu.tourSelect()->getPortee();
-
+        sdlCircle(jeu.tourSelect()->getPosition()*float(TAILLE_FENETRE)/TAILLE_MAP,jeu.tourSelect()->getPortee()*float(TAILLE_FENETRE)/TAILLE_MAP,3);
 
         res = (int)nbGoldDegats;
         res2 = 1;
@@ -284,7 +314,6 @@ void sdlJeu::sdlAff () {
         affBouton(jeu.renvoieBoutonAmelioration()->at(2), img_upPortee);
         affBouton(jeu.renvoieBoutonAmelioration()->at(1), img_upVitesseAtq);
     }
-
     if (jeu.getPause()){
         affBouton(jeu.getBoutonPause(), img_pause);
     }
@@ -341,8 +370,8 @@ void sdlJeu::sdlBoucle () {
 	while (!quit) {
         
         nt = SDL_GetTicks();
-       jeu.actionAuto(float(nt-t));
-t = nt;
+        jeu.actionAuto(float(nt-t));
+        t = nt;
 		// tant qu'il y a des evenements  traiter (cette boucle n'est pas bloquante)
 		while (SDL_PollEvent(&events)) {
 			if (events.type == SDL_QUIT) quit = true;           // Si l'utilisateur a clique sur la croix de fermeture
@@ -372,8 +401,8 @@ t = nt;
 			else if (events.type == SDL_MOUSEBUTTONUP) {              // Si l'utilisateur à cliqué
 				if (events.button.button == SDL_BUTTON_LEFT){
 					SDL_GetMouseState(&x, &y);
-                    std::cout << x/TAILLE_SPRITE << " " << y/TAILLE_SPRITE << std::endl;
-                    std::cout << x << " " << y << std::endl;
+                    //std::cout << x/TAILLE_SPRITE << " " << y/TAILLE_SPRITE << std::endl;
+                    //std::cout << x << " " << y << std::endl;
                     jeu.clique(x,y,TAILLE_SPRITE);
                     //jeu.tourSelect()->affiche();
 				}else{
@@ -387,9 +416,31 @@ t = nt;
             
 		// on affiche le jeu sur le buffer cach
 		if(nt-ta > 1000.0/30.0){sdlAff();fps++;ta = nt;}
-        if(nt-tfps > 1000.0) {cout<<fps<<endl;fps=0;tfps =nt;}
+        //if(nt-tfps > 1000.0) {cout<<fps<<endl;fps=0;tfps =nt;}
 		// on permute les deux buffers (cette fonction ne doit se faire qu'une seule fois dans la boucle)
         SDL_RenderPresent(renderer);
 	}
 }
 
+/*tour:5:4:21:30:0:20
+tour:5:4:15:34:0:20
+tour:5:4:3:38:0:20
+tour:5:4:25:37:0:20
+chemin:16.5,10:16.5,20:35,20
+chemin:3,10:3,23:11.5,23:11.5,32:35,32
+vague:1:2:10/5/0,20/5/0,10/4/0,40/2/0,15/4/0,10/3/0,15/4/0,10/4/0,15/5/0
+vague:1:2:20/5/1,20/5/1,20/4/1,50/2/1,25/2/1,10/3/1,15/3/1,10/4/1,15/2/1
+vague:1:2:20/5/0,20/5/1,20/4/0,50/2/1,25/2/0,10/3/1,15/3/0,10/4/1,15/2/0
+vague:1:2:100/1/0
+base:35,30:
+
+
+tour:5:4:0:0:0:20
+tour:5:4:0:48:0:20
+tour:5:4:48:48:0:20
+tour:5:4:48:0:0:20
+chemin:1,1:25,25
+vague:1:2:10/5/0
+base:1,25:
+
+*/

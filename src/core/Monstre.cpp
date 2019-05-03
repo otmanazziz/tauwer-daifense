@@ -25,7 +25,7 @@ Monstre::Monstre(const int &_vie, const float &_vitesse,const int &_numChemin ,c
 	numChem = _numChemin;
 	etape = 1;
 	spawn = false;
-	gold = vie / 10;
+	gold = vie / 5;
 }
 
 Monstre::~Monstre(){

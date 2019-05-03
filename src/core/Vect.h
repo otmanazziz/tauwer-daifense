@@ -161,6 +161,7 @@ class Vect{
 		void testRegression();
 		Vect operator*(float f)const;
 		Vect operator/(float f)const;
+		Vect operator%(const int & i)const;
 };
 
 

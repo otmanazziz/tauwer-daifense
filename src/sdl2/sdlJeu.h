@@ -137,6 +137,7 @@ public :
     */
    void affBouton( const Bouton &b);
    void affBouton(const Bouton &b, Image &im);
+   void sdlCircle(const Vect & vec,const int & radius ,const  int & width);
     void sdlBoucle ();
     /**
         @brief Procédure: sdlAff
