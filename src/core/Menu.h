@@ -114,7 +114,7 @@ public:
 	*/
 
 	void afficherTabBouton();
-
+	unsigned int getTaille();
 
 };
 

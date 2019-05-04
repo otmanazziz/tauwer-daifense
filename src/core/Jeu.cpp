@@ -5,21 +5,26 @@
 Jeu::Jeu(){
 	DIR * rep = opendir("./data/map");
     std::vector<std::string> s;
+	int i = 0 ;
     if (rep != NULL)
     {
         struct dirent * ent;
-         
+        Vect bmap(600,40);
         while ((ent = readdir(rep)) != NULL)
         {	
         	s = split(ent->d_name, '.');
 			
-			if( s.back().compare(std::string("map")) == 0){std::cout<<ent->d_name<<std::endl;tabLienCarte.push_back(ent->d_name);}
+			if( s.back().compare(std::string("map")) == 0){
+				std::cout<<ent->d_name<<std::endl;
+				tabLienCarte.push_back(ent->d_name);
+				menuMap.ajouterBouton(Bouton(ent->d_name, Vect(200,i*40),bmap));
+				i++;
+			}
         }
          
         closedir(rep);
     }
 	niv = NULL;
-	changerMap(0);
 	pause = true ; 
 	
 
@@ -103,10 +108,16 @@ void Jeu::clique(const int & x, const int & y , const int & taille){
 				}
 			}	
 		}
-	}
-	if(bpause.clique(v)){
-		if(pause) pause = false;
-		else pause = true;
+	}else{
+		for(unsigned int i = 0 ; i < menuMap.getTaille(); i++){
+			if(menuMap.getBoutonIndice(i).clique(v)){
+				changerMap(i);
+			}
+		}
+
+	} 
+	if(bpause.clique(v) && niv != NULL){
+		Pause();
 	}
 }
 
@@ -157,10 +168,14 @@ std::string Jeu::getImageMap(){
 	std::ifstream f ; 
 	f.open(("./data/map/"+tabLienCarte[mapSelect]).c_str());
 	if(!f.is_open()) { 
-		return "test.map" ;
+		return "test.png" ;
 	}
 	std::string ligne;
 	getline(f,ligne);
 	return "./data/image/map/"+ligne ;
 
+}
+
+Menu Jeu::getMenuMap(){
+	return menuMap;
 }

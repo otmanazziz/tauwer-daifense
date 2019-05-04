@@ -70,4 +70,8 @@ void Menu::supprimerBoutonIndice(const int &indice){
 	tabBouton.erase(tabBouton.begin() + indice);
 }
 
+unsigned int Menu::getTaille(){
+ return tabBouton.size();
+}
+
 //JE TERMINERAIS LE WE : OTMAN

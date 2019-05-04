@@ -13,7 +13,7 @@
 class Jeu{
 	private:
 		std::vector<std::string> tabLienCarte;
-		Menu principale;
+		Menu menuMap;
 		Tour * tourSelectionne;
 		std::vector<Bouton> tabBouton;
 		std::vector<Bouton> tabBoutonTour;
@@ -73,6 +73,7 @@ class Jeu{
 		Bouton getBoutonPause();
 		void Pause();
 		std::string getImageMap();
+		Menu getMenuMap();
 
 };
 
