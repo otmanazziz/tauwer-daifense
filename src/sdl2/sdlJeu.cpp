@@ -272,13 +272,21 @@ void sdlJeu::sdlAff () {
             res = res / 10.0;
         }
 
-        //Affichage du gold dégats
-        SDL_Surface * txtGoldDamage= TTF_RenderText_Solid(font,to_string(nbGoldDegats).c_str(),font_color);
+        //Affichage du prix des dégats d'attaque
+        SDL_Surface * txtGoldDamage= TTF_RenderText_Solid(font, to_string(nbGoldDegats).c_str() ,font_color);
 	    f.setSurface(txtGoldDamage);
 	    f.loadFromCurrentSurface(renderer);
-        pos.x = 70; pos.y = 120; pos.w = 30 * res2; pos.h = 60;
+        pos.x = 70; pos.y = 120; pos.w = 15 * res2; pos.h = 30;
         SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
         SDL_FreeSurface(txtGoldDamage);
+
+        unsigned int degatsTour = jeu.tourSelect()->getAttaque().getDegats();
+        SDL_Surface * txtDamage = TTF_RenderText_Solid(font, (to_string(degatsTour) + "->" + to_string(degatsTour + 5)).c_str() ,font_color);
+	    f.setSurface(txtDamage);
+	    f.loadFromCurrentSurface(renderer);
+        pos.x = 70; pos.y = 150; pos.w = 30 * res2; pos.h = 30;
+        SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+        SDL_FreeSurface(txtDamage);
 
         res = (int)nbGoldVitesse;
         res2 = 1;
@@ -287,13 +295,22 @@ void sdlJeu::sdlAff () {
             res = res / 10.0;
         }
 
-        //Affichage du gold vitesse
-        SDL_Surface * txtGoldSpeed= TTF_RenderText_Solid(font,to_string(nbGoldVitesse).c_str(),font_color);
+        //Affichage du prix de la vitesse d'ttaque
+        SDL_Surface * txtGoldSpeed = TTF_RenderText_Solid(font, to_string(nbGoldVitesse).c_str(),font_color);
 	    f.setSurface(txtGoldSpeed);
 	    f.loadFromCurrentSurface(renderer);
-        pos.x = 70; pos.y = 180; pos.w = 30 * res2; pos.h = 60;
+        pos.x = 70; pos.y = 180; pos.w = 15 * res2; pos.h = 30;
         SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
         SDL_FreeSurface(txtGoldSpeed);
+
+        unsigned int vitesseTour = jeu.tourSelect()->getVitAtq();
+        string vitTour = to_string(vitesseTour + 0.5);
+        SDL_Surface * txtSpeed = TTF_RenderText_Solid(font, (to_string(vitesseTour) + "->" + vitTour.substr(0, vitTour.find(".") + 2)).c_str() ,font_color);
+	    f.setSurface(txtSpeed);
+	    f.loadFromCurrentSurface(renderer);
+        pos.x = 70; pos.y = 210; pos.w = 30 * res2; pos.h = 30;
+        SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+        SDL_FreeSurface(txtSpeed);
 
         res = (int)nbGoldPortee;
         res2 = 1;
@@ -302,13 +319,21 @@ void sdlJeu::sdlAff () {
             res = res / 10.0;
         }
 
-        //Affichage du gold portée
+        //Affichage du prix de la portée de la tour
         SDL_Surface * txtGoldPortee= TTF_RenderText_Solid(font,to_string(nbGoldPortee).c_str(),font_color);
 	    f.setSurface(txtGoldPortee);
 	    f.loadFromCurrentSurface(renderer);
-        pos.x = 70; pos.y = 240; pos.w = 30 * res2; pos.h = 60;
+        pos.x = 70; pos.y = 240; pos.w = 15 * res2; pos.h = 30;
         SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
         SDL_FreeSurface(txtGoldPortee);
+
+        unsigned int porteeTour = jeu.tourSelect()->getPortee();
+        SDL_Surface * txtPortee = TTF_RenderText_Solid(font, (to_string(porteeTour) + "->" + to_string(porteeTour + 1)).c_str() ,font_color);
+	    f.setSurface(txtPortee);
+	    f.loadFromCurrentSurface(renderer);
+        pos.x = 70; pos.y = 270; pos.w = 30 * res2; pos.h = 30;
+        SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+        SDL_FreeSurface(txtPortee);
 
 	    affBouton(jeu.renvoieBoutonAmelioration()->at(0), img_upDamage);
         affBouton(jeu.renvoieBoutonAmelioration()->at(2), img_upPortee);
