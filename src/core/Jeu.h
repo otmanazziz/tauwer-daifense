@@ -20,6 +20,7 @@ class Jeu{
 		Niveau *niv;
 		bool pause;
 		Bouton bpause;
+		int mapSelect;
 	public :
 		/**
 			@brief Constructeur par défaut: Jeu
@@ -70,6 +71,8 @@ class Jeu{
 		void changerMap(int m);
 		bool getPause();
 		Bouton getBoutonPause();
+		void Pause();
+		std::string getImageMap();
 
 };
 

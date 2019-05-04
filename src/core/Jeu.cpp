@@ -136,6 +136,7 @@ void Jeu::changerMap(int m){
 		tabBoutonTour.back().getTaille().afficheVect();
 		tabBoutonTour.back().getPos().afficheVect();
 	}
+	mapSelect = m ;
 
 }
 
@@ -146,4 +147,20 @@ bool Jeu::getPause(){
 Bouton Jeu::getBoutonPause(){
 
 	return bpause;
+}
+
+void Jeu::Pause(){
+	pause = !pause;
+}
+
+std::string Jeu::getImageMap(){
+	std::ifstream f ; 
+	f.open(("./data/map/"+tabLienCarte[mapSelect]).c_str());
+	if(!f.is_open()) { 
+		return "test.map" ;
+	}
+	std::string ligne;
+	getline(f,ligne);
+	return "./data/image/map/"+ligne ;
+
 }

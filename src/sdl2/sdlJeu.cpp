@@ -126,7 +126,7 @@ sdlJeu::sdlJeu () {
     img_play.loadFromFile("./data/image/play.png",renderer);
     img_pause.loadFromFile("./data/image/pause.png",renderer);
     emplacement.loadFromFile("./data/image/emplacement.png",renderer);
-    background.loadFromFile("./data/image/ground.png",renderer);
+    
     // FONTS
     font = TTF_OpenFont("./data/font/DejaVuSansCondensed.ttf",50);
     if (font == NULL) {
@@ -366,12 +366,15 @@ void sdlJeu::sdlBoucle () {
     Uint32 ta = SDL_GetTicks();
     Uint32 tfps = SDL_GetTicks();
     Mix_PlayMusic(sound, -1);
+    background.loadFromFile(jeu.getImageMap().c_str(),renderer);
 	// tant que ce n'est pas la fin ...
 	while (!quit) {
         
         nt = SDL_GetTicks();
-        jeu.actionAuto(float(nt-t));
-        t = nt;
+        if(nt-t > 50){
+            jeu.actionAuto(float(nt-t));
+            t = nt;
+        }
 		// tant qu'il y a des evenements  traiter (cette boucle n'est pas bloquante)
 		while (SDL_PollEvent(&events)) {
 			if (events.type == SDL_QUIT) quit = true;           // Si l'utilisateur a clique sur la croix de fermeture

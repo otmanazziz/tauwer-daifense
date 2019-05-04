@@ -48,7 +48,7 @@ void txtAff(WinTXT & win, Jeu &jeu){
 }
 
 void txtBoucle(Jeu & jeu){
-	WinTXT win (40, 40);
+	WinTXT win (50, 50);
 
 	bool ok = true;
 	int c;
@@ -69,11 +69,11 @@ void txtBoucle(Jeu & jeu){
         	case 'q':
         		ok = false;
         		break;
-        	case 't':
-        jeu.actionAuto(200);
+        	case 'p':
+				jeu.Pause();
         		break;
 
-        }
+        }jeu.actionAuto(200);
 
 	} while (ok);
 
