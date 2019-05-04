@@ -26,6 +26,7 @@ Jeu::Jeu(){
     }
 	niv = NULL;
 	pause = true ; 
+	tourSelectionne = NULL;
 	
 
 	//Pour placer les boutons d'amélioration
@@ -76,6 +77,7 @@ void Jeu::clique(const int & x, const int & y , const int & taille){
 			if (tabBoutonTour[i].clique(v+(Vect(taille,taille)/2))){
 				tourSelectionne = niv->addrGetCarte()->addrTourIndice(i);
 				tourSelectionne->affiche();std::cout<<i<<std::endl;
+				break;
 			}
 		}
 		if (tourSelectionne != NULL){
@@ -112,6 +114,7 @@ void Jeu::clique(const int & x, const int & y , const int & taille){
 		for(unsigned int i = 0 ; i < menuMap.getTaille(); i++){
 			if(menuMap.getBoutonIndice(i).clique(v)){
 				changerMap(i);
+				break;
 			}
 		}
 
@@ -141,6 +144,7 @@ void Jeu::changerMap(int m){
 	if(niv != NULL) delete niv ; 
 	niv = new Niveau(tabLienCarte[m]);
 	tourSelectionne = NULL;
+	tabBoutonTour.clear();
 	Vect t2(64,64); 
 	for (unsigned int i = 0 ; i < niv->addrGetCarte()->tailleTabTour(); i++){
 		tabBoutonTour.emplace_back(""+i, niv->addrGetCarte()->addrTourIndice(i)->getPosition()*20, t2);
@@ -166,13 +170,19 @@ void Jeu::Pause(){
 
 std::string Jeu::getImageMap(){
 	std::ifstream f ; 
-	f.open(("./data/map/"+tabLienCarte[mapSelect]).c_str());
-	if(!f.is_open()) { 
-		return "test.png" ;
+	if(niv != NULL){
+		f.open(("./data/map/"+tabLienCarte[mapSelect]).c_str());
+		if(!f.is_open()) { 
+			f.close();
+			std::cout<<"erreur du chargement de " + tabLienCarte[mapSelect]<<std::endl; 
+			return "NULL" ;
+		}
+		std::string ligne;
+		getline(f,ligne);
+		f.close();
+		return "./data/image/map/"+ligne ;
 	}
-	std::string ligne;
-	getline(f,ligne);
-	return "./data/image/map/"+ligne ;
+	return "NULL";
 
 }
 

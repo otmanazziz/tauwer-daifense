@@ -21,6 +21,8 @@ Image::Image () {
     has_changed = false;
 }
 void Image::loadFromFile (const char* filename, SDL_Renderer * renderer) {
+    
+   
     surface = IMG_Load(filename);
     if (surface == NULL) {
         string nfn = string("../") + filename;
@@ -140,13 +142,16 @@ sdlJeu::sdlJeu () {
     {
         sound = Mix_LoadMUS("./data/sound/son.wav");
         if (sound == NULL) {
-                cout << "Failed to load 1234.wav! SDL_mixer Error: " << Mix_GetError() << endl; SDL_Quit(); exit(1);
+                cout << "Failed to load son.wav! SDL_mixer Error: " << Mix_GetError() << endl; SDL_Quit(); exit(1);
         }
     }  
 }
 
 sdlJeu::~sdlJeu () {
-    if (withSound) Mix_Quit();
+    if (withSound){
+        Mix_FreeMusic(sound);
+        Mix_CloseAudio();
+    }
     TTF_CloseFont(font);
     TTF_Quit();
     SDL_DestroyRenderer(renderer);
@@ -157,17 +162,17 @@ void sdlJeu::affBouton( const Bouton &b){
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
     SDL_Rect v;
     Bouton p = b;
-    v.x = p.getPos().getX();
-    v.y = p.getPos().getY();
-    v.w = p.getTaille().getX();
-    v.h = p.getTaille().getY();
+    v.x = p.getPos().getX()+1;
+    v.y = p.getPos().getY()+1;
+    v.w = p.getTaille().getX()-2;
+    v.h = p.getTaille().getY()-2;
     SDL_RenderFillRect( renderer, &v );
     SDL_Surface * text = TTF_RenderText_Solid(font, p.getNom().c_str() ,font_color);
     Image f;
     f.setSurface(text);
 	f.loadFromCurrentSurface(renderer);
-    
     SDL_RenderCopy(renderer,f.getTexture(),NULL,&v);
+    
     SDL_FreeSurface(text); 
 	
 }
@@ -277,7 +282,7 @@ void sdlJeu::sdlAff () {
             SDL_Surface * txtGoldDamage= TTF_RenderText_Solid(font,to_string(nbGoldDegats).c_str(),font_color);
             f.setSurface(txtGoldDamage);
             f.loadFromCurrentSurface(renderer);
-            pos.x = 70; pos.y = 120; pos.w = 30 * res2; pos.h = 60;
+            pos.x = 70; pos.y = 120; pos.w = 15 * res2; pos.h = 30;
             SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
             SDL_FreeSurface(txtGoldDamage);
 
@@ -300,7 +305,7 @@ void sdlJeu::sdlAff () {
             SDL_Surface * txtGoldSpeed= TTF_RenderText_Solid(font,to_string(nbGoldVitesse).c_str(),font_color);
             f.setSurface(txtGoldSpeed);
             f.loadFromCurrentSurface(renderer);
-            pos.x = 70; pos.y = 180; pos.w = 30 * res2; pos.h = 60;
+            pos.x = 70; pos.y = 180; pos.w = 15 * res2; pos.h = 30;
             SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
             SDL_FreeSurface(txtGoldSpeed);
 
@@ -324,7 +329,7 @@ void sdlJeu::sdlAff () {
             SDL_Surface * txtGoldPortee= TTF_RenderText_Solid(font,to_string(nbGoldPortee).c_str(),font_color);
             f.setSurface(txtGoldPortee);
             f.loadFromCurrentSurface(renderer);
-            pos.x = 70; pos.y = 240; pos.w = 30 * res2; pos.h = 60;
+            pos.x = 70; pos.y = 240; pos.w = 15 * res2; pos.h = 30;
             SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
             SDL_FreeSurface(txtGoldPortee);
 
@@ -403,7 +408,8 @@ void sdlJeu::sdlBoucle () {
     Uint32 ta = SDL_GetTicks();
     Uint32 tfps = SDL_GetTicks();
     Mix_PlayMusic(sound, -1);
-    background.loadFromFile(jeu.getImageMap().c_str(),renderer);
+    string backgroundCourrant = "NULL";
+    
 	// tant que ce n'est pas la fin ...
 	while (!quit) {
         
@@ -444,6 +450,18 @@ void sdlJeu::sdlBoucle () {
                     //std::cout << x/TAILLE_SPRITE << " " << y/TAILLE_SPRITE << std::endl;
                     //std::cout << x << " " << y << std::endl;
                     jeu.clique(x,y,TAILLE_SPRITE);
+                    if(jeu.getPause()){ 
+                        if(jeu.getNiveau() != NULL){
+                            jeu.getNiveau()->affiche();
+                            string bg = jeu.getImageMap();
+                            
+                            if(backgroundCourrant != bg) {
+                                
+                                backgroundCourrant = bg;cout<<backgroundCourrant<<endl;
+                                background.loadFromFile(backgroundCourrant.c_str(),renderer);
+                            }
+                        }
+                    }
                     //jeu.tourSelect()->affiche();
 				}else{
 					x = -1;

@@ -73,7 +73,9 @@ void termInit()      // configure la saisie : ne pas afficher les caracteres tap
     tcsetattr(STDIN_FILENO, TCSANOW, &t);
 #endif
 }
-
+WinTXT::~WinTXT(){
+    delete win;
+}
 WinTXT::WinTXT (int dx, int dy) {
     dimx = dx;
     dimy = dy;

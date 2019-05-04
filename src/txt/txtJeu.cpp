@@ -16,7 +16,7 @@ void txtAff(WinTXT & win, Jeu &jeu){
 	Vect v;
 
 	win.clear();
-	for( int i = 0 ; i < 40 ; i++) for( int j = 0 ; j < 40 ; j++)win.print(i,j,'.');
+	for( int i = 0 ; i < 50 ; i++) for( int j = 0 ; j < 50 ; j++)win.print(i,j,'.');
 	for (unsigned int i = 0; i < nbTourDansNiveau; i++){
 		v = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
 		//std::cout << "Coordonnees de la tour " << i + 1 << ".";
@@ -54,7 +54,7 @@ void txtBoucle(Jeu & jeu){
 	int c;
 	int x = -1;
 	int y = -1;
-
+	jeu.changerMap(0);
 	do {
 	    txtAff(win,jeu);
 	
