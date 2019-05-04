@@ -162,13 +162,13 @@ void sdlJeu::affBouton( const Bouton &b){
     v.w = p.getTaille().getX();
     v.h = p.getTaille().getY();
     SDL_RenderFillRect( renderer, &v );
-    /* SDL_Surface * text = TTF_RenderText_Solid(font, p.getNom().c_str() ,font_color);
+    SDL_Surface * text = TTF_RenderText_Solid(font, p.getNom().c_str() ,font_color);
     Image f;
     f.setSurface(text);
 	f.loadFromCurrentSurface(renderer);
     
     SDL_RenderCopy(renderer,f.getTexture(),NULL,&v);
-    SDL_FreeSurface(text); */
+    SDL_FreeSurface(text); 
 	
 }
 
@@ -199,148 +199,185 @@ void sdlJeu::sdlAff () {
 	//Remplir l'écran de blanc
     SDL_SetRenderDrawColor(renderer, 230, 255, 240, 255);
     SDL_RenderClear(renderer);
-    background.draw(renderer,0,0,1000,1000);
-    //jeu.getNiveau()->affiche();
-	
-	unsigned int nbTourDansNiveau = jeu.getNiveau()->getCarte().tailleTabTour();
-	unsigned int nbCheminDansNiveau = jeu.getNiveau()->getCarte().tailleTabChemin();
-	Vect v , vv;
-	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-	for (unsigned int i = 0; i < nbCheminDansNiveau; i++){//    affiche les chemins
-		for( int j = 1 ; j < int(jeu.getNiveau()->getCarte().cheminIndice(i).tailleChemin()) ; j++){
-			v = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j-1);
-			vv = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j);
-			SDL_RenderDrawLine(renderer,
-                                v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP,
-                                v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP,
-                                vv.getX()*float(TAILLE_FENETRE)/TAILLE_MAP,
-                                vv.getY()*float(TAILLE_FENETRE)/TAILLE_MAP);
+    if(jeu.getNiveau() != NULL){
+        background.draw(renderer,0,0,1000,1000);
+        //jeu.getNiveau()->affiche();
+        
+        unsigned int nbTourDansNiveau = jeu.getNiveau()->getCarte().tailleTabTour();
+        unsigned int nbCheminDansNiveau = jeu.getNiveau()->getCarte().tailleTabChemin();
+        Vect v , vv;
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+        for (unsigned int i = 0; i < nbCheminDansNiveau; i++){//    affiche les chemins
+            for( int j = 1 ; j < int(jeu.getNiveau()->getCarte().cheminIndice(i).tailleChemin()) ; j++){
+                v = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j-1);
+                vv = jeu.getNiveau()->getCarte().cheminIndice(int(i)).prochaineEtape(j);
+                SDL_RenderDrawLine(renderer,
+                                    v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP,
+                                    v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP,
+                                    vv.getX()*float(TAILLE_FENETRE)/TAILLE_MAP,
+                                    vv.getY()*float(TAILLE_FENETRE)/TAILLE_MAP);
 
-			
-		}
-	}
-	
-	for (unsigned int i = 0; i < nbTourDansNiveau; i++){//affiche les tours 
-		v = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
-		if(jeu.getNiveau()->getCarte().tourIndice(i).getSpawn())tour.draw(renderer,
-            v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/2,
-            v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/2,
-            TAILLE_SPRITE,
-            TAILLE_SPRITE);
-        else emplacement.draw(renderer,
-            v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/2,
-            v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/2,
-            TAILLE_SPRITE,
-            TAILLE_SPRITE);
-	}
-	if (jeu.getNiveau()->addrGetCarte()->tailleTabVague() > 0){//affiche les monstres
-		for(unsigned int i = 0 ; i < jeu.getNiveau()->getCarte().vagueIndice(0).getVague().size();i++){
-			if(jeu.getNiveau()->addrGetCarte()->addrVagueIndice(0)->addrGetIndiceMonstre(i)->getSpawn()){
-				
-				v =jeu.getNiveau()->getCarte().vagueIndice(0).getVague()[i].getPos(); 
-				monstre.draw(renderer,
-                    v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/4,
-                    v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/4,
-                    TAILLE_SPRITE/2,
-                    TAILLE_SPRITE/2);
-			}
-		}
-	}
-	v = jeu.getNiveau()->addrGetCarte()->getBase().getPosition();
-	base.draw(renderer,
-        (v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP)-TAILLE_SPRITE,
-        (v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP)-TAILLE_SPRITE,
-        TAILLE_SPRITE*2,
-        TAILLE_SPRITE*2);//affiche la base
-    //sdlCircle(Vect((v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP),(v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP)),64,3);
-    Image f;
-    SDL_Rect pos;
+                
+            }
+        }
+       
+        for (unsigned int i = 0; i < nbTourDansNiveau; i++){//affiche les tours 
+            v = jeu.getNiveau()->getCarte().tourIndice(i).getPosition();
+            if(jeu.getNiveau()->getCarte().tourIndice(i).getSpawn())tour.draw(renderer,
+                v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/2,
+                v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/2,
+                TAILLE_SPRITE,
+                TAILLE_SPRITE);
+            else emplacement.draw(renderer,
+                v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/2,
+                v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/2,
+                TAILLE_SPRITE,
+                TAILLE_SPRITE);
+        }
+        if (jeu.getNiveau()->addrGetCarte()->tailleTabVague() > 0){//affiche les monstres
+            for(unsigned int i = 0 ; i < jeu.getNiveau()->getCarte().vagueIndice(0).getVague().size();i++){
+                if(jeu.getNiveau()->addrGetCarte()->addrVagueIndice(0)->addrGetIndiceMonstre(i)->getSpawn()){
+                    
+                    v =jeu.getNiveau()->getCarte().vagueIndice(0).getVague()[i].getPos(); 
+                    monstre.draw(renderer,
+                        v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/4,
+                        v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP - TAILLE_SPRITE/4,
+                        TAILLE_SPRITE/2,
+                        TAILLE_SPRITE/2);
+                }
+            }
+        }
+        v = jeu.getNiveau()->addrGetCarte()->getBase().getPosition();
+        base.draw(renderer,
+            (v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP)-TAILLE_SPRITE,
+            (v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP)-TAILLE_SPRITE,
+            TAILLE_SPRITE*2,
+            TAILLE_SPRITE*2);//affiche la base
+        //sdlCircle(Vect((v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP),(v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP)),64,3);
+        Image f;
+        SDL_Rect pos;
 
-    int res;
-    int res2;
+        int res;
+        int res2;
 
-    if(jeu.tourSelect() != NULL){
-        unsigned int nbGoldDegats = jeu.tourSelect()->getAttaque().getDegats();
-        unsigned int nbGoldVitesse = 8 * jeu.tourSelect()->getVitAtq();
-        unsigned int nbGoldPortee = 2 * jeu.tourSelect()->getPortee();
-        sdlCircle(jeu.tourSelect()->getPosition()*float(TAILLE_FENETRE)/TAILLE_MAP,jeu.tourSelect()->getPortee()*float(TAILLE_FENETRE)/TAILLE_MAP,3);
+        if(jeu.tourSelect() != NULL){
+            unsigned int nbGoldDegats = jeu.tourSelect()->getAttaque().getDegats();
+            unsigned int nbGoldVitesse = 8 * jeu.tourSelect()->getVitAtq();
+            unsigned int nbGoldPortee = 2 * jeu.tourSelect()->getPortee();
+            sdlCircle(jeu.tourSelect()->getPosition()*float(TAILLE_FENETRE)/TAILLE_MAP,jeu.tourSelect()->getPortee()*float(TAILLE_FENETRE)/TAILLE_MAP,3);
 
-        res = (int)nbGoldDegats;
+            res = (int)nbGoldDegats;
+            res2 = 1;
+            while (res >= 10){
+                res2 ++ ;
+                res = res / 10.0;
+            }
+
+            //Affichage du gold dégats
+            SDL_Surface * txtGoldDamage= TTF_RenderText_Solid(font,to_string(nbGoldDegats).c_str(),font_color);
+            f.setSurface(txtGoldDamage);
+            f.loadFromCurrentSurface(renderer);
+            pos.x = 70; pos.y = 120; pos.w = 30 * res2; pos.h = 60;
+            SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_FreeSurface(txtGoldDamage);
+
+            unsigned int degatsTour = jeu.tourSelect()->getAttaque().getDegats();
+            SDL_Surface * txtDamage = TTF_RenderText_Solid(font, (to_string(degatsTour) + "->" + to_string(degatsTour + 5)).c_str() ,font_color);
+            f.setSurface(txtDamage);
+            f.loadFromCurrentSurface(renderer);
+            pos.x = 70; pos.y = 150; pos.w = 30 * res2; pos.h = 30;
+            SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_FreeSurface(txtDamage);
+
+            res = (int)nbGoldVitesse;
+            res2 = 1;
+            while (res >= 10){
+                res2 ++ ;
+                res = res / 10.0;
+            }
+
+            //Affichage du gold vitesse
+            SDL_Surface * txtGoldSpeed= TTF_RenderText_Solid(font,to_string(nbGoldVitesse).c_str(),font_color);
+            f.setSurface(txtGoldSpeed);
+            f.loadFromCurrentSurface(renderer);
+            pos.x = 70; pos.y = 180; pos.w = 30 * res2; pos.h = 60;
+            SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_FreeSurface(txtGoldSpeed);
+
+            unsigned int vitesseTour = jeu.tourSelect()->getVitAtq();
+            string vitTour = to_string(vitesseTour + 0.5);
+            SDL_Surface * txtSpeed = TTF_RenderText_Solid(font, (to_string(vitesseTour) + "->" + vitTour.substr(0, vitTour.find(".") + 2)).c_str() ,font_color);
+            f.setSurface(txtSpeed);
+            f.loadFromCurrentSurface(renderer);
+            pos.x = 70; pos.y = 210; pos.w = 30 * res2; pos.h = 30;
+            SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_FreeSurface(txtSpeed);
+
+            res = (int)nbGoldPortee;
+            res2 = 1;
+            while (res >= 10){
+                res2 ++ ;
+                res = res / 10.0;
+            }
+
+            //Affichage du gold portée
+            SDL_Surface * txtGoldPortee= TTF_RenderText_Solid(font,to_string(nbGoldPortee).c_str(),font_color);
+            f.setSurface(txtGoldPortee);
+            f.loadFromCurrentSurface(renderer);
+            pos.x = 70; pos.y = 240; pos.w = 30 * res2; pos.h = 60;
+            SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_FreeSurface(txtGoldPortee);
+
+            unsigned int porteeTour = jeu.tourSelect()->getPortee();
+            SDL_Surface * txtPortee = TTF_RenderText_Solid(font, (to_string(porteeTour) + "->" + to_string(porteeTour + 1)).c_str() ,font_color);
+            f.setSurface(txtPortee);
+            f.loadFromCurrentSurface(renderer);
+            pos.x = 70; pos.y = 270; pos.w = 30 * res2; pos.h = 30;
+            SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_FreeSurface(txtPortee);
+
+            affBouton(jeu.renvoieBoutonAmelioration()->at(0), img_upDamage);
+            affBouton(jeu.renvoieBoutonAmelioration()->at(2), img_upPortee);
+            affBouton(jeu.renvoieBoutonAmelioration()->at(1), img_upVitesseAtq);
+        }
+
+        res = jeu.getNiveau()->getOr();
+
         res2 = 1;
         while (res >= 10){
             res2 ++ ;
             res = res / 10.0;
         }
 
-        //Affichage du prix des dégats d'attaque
-        SDL_Surface * txtGoldDamage= TTF_RenderText_Solid(font, to_string(nbGoldDegats).c_str() ,font_color);
-	    f.setSurface(txtGoldDamage);
-	    f.loadFromCurrentSurface(renderer);
-        pos.x = 70; pos.y = 120; pos.w = 15 * res2; pos.h = 30;
+
+        img_life.draw(renderer, 0, 0, 60, 60);
+        SDL_Surface * text1= TTF_RenderText_Solid(font,to_string(jeu.getNiveau()->addrGetCarte()->getBase().getVie()).c_str(),font_color);
+        f.setSurface(text1);
+        f.loadFromCurrentSurface(renderer);
+
+        pos.x = 60; pos.y =0; pos.w = 80; pos.h = 60;
+
         SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
-        SDL_FreeSurface(txtGoldDamage);
+        SDL_FreeSurface(text1);
 
-        unsigned int degatsTour = jeu.tourSelect()->getAttaque().getDegats();
-        SDL_Surface * txtDamage = TTF_RenderText_Solid(font, (to_string(degatsTour) + "->" + to_string(degatsTour + 5)).c_str() ,font_color);
-	    f.setSurface(txtDamage);
-	    f.loadFromCurrentSurface(renderer);
-        pos.x = 70; pos.y = 150; pos.w = 30 * res2; pos.h = 30;
+
+        coin.draw(renderer, 0, 60, 60, 60);
+        SDL_Surface * text2 = TTF_RenderText_Solid(font,to_string(jeu.getNiveau()->getOr()).c_str(),font_color);
+        f.setSurface(text2);
+        f.loadFromCurrentSurface(renderer);
+        
+        pos.x = 60; pos.y =60; pos.w = 30 * res2; pos.h = 60;
         SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
-        SDL_FreeSurface(txtDamage);
+        SDL_FreeSurface(text2);
 
-        res = (int)nbGoldVitesse;
-        res2 = 1;
-        while (res >= 10){
-            res2 ++ ;
-            res = res / 10.0;
-        }
-
-        //Affichage du prix de la vitesse d'ttaque
-        SDL_Surface * txtGoldSpeed = TTF_RenderText_Solid(font, to_string(nbGoldVitesse).c_str(),font_color);
-	    f.setSurface(txtGoldSpeed);
-	    f.loadFromCurrentSurface(renderer);
-        pos.x = 70; pos.y = 180; pos.w = 15 * res2; pos.h = 30;
-        SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
-        SDL_FreeSurface(txtGoldSpeed);
-
-        unsigned int vitesseTour = jeu.tourSelect()->getVitAtq();
-        string vitTour = to_string(vitesseTour + 0.5);
-        SDL_Surface * txtSpeed = TTF_RenderText_Solid(font, (to_string(vitesseTour) + "->" + vitTour.substr(0, vitTour.find(".") + 2)).c_str() ,font_color);
-	    f.setSurface(txtSpeed);
-	    f.loadFromCurrentSurface(renderer);
-        pos.x = 70; pos.y = 210; pos.w = 30 * res2; pos.h = 30;
-        SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
-        SDL_FreeSurface(txtSpeed);
-
-        res = (int)nbGoldPortee;
-        res2 = 1;
-        while (res >= 10){
-            res2 ++ ;
-            res = res / 10.0;
-        }
-
-        //Affichage du prix de la portée de la tour
-        SDL_Surface * txtGoldPortee= TTF_RenderText_Solid(font,to_string(nbGoldPortee).c_str(),font_color);
-	    f.setSurface(txtGoldPortee);
-	    f.loadFromCurrentSurface(renderer);
-        pos.x = 70; pos.y = 240; pos.w = 15 * res2; pos.h = 30;
-        SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
-        SDL_FreeSurface(txtGoldPortee);
-
-        unsigned int porteeTour = jeu.tourSelect()->getPortee();
-        SDL_Surface * txtPortee = TTF_RenderText_Solid(font, (to_string(porteeTour) + "->" + to_string(porteeTour + 1)).c_str() ,font_color);
-	    f.setSurface(txtPortee);
-	    f.loadFromCurrentSurface(renderer);
-        pos.x = 70; pos.y = 270; pos.w = 30 * res2; pos.h = 30;
-        SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
-        SDL_FreeSurface(txtPortee);
-
-	    affBouton(jeu.renvoieBoutonAmelioration()->at(0), img_upDamage);
-        affBouton(jeu.renvoieBoutonAmelioration()->at(2), img_upPortee);
-        affBouton(jeu.renvoieBoutonAmelioration()->at(1), img_upVitesseAtq);
+        
     }
     if (jeu.getPause()){
         affBouton(jeu.getBoutonPause(), img_pause);
+        Menu m = jeu.getMenuMap();
+        for (unsigned int i = 0 ; i <  m.getTaille() ; i++){
+            affBouton(m.getBoutonIndice(i));
+        }
     }
     else{
         affBouton(jeu.getBoutonPause(), img_play);
@@ -349,32 +386,7 @@ void sdlJeu::sdlAff () {
     //for (unsigned int i = 0 ; i < jeu.renvoieBoutonTour()->size();i++)
     //  affBouton(jeu.renvoieBoutonTour()->at(i));
 
-    res = jeu.getNiveau()->getOr();
-    res2 = 1;
-    while (res >= 10){
-        res2 ++ ;
-        res = res / 10.0;
-    }
-
-    img_life.draw(renderer, 0, 0, 60, 60);
-	SDL_Surface * text1= TTF_RenderText_Solid(font,to_string(jeu.getNiveau()->addrGetCarte()->getBase().getVie()).c_str(),font_color);
-	f.setSurface(text1);
-	f.loadFromCurrentSurface(renderer);
-
-    pos.x = 60; pos.y =0; pos.w = 80; pos.h = 60;
-    SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
-    SDL_FreeSurface(text1);
-
-    coin.draw(renderer, 0, 60, 60, 60);
-    SDL_Surface * text2 = TTF_RenderText_Solid(font,to_string(jeu.getNiveau()->getOr()).c_str(),font_color);
-	f.setSurface(text2);
-	f.loadFromCurrentSurface(renderer);
-	
-	
     
-	pos.x = 60; pos.y =60; pos.w = 30 * res2; pos.h = 60;
-	SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
-	SDL_FreeSurface(text2);
 	
 	
 	
