@@ -3,18 +3,21 @@
 Vague::Vague(){
 	tempsEnnemi = 0;
 	tempsVague = 0;
+	cooldownSpawn = tempsEnnemi;
 }
 
 Vague::Vague(const Vague &v){
 	tempsEnnemi = v.tempsEnnemi;
 	tempsVague = v.tempsVague;
 	monstres = v.monstres;
+	cooldownSpawn = tempsEnnemi;
 }
 
 Vague::Vague(const float &_tempsEnnemi, const float &_tempsVague, const std::vector<Monstre> &_monstres){
 	tempsEnnemi = _tempsEnnemi;
 	tempsVague = _tempsVague;
 	monstres = _monstres;
+	cooldownSpawn = tempsEnnemi;
 }
 
 Vague::~Vague(){

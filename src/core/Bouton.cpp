@@ -30,11 +30,11 @@ std::string Bouton::getNom(){
 	return nom;
 }
 
-Vect Bouton::getPos(){
+Vect Bouton::getPos()const{
 	return pos;
 }
 
-Vect Bouton::getTaille(){
+Vect Bouton::getTaille()const{
 	return taille;
 }
 

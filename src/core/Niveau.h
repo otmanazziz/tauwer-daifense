@@ -13,7 +13,6 @@
 class Niveau{
 	private : 
 		Carte carte;
-		Hero * hero;
 		unsigned int Or;
 		int score;
 	public :

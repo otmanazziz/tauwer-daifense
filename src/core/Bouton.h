@@ -64,7 +64,7 @@ public:
 			b2.getPos();
 		@endcode	
 	*/
-	Vect getPos();
+	Vect getPos()const;
 	/**
 		@brief Fonction: getTaille
 		Permet de retourner la taille du bouton
@@ -73,7 +73,7 @@ public:
 			b2.getTaille();
 		@endcode	
 	*/
-	Vect getTaille();
+	Vect getTaille()const;
 	/**
 		@brief Procédure: setNom
 		Permet de modifier le nom du bouton

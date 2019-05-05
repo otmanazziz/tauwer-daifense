@@ -22,7 +22,7 @@ Image::Image () {
 }
 void Image::loadFromFile (const char* filename, SDL_Renderer * renderer) {
     
-   
+   SDL_DestroyTexture(texture);
     surface = IMG_Load(filename);
     if (surface == NULL) {
         string nfn = string("../") + filename;
@@ -172,19 +172,13 @@ void sdlJeu::affBouton( const Bouton &b){
     f.setSurface(text);
 	f.loadFromCurrentSurface(renderer);
     SDL_RenderCopy(renderer,f.getTexture(),NULL,&v);
-    
+    SDL_DestroyTexture(f.getTexture());
     SDL_FreeSurface(text); 
 	
 }
 
 void sdlJeu::affBouton(const Bouton &b, Image &im){
-    SDL_Rect v;
-    Bouton p = b;
-    v.x = p.getPos().getX();
-    v.y = p.getPos().getY();
-    v.w = p.getTaille().getX();
-    v.h = p.getTaille().getY();
-    im.draw(renderer, v.x, v.y, v.w, v.h);
+    im.draw(renderer, int(b.getPos().getX()), int(b.getPos().getY()), int(b.getTaille().getX()), int(b.getTaille().getY()));
 }
 void sdlJeu::sdlCircle(const Vect & vec,const int & radius ,const  int & width){
     int radius_min = radius -1- float(width)/2 , radius_max = radius + float(width)/2;
@@ -253,12 +247,12 @@ void sdlJeu::sdlAff () {
             }
         }
         v = jeu.getNiveau()->addrGetCarte()->getBase().getPosition();
-        base.draw(renderer,
+        base.draw(renderer,//affiche la base
             (v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP)-TAILLE_SPRITE,
             (v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP)-TAILLE_SPRITE,
             TAILLE_SPRITE*2,
-            TAILLE_SPRITE*2);//affiche la base
-        //sdlCircle(Vect((v.getX()*float(TAILLE_FENETRE)/TAILLE_MAP),(v.getY()*float(TAILLE_FENETRE)/TAILLE_MAP)),64,3);
+            TAILLE_SPRITE*2);
+        
         Image f;
         SDL_Rect pos;
 
@@ -292,6 +286,7 @@ void sdlJeu::sdlAff () {
             f.loadFromCurrentSurface(renderer);
             pos.x = 70; pos.y = 150; pos.w = 30 * res2; pos.h = 30;
             SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_DestroyTexture(f.getTexture());
             SDL_FreeSurface(txtDamage);
 
             res = (int)nbGoldVitesse;
@@ -307,6 +302,7 @@ void sdlJeu::sdlAff () {
             f.loadFromCurrentSurface(renderer);
             pos.x = 70; pos.y = 180; pos.w = 15 * res2; pos.h = 30;
             SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_DestroyTexture(f.getTexture());
             SDL_FreeSurface(txtGoldSpeed);
 
             unsigned int vitesseTour = jeu.tourSelect()->getVitAtq();
@@ -316,6 +312,7 @@ void sdlJeu::sdlAff () {
             f.loadFromCurrentSurface(renderer);
             pos.x = 70; pos.y = 210; pos.w = 30 * res2; pos.h = 30;
             SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_DestroyTexture(f.getTexture());
             SDL_FreeSurface(txtSpeed);
 
             res = (int)nbGoldPortee;
@@ -331,6 +328,7 @@ void sdlJeu::sdlAff () {
             f.loadFromCurrentSurface(renderer);
             pos.x = 70; pos.y = 240; pos.w = 15 * res2; pos.h = 30;
             SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_DestroyTexture(f.getTexture());
             SDL_FreeSurface(txtGoldPortee);
 
             unsigned int porteeTour = jeu.tourSelect()->getPortee();
@@ -339,6 +337,7 @@ void sdlJeu::sdlAff () {
             f.loadFromCurrentSurface(renderer);
             pos.x = 70; pos.y = 270; pos.w = 30 * res2; pos.h = 30;
             SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_DestroyTexture(f.getTexture());
             SDL_FreeSurface(txtPortee);
 
             affBouton(jeu.renvoieBoutonAmelioration()->at(0), img_upDamage);
@@ -356,24 +355,27 @@ void sdlJeu::sdlAff () {
 
 
         img_life.draw(renderer, 0, 0, 60, 60);
-        SDL_Surface * text1= TTF_RenderText_Solid(font,to_string(jeu.getNiveau()->addrGetCarte()->getBase().getVie()).c_str(),font_color);
-        f.setSurface(text1);
-        f.loadFromCurrentSurface(renderer);
-
+        SDL_Surface * textVie= TTF_RenderText_Solid(font,to_string(jeu.getNiveau()->addrGetCarte()->getBase().getVie()).c_str(),font_color);
+        f.setSurface(textVie);
+        f.loadFromCurrentSurface(renderer);   
+        
         pos.x = 60; pos.y =0; pos.w = 80; pos.h = 60;
 
         SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
-        SDL_FreeSurface(text1);
+        SDL_DestroyTexture(f.getTexture());
+        SDL_FreeSurface(textVie);
 
 
         coin.draw(renderer, 0, 60, 60, 60);
-        SDL_Surface * text2 = TTF_RenderText_Solid(font,to_string(jeu.getNiveau()->getOr()).c_str(),font_color);
-        f.setSurface(text2);
-        f.loadFromCurrentSurface(renderer);
+         SDL_Surface * textOr = TTF_RenderText_Solid(font,to_string(jeu.getNiveau()->getOr()).c_str(),font_color);
+        f.setSurface(textOr);
+        f.loadFromCurrentSurface(renderer); 
         
         pos.x = 60; pos.y =60; pos.w = 30 * res2; pos.h = 60;
         SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
-        SDL_FreeSurface(text2);
+        SDL_DestroyTexture(f.getTexture());
+        SDL_FreeSurface(textOr); 
+
 
         
     }

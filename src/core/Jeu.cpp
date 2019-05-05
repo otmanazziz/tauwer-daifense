@@ -65,7 +65,7 @@ Niveau *Jeu::getNiveau(){
 void Jeu::actionAuto(float delta){
 	if(!pause)
 		niv->maj(delta/1000.0);
-		//std::cout<<x<<" "<<y<<std::endl;
+		
 }
 
 void Jeu::clique(const int & x, const int & y , const int & taille){
