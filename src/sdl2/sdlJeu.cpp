@@ -22,7 +22,8 @@ Image::Image () {
 }
 void Image::loadFromFile (const char* filename, SDL_Renderer * renderer) {
     
-   SDL_DestroyTexture(texture);
+    SDL_DestroyTexture(texture);
+    //SDL_FreeSurface(surface);
     surface = IMG_Load(filename);
     if (surface == NULL) {
         string nfn = string("../") + filename;
