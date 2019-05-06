@@ -93,8 +93,11 @@
 
 	bool Tour::peutTirer(float d){
 		cooldownAtq -= d;
+		std::cout<<"Dcooldown"<<cooldownAtq<<std::endl;
 		if(cooldownAtq <= 0 ){
+			
 			cooldownAtq = 1/vitesseAtq;
+			std::cout<<"Acooldown"<<cooldownAtq<<std::endl;
 			return true;
 		}
 		else return false;
