@@ -24,11 +24,11 @@ Class \hyperlink{classCarte}{Carte} Classe de carte, permettant de gérer les in
 bool \hyperlink{classCarte_a80741d7228490a91565f33977355da92}{reinit} ()
 \begin{DoxyCompactList}\small\item\em Booléen\+: reinit Permet de savoir si la carte a été réinitialisé \end{DoxyCompactList}\item 
 \hyperlink{classTour}{Tour} \hyperlink{classCarte_ae4eaa2ff8488218767a9f68232f066d4}{tour\+Indice} (const int \&i)
-\begin{DoxyCompactList}\small\item\em Fonction\+: tour\+Indice Permet de retourner l\textquotesingle{}indice de la tour. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Fonction\+: tour\+Indice Permet de retourner la tour à l\textquotesingle{}indice i. \end{DoxyCompactList}\item 
 \hyperlink{classVague}{Vague} \hyperlink{classCarte_a042044f8d54a0f85953a5f61a0d38c86}{vague\+Indice} (const int \&i)
-\begin{DoxyCompactList}\small\item\em Fonction\+: vague\+Indice Permet de retourner l\textquotesingle{}indice de la vague. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Fonction\+: vague\+Indice Permet de retourner la vague à l\textquotesingle{}indice i. \end{DoxyCompactList}\item 
 \hyperlink{classChemin}{Chemin} \hyperlink{classCarte_aaab8126dc81caed5a8e38772d84b60e4}{chemin\+Indice} (const int \&i)
-\begin{DoxyCompactList}\small\item\em Fonction\+: chemin\+Indice Permet de retourner l\textquotesingle{}indice du chemin. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Fonction\+: chemin\+Indice Permet de retourner le chemin à l\textquotesingle{}indice i. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{classCarte_a34264cb9ab59c19b9bd7ad1eeae324b0}{taille\+Tab\+Tour} ()
 \begin{DoxyCompactList}\small\item\em Fonction\+: taille\+Tab\+Tour Permet de retourner la taille du tableau de tour (nombre de tour) \end{DoxyCompactList}\item 
 unsigned int \hyperlink{classCarte_aa55a81ad0d51af69b0a34dcc544b678d}{taille\+Tab\+Chemin} ()
@@ -36,11 +36,11 @@ unsigned int \hyperlink{classCarte_aa55a81ad0d51af69b0a34dcc544b678d}{taille\+Ta
 unsigned int \hyperlink{classCarte_a17cf9a92bb7d81cf3279b50bb40b0891}{taille\+Tab\+Vague} ()
 \begin{DoxyCompactList}\small\item\em Fonction\+: taille\+Tab\+Vague Permet de retourner la taille du tableau de vague (nombre de vague) \end{DoxyCompactList}\item 
 \hyperlink{classTour}{Tour} $\ast$ \hyperlink{classCarte_a573a9aa2b9917152357b710fe0be6ecc}{addr\+Tour\+Indice} (const int \&i)
-\begin{DoxyCompactList}\small\item\em Fonction\+: addr\+Tour\+Indice Permet de retourner l\textquotesingle{}indice de la tour. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Fonction\+: addr\+Tour\+Indice Permet de retourner le pointeur de la tour à l\textquotesingle{}indice i. \end{DoxyCompactList}\item 
 \hyperlink{classVague}{Vague} $\ast$ \hyperlink{classCarte_a21708cf932e4d0e74ed0222f7950582a}{addr\+Vague\+Indice} (const int \&i)
-\begin{DoxyCompactList}\small\item\em Fonction\+: addr\+Vague\+Indice Permet de retourner l\textquotesingle{}indice de la vague. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Fonction\+: addr\+Vague\+Indice Permet de retourner le pointeur de la vague à l\textquotesingle{}indice i. \end{DoxyCompactList}\item 
 \hyperlink{classChemin}{Chemin} $\ast$ \hyperlink{classCarte_a16a507cb5eb10f57f0d34052db75689c}{addr\+Chemin\+Indice} (const int \&i)
-\begin{DoxyCompactList}\small\item\em Fonction\+: addr\+Chemin\+Indice Permet de retourner l\textquotesingle{}indice du chemin. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Fonction\+: addr\+Chemin\+Indice Permet de retourner le pointeur du chemin à l\textquotesingle{}indice i. \end{DoxyCompactList}\item 
 void \hyperlink{classCarte_a6d721dfc81b3a45f038c73d20e80d545}{maj} (\hyperlink{classNiveau}{Niveau} \&n, float delta)
 \begin{DoxyCompactList}\small\item\em Procédure\+: maj Permet de mettre à jour la carte. \end{DoxyCompactList}\item 
 \hyperlink{classBase}{Base} \hyperlink{classCarte_af76239ad9a307cf94ba0916ea477a331}{get\+Base} ()
@@ -113,7 +113,7 @@ Constructeur\+:\hyperlink{classCarte}{Carte} Permet de créer le constructeur de
 
 
 
-Fonction\+: addr\+Chemin\+Indice Permet de retourner l\textquotesingle{}indice du chemin. 
+Fonction\+: addr\+Chemin\+Indice Permet de retourner le pointeur du chemin à l\textquotesingle{}indice i. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -135,7 +135,7 @@ c2.addrCheminIndice(i);
 
 
 
-Fonction\+: addr\+Tour\+Indice Permet de retourner l\textquotesingle{}indice de la tour. 
+Fonction\+: addr\+Tour\+Indice Permet de retourner le pointeur de la tour à l\textquotesingle{}indice i. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -157,7 +157,7 @@ c2.addrTourIndice(i);
 
 
 
-Fonction\+: addr\+Vague\+Indice Permet de retourner l\textquotesingle{}indice de la vague. 
+Fonction\+: addr\+Vague\+Indice Permet de retourner le pointeur de la vague à l\textquotesingle{}indice i. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -193,7 +193,7 @@ c2.affiche();
 
 
 
-Fonction\+: chemin\+Indice Permet de retourner l\textquotesingle{}indice du chemin. 
+Fonction\+: chemin\+Indice Permet de retourner le chemin à l\textquotesingle{}indice i. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -335,7 +335,7 @@ c2.tailleTabVague();
 
 
 
-Fonction\+: tour\+Indice Permet de retourner l\textquotesingle{}indice de la tour. 
+Fonction\+: tour\+Indice Permet de retourner la tour à l\textquotesingle{}indice i. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -357,7 +357,7 @@ c2.tourIndice(i);
 
 
 
-Fonction\+: vague\+Indice Permet de retourner l\textquotesingle{}indice de la vague. 
+Fonction\+: vague\+Indice Permet de retourner la vague à l\textquotesingle{}indice i. 
 
 
 \begin{DoxyParams}{Parameters}
