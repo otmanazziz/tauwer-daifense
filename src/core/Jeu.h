@@ -21,6 +21,8 @@ class Jeu{
 		bool pause;
 		Bouton bpause;
 		int mapSelect;
+		bool gagner;
+		bool perdue;
 	public :
 		/**
 			@brief Constructeur par défaut: Jeu
@@ -74,7 +76,8 @@ class Jeu{
 		void Pause();
 		std::string getImageMap();
 		Menu getMenuMap();
-
+		bool getGagner();
+		bool getPerdue(); 
 };
 
 #endif

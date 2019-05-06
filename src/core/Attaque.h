@@ -86,6 +86,7 @@ public:
 
 	void setDegats(const int &_degats);
 	void addDegat(const int &d);
+	void addZone(const float &f);
 
 };
 

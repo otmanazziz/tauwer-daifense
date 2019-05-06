@@ -97,6 +97,8 @@ private :
 
     struct _Mix_Music * sound;
     bool withSound;
+    Image gagner;
+    Image perdue;
 
     Image tour;
     Image emplacement;
@@ -107,6 +109,7 @@ private :
     Image img_upDamage;
     Image img_upPortee;
     Image img_upVitesseAtq;
+    Image img_upZone;
     Image img_play;
     Image img_pause;
     Image background;

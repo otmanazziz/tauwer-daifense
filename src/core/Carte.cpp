@@ -168,14 +168,19 @@ void Carte::maj(Niveau & n , float delta){
 	for (unsigned int k = 0; k < tabTour.size(); k++) tabTour[k].setAAttaquer(false);
 	for (unsigned int k = 0; k < tabTour.size(); k++){
 		if(tabTour[k].getSpawn()){
+			Vect posMonstreViser;
 			for (unsigned int j = 0; j < tabVague[0].tailleVague(); j++){
-				if (tabTour[k].estAPortee(tabVague[0].getVague()[j].getPos()) && tabTour[k].peutTirer(delta) ){
+				posMonstreViser = tabVague[0].getVague()[j].getPos();
+				if (tabTour[k].estAPortee(posMonstreViser) && tabTour[k].peutTirer(delta) ){
 					tabTour[k].setAAttaquer(true);
-					attaque = tabTour[k].getAttaque();//Récupère l'attaque de la tour
-					if (attaque.getZone() > 0){
+					attaque = tabTour[k].getAttaque();
+					if (attaque.getZone() > 0){//cas ou la tour tape en zone 
 						for (unsigned int i = 0; i < tabVague[0].tailleVague(); i++){
-							if(tabVague[0].addrGetIndiceMonstre(i)->perdreVie(attaque.getDegats())){
-								n.ajouterOr((unsigned int)(tabVague[0].ennemiMort(int(i))));
+							Monstre * mons = tabVague[0].addrGetIndiceMonstre(i);
+							if((mons->getPos()-posMonstreViser).module() <= attaque.getZone()){
+								if (mons->perdreVie(attaque.getDegats())){
+									n.ajouterOr((unsigned int)(tabVague[0].ennemiMort(int(i))));
+								}
 							}
 						}
 					}	else {	

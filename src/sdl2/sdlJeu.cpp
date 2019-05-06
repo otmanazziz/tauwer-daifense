@@ -126,6 +126,7 @@ sdlJeu::sdlJeu () {
     img_upDamage.loadFromFile("./data/image/upDamage.png",renderer);
     img_upPortee.loadFromFile("./data/image/upPortee.png",renderer);
     img_upVitesseAtq.loadFromFile("./data/image/upVitesse.png",renderer);
+    img_upZone.loadFromFile("./data/image/upZone.png",renderer);
     img_play.loadFromFile("./data/image/play.png",renderer);
     img_pause.loadFromFile("./data/image/pause.png",renderer);
     emplacement.loadFromFile("./data/image/emplacement.png",renderer);
@@ -137,6 +138,15 @@ sdlJeu::sdlJeu () {
 	}
 	font_color.r = 0;font_color.g = 0;font_color.b = 0;
 	
+    SDL_Surface * text = TTF_RenderText_Solid(font, "Vous avez gagnez !" ,font_color);
+    gagner.setSurface(text);
+	gagner.loadFromCurrentSurface(renderer);
+    SDL_FreeSurface(text);
+
+    text = TTF_RenderText_Solid(font, "Vous avez perdue !" ,font_color);
+    perdue.setSurface(text);
+	perdue.loadFromCurrentSurface(renderer);
+    SDL_FreeSurface(text);
 
     // SONS
   if (withSound)
@@ -264,6 +274,7 @@ void sdlJeu::sdlAff () {
             unsigned int nbGoldDegats = jeu.tourSelect()->getAttaque().getDegats();
             unsigned int nbGoldVitesse = 8 * jeu.tourSelect()->getVitAtq();
             unsigned int nbGoldPortee = 2 * jeu.tourSelect()->getPortee();
+            unsigned int nbGoldZone = 15 * jeu.tourSelect()->getAttaque().getZone();
             sdlCircle(jeu.tourSelect()->getPosition()*float(TAILLE_FENETRE)/TAILLE_MAP,jeu.tourSelect()->getPortee()*float(TAILLE_FENETRE)/TAILLE_MAP,3);
 
             res = (int)nbGoldDegats;
@@ -279,6 +290,7 @@ void sdlJeu::sdlAff () {
             f.loadFromCurrentSurface(renderer);
             pos.x = 70; pos.y = 120; pos.w = 15 * res2; pos.h = 30;
             SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_DestroyTexture(f.getTexture());
             SDL_FreeSurface(txtGoldDamage);
 
             unsigned int degatsTour = jeu.tourSelect()->getAttaque().getDegats();
@@ -306,9 +318,10 @@ void sdlJeu::sdlAff () {
             SDL_DestroyTexture(f.getTexture());
             SDL_FreeSurface(txtGoldSpeed);
 
-            unsigned int vitesseTour = jeu.tourSelect()->getVitAtq();
-            string vitTour = to_string(vitesseTour + 0.5);
-            SDL_Surface * txtSpeed = TTF_RenderText_Solid(font, (to_string(vitesseTour) + "->" + vitTour.substr(0, vitTour.find(".") + 2)).c_str() ,font_color);
+            float vitesseTour = jeu.tourSelect()->getVitAtq();
+            string vitUpTour = to_string(vitesseTour + 0.5);
+            string vitTour = to_string(vitesseTour);
+            SDL_Surface * txtSpeed = TTF_RenderText_Solid(font, ( vitTour.substr(0, vitTour.find(".") + 2)+ "->" + vitUpTour.substr(0, vitUpTour.find(".") + 2)).c_str() ,font_color);
             f.setSurface(txtSpeed);
             f.loadFromCurrentSurface(renderer);
             pos.x = 70; pos.y = 210; pos.w = 30 * res2; pos.h = 30;
@@ -341,9 +354,37 @@ void sdlJeu::sdlAff () {
             SDL_DestroyTexture(f.getTexture());
             SDL_FreeSurface(txtPortee);
 
+            res = (int)nbGoldZone;
+            res2 = 1;
+            while (res >= 10){
+                res2 ++ ;
+                res = res / 10.0;
+            }
+
+            //Affichage du gold dégats
+            SDL_Surface * txtGoldZone= TTF_RenderText_Solid(font,to_string(nbGoldZone).c_str(),font_color);
+            f.setSurface(txtGoldZone);
+            f.loadFromCurrentSurface(renderer);
+            pos.x = 70; pos.y = 300; pos.w = 15 * res2; pos.h = 30;
+            SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_DestroyTexture(f.getTexture());
+            SDL_FreeSurface(txtGoldZone);
+
+            float zoneTour = jeu.tourSelect()->getAttaque().getZone();
+            string szoneUpTour = to_string(zoneTour + 0.5);
+            string szoneTour = to_string(zoneTour);
+            SDL_Surface * txtZone = TTF_RenderText_Solid(font, (szoneTour.substr(0, szoneTour.find(".") + 2) + "->" + szoneUpTour.substr(0, szoneUpTour.find(".") + 2)).c_str() ,font_color);
+            f.setSurface(txtZone);
+            f.loadFromCurrentSurface(renderer);
+            pos.x = 70; pos.y = 330; pos.w = 30 * res2; pos.h = 30;
+            SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+            SDL_DestroyTexture(f.getTexture());
+            SDL_FreeSurface(txtZone);
+
             affBouton(jeu.renvoieBoutonAmelioration()->at(0), img_upDamage);
             affBouton(jeu.renvoieBoutonAmelioration()->at(2), img_upPortee);
             affBouton(jeu.renvoieBoutonAmelioration()->at(1), img_upVitesseAtq);
+            affBouton(jeu.renvoieBoutonAmelioration()->at(3), img_upZone);
         }
 
         res = jeu.getNiveau()->getOr();
@@ -389,6 +430,23 @@ void sdlJeu::sdlAff () {
     }
     else{
         affBouton(jeu.getBoutonPause(), img_play);
+        
+        if(jeu.getGagner()){
+            SDL_Rect r ;
+        r.x = 0;
+        r.y = 400;
+        r.w = 1000;
+        r.h = 200;
+            SDL_RenderCopy(renderer,gagner.getTexture(),NULL,&r);
+        }
+        if(jeu.getPerdue()){
+            SDL_Rect r ;
+        r.x = 0;
+        r.y = 400;
+        r.w = 1000;
+        r.h = 200;
+            SDL_RenderCopy(renderer,perdue.getTexture(),NULL,&r);
+        }
     }
 
     //for (unsigned int i = 0 ; i < jeu.renvoieBoutonTour()->size();i++)
@@ -417,7 +475,7 @@ void sdlJeu::sdlBoucle () {
 	while (!quit) {
         
         nt = SDL_GetTicks();
-        if(nt-t > 50){
+        if(nt-t > 50 && !jeu.getGagner() && !jeu.getPerdue()){
             jeu.actionAuto(float(nt-t));
             t = nt;
         }
@@ -483,25 +541,3 @@ void sdlJeu::sdlBoucle () {
 	}
 }
 
-/*tour:5:4:21:30:0:20
-tour:5:4:15:34:0:20
-tour:5:4:3:38:0:20
-tour:5:4:25:37:0:20
-chemin:16.5,10:16.5,20:35,20
-chemin:3,10:3,23:11.5,23:11.5,32:35,32
-vague:1:2:10/5/0,20/5/0,10/4/0,40/2/0,15/4/0,10/3/0,15/4/0,10/4/0,15/5/0
-vague:1:2:20/5/1,20/5/1,20/4/1,50/2/1,25/2/1,10/3/1,15/3/1,10/4/1,15/2/1
-vague:1:2:20/5/0,20/5/1,20/4/0,50/2/1,25/2/0,10/3/1,15/3/0,10/4/1,15/2/0
-vague:1:2:100/1/0
-base:35,30:
-
-
-tour:5:4:0:0:0:20
-tour:5:4:0:48:0:20
-tour:5:4:48:48:0:20
-tour:5:4:48:0:0:20
-chemin:1,1:25,25
-vague:1:2:10/5/0
-base:1,25:
-
-*/

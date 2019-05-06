@@ -147,6 +147,7 @@ public:
 	void addPortee(int p);
 	bool peutTirer(float d);
 	void setSpawn(const bool & b );
+	void addZone(const float & f);
 };
 
 

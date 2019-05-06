@@ -27,17 +27,18 @@ Jeu::Jeu(){
 	niv = NULL;
 	pause = true ; 
 	tourSelectionne = NULL;
-	
+	gagner = false;
 
 	//Pour placer les boutons d'amélioration
 	Vect v(0, 120);
 	Vect v1(0, 180);
-	Vect v2 (0, 240);
-
+	Vect v2(0, 240);
+	Vect v3(0,300);
 	Vect t(60, 60);
 	tabBouton.emplace_back("Attaque", v, t);
 	tabBouton.emplace_back("VitesseAtq", v1, t);
 	tabBouton.emplace_back("Portee", v2, t);
+	tabBouton.emplace_back("Zone",v3,t);
 	bpause = Bouton("",Vect(940,0),t);
 	
 
@@ -63,8 +64,12 @@ Niveau *Jeu::getNiveau(){
 
 
 void Jeu::actionAuto(float delta){
-	if(!pause)
+	if(!pause){
 		niv->maj(delta/1000.0);
+		gagner = niv->finNiveau();
+		perdue = niv->perdue();
+	}
+		
 		
 }
 
@@ -80,7 +85,7 @@ void Jeu::clique(const int & x, const int & y , const int & taille){
 				break;
 			}
 		}
-		if (tourSelectionne != NULL){
+		if (tourSelectionne != NULL){//si une tour est selectionner les action sont possible
 			unsigned int nbGold;
 			if(tourSelectionne->getSpawn()){	
 					
@@ -101,6 +106,12 @@ void Jeu::clique(const int & x, const int & y , const int & taille){
 						if(nbGold <= niv->getOr()){
 							niv->retirerOr(nbGold);
 							tourSelectionne->addPortee(1);
+						}
+					}else if(tabBouton[3].clique(v)){
+						nbGold = 15* tourSelectionne->getAttaque().getZone();
+						if(nbGold <= niv->getOr()){
+							niv->retirerOr(nbGold);
+							tourSelectionne->addZone(0.5);
 						}
 					}	
 			}else{
@@ -141,6 +152,8 @@ std::vector<Bouton> * Jeu::renvoieBoutonTour(){
 }
 
 void Jeu::changerMap(int m){
+	gagner = false;
+	perdue = false;
 	if(niv != NULL) delete niv ; 
 	niv = new Niveau(tabLienCarte[m]);
 	tourSelectionne = NULL;
@@ -188,4 +201,12 @@ std::string Jeu::getImageMap(){
 
 Menu Jeu::getMenuMap(){
 	return menuMap;
+}
+
+bool Jeu::getGagner(){
+	return gagner;
+}
+
+bool Jeu::getPerdue(){
+	return perdue;
 }

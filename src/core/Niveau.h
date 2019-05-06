@@ -95,6 +95,8 @@ class Niveau{
 		@endcode	
 	*/		
 		void affiche();
+		bool perdue();
+		bool finNiveau();
 
 };
 

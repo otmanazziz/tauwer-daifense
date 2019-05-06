@@ -44,3 +44,11 @@ void Niveau::affiche(){
 void Niveau::maj(float delta){
 	carte.maj(*this, delta);
 }
+
+bool Niveau::perdue(){
+	return carte.getBase().getVie() <= 0;
+}
+
+bool Niveau::finNiveau(){
+	return carte.tailleTabVague() <= 0;
+}

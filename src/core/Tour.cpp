@@ -28,7 +28,7 @@
 	}
 
 	Tour::~Tour(){
-		//
+		
 	}
 
 	bool Tour::getSpawn(){
@@ -102,4 +102,8 @@
 
 	void Tour::setSpawn(const bool & b ){
 		spawn = b;
+	}
+
+	void Tour::addZone(const float & f){
+		attaque.addZone(f);
 	}
