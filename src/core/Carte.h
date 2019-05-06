@@ -65,7 +65,7 @@ class Carte{
 		bool reinit();
 	/**
 		@brief Fonction: tourIndice
-		Permet de retourner l'indice de la tour
+		Permet de retourner la tour à l'indice i
 		@param Entier i
 		@return Tour Indice
 		@code
@@ -75,7 +75,7 @@ class Carte{
 		Tour tourIndice(const int & i); 
 	/**
 		@brief Fonction: vagueIndice
-		Permet de retourner l'indice de la vague
+		Permet de retourner la vague à l'indice i
 		@param Entier i
 		@return Vague Indice
 		@code
@@ -85,7 +85,7 @@ class Carte{
 		Vague vagueIndice(const int & i);
 	/**
 		@brief Fonction: cheminIndice
-		Permet de retourner l'indice du chemin
+		Permet de retourner le chemin à l'indice i
 		@param Entier i
 		@return Chemin Indice
 		@code
@@ -122,7 +122,7 @@ class Carte{
 		unsigned int tailleTabVague();
 	/**
 		@brief Fonction: addrTourIndice
-		Permet de retourner l'indice de la tour
+		Permet de retourner le pointeur de la tour à l'indice i
 		@param Entier i
 		@return Tour
 		@code
@@ -133,7 +133,7 @@ class Carte{
 		Tour * addrTourIndice(const int & i);
 	/**
 		@brief Fonction: addrVagueIndice
-		Permet de retourner l'indice de la vague
+		Permet de retourner le pointeur de la vague à l'indice i
 		@param Entier i
 		@return Vague
 		@code
@@ -144,7 +144,7 @@ class Carte{
 		Vague * addrVagueIndice(const int & i);
 	/**
 		@brief Fonction: addrCheminIndice
-		Permet de retourner l'indice du chemin
+		Permet de retourner le pointeur du chemin à l'indice i
 		@param Entier i
 		@return Chemin
 		@code
