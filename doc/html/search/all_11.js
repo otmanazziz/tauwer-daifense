@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['tauwer_20daifense',['Tauwer Daifense',['../index.html',1,'']]],
   ['taillechemin',['tailleChemin',['../classChemin.html#a7153e040b29f294f30793a698cde23b3',1,'Chemin']]],
   ['tailletabchemin',['tailleTabChemin',['../classCarte.html#aa55a81ad0d51af69b0a34dcc544b678d',1,'Carte']]],
   ['tailletabtour',['tailleTabTour',['../classCarte.html#a34264cb9ab59c19b9bd7ad1eeae324b0',1,'Carte']]],
