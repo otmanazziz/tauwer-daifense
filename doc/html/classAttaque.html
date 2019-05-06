@@ -98,6 +98,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad1af4e5ae848c40c7879fa4f9a56c674"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAttaque.html#ad1af4e5ae848c40c7879fa4f9a56c674">setDegats</a> (const int &amp;_degats)</td></tr>
 <tr class="memdesc:ad1af4e5ae848c40c7879fa4f9a56c674"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: setDegats Permet de modifier l'entier des dégats.  <a href="#ad1af4e5ae848c40c7879fa4f9a56c674">More...</a><br /></td></tr>
 <tr class="separator:ad1af4e5ae848c40c7879fa4f9a56c674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b0b804d6533953ed18fc8239f2cc1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAttaque.html#a47b0b804d6533953ed18fc8239f2cc1d">addDegat</a> (const int &amp;d)</td></tr>
+<tr class="memdesc:a47b0b804d6533953ed18fc8239f2cc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: addDegats Permet de modifier l'entier des dégats.  <a href="#a47b0b804d6533953ed18fc8239f2cc1d">More...</a><br /></td></tr>
+<tr class="separator:a47b0b804d6533953ed18fc8239f2cc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4ca211e47b04d97bed004af117b550"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAttaque.html#a1d4ca211e47b04d97bed004af117b550">addZone</a> (const float &amp;f)</td></tr>
+<tr class="memdesc:a1d4ca211e47b04d97bed004af117b550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: addZone Permet de modifier l'entier de la zone.  <a href="#a1d4ca211e47b04d97bed004af117b550">More...</a><br /></td></tr>
+<tr class="separator:a1d4ca211e47b04d97bed004af117b550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class <a class="el" href="classAttaque.html" title="Class Attaque Classe d&#39;attaque, permettant de gérer l&#39;attaque des tours, et la portée des attaques...">Attaque</a> Classe d'attaque, permettant de gérer l'attaque des tours, et la portée des attaques. </p>
@@ -184,6 +190,58 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a47b0b804d6533953ed18fc8239f2cc1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b0b804d6533953ed18fc8239f2cc1d">&#9670;&nbsp;</a></span>addDegat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Attaque::addDegat </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procédure: addDegats Permet de modifier l'entier des dégats. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Entier</td><td><div class="fragment"><div class="line">a2.addDegats(7);</div></div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1d4ca211e47b04d97bed004af117b550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d4ca211e47b04d97bed004af117b550">&#9670;&nbsp;</a></span>addZone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Attaque::addZone </td>
+          <td>(</td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procédure: addZone Permet de modifier l'entier de la zone. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Réel</td><td><div class="fragment"><div class="line">a2.addZone(2);</div></div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a56856e2880988e4cf9b051d32ca427a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56856e2880988e4cf9b051d32ca427a3">&#9670;&nbsp;</a></span>getDegats()</h2>
 
@@ -277,8 +335,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/samy/Projet/lifap4/src/<a class="el" href="Attaque_8h_source.html">Attaque.h</a></li>
-<li>/home/samy/Projet/lifap4/src/Attaque.cpp</li>
+<li>src/core/<a class="el" href="Attaque_8h_source.html">Attaque.h</a></li>
+<li>src/core/Attaque.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

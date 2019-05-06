@@ -122,6 +122,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a734074001bba32f3d76e5cee612864f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVect.html#a734074001bba32f3d76e5cee612864f1">testRegression</a> ()</td></tr>
 <tr class="memdesc:a734074001bba32f3d76e5cee612864f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: testRegression Fait des tests de Régression.  <a href="#a734074001bba32f3d76e5cee612864f1">More...</a><br /></td></tr>
 <tr class="separator:a734074001bba32f3d76e5cee612864f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81581552ec69c7a0006837148141232e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVect.html">Vect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVect.html#a81581552ec69c7a0006837148141232e">operator*</a> (float f) const</td></tr>
+<tr class="memdesc:a81581552ec69c7a0006837148141232e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vecteur: operator * Permet de retourner le produit d'un vect et d'un réel.  <a href="#a81581552ec69c7a0006837148141232e">More...</a><br /></td></tr>
+<tr class="separator:a81581552ec69c7a0006837148141232e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fcad4106fa5eb9826f7259f3509599e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVect.html">Vect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVect.html#a5fcad4106fa5eb9826f7259f3509599e">operator/</a> (float f) const</td></tr>
+<tr class="memdesc:a5fcad4106fa5eb9826f7259f3509599e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vecteur: operator / Permet de retourner la division d'un vect et d'un réel.  <a href="#a5fcad4106fa5eb9826f7259f3509599e">More...</a><br /></td></tr>
+<tr class="separator:a5fcad4106fa5eb9826f7259f3509599e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c95db0096c212593a83992d8c9cc42a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVect.html">Vect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVect.html#a7c95db0096c212593a83992d8c9cc42a">operator%</a> (const int &amp;i) const</td></tr>
+<tr class="memdesc:a7c95db0096c212593a83992d8c9cc42a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vecteur: operator % Permet de retourner le reste de la division euclidienne d'un vect et d'un réel.  <a href="#a7c95db0096c212593a83992d8c9cc42a">More...</a><br /></td></tr>
+<tr class="separator:a7c95db0096c212593a83992d8c9cc42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class <a class="el" href="classVect.html" title="Class Vect Classe de vecteurs, permettant de gérer les coordonnées dans un espace en 2D...">Vect</a> Classe de vecteurs, permettant de gérer les coordonnées dans un espace en 2D. </p>
@@ -299,8 +308,35 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a7c95db0096c212593a83992d8c9cc42a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c95db0096c212593a83992d8c9cc42a">&#9670;&nbsp;</a></span>operator%()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVect.html">Vect</a> Vect::operator% </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vecteur: operator % Permet de retourner le reste de la division euclidienne d'un vect et d'un réel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Entier</td><td>i </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Le reste de la division euclidienne d'un vect et d'un réel <div class="fragment"><div class="line"><a class="code" href="classVect.html">Vect</a> v3 = v1 % f;</div></div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
 <a id="ab3dce1a30e0626a88cd726aa0d4f78e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3dce1a30e0626a88cd726aa0d4f78e5">&#9670;&nbsp;</a></span>operator*()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3dce1a30e0626a88cd726aa0d4f78e5">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,6 +359,33 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>La somme de 2 vecteurs <div class="fragment"><div class="line"><a class="code" href="classVect.html">Vect</a> v3 = v1 * v2;</div></div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="a81581552ec69c7a0006837148141232e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81581552ec69c7a0006837148141232e">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVect.html">Vect</a> Vect::operator* </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vecteur: operator * Permet de retourner le produit d'un vect et d'un réel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>f </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Le produit d'un vecteur et d'un réel <div class="fragment"><div class="line"><a class="code" href="classVect.html">Vect</a> v3 = v1 * f;</div></div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -376,12 +439,12 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>La somme de 2 vecteurs <div class="fragment"><div class="line"><a class="code" href="classVect.html">Vect</a> v3 = v1 - v2;</div></div><!-- fragment --> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>La soustraction de 2 vecteurs <div class="fragment"><div class="line"><a class="code" href="classVect.html">Vect</a> v3 = v1 - v2;</div></div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
 <a id="a08e7e684ad85024233a59aff86eb5c83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08e7e684ad85024233a59aff86eb5c83">&#9670;&nbsp;</a></span>operator/()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a08e7e684ad85024233a59aff86eb5c83">&#9670;&nbsp;</a></span>operator/() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -403,7 +466,34 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>La somme de 2 vecteurs <div class="fragment"><div class="line"><a class="code" href="classVect.html">Vect</a> v3 = v1 / v2;</div></div><!-- fragment --> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>La division de 2 vecteurs <div class="fragment"><div class="line"><a class="code" href="classVect.html">Vect</a> v3 = v1 / v2;</div></div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="a5fcad4106fa5eb9826f7259f3509599e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fcad4106fa5eb9826f7259f3509599e">&#9670;&nbsp;</a></span>operator/() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVect.html">Vect</a> Vect::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vecteur: operator / Permet de retourner la division d'un vect et d'un réel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>f </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Le division d'un vecteur et d'un réel <div class="fragment"><div class="line"><a class="code" href="classVect.html">Vect</a> v3 = v1 / f;</div></div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -508,8 +598,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/samy/Projet/lifap4/src/<a class="el" href="Vect_8h_source.html">Vect.h</a></li>
-<li>/home/samy/Projet/lifap4/src/Vect.cpp</li>
+<li>src/core/<a class="el" href="Vect_8h_source.html">Vect.h</a></li>
+<li>src/core/Vect.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

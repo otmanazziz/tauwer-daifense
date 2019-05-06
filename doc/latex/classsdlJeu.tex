@@ -17,6 +17,12 @@ Class sld\+Jeu Classe de \hyperlink{classsdlJeu}{sdl\+Jeu}, permettant d\textquo
 \mbox{\Hypertarget{classsdlJeu_a5bcd8f5ed17a2cea2ad2fc633415cbcc}\label{classsdlJeu_a5bcd8f5ed17a2cea2ad2fc633415cbcc}} 
 \hyperlink{classsdlJeu_a5bcd8f5ed17a2cea2ad2fc633415cbcc}{$\sim$sdl\+Jeu} ()
 \begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire la sdl du jeu. \end{DoxyCompactList}\item 
+void \hyperlink{classsdlJeu_a5ada7438cc0d3226ad2aa535a523a895}{aff\+Bouton} (const \hyperlink{classBouton}{Bouton} \&b)
+\begin{DoxyCompactList}\small\item\em Procédure\+: aff\+Bouton Permet d\textquotesingle{}afficher un bouton sans image avec un texte. \end{DoxyCompactList}\item 
+void \hyperlink{classsdlJeu_a71bd3bdde9cf7a273b2ec05b08fdc361}{aff\+Bouton} (const \hyperlink{classBouton}{Bouton} \&b, \hyperlink{classImage}{Image} \&im)
+\begin{DoxyCompactList}\small\item\em Procédure\+: aff\+Bouton Permet d\textquotesingle{}afficher un bouton avec une image. \end{DoxyCompactList}\item 
+void \hyperlink{classsdlJeu_a75a0ab9c8235020b2d8b99018f074325}{sdl\+Circle} (const \hyperlink{classVect}{Vect} \&vec, const int \&radius, const int \&width)
+\begin{DoxyCompactList}\small\item\em Procédure\+: aff\+Bouton Permet d\textquotesingle{}afficher la portée de la tour sous forme de cercle. \end{DoxyCompactList}\item 
 void \hyperlink{classsdlJeu_a5628835d7efcab056985c3aa3de56836}{sdl\+Boucle} ()
 \begin{DoxyCompactList}\small\item\em Procédure\+: sdl\+Boucle Permet de tout garder tant que ce n\textquotesingle{}est pas la fin. \end{DoxyCompactList}\item 
 void \hyperlink{classsdlJeu_aedada55e3f96ba37493664d358dc7b60}{sdl\+Aff} ()
@@ -44,6 +50,44 @@ Constructeur par défaut\+: \hyperlink{classsdlJeu}{sdl\+Jeu} Permet de créer l
  
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsdlJeu_a5ada7438cc0d3226ad2aa535a523a895}\label{classsdlJeu_a5ada7438cc0d3226ad2aa535a523a895}} 
+\index{sdl\+Jeu@{sdl\+Jeu}!aff\+Bouton@{aff\+Bouton}}
+\index{aff\+Bouton@{aff\+Bouton}!sdl\+Jeu@{sdl\+Jeu}}
+\subsubsection{\texorpdfstring{aff\+Bouton()}{affBouton()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void sdl\+Jeu\+::aff\+Bouton (\begin{DoxyParamCaption}\item[{const \hyperlink{classBouton}{Bouton} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: aff\+Bouton Permet d\textquotesingle{}afficher un bouton sans image avec un texte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classBouton}{Bouton}} & b 
+\begin{DoxyCode}
+i2.affBouton(b)
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsdlJeu_a71bd3bdde9cf7a273b2ec05b08fdc361}\label{classsdlJeu_a71bd3bdde9cf7a273b2ec05b08fdc361}} 
+\index{sdl\+Jeu@{sdl\+Jeu}!aff\+Bouton@{aff\+Bouton}}
+\index{aff\+Bouton@{aff\+Bouton}!sdl\+Jeu@{sdl\+Jeu}}
+\subsubsection{\texorpdfstring{aff\+Bouton()}{affBouton()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void sdl\+Jeu\+::aff\+Bouton (\begin{DoxyParamCaption}\item[{const \hyperlink{classBouton}{Bouton} \&}]{b,  }\item[{\hyperlink{classImage}{Image} \&}]{im }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: aff\+Bouton Permet d\textquotesingle{}afficher un bouton avec une image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classBouton}{Bouton}} & b, \hyperlink{classImage}{Image} im 
+\begin{DoxyCode}
+i2.affBouton(b,im)
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classsdlJeu_aedada55e3f96ba37493664d358dc7b60}\label{classsdlJeu_aedada55e3f96ba37493664d358dc7b60}} 
 \index{sdl\+Jeu@{sdl\+Jeu}!sdl\+Aff@{sdl\+Aff}}
 \index{sdl\+Aff@{sdl\+Aff}!sdl\+Jeu@{sdl\+Jeu}}
@@ -72,9 +116,28 @@ Procédure\+: sdl\+Boucle Permet de tout garder tant que ce n\textquotesingle{}e
 \begin{DoxyCode}
 sj.\hyperlink{classsdlJeu_a5628835d7efcab056985c3aa3de56836}{sdlBoucle}();
 \end{DoxyCode}
- 
+ \mbox{\Hypertarget{classsdlJeu_a75a0ab9c8235020b2d8b99018f074325}\label{classsdlJeu_a75a0ab9c8235020b2d8b99018f074325}} 
+\index{sdl\+Jeu@{sdl\+Jeu}!sdl\+Circle@{sdl\+Circle}}
+\index{sdl\+Circle@{sdl\+Circle}!sdl\+Jeu@{sdl\+Jeu}}
+\subsubsection{\texorpdfstring{sdl\+Circle()}{sdlCircle()}}
+{\footnotesize\ttfamily void sdl\+Jeu\+::sdl\+Circle (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{vec,  }\item[{const int \&}]{radius,  }\item[{const int \&}]{width }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: aff\+Bouton Permet d\textquotesingle{}afficher la portée de la tour sous forme de cercle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vecteur} & vect, Entier radius, Entier width 
+\begin{DoxyCode}
+i2.sdlCircel(vec,radius,width)
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/samy/\+Projet/lifap4/src/sdl\+Jeu.\+h\item 
-/home/samy/\+Projet/lifap4/src/sdl\+Jeu.\+cpp\end{DoxyCompactItemize}
+src/sdl2/sdl\+Jeu.\+h\item 
+src/sdl2/sdl\+Jeu.\+cpp\end{DoxyCompactItemize}

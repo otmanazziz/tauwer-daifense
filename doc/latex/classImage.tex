@@ -16,16 +16,16 @@ Class \hyperlink{classImage}{Image} Classe d\textquotesingle{}\hyperlink{classIm
 \begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classImage}{Image} Permet de créer l\textquotesingle{}image par défaut. \end{DoxyCompactList}\item 
 \hyperlink{classImage_a18dba28d7d81f51cabf37e0044bd2d6c}{Image} (const \hyperlink{classImage}{Image} \&\+\_\+image)
 \begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classImage}{Image} Permet de créer par copie une nouvelle image. \end{DoxyCompactList}\item 
-\hyperlink{classImage_ae8b4bc2d9cf6b0591f9c16829e0b1dad}{Image} (const std\+::vectore$<$ \hyperlink{classCouleur}{Couleur} $>$ \&\+\_\+tab\+Couleur, const \hyperlink{classVect}{Vect} \&\+\_\+dim)
+\hyperlink{classImage_ae8b4bc2d9cf6b0591f9c16829e0b1dad}{Image} (const std\+::vectore$<$ Couleur $>$ \&\+\_\+tab\+Couleur, const \hyperlink{classVect}{Vect} \&\+\_\+dim)
 \begin{DoxyCompactList}\small\item\em Constructeur par copie\+:\hyperlink{classImage}{Image} Construit par copie la classe \hyperlink{classImage}{Image} avec les valeurs. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classImage_a0294f63700543e11c0f0da85601c7ae5}\label{classImage_a0294f63700543e11c0f0da85601c7ae5}} 
 \hyperlink{classImage_a0294f63700543e11c0f0da85601c7ae5}{$\sim$\+Image} ()
 \begin{DoxyCompactList}\small\item\em Destructeur\+: \hyperlink{classImage}{Image} Détruit la classe \hyperlink{classImage}{Image}. \end{DoxyCompactList}\item 
-std\+::vector$<$ \hyperlink{classCouleur}{Couleur} $>$ \hyperlink{classImage_a61a9499054fb7982ca74f7e408617df5}{get\+Tab\+Couleur} ()
-\begin{DoxyCompactList}\small\item\em Tableau de \hyperlink{classCouleur}{Couleur}\+: get\+Tab\+Couleur Permet de retourner un tableau de couleur. \end{DoxyCompactList}\item 
+std\+::vector$<$ Couleur $>$ \hyperlink{classImage_a61a9499054fb7982ca74f7e408617df5}{get\+Tab\+Couleur} ()
+\begin{DoxyCompactList}\small\item\em Tableau de Couleur\+: get\+Tab\+Couleur Permet de retourner un tableau de couleur. \end{DoxyCompactList}\item 
 \hyperlink{classVect}{Vect} \hyperlink{classImage_a19886e6e2f661123224101aebdab0659}{get\+Dim} ()
 \begin{DoxyCompactList}\small\item\em Classe Vecteur\+: get\+Dim Permet de retourner le vecteur de dim. \end{DoxyCompactList}\item 
-void \hyperlink{classImage_a17feecebcbde65970ffa419ba9f0465a}{set\+Tab\+Couleur} (const std\+::vector$<$ \hyperlink{classCouleur}{Couleur} $>$ \&\+\_\+tab\+Couleur)
+void \hyperlink{classImage_a17feecebcbde65970ffa419ba9f0465a}{set\+Tab\+Couleur} (const std\+::vector$<$ Couleur $>$ \&\+\_\+tab\+Couleur)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Tab\+Couleur Permet de modifier le tableau de couleur. \end{DoxyCompactList}\item 
 void \hyperlink{classImage_a9561b601b84ece813a9b87b881b8fc24}{set\+Dim} (const Vec \&\+\_\+dim)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Dim Permet de modifier la dimension. \end{DoxyCompactList}\item 
@@ -86,7 +86,7 @@ Constructeur par copie\+: \hyperlink{classImage}{Image} Permet de créer par cop
 \index{Image@{Image}!Image@{Image}}
 \index{Image@{Image}!Image@{Image}}
 \subsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const std\+::vectore$<$ \hyperlink{classCouleur}{Couleur} $>$ \&}]{\+\_\+tab\+Couleur,  }\item[{const \hyperlink{classVect}{Vect} \&}]{\+\_\+dim }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const std\+::vectore$<$ Couleur $>$ \&}]{\+\_\+tab\+Couleur,  }\item[{const \hyperlink{classVect}{Vect} \&}]{\+\_\+dim }\end{DoxyParamCaption})}
 
 
 
@@ -94,7 +94,7 @@ Constructeur par copie\+:\hyperlink{classImage}{Image} Construit par copie la cl
 
 
 \begin{DoxyParams}{Parameters}
-{\em Tableau} & de \hyperlink{classCouleur}{Couleur}, Vecteur dimension 
+{\em Tableau} & de Couleur, Vecteur dimension 
 \begin{DoxyCode}
 \hyperlink{classImage}{Image} i2( Tableau de couleur, dimension);
 \end{DoxyCode}
@@ -158,14 +158,14 @@ i2.getDim();
 \index{Image@{Image}!get\+Tab\+Couleur@{get\+Tab\+Couleur}}
 \index{get\+Tab\+Couleur@{get\+Tab\+Couleur}!Image@{Image}}
 \subsubsection{\texorpdfstring{get\+Tab\+Couleur()}{getTabCouleur()}}
-{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{classCouleur}{Couleur} $>$ Image\+::get\+Tab\+Couleur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::vector$<$ Couleur $>$ Image\+::get\+Tab\+Couleur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Tableau de \hyperlink{classCouleur}{Couleur}\+: get\+Tab\+Couleur Permet de retourner un tableau de couleur. 
+Tableau de Couleur\+: get\+Tab\+Couleur Permet de retourner un tableau de couleur. 
 
 \begin{DoxyReturn}{Returns}
-Tableau de \hyperlink{classCouleur}{Couleur} 
+Tableau de Couleur 
 \begin{DoxyCode}
 i2.getTabCouleur();
 \end{DoxyCode}
@@ -268,7 +268,7 @@ i2.setSurface(surf);
 \index{Image@{Image}!set\+Tab\+Couleur@{set\+Tab\+Couleur}}
 \index{set\+Tab\+Couleur@{set\+Tab\+Couleur}!Image@{Image}}
 \subsubsection{\texorpdfstring{set\+Tab\+Couleur()}{setTabCouleur()}}
-{\footnotesize\ttfamily void Image\+::set\+Tab\+Couleur (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classCouleur}{Couleur} $>$ \&}]{\+\_\+tab\+Couleur }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Image\+::set\+Tab\+Couleur (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Couleur $>$ \&}]{\+\_\+tab\+Couleur }\end{DoxyParamCaption})}
 
 
 
@@ -287,7 +287,7 @@ i2.setTabCouleur(Tabl de Couleur);
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/samy/\+Projet/lifap4/src/Image.\+h\item 
-/home/samy/\+Projet/lifap4/src/sdl\+Jeu.\+h\item 
-/home/samy/\+Projet/lifap4/src/Image.\+cpp\item 
-/home/samy/\+Projet/lifap4/src/sdl\+Jeu.\+cpp\end{DoxyCompactItemize}
+src/core/Image.\+h\item 
+src/sdl2/sdl\+Jeu.\+h\item 
+src/core/Image.\+cpp\item 
+src/sdl2/sdl\+Jeu.\+cpp\end{DoxyCompactItemize}

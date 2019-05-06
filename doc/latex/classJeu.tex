@@ -22,7 +22,31 @@ void \hyperlink{classJeu_a4f8c73b225819fb5a6ba342adc2f1fa4}{affiche\+Carte\+Disp
 \hyperlink{classNiveau}{Niveau} $\ast$ \hyperlink{classJeu_a71bf0b5329ade330d95318b50d1e2f12}{get\+Niveau} ()
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Niveau Permet de retourner le pointeur de niveau. \end{DoxyCompactList}\item 
 void \hyperlink{classJeu_a8d2a0773d8edcb42d5e055785ad4b71a}{action\+Auto} (float delta)
-\begin{DoxyCompactList}\small\item\em Procédure\+: action\+Auto Permet d\textquotesingle{}avoir des actions automatiques. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Procédure\+: action\+Auto Permet d\textquotesingle{}avoir des actions automatiques. \end{DoxyCompactList}\item 
+void \hyperlink{classJeu_a6a95f56b4cdcf94806237e672de41d7f}{clique} (const int \&x, const int \&y, const int \&taille)
+\begin{DoxyCompactList}\small\item\em Procédure\+: clique Permet de savoir si le curseur est sur le jeu ou pas. \end{DoxyCompactList}\item 
+\hyperlink{classTour}{Tour} $\ast$ \hyperlink{classJeu_a495360d61991b02b3a5a702cef5bd4b2}{tour\+Select} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: tour\+Select Permet de retourner la tour sélectionner. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ $\ast$ \hyperlink{classJeu_a09404fb1bfd86af39da4cb5945f22fa5}{renvoie\+Bouton\+Amelioration} ()
+\begin{DoxyCompactList}\small\item\em Tableau de \hyperlink{classBouton}{Bouton}\+: renvoie\+Bouton\+Amelioration Permet de retourner un tableau de bouton. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ $\ast$ \hyperlink{classJeu_aea4394fb2f268e68eb8118d32286e8d7}{renvoie\+Bouton\+Tour} ()
+\begin{DoxyCompactList}\small\item\em Tableau de \hyperlink{classBouton}{Bouton}\+: renvoie\+Bouton\+Tour Permet de retourner un tableau de bouton. \end{DoxyCompactList}\item 
+void \hyperlink{classJeu_ada22a232d25c271778a3a0b0ecdd61c9}{changer\+Map} (int m)
+\begin{DoxyCompactList}\small\item\em Procédure\+: changer\+Map Permet d\textquotesingle{}avoir de changer de carte. \end{DoxyCompactList}\item 
+bool \hyperlink{classJeu_abcee93768971be5db133648851a0219e}{get\+Pause} ()
+\begin{DoxyCompactList}\small\item\em Booléen\+: get\+Pause Permet de savoir si le jeu est en pause. \end{DoxyCompactList}\item 
+\hyperlink{classBouton}{Bouton} \hyperlink{classJeu_a550a74e12dedc1170162141fa9356fb6}{get\+Bouton\+Pause} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Bouton\+Pause Permet de retourner un bouton. \end{DoxyCompactList}\item 
+void \hyperlink{classJeu_a825bd1ef8b91c70e468966f6985a2ee3}{Pause} ()
+\begin{DoxyCompactList}\small\item\em Procédure\+: Pause Permet de mettre en pause. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classJeu_a01d73851016ee4edb6742231d4084ad7}{get\+Image\+Map} ()
+\begin{DoxyCompactList}\small\item\em Chaine de caractère\+: get\+Image\+Maps Permet de retourner le nom de l\textquotesingle{}image de la map sélectionnée. \end{DoxyCompactList}\item 
+\hyperlink{classMenu}{Menu} \hyperlink{classJeu_a53db67d1ac9622db7f13297e398f2730}{get\+Menu\+Map} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Menu\+Map Permet de retourner le menu. \end{DoxyCompactList}\item 
+bool \hyperlink{classJeu_a1dee637787fc6976f2b504631780bf38}{get\+Gagner} ()
+\begin{DoxyCompactList}\small\item\em Booléen\+: get\+Gagner Permet de savoir si la partie a été gagnée. \end{DoxyCompactList}\item 
+bool \hyperlink{classJeu_a344c165558c9ab3aa815404179351156}{get\+Perdue} ()
+\begin{DoxyCompactList}\small\item\em Booléen\+: get\+Perdue Permet de savoir si la partie a été perdue. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -79,7 +103,110 @@ Procédure\+: affiche\+Carte\+Dispo Permet d\textquotesingle{}afficher la carte.
 \begin{DoxyCode}
 j2.afficheCarteDispo();
 \end{DoxyCode}
- \mbox{\Hypertarget{classJeu_a71bf0b5329ade330d95318b50d1e2f12}\label{classJeu_a71bf0b5329ade330d95318b50d1e2f12}} 
+ \mbox{\Hypertarget{classJeu_ada22a232d25c271778a3a0b0ecdd61c9}\label{classJeu_ada22a232d25c271778a3a0b0ecdd61c9}} 
+\index{Jeu@{Jeu}!changer\+Map@{changer\+Map}}
+\index{changer\+Map@{changer\+Map}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{changer\+Map()}{changerMap()}}
+{\footnotesize\ttfamily void Jeu\+::changer\+Map (\begin{DoxyParamCaption}\item[{int}]{m }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: changer\+Map Permet d\textquotesingle{}avoir de changer de carte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & m 
+\begin{DoxyCode}
+i2.changerMap(m);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_a6a95f56b4cdcf94806237e672de41d7f}\label{classJeu_a6a95f56b4cdcf94806237e672de41d7f}} 
+\index{Jeu@{Jeu}!clique@{clique}}
+\index{clique@{clique}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{clique()}{clique()}}
+{\footnotesize\ttfamily void Jeu\+::clique (\begin{DoxyParamCaption}\item[{const int \&}]{x,  }\item[{const int \&}]{y,  }\item[{const int \&}]{taille }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: clique Permet de savoir si le curseur est sur le jeu ou pas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & x, Entier y, Entier taille 
+\begin{DoxyCode}
+i2.clique(x,y,taille);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJeu_a550a74e12dedc1170162141fa9356fb6}\label{classJeu_a550a74e12dedc1170162141fa9356fb6}} 
+\index{Jeu@{Jeu}!get\+Bouton\+Pause@{get\+Bouton\+Pause}}
+\index{get\+Bouton\+Pause@{get\+Bouton\+Pause}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{get\+Bouton\+Pause()}{getBoutonPause()}}
+{\footnotesize\ttfamily \hyperlink{classBouton}{Bouton} Jeu\+::get\+Bouton\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Bouton\+Pause Permet de retourner un bouton. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classBouton}{Bouton} 
+\begin{DoxyCode}
+i2.getBoutonPause();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a1dee637787fc6976f2b504631780bf38}\label{classJeu_a1dee637787fc6976f2b504631780bf38}} 
+\index{Jeu@{Jeu}!get\+Gagner@{get\+Gagner}}
+\index{get\+Gagner@{get\+Gagner}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{get\+Gagner()}{getGagner()}}
+{\footnotesize\ttfamily bool Jeu\+::get\+Gagner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Booléen\+: get\+Gagner Permet de savoir si la partie a été gagnée. 
+
+
+\begin{DoxyCode}
+i2.getGagner();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classJeu_a01d73851016ee4edb6742231d4084ad7}\label{classJeu_a01d73851016ee4edb6742231d4084ad7}} 
+\index{Jeu@{Jeu}!get\+Image\+Map@{get\+Image\+Map}}
+\index{get\+Image\+Map@{get\+Image\+Map}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{get\+Image\+Map()}{getImageMap()}}
+{\footnotesize\ttfamily std\+::string Jeu\+::get\+Image\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Chaine de caractère\+: get\+Image\+Maps Permet de retourner le nom de l\textquotesingle{}image de la map sélectionnée. 
+
+\begin{DoxyReturn}{Returns}
+Nom de l\textquotesingle{}image qu\textquotesingle{}on sélectionne 
+\begin{DoxyCode}
+i2.getImageMap();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a53db67d1ac9622db7f13297e398f2730}\label{classJeu_a53db67d1ac9622db7f13297e398f2730}} 
+\index{Jeu@{Jeu}!get\+Menu\+Map@{get\+Menu\+Map}}
+\index{get\+Menu\+Map@{get\+Menu\+Map}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{get\+Menu\+Map()}{getMenuMap()}}
+{\footnotesize\ttfamily \hyperlink{classMenu}{Menu} Jeu\+::get\+Menu\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Menu\+Map Permet de retourner le menu. 
+
+\begin{DoxyReturn}{Returns}
+I\+Menu 
+\begin{DoxyCode}
+i2.getMenuMap();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a71bf0b5329ade330d95318b50d1e2f12}\label{classJeu_a71bf0b5329ade330d95318b50d1e2f12}} 
 \index{Jeu@{Jeu}!get\+Niveau@{get\+Niveau}}
 \index{get\+Niveau@{get\+Niveau}!Jeu@{Jeu}}
 \subsubsection{\texorpdfstring{get\+Niveau()}{getNiveau()}}
@@ -96,9 +223,102 @@ j2->getNiveau();
 \end{DoxyCode}
  
 \end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_abcee93768971be5db133648851a0219e}\label{classJeu_abcee93768971be5db133648851a0219e}} 
+\index{Jeu@{Jeu}!get\+Pause@{get\+Pause}}
+\index{get\+Pause@{get\+Pause}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{get\+Pause()}{getPause()}}
+{\footnotesize\ttfamily bool Jeu\+::get\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Booléen\+: get\+Pause Permet de savoir si le jeu est en pause. 
+
+
+\begin{DoxyCode}
+i2.getPause();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classJeu_a344c165558c9ab3aa815404179351156}\label{classJeu_a344c165558c9ab3aa815404179351156}} 
+\index{Jeu@{Jeu}!get\+Perdue@{get\+Perdue}}
+\index{get\+Perdue@{get\+Perdue}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{get\+Perdue()}{getPerdue()}}
+{\footnotesize\ttfamily bool Jeu\+::get\+Perdue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Booléen\+: get\+Perdue Permet de savoir si la partie a été perdue. 
+
+
+\begin{DoxyCode}
+i2.getPerdue();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classJeu_a825bd1ef8b91c70e468966f6985a2ee3}\label{classJeu_a825bd1ef8b91c70e468966f6985a2ee3}} 
+\index{Jeu@{Jeu}!Pause@{Pause}}
+\index{Pause@{Pause}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily void Jeu\+::\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: Pause Permet de mettre en pause. 
+
+
+\begin{DoxyCode}
+i2.Pause();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classJeu_a09404fb1bfd86af39da4cb5945f22fa5}\label{classJeu_a09404fb1bfd86af39da4cb5945f22fa5}} 
+\index{Jeu@{Jeu}!renvoie\+Bouton\+Amelioration@{renvoie\+Bouton\+Amelioration}}
+\index{renvoie\+Bouton\+Amelioration@{renvoie\+Bouton\+Amelioration}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{renvoie\+Bouton\+Amelioration()}{renvoieBoutonAmelioration()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ $\ast$ Jeu\+::renvoie\+Bouton\+Amelioration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tableau de \hyperlink{classBouton}{Bouton}\+: renvoie\+Bouton\+Amelioration Permet de retourner un tableau de bouton. 
+
+\begin{DoxyReturn}{Returns}
+Tableau de \hyperlink{classBouton}{Bouton} 
+\begin{DoxyCode}
+i2.renvoieBoutonAmelioration();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_aea4394fb2f268e68eb8118d32286e8d7}\label{classJeu_aea4394fb2f268e68eb8118d32286e8d7}} 
+\index{Jeu@{Jeu}!renvoie\+Bouton\+Tour@{renvoie\+Bouton\+Tour}}
+\index{renvoie\+Bouton\+Tour@{renvoie\+Bouton\+Tour}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{renvoie\+Bouton\+Tour()}{renvoieBoutonTour()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ $\ast$ Jeu\+::renvoie\+Bouton\+Tour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tableau de \hyperlink{classBouton}{Bouton}\+: renvoie\+Bouton\+Tour Permet de retourner un tableau de bouton. 
+
+\begin{DoxyReturn}{Returns}
+Tableau de \hyperlink{classBouton}{Bouton} 
+\begin{DoxyCode}
+i2.renvoirBoutonTour();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJeu_a495360d61991b02b3a5a702cef5bd4b2}\label{classJeu_a495360d61991b02b3a5a702cef5bd4b2}} 
+\index{Jeu@{Jeu}!tour\+Select@{tour\+Select}}
+\index{tour\+Select@{tour\+Select}!Jeu@{Jeu}}
+\subsubsection{\texorpdfstring{tour\+Select()}{tourSelect()}}
+{\footnotesize\ttfamily \hyperlink{classTour}{Tour} $\ast$ Jeu\+::tour\+Select (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: tour\+Select Permet de retourner la tour sélectionner. 
+
+\begin{DoxyReturn}{Returns}
+tour\+Select 
+\begin{DoxyCode}
+i2.tourSelect();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/samy/\+Projet/lifap4/src/Jeu.\+h\item 
-/home/samy/\+Projet/lifap4/src/Jeu.\+cpp\end{DoxyCompactItemize}
+src/core/Jeu.\+h\item 
+src/core/Jeu.\+cpp\end{DoxyCompactItemize}

@@ -100,6 +100,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a945a71fd635f9ab1e15dbae04afa5e5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNiveau.html#a945a71fd635f9ab1e15dbae04afa5e5d">affiche</a> ()</td></tr>
 <tr class="memdesc:a945a71fd635f9ab1e15dbae04afa5e5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: affiche Permet d'afficher le niveau.  <a href="#a945a71fd635f9ab1e15dbae04afa5e5d">More...</a><br /></td></tr>
 <tr class="separator:a945a71fd635f9ab1e15dbae04afa5e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749c4fbb42a1f47bff1b0b845a214d1a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNiveau.html#a749c4fbb42a1f47bff1b0b845a214d1a">perdue</a> ()</td></tr>
+<tr class="memdesc:a749c4fbb42a1f47bff1b0b845a214d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen: perdue Permet de savoir si le niveau est perdue ou non.  <a href="#a749c4fbb42a1f47bff1b0b845a214d1a">More...</a><br /></td></tr>
+<tr class="separator:a749c4fbb42a1f47bff1b0b845a214d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43feae8b186ed6167b5cadaf2d01cac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNiveau.html#ab43feae8b186ed6167b5cadaf2d01cac">finNiveau</a> ()</td></tr>
+<tr class="memdesc:ab43feae8b186ed6167b5cadaf2d01cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen: finNiveau Permet de savoir si le niveau est finie ou non.  <a href="#ab43feae8b186ed6167b5cadaf2d01cac">More...</a><br /></td></tr>
+<tr class="separator:ab43feae8b186ed6167b5cadaf2d01cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class <a class="el" href="classNiveau.html" title="Class Niveau Classe de Niveau permettant de gérer les caractéristique d&#39;un niveau (la carte...">Niveau</a> Classe de <a class="el" href="classNiveau.html" title="Class Niveau Classe de Niveau permettant de gérer les caractéristique d&#39;un niveau (la carte...">Niveau</a> permettant de gérer les caractéristique d'un niveau (la carte, le héro, l'or et le score) </p>
@@ -166,7 +172,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fonction: addrGetCarte Permet de retourner le pointeur de carte. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classCarte.html">Carte</a> carte <div class="fragment"><div class="line">n2-&gt;addrGetCarte();</div></div><!-- fragment --> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classCarte.html" title="Class Carte Classe de carte, permettant de gérer les informations de la carte. ">Carte</a> carte <div class="fragment"><div class="line">n2-&gt;addrGetCarte();</div></div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -215,6 +221,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ab43feae8b186ed6167b5cadaf2d01cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab43feae8b186ed6167b5cadaf2d01cac">&#9670;&nbsp;</a></span>finNiveau()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Niveau::finNiveau </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Booléen: finNiveau Permet de savoir si le niveau est finie ou non. </p>
+<div class="fragment"><div class="line">n2.finNiveau();</div></div><!-- fragment --> 
+</div>
+</div>
 <a id="a503e0b7db795e1f9bf3ea76cc4fd9e99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a503e0b7db795e1f9bf3ea76cc4fd9e99">&#9670;&nbsp;</a></span>getCarte()</h2>
 
@@ -231,7 +256,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fonction: getCarte Permet de retourner la carte. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classCarte.html">Carte</a> carte <div class="fragment"><div class="line">n2.getCarte();</div></div><!-- fragment --> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classCarte.html" title="Class Carte Classe de carte, permettant de gérer les informations de la carte. ">Carte</a> carte <div class="fragment"><div class="line">n2.getCarte();</div></div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -281,6 +306,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a749c4fbb42a1f47bff1b0b845a214d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a749c4fbb42a1f47bff1b0b845a214d1a">&#9670;&nbsp;</a></span>perdue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Niveau::perdue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Booléen: perdue Permet de savoir si le niveau est perdue ou non. </p>
+<div class="fragment"><div class="line">n2.perdue();</div></div><!-- fragment --> 
+</div>
+</div>
 <a id="a3192b7514716cfddac9ff465f9ad1f2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3192b7514716cfddac9ff465f9ad1f2f">&#9670;&nbsp;</a></span>retirerOr()</h2>
 
@@ -308,8 +352,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/samy/Projet/lifap4/src/<a class="el" href="Niveau_8h_source.html">Niveau.h</a></li>
-<li>/home/samy/Projet/lifap4/src/Niveau.cpp</li>
+<li>src/core/<a class="el" href="Niveau_8h_source.html">Niveau.h</a></li>
+<li>src/core/Niveau.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
