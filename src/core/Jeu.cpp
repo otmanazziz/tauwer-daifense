@@ -108,7 +108,7 @@ void Jeu::clique(const int & x, const int & y , const int & taille){
 							tourSelectionne->addPortee(1);
 						}
 					}else if(tabBouton[3].clique(v)){
-						nbGold = 15* tourSelectionne->getAttaque().getZone();
+						nbGold = 15 + 30* tourSelectionne->getAttaque().getZone();
 						if(nbGold <= niv->getOr()){
 							niv->retirerOr(nbGold);
 							tourSelectionne->addZone(0.5);

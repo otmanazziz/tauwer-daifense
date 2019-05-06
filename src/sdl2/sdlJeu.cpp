@@ -274,7 +274,7 @@ void sdlJeu::sdlAff () {
             unsigned int nbGoldDegats = jeu.tourSelect()->getAttaque().getDegats();
             unsigned int nbGoldVitesse = 8 * jeu.tourSelect()->getVitAtq();
             unsigned int nbGoldPortee = 2 * jeu.tourSelect()->getPortee();
-            unsigned int nbGoldZone = 15 * jeu.tourSelect()->getAttaque().getZone();
+            unsigned int nbGoldZone = 15 + 30 * jeu.tourSelect()->getAttaque().getZone();
             sdlCircle(jeu.tourSelect()->getPosition()*float(TAILLE_FENETRE)/TAILLE_MAP,jeu.tourSelect()->getPortee()*float(TAILLE_FENETRE)/TAILLE_MAP,3);
 
             res = (int)nbGoldDegats;
@@ -324,7 +324,7 @@ void sdlJeu::sdlAff () {
             SDL_Surface * txtSpeed = TTF_RenderText_Solid(font, ( vitTour.substr(0, vitTour.find(".") + 2)+ "->" + vitUpTour.substr(0, vitUpTour.find(".") + 2)).c_str() ,font_color);
             f.setSurface(txtSpeed);
             f.loadFromCurrentSurface(renderer);
-            pos.x = 70; pos.y = 210; pos.w = 30 * res2; pos.h = 30;
+            pos.x = 70; pos.y = 210; pos.w = 30 + 30 * res2; pos.h = 30;
             SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
             SDL_DestroyTexture(f.getTexture());
             SDL_FreeSurface(txtSpeed);
@@ -376,7 +376,7 @@ void sdlJeu::sdlAff () {
             SDL_Surface * txtZone = TTF_RenderText_Solid(font, (szoneTour.substr(0, szoneTour.find(".") + 2) + "->" + szoneUpTour.substr(0, szoneUpTour.find(".") + 2)).c_str() ,font_color);
             f.setSurface(txtZone);
             f.loadFromCurrentSurface(renderer);
-            pos.x = 70; pos.y = 330; pos.w = 30 * res2; pos.h = 30;
+            pos.x = 70; pos.y = 330; pos.w = 30 + 30 * res2; pos.h = 30;
             SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
             SDL_DestroyTexture(f.getTexture());
             SDL_FreeSurface(txtZone);

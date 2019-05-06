@@ -175,15 +175,23 @@ void Carte::maj(Niveau & n , float delta){
 					tabTour[k].setAAttaquer(true);
 					attaque = tabTour[k].getAttaque();
 					if (attaque.getZone() > 0){//cas ou la tour tape en zone 
+						
+						
 						for (unsigned int i = 0; i < tabVague[0].tailleVague(); i++){
 							Monstre * mons = tabVague[0].addrGetIndiceMonstre(i);
-							if((mons->getPos()-posMonstreViser).module() <= attaque.getZone()){
+							float  dist = (mons->getPos()-posMonstreViser).module();
+							
+							if( dist <= attaque.getZone()){
+								
 								if (mons->perdreVie(attaque.getDegats())){
 									n.ajouterOr((unsigned int)(tabVague[0].ennemiMort(int(i))));
+									i--;
 								}
 							}
 						}
-					}	else {	
+						
+					}	
+					else {	
 						if(tabVague[0].addrGetIndiceMonstre(j)->perdreVie(attaque.getDegats())){
 							n.ajouterOr((unsigned int)(tabVague[0].ennemiMort(int(j))));
 						}
