@@ -81,7 +81,7 @@ void Jeu::clique(const int & x, const int & y , const int & taille){
 			 
 			if (tabBoutonTour[i].clique(v+(Vect(taille,taille)/2))){
 				tourSelectionne = niv->addrGetCarte()->addrTourIndice(i);
-				tourSelectionne->affiche();std::cout<<i<<std::endl;
+				std::cout<<"Tour n°: "<<i<<std::endl;tourSelectionne->affiche();
 				break;
 			}
 		}
@@ -96,13 +96,13 @@ void Jeu::clique(const int & x, const int & y , const int & taille){
 							tourSelectionne->addDegat(5);
 						}
 					}else if(tabBouton[1].clique(v)){
-						nbGold = 8* tourSelectionne->getVitAtq();
+						nbGold = 20* tourSelectionne->getVitAtq();
 						if(nbGold <= niv->getOr()){
 							niv->retirerOr(nbGold);
 							tourSelectionne->addVitAtq(0.5);
 						}
 					}else if(tabBouton[2].clique(v)){
-						nbGold = 2* tourSelectionne->getPortee();
+						nbGold = 5* tourSelectionne->getPortee();
 						if(nbGold <= niv->getOr()){
 							niv->retirerOr(nbGold);
 							tourSelectionne->addPortee(1);

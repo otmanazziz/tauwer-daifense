@@ -174,7 +174,7 @@ void Carte::maj(Niveau & n , float delta){
 				if (tabTour[k].estAPortee(posMonstreViser) && tabTour[k].peutTirer(delta) ){
 					tabTour[k].setAAttaquer(true);
 					attaque = tabTour[k].getAttaque();
-					if (attaque.getZone() > 0){//cas ou la tour tape en zone 
+					if (attaque.getZone() > 0.0){//cas ou la tour tape en zone 
 						
 						
 						for (unsigned int i = 0; i < tabVague[0].tailleVague(); i++){

@@ -1,4 +1,4 @@
-CORE = core/Vect.cpp core/fonction.cpp core/Tour.cpp core/Base.cpp core/Couleur.cpp core/Monstre.cpp core/Vague.cpp core/Bouton.cpp core/Menu.cpp core/Effet.cpp core/Attaque.cpp core/Sort.cpp  core/Chemin.cpp core/Carte.cpp core/Hero.cpp core/Niveau.cpp  core/Jeu.cpp
+CORE = core/Vect.cpp core/fonction.cpp core/Tour.cpp core/Base.cpp core/Monstre.cpp core/Vague.cpp core/Bouton.cpp core/Menu.cpp core/Effet.cpp core/Attaque.cpp core/Sort.cpp  core/Chemin.cpp core/Carte.cpp core/Hero.cpp core/Niveau.cpp  core/Jeu.cpp
 
 
 SRCS_TXT = $(CORE) txt/txtJeu.cpp txt/WinTXT.cpp txt/main_txt.cpp

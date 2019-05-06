@@ -272,8 +272,8 @@ void sdlJeu::sdlAff () {
 
         if(jeu.tourSelect() != NULL){
             unsigned int nbGoldDegats = jeu.tourSelect()->getAttaque().getDegats();
-            unsigned int nbGoldVitesse = 8 * jeu.tourSelect()->getVitAtq();
-            unsigned int nbGoldPortee = 2 * jeu.tourSelect()->getPortee();
+            unsigned int nbGoldVitesse = 20 * jeu.tourSelect()->getVitAtq();
+            unsigned int nbGoldPortee = 5 * jeu.tourSelect()->getPortee();
             unsigned int nbGoldZone = 15 + 30 * jeu.tourSelect()->getAttaque().getZone();
             sdlCircle(jeu.tourSelect()->getPosition()*float(TAILLE_FENETRE)/TAILLE_MAP,jeu.tourSelect()->getPortee()*float(TAILLE_FENETRE)/TAILLE_MAP,3);
 
