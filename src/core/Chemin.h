@@ -50,7 +50,7 @@ class Chemin{
 			c1.tailleChemin();
 		@endcode	
 	*/
-		unsigned int tailleChemin();
+		unsigned int tailleChemin()const;
 	/**
 		@brief Procédure: affiche
 		Permet d'afficher les chemins
@@ -58,7 +58,7 @@ class Chemin{
 			c1.affiche();
 		@endcode	
 	*/	
-	void affiche();
+	void affiche()const;
 	
 };
 

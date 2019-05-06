@@ -54,7 +54,7 @@ public:
 			m2.getTabBouton();
 		@endcode	
 	*/
-	std::vector<Bouton> getTabBouton();
+	std::vector<Bouton> getTabBouton()const;
 	/**
 		@brief Procédure: setTabBouton
 		Permet de modifier le tableau de bouton
@@ -73,7 +73,7 @@ public:
 			m2.setBoutonIndice(indice, bouton);
 		@endcode	
 	*/
-	void setBoutonIndice(const int &indice, Bouton bouton);
+	void setBoutonIndice(const int &indice,const Bouton & bouton);
 	/**
 		@brief Fonction: getBoutonIndice
 		Permet de retourner l'indide du bouton
@@ -82,7 +82,7 @@ public:
 			m2.getBoutonIndice();
 		@endcode	
 	*/	
-	Bouton getBoutonIndice(const int &indice);
+	Bouton getBoutonIndice(const int &indice)const;
 	/**
 		@brief Procédure: ajouterBouton
 		Permet d'ajouter un bouton dans le menu
@@ -92,7 +92,7 @@ public:
 		@endcode	
 
 	*/
-	void ajouterBouton(Bouton _bouton);
+	void ajouterBouton(const Bouton &_bouton);
 	/**
 		@brief Procédure: supprimerBoutonIndice
 		Permet de supprimer l'indice d'un bouton dans le menu
@@ -113,7 +113,7 @@ public:
 
 	*/
 
-	void afficherTabBouton();
+	void afficherTabBouton()const;
 	/**
 		@brief Fonction: getTaille
 		Permet de retourner la taille du menu
@@ -122,7 +122,7 @@ public:
 			m2.getTaille();
 		@endcode	
 	*/
-	unsigned int getTaille();
+	unsigned int getTaille()const;
 
 };
 

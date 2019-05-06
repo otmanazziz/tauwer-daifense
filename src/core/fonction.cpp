@@ -20,7 +20,7 @@ std::vector<std::string> split(const std::string & s , const char & c ){
 	}
 }
 
-bool avancerVers(float f ,Vect & m, const Vect & e){
+bool avancerVers(const float & f ,Vect & m, const Vect & e){
 	Vect v(m-e);
 	v = Vect(0,0) - v;
 	float mod = v.module();

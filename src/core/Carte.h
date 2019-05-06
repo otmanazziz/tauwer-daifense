@@ -72,7 +72,7 @@ class Carte{
 			c2.tourIndice(i);
 		@endcode	
 	*/
-		Tour tourIndice(const int & i); 
+		Tour tourIndice(const int & i)const; 
 	/**
 		@brief Fonction: vagueIndice
 		Permet de retourner la vague à l'indice i
@@ -82,7 +82,7 @@ class Carte{
 			c2.vagueIndice(i);
 		@endcode	
 	*/	
-		Vague vagueIndice(const int & i);
+		Vague vagueIndice(const int & i)const;
 	/**
 		@brief Fonction: cheminIndice
 		Permet de retourner le chemin à l'indice i
@@ -92,7 +92,7 @@ class Carte{
 			c2.cheminIndice(i);
 		@endcode	
 	*/	
-		Chemin cheminIndice(const int & i);
+		Chemin cheminIndice(const int & i)const;
 	/**
 		@brief Fonction: tailleTabTour
 		Permet de retourner la taille du tableau de tour (nombre de tour)
@@ -101,7 +101,7 @@ class Carte{
 			c2.tailleTabTour();
 		@endcode	
 	*/
-		unsigned int tailleTabTour();
+		unsigned int tailleTabTour()const;
 	/**
 		@brief Fonction: tailleTabChemin
 		Permet de retourner la taille du tableau de chemin (nombre de chemin)
@@ -110,7 +110,7 @@ class Carte{
 			c2.tailleTabChemin();
 		@endcode	
 	*/
-		unsigned int tailleTabChemin();
+		unsigned int tailleTabChemin()const;
 	/**
 		@brief Fonction: tailleTabVague
 		Permet de retourner la taille du tableau de vague (nombre de vague)
@@ -119,7 +119,7 @@ class Carte{
 			c2.tailleTabVague();
 		@endcode	
 	*/
-		unsigned int tailleTabVague();
+		unsigned int tailleTabVague()const;
 	/**
 		@brief Fonction: addrTourIndice
 		Permet de retourner le pointeur de la tour à l'indice i
@@ -161,7 +161,7 @@ class Carte{
 			c2.maj(n,delta);
 		@endcode
 	*/
-		void maj(Niveau & n, float delta);
+		void maj(Niveau & n, const float &delta);
 	/**
 		@brief Fonction: getBase
 		Permet de retourner la base
@@ -170,7 +170,7 @@ class Carte{
 			c2.getBase(i);
 		@endcode	
 	*/
-		Base getBase();
+		Base getBase()const;
 	/**
 		@brief Procédure: setFichier		
 		Permet de changer de fichiers
@@ -187,7 +187,7 @@ class Carte{
 			c2.affiche();
 		@endcode	
 	*/	
-		void affiche();
+		void affiche()const;
 };
 
 #endif

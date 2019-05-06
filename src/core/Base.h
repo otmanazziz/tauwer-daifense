@@ -52,7 +52,7 @@ public:
 		@endcode	
 	*/
 
-	int getVie();
+	int getVie()const;
 	/**
 		@brief Fonction: getPosition
 		Permet de retourner le vecteur position
@@ -61,7 +61,7 @@ public:
 			b2.getPosition();
 		@endcode	
 	*/
-	Vect getPosition();
+	Vect getPosition()const;
 	/**
 		@brief Procédure: setVie
 		Permet de modifier l'entier représentant la vie de la base
@@ -101,7 +101,7 @@ public:
 			b2.affiche();
 		@endcode	
 	*/
-	void affiche();
+	void affiche()const;
 };
 
 #endif

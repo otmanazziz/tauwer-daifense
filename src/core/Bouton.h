@@ -55,7 +55,7 @@ public:
 			b2.getNom();
 		@endcode	
 	*/
-	std::string getNom();
+	std::string getNom()const;
 	/**
 		@brief Fonction: getPos
 		Permet de retourner la position du bouton
@@ -112,7 +112,7 @@ public:
 		@endcode	
 	*/
 
-	bool clique(const Vect &_pos);
+	bool clique(const Vect &_pos)const;
 };
 
 #endif

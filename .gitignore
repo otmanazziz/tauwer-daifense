@@ -6,3 +6,4 @@ obj/
 
 bin/txt
 bin/sdl
+*.tar.gz

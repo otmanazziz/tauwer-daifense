@@ -21,11 +21,11 @@ Base::~Base(){
 	//DESTRUCTEUR
 }
 
-int Base::getVie(){
+int Base::getVie()const{
 	return vie;
 }
 
-Vect Base::getPosition(){
+Vect Base::getPosition()const{
 	return position;
 }
 
@@ -42,7 +42,7 @@ void Base::perdreVie(const int &viePerdue){
 	else vie -= viePerdue;
 }
 
-void Base::affiche(){
+void Base::affiche()const{
 std::cout<<" Position : "<<std::endl;
 	position.afficheVect();
 std::cout<<" Vie : "<<vie <<std::endl;

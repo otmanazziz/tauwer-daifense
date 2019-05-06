@@ -23,7 +23,7 @@ Attaque::~Attaque(){
 	degats = 0;
 }
 
-float Attaque::getZone(){
+float Attaque::getZone()const{
 	return zone;
 }
 
@@ -31,7 +31,7 @@ float Attaque::getZone(){
 	return effet;
 }*/
 
-int Attaque::getDegats(){
+int Attaque::getDegats()const{
 	return degats;
 }
 

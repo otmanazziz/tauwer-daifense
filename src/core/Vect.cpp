@@ -75,10 +75,8 @@ float Vect::module()const{
 	return sqrt((x*x)+(y*y));
 }
 
-void Vect::afficheVect(){
-	if (y < 0)
-		std::cout << "Votre vecteur vaut: " << x << " " << y << "\n";
-	else std::cout << "Votre vecteur vaut: " << x << " + " << y << "\n";
+void Vect::afficheVect()const{
+		std::cout << "(" << x << " ; " << y << ")"<<std::endl;
 }
 
 void Vect::testRegression(){
@@ -114,11 +112,11 @@ void Vect::testRegression(){
 	assert(v1.module() > 0);
 	assert(v4.module() - v2.module() - v2.module() < 0);
 }
-Vect Vect::operator*(float f)const{
+Vect Vect::operator*(const float & f)const{
 	return Vect(x*f,y*f);	
 }
 
-Vect Vect::operator/(float f)const{
+Vect Vect::operator/(const float & f)const{
 	return Vect(x/f,y/f);
 }
 Vect Vect::operator%(const int & i)const{

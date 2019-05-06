@@ -12,7 +12,7 @@
         @param Chaîne de caractères s, caractère c
 		@return tableau de chaînes de caractères
 		@code
-			aV.split(s, ".");
+		vector<string> t = 	split(s, ".");
 		@endcode	
 	*/
 std::vector<std::string> split(const std::string & s , const char & c );
@@ -21,8 +21,8 @@ std::vector<std::string> split(const std::string & s , const char & c );
 		Permet de savoir si l'ennemi à avancer vers une position
         @param Réel v, Vect m, Vect e
 		@code
-			aV.avancerVers(v,m,e);
+			avancerVers(v,m,e);
 		@endcode	
 	*/
-bool avancerVers(float v ,Vect & m, const Vect & e);
+bool avancerVers(const float & v ,Vect & m, const Vect & e);
 #endif

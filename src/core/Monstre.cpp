@@ -87,7 +87,7 @@ bool Monstre::getSpawn()const{
 void Monstre::spawner(){
 	spawn = true;
 }
-void Monstre::test(){
+void Monstre::test()const{
 	Monstre m;
 	Vect v(1.5, 6.3);
 	Monstre m1(m);
@@ -102,7 +102,7 @@ void Monstre::test(){
 }
 
 
-void Monstre::avancer(const Vect & v , float delta){
+void Monstre::avancer(const Vect & v , const float & delta){
 	if(pos == v);
 	else{		
 		if(avancerVers(vitesse* delta,pos, v)){
@@ -111,7 +111,7 @@ void Monstre::avancer(const Vect & v , float delta){
 	}
 }
                                                                        
-void Monstre::affiche(){
+void Monstre::affiche()const{
 	std::cout<<std::endl<<" Vie : "<< vie<<" - Position : "<< pos.getX() << "   " << pos.getY() <<" - Vitesse : "<<vitesse<<" -Etape : "<<etape <<" - numChem : "<< numChem <<" - spawner : "<< spawn<<" gold: "<<gold<<std::endl; 
 }	
 	
@@ -120,7 +120,7 @@ int Monstre::getNumChem()const{
 }
 	
 	
-void Monstre::setEstAttaquer(bool b){
+void Monstre::setEstAttaquer(const bool &b){
 
 	estAttaquer = b;
 }	

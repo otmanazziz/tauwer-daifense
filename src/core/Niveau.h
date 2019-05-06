@@ -41,7 +41,7 @@ class Niveau{
 			n2.getCarte();
 		@endcode	
 	*/
-		Carte getCarte();
+		Carte getCarte()const;
 	/**
 		@brief Fonction: getOr
 		Permet de retourner le nombre d'or
@@ -50,7 +50,7 @@ class Niveau{
 			n2.getOr();
 		@endcode	
 	*/	
-		unsigned int getOr();
+		unsigned int getOr()const;
 	/**
 		@brief Fonction: addrGetCarte
 		Permet de retourner le pointeur de carte
@@ -68,7 +68,7 @@ class Niveau{
 			n2.maj(delta);
 		@endcode	
 	*/
-		void maj(float delta);
+		void maj(const float &delta);
 	/**
 		@brief Procédure: ajouterOr
 		Permet de gagner de l'or en tuant des ennemis
@@ -77,7 +77,7 @@ class Niveau{
 			n2.ajouterOr(o);
 		@endcode	
 	*/	
-		void ajouterOr(unsigned int o);
+		void ajouterOr(const unsigned int & o);
 	/**
 		@brief Procédure: retirerOr
 		Permet de perdre de l'or en tuant des ennemis
@@ -86,7 +86,7 @@ class Niveau{
 			n2.ajouterOr(o);
 		@endcode	
 	*/		
-		void retirerOr(unsigned int o);
+		void retirerOr(const unsigned int & o);
 	/**
 		@brief Procédure: affiche
 		Permet d'afficher le niveau
@@ -94,7 +94,7 @@ class Niveau{
 			n2.affiche();
 		@endcode	
 	*/		
-		void affiche();
+		void affiche()const;
 	/**
 		@brief Booléen: perdue
 		Permet de savoir si le niveau est perdue ou non
@@ -102,7 +102,7 @@ class Niveau{
 			n2.perdue();
 		@endcode	
 	*/
-		bool perdue();
+		bool perdue()const;
 	/**
 		@brief Booléen: finNiveau
 		Permet de savoir si le niveau est finie ou non
@@ -110,7 +110,7 @@ class Niveau{
 			n2.finNiveau();
 		@endcode	
 	*/
-		bool finNiveau();
+		bool finNiveau()const;
 
 };
 

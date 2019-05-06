@@ -47,7 +47,7 @@ Jeu::Jeu(){
 Jeu::~Jeu(){
 	delete niv;
 }
-void Jeu::afficheCarteDispo(){
+void Jeu::afficheCarteDispo()const{
 	for(unsigned int i = 0 ; i < tabLienCarte.size() ; i++){
 		std::cout<< tabLienCarte[i] << std::endl;
 	}
@@ -63,7 +63,7 @@ Niveau *Jeu::getNiveau(){
 
 
 
-void Jeu::actionAuto(float delta){
+void Jeu::actionAuto(const float & delta){
 	if(!pause){
 		niv->maj(delta/1000.0);
 		gagner = niv->finNiveau();
@@ -151,7 +151,7 @@ std::vector<Bouton> * Jeu::renvoieBoutonTour(){
 
 }
 
-void Jeu::changerMap(int m){
+void Jeu::changerMap(const int &m){
 	gagner = false;
 	perdue = false;
 	if(niv != NULL) delete niv ; 
@@ -168,11 +168,11 @@ void Jeu::changerMap(int m){
 
 }
 
-bool Jeu::getPause(){
+bool Jeu::getPause()const{
 	return pause;
 }
 
-Bouton Jeu::getBoutonPause(){
+Bouton Jeu::getBoutonPause()const{
 
 	return bpause;
 }
@@ -181,7 +181,7 @@ void Jeu::Pause(){
 	pause = !pause;
 }
 
-std::string Jeu::getImageMap(){
+std::string Jeu::getImageMap()const{
 	std::ifstream f ; 
 	if(niv != NULL){
 		f.open(("./data/map/"+tabLienCarte[mapSelect]).c_str());
@@ -199,14 +199,14 @@ std::string Jeu::getImageMap(){
 
 }
 
-Menu Jeu::getMenuMap(){
+Menu Jeu::getMenuMap()const{
 	return menuMap;
 }
 
-bool Jeu::getGagner(){
+bool Jeu::getGagner()const{
 	return gagner;
 }
 
-bool Jeu::getPerdue(){
+bool Jeu::getPerdue()const{
 	return perdue;
 }

@@ -31,23 +31,23 @@
 		
 	}
 
-	bool Tour::getSpawn(){
+	bool Tour::getSpawn()const{
 		return spawn;
 	}
 	
-	float Tour::getVitAtq(){
+	float Tour::getVitAtq()const{
 		return vitesseAtq;
 	}
 
-	int Tour::getPortee(){
+	int Tour::getPortee()const{
 		return portee;
 	}
 
-	int Tour::getDegat(){
+	int Tour::getDegat()const{
 		return attaque.getDegats();
 	}
 
-	Vect Tour::getPosition(){
+	Vect Tour::getPosition()const{
 		return position;
 	}
 
@@ -61,7 +61,7 @@
 		position.setVect(_position);
 	}
 
-	void Tour::affiche(){
+	void Tour::affiche()const{
 		std::cout << "Votre vitesse d'attaque est de " << vitesseAtq << "\n";
 		std::cout << "Votre portee est de " << portee << "\n";
 		std::cout << "Vos degat sont de " << attaque.getDegats() << "\n";
@@ -72,22 +72,22 @@
 		return (pos-position).module() <= portee;
 	}
 
-	Attaque Tour::getAttaque(){
+	Attaque Tour::getAttaque()const{
 		return attaque;
 	}
 
-	void Tour::setAAttaquer(bool b){
+	void Tour::setAAttaquer(const bool & b){
 		aAttaquer = b;
 	}
-	void Tour::addDegat(int d){
+	void Tour::addDegat(const int & d){
 		attaque.addDegat(d);
 	}
 
-	void Tour::addVitAtq(float f){
+	void Tour::addVitAtq(const float & f){
 		vitesseAtq += f;
 	}
 
-	void Tour::addPortee(int p){
+	void Tour::addPortee(const int & p){
 		portee += p;
 	}
 

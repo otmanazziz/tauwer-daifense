@@ -168,7 +168,7 @@ class Vague{
 				v2.avancerMonstre(tabChemin, delta);
 			@endcode	
 		*/
-		void avancerMonstre(const std::vector<Chemin> &tabChemin , float delta);
+		void avancerMonstre(const std::vector<Chemin> &tabChemin ,const float &delta);
 
 		/**
 			@brief Procédure: spawnerMonstre
@@ -178,7 +178,7 @@ class Vague{
 				v2.spawnerMonstre();
 			@endcode	
 		*/
-		void spawnerMonstre(float delta);
+		void spawnerMonstre(const float & delta);
 
 		/**
 			@brief Procédure: affiche
@@ -187,7 +187,7 @@ class Vague{
 				v2.affiche();
 			@endcode	
 		*/	
-		void affiche();
+		void affiche()const;
 
 		/**
 			@brief Procédure: monstresBase

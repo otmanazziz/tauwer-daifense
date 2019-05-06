@@ -58,7 +58,7 @@ class Vect{
 		@brief Vecteur: Opérateur *
 		Permet de retourner le produit de 2 vecteurs
 		@param vector2: Un autre vecteur
-		@return La somme de 2 vecteurs
+		@return Le produit de 2 vecteurs
 		@code
 			Vect v3 = v1 * v2;
 		@endcode
@@ -141,7 +141,7 @@ class Vect{
 			v.afficheVect();
 		@endcode
 		*/
-		void afficheVect();
+		void afficheVect()const;
 		/**
 		@brief Réel: module
 		Retourne le module d'un vecteur
@@ -168,7 +168,7 @@ class Vect{
 			Vect v3 = v1 * f;
 		@endcode
 		*/
-		Vect operator*(float f)const;
+		Vect operator*(const float & f)const;
 		/**
 		@brief Vecteur: operator /
 		Permet de retourner la division d'un vect et d'un réel
@@ -178,7 +178,7 @@ class Vect{
 			Vect v3 = v1 / f;
 		@endcode
 		*/
-		Vect operator/(float f)const;
+		Vect operator/(const float & f)const;
 		/**
 		@brief Vecteur: operator %
 		Permet de retourner le reste de la division euclidienne d'un vect et d'un entier sur chaque composante

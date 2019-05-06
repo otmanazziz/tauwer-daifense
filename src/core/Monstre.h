@@ -186,7 +186,7 @@ public:
 				m.avancer(v);
 			@endcode	
 	*/
-	void avancer(const Vect & v , float delta );
+	void avancer(const Vect & v , const float & delta );
 	/**
 			@brief Procédure: test
 			Permet de tester la perte de vie d'un monstre
@@ -194,7 +194,7 @@ public:
 				m.test();
 			@endcode	
 	*/
-	void test();
+	void test()const;
 	/**
 			@brief Procédure: affiche
 			Permet d'afficher toutes les informations d'un monstre
@@ -202,7 +202,7 @@ public:
 				m.affiche();
 			@endcode	
 	*/
-	void affiche();
+	void affiche()const;
 	/**
 		@brief Procédure: setEstAttaquer
 		Permet de modifier la cible attaquée
@@ -212,7 +212,7 @@ public:
 		@endcode
 	*/
 
-	void setEstAttaquer(bool b);
+	void setEstAttaquer(const bool &b);
 };
 
 #endif

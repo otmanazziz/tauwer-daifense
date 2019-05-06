@@ -16,7 +16,7 @@ Menu::~Menu(){
 	tabBouton.clear();
 }
 
-std::vector<Bouton> Menu::getTabBouton(){
+std::vector<Bouton> Menu::getTabBouton()const{
 	return tabBouton;
 }
 
@@ -24,13 +24,13 @@ void Menu::setTabBouton(const std::vector<Bouton> &_tabBouton){
 	tabBouton = _tabBouton;
 }
 
-void Menu::setBoutonIndice(const int &indice, Bouton bouton){
+void Menu::setBoutonIndice(const int &indice, const Bouton &bouton){
 	tabBouton[indice].setNom(bouton.getNom());
 	tabBouton[indice].setPos(bouton.getPos());
 	tabBouton[indice].setTaille(bouton.getTaille());
 }
 
-Bouton Menu::getBoutonIndice(const int &indice){
+Bouton Menu::getBoutonIndice(const int &indice)const{
 	Bouton bouton;
 	bouton.setNom(tabBouton[indice].getNom());
 	bouton.setPos(tabBouton[indice].getPos());
@@ -38,11 +38,11 @@ Bouton Menu::getBoutonIndice(const int &indice){
 	return bouton;
 }
 
-void Menu::ajouterBouton(Bouton _bouton){
+void Menu::ajouterBouton(const Bouton &_bouton){
 	tabBouton.push_back(_bouton);
 }
 
-void Menu::afficherTabBouton(){
+void Menu::afficherTabBouton()const{
 	if (tabBouton.size() > 0){
 		Vect _pos;
 		Vect _taille;
@@ -70,8 +70,7 @@ void Menu::supprimerBoutonIndice(const int &indice){
 	tabBouton.erase(tabBouton.begin() + indice);
 }
 
-unsigned int Menu::getTaille(){
+unsigned int Menu::getTaille()const{
  return tabBouton.size();
 }
 
-//JE TERMINERAIS LE WE : OTMAN

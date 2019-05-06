@@ -54,7 +54,7 @@ public:
 		@endcode	
 	*/
 
-	float getZone();
+	float getZone()const;
 	/**
 		@brief Fonction: getDegats
 		Permet de retourner l'entier des dégats
@@ -63,7 +63,7 @@ public:
 			a2.getDegats();
 		@endcode	
 	*/
-	int getDegats();
+	int getDegats()const;
 	/**
 		@brief Procédure: setZone
 		Permet de modifier le réel représentant la zone d'attaque

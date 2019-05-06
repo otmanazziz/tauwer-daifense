@@ -45,7 +45,7 @@ class Jeu{
 				j2.afficheCarteDispo();
 			@endcode	
 		*/
-		void afficheCarteDispo();
+		void afficheCarteDispo()const;
 		/**
 			@brief Fonction: getNiveau
 			Permet de retourner le pointeur de niveau
@@ -63,7 +63,7 @@ class Jeu{
 				i2.actionAuto();
 			@endcode	
 		*/
-		void actionAuto(float delta);
+		void actionAuto(const float &delta);
 		/**
 			@brief Procédure: clique
 			Permet de savoir si le curseur est sur le jeu ou pas
@@ -110,7 +110,7 @@ class Jeu{
 				i2.changerMap(m);
 			@endcode	
 		*/
-		void changerMap(int m);
+		void changerMap(const int & m);
 		/**
 			@brief Booléen: getPause
 			Permet de savoir si le jeu est en pause
@@ -118,7 +118,7 @@ class Jeu{
 				i2.getPause();
 			@endcode	
 		*/
-		bool getPause();
+		bool getPause()const;
 		/**
 			@brief Fonction: getBoutonPause
 			Permet de retourner un bouton
@@ -127,7 +127,7 @@ class Jeu{
 				i2.getBoutonPause();
 			@endcode	
 		*/
-		Bouton getBoutonPause();
+		Bouton getBoutonPause()const;
 		/**
 			@brief Procédure: Pause
 			Permet de mettre en pause
@@ -144,7 +144,7 @@ class Jeu{
 				i2.getImageMap();
 			@endcode
 		*/
-		std::string getImageMap();
+		std::string getImageMap()const;
 		/**
 			@brief Fonction: getMenuMap
 			Permet de retourner le menu
@@ -153,7 +153,7 @@ class Jeu{
 				i2.getMenuMap();
 			@endcode
 		*/
-		Menu getMenuMap();
+		Menu getMenuMap()const;
 		/**
 			@brief Booléen: getGagner
 			Permet de savoir si la partie a été gagnée
@@ -161,7 +161,7 @@ class Jeu{
 				i2.getGagner();
 			@endcode	
 		*/
-		bool getGagner();
+		bool getGagner()const;
 		/**
 			@brief Booléen: getPerdue
 			Permet de savoir si la partie a été perdue
@@ -169,7 +169,7 @@ class Jeu{
 				i2.getPerdue();
 			@endcode	
 		*/
-		bool getPerdue(); 
+		bool getPerdue()const; 
 };
 
 #endif

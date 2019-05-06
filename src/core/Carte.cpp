@@ -92,25 +92,25 @@ bool Carte::reinit(){
 	return true;
 }
 
-Tour Carte::tourIndice(const int & i){
+Tour Carte::tourIndice(const int & i)const{
 	return tabTour[i];	
 }
 
-Vague Carte::vagueIndice(const int & i){
+Vague Carte::vagueIndice(const int & i)const{
 	return tabVague[i];	
 }
 
-Chemin Carte::cheminIndice(const int & i){
+Chemin Carte::cheminIndice(const int & i)const{
 	return tabChemin[i];	
 }
 
-unsigned int Carte::tailleTabTour(){
+unsigned int Carte::tailleTabTour()const{
 	return tabTour.size();
 }
-unsigned int Carte::tailleTabChemin(){
+unsigned int Carte::tailleTabChemin()const{
 	return tabChemin.size();
 }
-unsigned int Carte::tailleTabVague(){
+unsigned int Carte::tailleTabVague()const{
 	return tabVague.size();
 }
 
@@ -126,12 +126,12 @@ Chemin * Carte::addrCheminIndice(const int & i){
 	return &tabChemin[i];	
 }
 
-Base Carte::getBase(){
+Base Carte::getBase()const{
 	//std::cout<<"getbase "; base.affiche();
 	return base;
 }
 
-void Carte::affiche(){
+void Carte::affiche()const{
 	unsigned int i;
 	std::cout<<std::endl<<"Affichage des Tours :"<<std::endl<<std::endl;
 	for (i = 0 ; i < tabTour.size();i++){
@@ -152,7 +152,7 @@ void Carte::affiche(){
 	base.affiche();
 }
 
-void Carte::maj(Niveau & n , float delta){
+void Carte::maj(Niveau & n , const float & delta){
 	Attaque attaque;
 	if(!tabVague.empty()){
 		if(!tabVague[0].getVague().empty()){
@@ -207,38 +207,6 @@ void Carte::maj(Niveau & n , float delta){
 	
 	
 }
-
-
-/*
-	
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-	bool aDejaDetecteEnnemi;
-	for (unsigned int k = 0; k < nbTour; k++){
-
-		for (unsigned int j = 0; j < tabVague[0].tailleVague(); j++){
-			
-			if (tabTour[k].estAPortee(tabVague[0].getVague()[j].getPos()) ){			
-				if(tabVague[0]->addrGetIndiceMonstre(j)->perdreVie(tabTour[k].getAttaque().getDegat())){
-					tabVague[0].ennemiMort(int(j));
-				}
-				break;	
-			}
-
-		}
-		
-	}
-	
-*/
 
 
 

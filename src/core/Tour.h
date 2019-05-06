@@ -57,7 +57,7 @@ public:
 			t2.getSpawn();
 		@endcode
 	*/
-	bool getSpawn();
+	bool getSpawn()const;
 	/**
 		@brief Fonction: getVitAtq
 		Permet de retourner le réel de la vitesse d'attaque
@@ -66,7 +66,7 @@ public:
 			t2.getVitAtq();
 		@endcode
 	*/
-	float getVitAtq();
+	float getVitAtq()const;
 	/**
 		@brief Fonction: getPortee
 		Permet de retourner l'entier de la portée
@@ -75,7 +75,7 @@ public:
 			t2.getPortee();
 		@endcode
 	*/
-	int getPortee();
+	int getPortee()const;
 	/**
 		@brief Vecteur: getPosition
 		Permet de retourner le vecteur de la position
@@ -84,7 +84,7 @@ public:
 			t2.getPosition();
 		@endcode
 	*/
-	Vect getPosition();
+	Vect getPosition()const;
 	/**
 		@brief Procédure: setSpawn
 		Permet de modifier le booléen du spawn de la tour
@@ -128,7 +128,7 @@ public:
 			t2.affiche();
 		@endcode
 	*/
-	void affiche();
+	void affiche()const;
 	/**
 		@brief Booléen: estAPortee
 		Vérifie si la tour a détecté un ennemi (ici des coordonnées d'un vecteur) dans sa portée
@@ -147,7 +147,7 @@ public:
 			t2.getDegat();
 		@endcode
 	*/
-	int getDegat();
+	int getDegat()const;
 	/**
 		@brief Attaque: getAttaque
 		Permet de retourner l'attaque de la tour
@@ -156,7 +156,7 @@ public:
 			t2.getAttaque();
 		@endcode
 	*/
-	Attaque getAttaque();
+	Attaque getAttaque()const;
 	/**
 		@brief Procédure: setAAttaquer
 		Permet de modifier l'attaque de la tour
@@ -165,7 +165,7 @@ public:
 			t2.setAAttaquer(b);
 		@endcode
 	*/
-	void setAAttaquer(bool b);
+	void setAAttaquer(const bool & b);
 	/**
 		@brief Procédure: addDegat
 		Permet d'ajouter des dégats à la tour
@@ -174,7 +174,7 @@ public:
 			t2.addDegat(d);
 		@endcode
 	*/
-	void addDegat(int d);
+	void addDegat(const int & d);
 	/**
 		@brief Procédure: addVitAtq
 		Permet d'ajouter de la vitesse d'attaque à la tour
@@ -183,7 +183,7 @@ public:
 			t2.addVitAtq(f);
 		@endcode
 	*/
-	void addVitAtq(float f);
+	void addVitAtq(const float & f);
 	/**
 		@brief Procédure: addPortee
 		Permet d'ajouter de la portée à la tour
@@ -192,7 +192,7 @@ public:
 			t2.addPortee(p);
 		@endcode
 	*/
-	void addPortee(int p);
+	void addPortee(const int & p);
 	/**
 		@brief Booléen: peutTirer
 		Permet de savoir si la tour peut tirer ou non
@@ -219,6 +219,14 @@ public:
 		@endcode
 	*/
 	void addZone(const float & f);
+	/**
+		@brief Procédure: cooldown
+		permet de baisser le compteur avant la prochaine attaque
+		@param Réel delta
+		@code
+			t2.cooldown(delta);
+		@endcode
+	*/
 	void cooldown(const float & f);
 };
 

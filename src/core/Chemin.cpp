@@ -18,10 +18,10 @@ Vect Chemin::prochaineEtape(const int & e)const{
 	return tabEtape[e];
 }
 
-void  Chemin::affiche(){
+void  Chemin::affiche()const{
 	for (unsigned int i = 0 ; i < tabEtape.size();i++) tabEtape[int(i)].afficheVect();
 }
 
-unsigned int Chemin::tailleChemin(){
+unsigned int Chemin::tailleChemin()const{
 		return tabEtape.size();
 }

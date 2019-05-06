@@ -76,7 +76,7 @@ int Vague::ennemiMort(const int & i){
 }
 
 
-void Vague::avancerMonstre(const std::vector<Chemin> &tabChemin, float delta){
+void Vague::avancerMonstre(const std::vector<Chemin> &tabChemin, const float & delta){
 	for( unsigned int i = 0 ; i < monstres.size(); i++){
 		if( monstres[i].getSpawn()){
 			monstres[i].avancer(tabChemin[monstres[i].getNumChem()].prochaineEtape(monstres[i].getEtape()), delta);
@@ -94,7 +94,7 @@ void Vague::monstresBase(Base & b){
 	}
 }
 
-void Vague::spawnerMonstre(float delta){
+void Vague::spawnerMonstre(const float & delta){
 	cooldownSpawn -= delta;
 	for( unsigned int i = 0 ; i < monstres.size(); i++){
 		if( !monstres[i].getSpawn() && cooldownSpawn <= 0 ){
@@ -105,7 +105,7 @@ void Vague::spawnerMonstre(float delta){
 	}
 }
 
-void Vague::affiche(){
+void Vague::affiche()const{
 	std::cout<<"Temps entre Ennemie : "<<tempsEnnemi<< " Temps de la Vague : "<<tempsVague<<std::endl;
 	for (unsigned int i = 0 ; i < monstres.size();i++) monstres[i].affiche();
 }

@@ -26,7 +26,7 @@ Bouton::~Bouton(){
 	taille = v;
 }
 
-std::string Bouton::getNom(){
+std::string Bouton::getNom()const{
 	return nom;
 }
 
@@ -50,7 +50,7 @@ void Bouton::setTaille(const Vect &_taille){
 	taille = _taille;
 }
 
-bool Bouton::clique(const Vect &_pos){
+bool Bouton::clique(const Vect &_pos)const{
 	if (_pos.getX() >= pos.getX() && 
 		_pos.getX() <= (pos.getX() + taille.getX()) && 
 		_pos.getY() >= pos.getY() && 
