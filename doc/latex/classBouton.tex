@@ -23,9 +23,9 @@ Class \hyperlink{classBouton}{Bouton} Classe de boutons, permettant de gérer le
 \begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire le bouton. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classBouton_a84818c161e6ea4ee6d58ccc53d57d802}{get\+Nom} ()
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Nom Permet de retourner le nom du bouton. \end{DoxyCompactList}\item 
-\hyperlink{classVect}{Vect} \hyperlink{classBouton_a98c3ba829a653f51ef8079395bbe061c}{get\+Pos} ()
+\hyperlink{classVect}{Vect} \hyperlink{classBouton_aed3d0897774100bd880276bd2e73db27}{get\+Pos} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Pos Permet de retourner la position du bouton. \end{DoxyCompactList}\item 
-\hyperlink{classVect}{Vect} \hyperlink{classBouton_af8d5683f32e115bd8d709bbfd6965b54}{get\+Taille} ()
+\hyperlink{classVect}{Vect} \hyperlink{classBouton_ab29ffdc7229d4d702f8dc6498ae08f20}{get\+Taille} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Taille Permet de retourner la taille du bouton. \end{DoxyCompactList}\item 
 void \hyperlink{classBouton_a4bdd74233fa0a3f6fe67d463b75d3f4a}{set\+Nom} (const std\+::string \&\+\_\+nom)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Nom Permet de modifier le nom du bouton. \end{DoxyCompactList}\item 
@@ -132,11 +132,11 @@ b2.getNom();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classBouton_a98c3ba829a653f51ef8079395bbe061c}\label{classBouton_a98c3ba829a653f51ef8079395bbe061c}} 
+\mbox{\Hypertarget{classBouton_aed3d0897774100bd880276bd2e73db27}\label{classBouton_aed3d0897774100bd880276bd2e73db27}} 
 \index{Bouton@{Bouton}!get\+Pos@{get\+Pos}}
 \index{get\+Pos@{get\+Pos}!Bouton@{Bouton}}
 \subsubsection{\texorpdfstring{get\+Pos()}{getPos()}}
-{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Bouton\+::get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Bouton\+::get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -149,11 +149,11 @@ b2.getPos();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classBouton_af8d5683f32e115bd8d709bbfd6965b54}\label{classBouton_af8d5683f32e115bd8d709bbfd6965b54}} 
+\mbox{\Hypertarget{classBouton_ab29ffdc7229d4d702f8dc6498ae08f20}\label{classBouton_ab29ffdc7229d4d702f8dc6498ae08f20}} 
 \index{Bouton@{Bouton}!get\+Taille@{get\+Taille}}
 \index{get\+Taille@{get\+Taille}!Bouton@{Bouton}}
 \subsubsection{\texorpdfstring{get\+Taille()}{getTaille()}}
-{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Bouton\+::get\+Taille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Bouton\+::get\+Taille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -178,7 +178,7 @@ Procédure\+: set\+Nom Permet de modifier le nom du bouton.
 
 
 \begin{DoxyParams}{Parameters}
-{\em Chaîne} & de caractère nom 
+{\em Chaîne} & de caractère Nom 
 \begin{DoxyCode}
 b2.setNom(Nom);
 \end{DoxyCode}
@@ -227,5 +227,5 @@ b2.setZone(Taille);
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/samy/\+Projet/lifap4/src/Bouton.\+h\item 
-/home/samy/\+Projet/lifap4/src/Bouton.\+cpp\end{DoxyCompactItemize}
+src/core/Bouton.\+h\item 
+src/core/Bouton.\+cpp\end{DoxyCompactItemize}

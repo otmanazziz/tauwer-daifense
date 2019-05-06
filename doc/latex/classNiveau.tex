@@ -29,7 +29,11 @@ void \hyperlink{classNiveau_aca63b4ff95491069ebf5a8931ffc6d03}{ajouter\+Or} (uns
 void \hyperlink{classNiveau_a3192b7514716cfddac9ff465f9ad1f2f}{retirer\+Or} (unsigned int o)
 \begin{DoxyCompactList}\small\item\em Procédure\+: retirer\+Or Permet de perdre de l\textquotesingle{}or en tuant des ennemis. \end{DoxyCompactList}\item 
 void \hyperlink{classNiveau_a945a71fd635f9ab1e15dbae04afa5e5d}{affiche} ()
-\begin{DoxyCompactList}\small\item\em Procédure\+: affiche Permet d\textquotesingle{}afficher le niveau. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Procédure\+: affiche Permet d\textquotesingle{}afficher le niveau. \end{DoxyCompactList}\item 
+bool \hyperlink{classNiveau_a749c4fbb42a1f47bff1b0b845a214d1a}{perdue} ()
+\begin{DoxyCompactList}\small\item\em Booléen\+: perdue Permet de savoir si le niveau est perdue ou non. \end{DoxyCompactList}\item 
+bool \hyperlink{classNiveau_ab43feae8b186ed6167b5cadaf2d01cac}{fin\+Niveau} ()
+\begin{DoxyCompactList}\small\item\em Booléen\+: fin\+Niveau Permet de savoir si le niveau est finie ou non. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -122,7 +126,21 @@ n2.ajouterOr(o);
  \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classNiveau_a503e0b7db795e1f9bf3ea76cc4fd9e99}\label{classNiveau_a503e0b7db795e1f9bf3ea76cc4fd9e99}} 
+\mbox{\Hypertarget{classNiveau_ab43feae8b186ed6167b5cadaf2d01cac}\label{classNiveau_ab43feae8b186ed6167b5cadaf2d01cac}} 
+\index{Niveau@{Niveau}!fin\+Niveau@{fin\+Niveau}}
+\index{fin\+Niveau@{fin\+Niveau}!Niveau@{Niveau}}
+\subsubsection{\texorpdfstring{fin\+Niveau()}{finNiveau()}}
+{\footnotesize\ttfamily bool Niveau\+::fin\+Niveau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Booléen\+: fin\+Niveau Permet de savoir si le niveau est finie ou non. 
+
+
+\begin{DoxyCode}
+n2.finNiveau();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classNiveau_a503e0b7db795e1f9bf3ea76cc4fd9e99}\label{classNiveau_a503e0b7db795e1f9bf3ea76cc4fd9e99}} 
 \index{Niveau@{Niveau}!get\+Carte@{get\+Carte}}
 \index{get\+Carte@{get\+Carte}!Niveau@{Niveau}}
 \subsubsection{\texorpdfstring{get\+Carte()}{getCarte()}}
@@ -175,7 +193,21 @@ n2.maj(delta);
  \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classNiveau_a3192b7514716cfddac9ff465f9ad1f2f}\label{classNiveau_a3192b7514716cfddac9ff465f9ad1f2f}} 
+\mbox{\Hypertarget{classNiveau_a749c4fbb42a1f47bff1b0b845a214d1a}\label{classNiveau_a749c4fbb42a1f47bff1b0b845a214d1a}} 
+\index{Niveau@{Niveau}!perdue@{perdue}}
+\index{perdue@{perdue}!Niveau@{Niveau}}
+\subsubsection{\texorpdfstring{perdue()}{perdue()}}
+{\footnotesize\ttfamily bool Niveau\+::perdue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Booléen\+: perdue Permet de savoir si le niveau est perdue ou non. 
+
+
+\begin{DoxyCode}
+n2.perdue();
+\end{DoxyCode}
+ \mbox{\Hypertarget{classNiveau_a3192b7514716cfddac9ff465f9ad1f2f}\label{classNiveau_a3192b7514716cfddac9ff465f9ad1f2f}} 
 \index{Niveau@{Niveau}!retirer\+Or@{retirer\+Or}}
 \index{retirer\+Or@{retirer\+Or}!Niveau@{Niveau}}
 \subsubsection{\texorpdfstring{retirer\+Or()}{retirerOr()}}
@@ -198,5 +230,5 @@ n2.ajouterOr(o);
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/samy/\+Projet/lifap4/src/Niveau.\+h\item 
-/home/samy/\+Projet/lifap4/src/Niveau.\+cpp\end{DoxyCompactItemize}
+src/core/Niveau.\+h\item 
+src/core/Niveau.\+cpp\end{DoxyCompactItemize}

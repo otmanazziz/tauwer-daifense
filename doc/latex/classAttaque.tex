@@ -28,7 +28,11 @@ int \hyperlink{classAttaque_a56856e2880988e4cf9b051d32ca427a3}{get\+Degats} ()
 void \hyperlink{classAttaque_ae6dc5afd850f4518e937b8a2c08ac764}{set\+Zone} (const float \&\+\_\+zone)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Zone Permet de modifier le réel représentant la zone d\textquotesingle{}attaque. \end{DoxyCompactList}\item 
 void \hyperlink{classAttaque_ad1af4e5ae848c40c7879fa4f9a56c674}{set\+Degats} (const int \&\+\_\+degats)
-\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Degats Permet de modifier l\textquotesingle{}entier des dégats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Procédure\+: set\+Degats Permet de modifier l\textquotesingle{}entier des dégats. \end{DoxyCompactList}\item 
+void \hyperlink{classAttaque_a47b0b804d6533953ed18fc8239f2cc1d}{add\+Degat} (const int \&d)
+\begin{DoxyCompactList}\small\item\em Procédure\+: add\+Degats Permet de modifier l\textquotesingle{}entier des dégats. \end{DoxyCompactList}\item 
+void \hyperlink{classAttaque_a1d4ca211e47b04d97bed004af117b550}{add\+Zone} (const float \&f)
+\begin{DoxyCompactList}\small\item\em Procédure\+: add\+Zone Permet de modifier l\textquotesingle{}entier de la zone. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -90,6 +94,44 @@ Constructeur\+:\hyperlink{classAttaque}{Attaque} Permet de créer le constructeu
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAttaque_a47b0b804d6533953ed18fc8239f2cc1d}\label{classAttaque_a47b0b804d6533953ed18fc8239f2cc1d}} 
+\index{Attaque@{Attaque}!add\+Degat@{add\+Degat}}
+\index{add\+Degat@{add\+Degat}!Attaque@{Attaque}}
+\subsubsection{\texorpdfstring{add\+Degat()}{addDegat()}}
+{\footnotesize\ttfamily void Attaque\+::add\+Degat (\begin{DoxyParamCaption}\item[{const int \&}]{d }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: add\+Degats Permet de modifier l\textquotesingle{}entier des dégats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & 
+\begin{DoxyCode}
+a2.addDegats(7);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAttaque_a1d4ca211e47b04d97bed004af117b550}\label{classAttaque_a1d4ca211e47b04d97bed004af117b550}} 
+\index{Attaque@{Attaque}!add\+Zone@{add\+Zone}}
+\index{add\+Zone@{add\+Zone}!Attaque@{Attaque}}
+\subsubsection{\texorpdfstring{add\+Zone()}{addZone()}}
+{\footnotesize\ttfamily void Attaque\+::add\+Zone (\begin{DoxyParamCaption}\item[{const float \&}]{f }\end{DoxyParamCaption})}
+
+
+
+Procédure\+: add\+Zone Permet de modifier l\textquotesingle{}entier de la zone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Réel} & 
+\begin{DoxyCode}
+a2.addZone(2);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classAttaque_a56856e2880988e4cf9b051d32ca427a3}\label{classAttaque_a56856e2880988e4cf9b051d32ca427a3}} 
 \index{Attaque@{Attaque}!get\+Degats@{get\+Degats}}
 \index{get\+Degats@{get\+Degats}!Attaque@{Attaque}}
@@ -166,5 +208,5 @@ a2.setZone(2);
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/samy/\+Projet/lifap4/src/Attaque.\+h\item 
-/home/samy/\+Projet/lifap4/src/Attaque.\+cpp\end{DoxyCompactItemize}
+src/core/Attaque.\+h\item 
+src/core/Attaque.\+cpp\end{DoxyCompactItemize}

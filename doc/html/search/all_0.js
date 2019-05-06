@@ -1,8 +1,17 @@
 var searchData=
 [
   ['actionauto',['actionAuto',['../classJeu.html#a8d2a0773d8edcb42d5e055785ad4b71a',1,'Jeu']]],
+  ['adddegat',['addDegat',['../classAttaque.html#a47b0b804d6533953ed18fc8239f2cc1d',1,'Attaque::addDegat()'],['../classTour.html#a61f75da2910e077d28121b04f7e6e747',1,'Tour::addDegat()']]],
+  ['addportee',['addPortee',['../classTour.html#af6ead0d33253a3400b65efb1a576d215',1,'Tour']]],
+  ['addrcheminindice',['addrCheminIndice',['../classCarte.html#a16a507cb5eb10f57f0d34052db75689c',1,'Carte']]],
   ['addrgetcarte',['addrGetCarte',['../classNiveau.html#a47ea8b8f36e27be8ad0d3f534a956260',1,'Niveau']]],
-  ['affiche',['affiche',['../classBase.html#a90f460bea595fc507cab1b6a2131350c',1,'Base::affiche()'],['../classMonstre.html#ac6700482d005ec983746983f76ad0088',1,'Monstre::affiche()'],['../classNiveau.html#a945a71fd635f9ab1e15dbae04afa5e5d',1,'Niveau::affiche()'],['../classTour.html#a418908de2fcbb83e8e9459a999f98aa6',1,'Tour::affiche()'],['../classVague.html#adec201ad91a86f65bf6aaf0ddb73bd20',1,'Vague::affiche()']]],
+  ['addrgetindicemonstre',['addrGetIndiceMonstre',['../classVague.html#ab177d208c78c64cb636e3746431a4d16',1,'Vague']]],
+  ['addrtourindice',['addrTourIndice',['../classCarte.html#a573a9aa2b9917152357b710fe0be6ecc',1,'Carte']]],
+  ['addrvagueindice',['addrVagueIndice',['../classCarte.html#a21708cf932e4d0e74ed0222f7950582a',1,'Carte']]],
+  ['addvitatq',['addVitAtq',['../classTour.html#a954d1151a9fbc182adde53b28fc7cc26',1,'Tour']]],
+  ['addzone',['addZone',['../classAttaque.html#a1d4ca211e47b04d97bed004af117b550',1,'Attaque::addZone()'],['../classTour.html#a6c3050640d16281913269f73af884ad6',1,'Tour::addZone()']]],
+  ['affbouton',['affBouton',['../classsdlJeu.html#a5ada7438cc0d3226ad2aa535a523a895',1,'sdlJeu::affBouton(const Bouton &amp;b)'],['../classsdlJeu.html#a71bd3bdde9cf7a273b2ec05b08fdc361',1,'sdlJeu::affBouton(const Bouton &amp;b, Image &amp;im)']]],
+  ['affiche',['affiche',['../classBase.html#a90f460bea595fc507cab1b6a2131350c',1,'Base::affiche()'],['../classCarte.html#aef8696f9e6017496583bf32fb7cceb80',1,'Carte::affiche()'],['../classChemin.html#aca468327c0fc8ce57727bc13edfa741e',1,'Chemin::affiche()'],['../classMonstre.html#ac6700482d005ec983746983f76ad0088',1,'Monstre::affiche()'],['../classNiveau.html#a945a71fd635f9ab1e15dbae04afa5e5d',1,'Niveau::affiche()'],['../classTour.html#a418908de2fcbb83e8e9459a999f98aa6',1,'Tour::affiche()'],['../classVague.html#adec201ad91a86f65bf6aaf0ddb73bd20',1,'Vague::affiche()']]],
   ['affichecartedispo',['afficheCarteDispo',['../classJeu.html#a4f8c73b225819fb5a6ba342adc2f1fa4',1,'Jeu']]],
   ['afficheeffet',['afficheEffet',['../classEffet.html#a038370be360fcb5e11f5d654e3506d42',1,'Effet']]],
   ['affichertabbouton',['afficherTabBouton',['../classMenu.html#af01f5f26519658b6e0fd92fdb8eda6fe',1,'Menu']]],

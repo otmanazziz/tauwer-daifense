@@ -44,7 +44,13 @@ void \hyperlink{classVect_afba6ce27d6700dddeb9272cdf39c66e3}{affiche\+Vect} ()
 float \hyperlink{classVect_aa61c71b79a4d2f2cda092648a7268c4f}{module} () const
 \begin{DoxyCompactList}\small\item\em Réel\+: module Retourne le module d\textquotesingle{}un vecteur. \end{DoxyCompactList}\item 
 void \hyperlink{classVect_a734074001bba32f3d76e5cee612864f1}{test\+Regression} ()
-\begin{DoxyCompactList}\small\item\em Procédure\+: test\+Regression Fait des tests de Régression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Procédure\+: test\+Regression Fait des tests de Régression. \end{DoxyCompactList}\item 
+\hyperlink{classVect}{Vect} \hyperlink{classVect_a81581552ec69c7a0006837148141232e}{operator$\ast$} (float f) const
+\begin{DoxyCompactList}\small\item\em Vecteur\+: operator $\ast$ Permet de retourner le produit d\textquotesingle{}un vect et d\textquotesingle{}un réel. \end{DoxyCompactList}\item 
+\hyperlink{classVect}{Vect} \hyperlink{classVect_a5fcad4106fa5eb9826f7259f3509599e}{operator/} (float f) const
+\begin{DoxyCompactList}\small\item\em Vecteur\+: operator / Permet de retourner la division d\textquotesingle{}un vect et d\textquotesingle{}un réel. \end{DoxyCompactList}\item 
+\hyperlink{classVect}{Vect} \hyperlink{classVect_a7c95db0096c212593a83992d8c9cc42a}{operator\%} (const int \&i) const
+\begin{DoxyCompactList}\small\item\em Vecteur\+: operator \% Permet de retourner le reste de la division euclidienne d\textquotesingle{}un vect et d\textquotesingle{}un réel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -181,10 +187,32 @@ v.\hyperlink{classVect_aa61c71b79a4d2f2cda092648a7268c4f}{module}();
 \end{DoxyCode}
  
 \end{DoxyReturn}
+\mbox{\Hypertarget{classVect_a7c95db0096c212593a83992d8c9cc42a}\label{classVect_a7c95db0096c212593a83992d8c9cc42a}} 
+\index{Vect@{Vect}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{operator\%()}{operator\%()}}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator\% (\begin{DoxyParamCaption}\item[{const int \&}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Vecteur\+: operator \% Permet de retourner le reste de la division euclidienne d\textquotesingle{}un vect et d\textquotesingle{}un réel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Entier} & i \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le reste de la division euclidienne d\textquotesingle{}un vect et d\textquotesingle{}un réel 
+\begin{DoxyCode}
+\hyperlink{classVect}{Vect} v3 = v1 % f;
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classVect_ab3dce1a30e0626a88cd726aa0d4f78e5}\label{classVect_ab3dce1a30e0626a88cd726aa0d4f78e5}} 
 \index{Vect@{Vect}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!Vect@{Vect}}
-\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{vector2 }\end{DoxyParamCaption}) const}
 
 
@@ -200,6 +228,28 @@ Vecteur\+: Opérateur $\ast$ Permet de retourner le produit de 2 vecteurs.
 La somme de 2 vecteurs 
 \begin{DoxyCode}
 \hyperlink{classVect}{Vect} v3 = v1 * v2;
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVect_a81581552ec69c7a0006837148141232e}\label{classVect_a81581552ec69c7a0006837148141232e}} 
+\index{Vect@{Vect}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption}) const}
+
+
+
+Vecteur\+: operator $\ast$ Permet de retourner le produit d\textquotesingle{}un vect et d\textquotesingle{}un réel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & f \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le produit d\textquotesingle{}un vecteur et d\textquotesingle{}un réel 
+\begin{DoxyCode}
+\hyperlink{classVect}{Vect} v3 = v1 * f;
 \end{DoxyCode}
  
 \end{DoxyReturn}
@@ -241,7 +291,7 @@ Vecteur\+: Opérateur -\/ Permet de retourner la différence de 2 vecteurs.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-La somme de 2 vecteurs 
+La soustraction de 2 vecteurs 
 \begin{DoxyCode}
 \hyperlink{classVect}{Vect} v3 = v1 - v2;
 \end{DoxyCode}
@@ -250,7 +300,7 @@ La somme de 2 vecteurs
 \mbox{\Hypertarget{classVect_a08e7e684ad85024233a59aff86eb5c83}\label{classVect_a08e7e684ad85024233a59aff86eb5c83}} 
 \index{Vect@{Vect}!operator/@{operator/}}
 \index{operator/@{operator/}!Vect@{Vect}}
-\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{vector2 }\end{DoxyParamCaption}) const}
 
 
@@ -263,9 +313,31 @@ Vecteur\+: Opérateur / Permet de retourner le quotient de 2 vecteurs.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-La somme de 2 vecteurs 
+La division de 2 vecteurs 
 \begin{DoxyCode}
 \hyperlink{classVect}{Vect} v3 = v1 / v2;
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVect_a5fcad4106fa5eb9826f7259f3509599e}\label{classVect_a5fcad4106fa5eb9826f7259f3509599e}} 
+\index{Vect@{Vect}!operator/@{operator/}}
+\index{operator/@{operator/}!Vect@{Vect}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator/ (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption}) const}
+
+
+
+Vecteur\+: operator / Permet de retourner la division d\textquotesingle{}un vect et d\textquotesingle{}un réel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & f \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le division d\textquotesingle{}un vecteur et d\textquotesingle{}un réel 
+\begin{DoxyCode}
+\hyperlink{classVect}{Vect} v3 = v1 / f;
 \end{DoxyCode}
  
 \end{DoxyReturn}
@@ -353,5 +425,5 @@ v.\hyperlink{classVect_a734074001bba32f3d76e5cee612864f1}{testRegression}();
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/samy/\+Projet/lifap4/src/Vect.\+h\item 
-/home/samy/\+Projet/lifap4/src/Vect.\+cpp\end{DoxyCompactItemize}
+src/core/Vect.\+h\item 
+src/core/Vect.\+cpp\end{DoxyCompactItemize}

@@ -34,7 +34,9 @@ void \hyperlink{classMenu_a429b2c8fcaed081553ce284ffa0637ab}{ajouter\+Bouton} (\
 void \hyperlink{classMenu_a1ed5172963be698f6fbabcf5a87ff664}{supprimer\+Bouton\+Indice} (const int \&indice)
 \begin{DoxyCompactList}\small\item\em Procédure\+: supprimer\+Bouton\+Indice Permet de supprimer l\textquotesingle{}indice d\textquotesingle{}un bouton dans le menu. \end{DoxyCompactList}\item 
 void \hyperlink{classMenu_af01f5f26519658b6e0fd92fdb8eda6fe}{afficher\+Tab\+Bouton} ()
-\begin{DoxyCompactList}\small\item\em Procédure\+: ajouter\+Bouton Permet d\textquotesingle{}afficher\textquotesingle{} un bouton dans le menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Procédure\+: affihcer\+Tab\+Bouton Permet d\textquotesingle{}afficher\textquotesingle{} un bouton dans le menu. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classMenu_a0a114609fcaf58b130a44a14e341117e}{get\+Taille} ()
+\begin{DoxyCompactList}\small\item\em Fonction\+: get\+Taille Permet de retourner la taille du menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -104,7 +106,7 @@ Constructeur\+:\hyperlink{classMenu}{Menu} Permet de créer le constructeur du m
 
 
 
-Procédure\+: ajouter\+Bouton Permet d\textquotesingle{}afficher\textquotesingle{} un bouton dans le menu. 
+Procédure\+: affihcer\+Tab\+Bouton Permet d\textquotesingle{}afficher\textquotesingle{} un bouton dans le menu. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -161,6 +163,23 @@ Fonction\+: get\+Tab\+Bouton Permet de retourner le tableau de bouton.
 Tableau de \hyperlink{classBouton}{Bouton} tab\+Bouton 
 \begin{DoxyCode}
 m2.getTabBouton();
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMenu_a0a114609fcaf58b130a44a14e341117e}\label{classMenu_a0a114609fcaf58b130a44a14e341117e}} 
+\index{Menu@{Menu}!get\+Taille@{get\+Taille}}
+\index{get\+Taille@{get\+Taille}!Menu@{Menu}}
+\subsubsection{\texorpdfstring{get\+Taille()}{getTaille()}}
+{\footnotesize\ttfamily unsigned int Menu\+::get\+Taille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction\+: get\+Taille Permet de retourner la taille du menu. 
+
+\begin{DoxyReturn}{Returns}
+Entier positif 
+\begin{DoxyCode}
+m2.getTaille();
 \end{DoxyCode}
  
 \end{DoxyReturn}
@@ -225,5 +244,5 @@ m2.supprimerBoutonIndice(indice);
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/samy/\+Projet/lifap4/src/Menu.\+h\item 
-/home/samy/\+Projet/lifap4/src/Menu.\+cpp\end{DoxyCompactItemize}
+src/core/Menu.\+h\item 
+src/core/Menu.\+cpp\end{DoxyCompactItemize}
