@@ -181,9 +181,9 @@ class Vect{
 		Vect operator/(float f)const;
 		/**
 		@brief Vecteur: operator %
-		Permet de retourner le reste de la division euclidienne d'un vect et d'un réel
+		Permet de retourner le reste de la division euclidienne d'un vect et d'un entier sur chaque composante
 		@param Entier i
-		@return Le reste de la division euclidienne d'un vect et d'un réel
+		@return Le reste de la division euclidienne d'un vect et d'un entier
 		@code
 			Vect v3 = v1 % f;
 		@endcode
