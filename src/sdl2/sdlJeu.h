@@ -130,8 +130,32 @@ public :
 
     */
     ~sdlJeu ();
+    /**
+        @brief Procédure: affBouton
+        Permet d'afficher un bouton sans image avec un texte
+        @param Bouton b
+        @code
+            i2.affBouton(b)
+        @endcode    
+    */
    void affBouton( const Bouton &b);
+     /**
+        @brief Procédure: affBouton
+        Permet d'afficher un bouton avec une image
+        @param Bouton b, Image im
+        @code
+            i2.affBouton(b,im)
+        @endcode    
+    */
    void affBouton(const Bouton &b, Image &im);
+    /**
+        @brief Procédure: affBouton
+        Permet d'afficher la portée de la tour sous forme de cercle
+        @param Vecteur vect, Entier radius, Entier width
+        @code
+            i2.sdlCircel(vec,radius,width)
+        @endcode    
+    */
    void sdlCircle(const Vect & vec,const int & radius ,const  int & width);
     /**
         @brief Procédure: sdlBoucle
