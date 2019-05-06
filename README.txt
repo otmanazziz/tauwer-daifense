@@ -19,6 +19,20 @@ Si vous parvenez à détruire toutes les vagues d'une carte, eh bien vous avez g
 Les tours sont déja placées, donc le jeu aura sa difficulté basé sur le choix des tours à construire ou améliorer selon les vagues d'ennemis.
 Les informations sur les vagues d'ennemis, les tours déja placées, la carte à choisir, les coordonnées de la base sont récupérées dans des fichiers *.map.
 
+===== Lancement du jeu =====
+Lorsque vous lancez le jeu, vous avez le choix entre plusieurs cartes (5 au total).
+Vous devez alors cliquer sur l'une d'entre elles pour pouvoir commencer.
+Le jeu ne se lance toujours pas? C'est normal, vous devez cliquer sur le bouton "Play" en haut à droite pour lancer le jeu.
+Pendant que les ennemis avancent, vous pouvez construire des tours ou en améliorer.
+Au début du jeu, toutes les tours ne sont pas construites, vous allez donc devoir les construire.
+Le coût d'une construction de tour vaut 20 pièces.
+A partir de la, cette tour va pouvoir attaquer et vous pourrez améliorer une de ses statiqtiques (comme la portée, la vitesse d'attaque, ses dégâts et sa zone d'attaque) tant que le jeu continue.
+Des boutons indiquant ces statistiques vont apparaître en haut à gauche avec le prix de cette amélioration et la valeur de ses statistiques ("non amélioré" -> "amélioré").
+Chaque ennemi qui atteint la base retire 1 PV à la base.
+La plupart du temps, les ennemis les plus lents sont les plus endurants (il faudra donc des tour assez forts pour les vaincre).
+Les ennemis les plus rapides sont les plus faibles. Pensez donc à bien améliorer les tours à chaque vague d'ennemis et pour chaque chemin.
+Bon courage.
+
 ===== Fonctionnalités =====
 Récupération des fichiers *.map (qui contient les informations sur la carte à utiliser, les tours, les vagues d'ennemis, les chemins et la base).
 Génération de la carte sélectionnée ainsi que les autres informations contenus dans le bon fichier *.map.
