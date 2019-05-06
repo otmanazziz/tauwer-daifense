@@ -47,18 +47,39 @@ class Vague{
 			Détruit la classe Vague
 		*/
 		~Vague();
+
 		/**
 			@brief Tableau de Monstre: getVague
-			Permet de retourner un tableau de vagues d'ennemis
-			@return Tableau de Vague
+			Permet de retourner un tableau d'ennemis
+			@return Tableau de monstres
 			@code
 				v2.getVague();
 			@endcode
 		*/
-
 		std::vector<Monstre> getVague()const;
+
+		/**
+			@brief Monstre: getIndiceMonstre
+			Permet de retourner les informations du monstre à l'indice n
+			@param Entier: n
+			@return Classe monstre
+			@code
+				v2.getIndiceMonstre(4);
+			@endcode	
+		*/
 		Monstre getIndiceMonstre(const int & n)const;
+
+		/**
+			@brief Pointeur sur monstre: addrGetIndiceMonstre
+			Permet de retourner un pointeur sur le monstre à l'indice n
+			@param Entier: n
+			@return Classe monstre (pointeur)
+			@code
+				v2.addrGetIndiceMonstre(4);
+			@endcode	
+		*/
 		Monstre * addrGetIndiceMonstre(const int & n);
+
 		/**
 			@brief Réel: getTempsEnnemi
 			Permet de retourner la valeur du temps
@@ -68,6 +89,7 @@ class Vague{
 			@endcode
 		*/
 		float getTempsEnnemi()const;
+
 		/**
 			@brief Réel: getTempsVague
 			Permet de retourner la valeur du temps
@@ -77,16 +99,17 @@ class Vague{
 			@endcode
 		*/
 		float getTempsVague()const ;
+
 		/**
-			@brief Entier: getnbMonstreRestant
-			Permet de retourner le nombre de monstres restant
-			@return Entier
+			@brief Procédure: setVague
+			Permet de définir la vague actuelle
+			@param Tableau de monstres
 			@code
 				v2.getNbMonstreRestant();
 			@endcode
 		*/
-
 		void setVague(const std::vector<Monstre> &_monstres);
+
 		/**
 			@brief Procédure: setTempsEnnemi			
 			Permet de définir le temps entre chaque ennemi dans la carte dans la classe sélectionnée
@@ -96,6 +119,7 @@ class Vague{
 			@endcode
 		*/
 		void setTempsEnnemi(const float &_tempsEnnemi);
+
 		/**
 			@brief Procédure: setTempsVague			
 			Permet de définir le temps avant la prochaine vague dans la classe sélectionnée
@@ -105,24 +129,27 @@ class Vague{
 			@endcode
 		*/
 		void setTempsVague(const float &_tempsVague);
+
 		/**
-			@brief Procédure: setNbMonstreRestant			
-			Permet de définir le nombre d'ennemis restants dans la classe sélectionnée
-			@param Entier
+			@brief Booléen: vagueVide	
+			Permet de vérifier si la vague actuelle est vide
+			@return Booléen
 			@code
-				v2.setNbMonstreRestant(6);
+				v2.vagueVide();
 			@endcode
 		*/
-
 		bool vagueVide()const;
+
 		/**
 			@brief Procédure: ennemiMort			
-			Permet d'actualiser la taille du tableau de monstres, si un monstre est mort
+			Permet de retourner l'or du monstre qui meurt (en plus de la supprimer dans le tableau de monstres actuel)
+			@param Entier: i
 			@code
 				v2.ennemiMort();
 			@endcode
 		*/
 		int ennemiMort(const int & i);
+
 		/**
 			@brief Procédure: avancementEtape			
 			Permet de vérifier l'avancement des étapes des ennemis en fonction de son chemin à prendre
@@ -132,47 +159,54 @@ class Vague{
 			@endcode
 		*/
 		void avancementEtape(std::vector<Chemin> &tabChemin);
-	/**
-		@brief Procédure: avancerMonstre
-		Permet de faire avancer le monstre
-		@param Chemin tabChemin, Réel delta
-		@code
-			v2.avancerMonstre(tabChemin, delta);
-		@endcode	
-	*/
+
+		/**
+			@brief Procédure: avancerMonstre
+			Permet de faire avancer le monstre
+			@param Chemin tabChemin, Réel delta
+			@code
+				v2.avancerMonstre(tabChemin, delta);
+			@endcode	
+		*/
 		void avancerMonstre(const std::vector<Chemin> &tabChemin , float delta);
-	/**
-		@brief Procédure: spawnerMonstre
-		Permet de créer des monstres dans la vague
-		@code
-			v2.spawnerMonstre();
-		@endcode	
-	*/
+
+		/**
+			@brief Procédure: spawnerMonstre
+			Permet de faire apparaitre des monstres dans la vague actuelle
+			@param Réel: delta
+			@code
+				v2.spawnerMonstre();
+			@endcode	
+		*/
 		void spawnerMonstre(float delta);
-	/**
-		@brief Procédure: affiche
-		Permet d'afficher des monstre dans la vague
-		@code
-			v2.affiche();
-		@endcode	
-	*/	
+
+		/**
+			@brief Procédure: affiche
+			Permet d'afficher des monstre dans la vague
+			@code
+				v2.affiche();
+			@endcode	
+		*/	
 		void affiche();
-	/**
-		@brief Procédure: monstresBase
-		Permet de faire disparaitre le monstre quand il arrive à la base et d'enlever un point de vie à la base
-		@param Base b
-		@code
-			v2.monstresBase(b);
-		@endcode	
-	*/
+
+		/**
+			@brief Procédure: monstresBase
+			Permet de faire disparaitre le monstre quand il arrive à la base et d'enlever un point de vie à la base
+			@param Base b
+			@code
+				v2.monstresBase(b);
+			@endcode	
+		*/
 		void monstresBase(Base & b);
-	/**
-		@brief Fonction: tailleVague
-		Permet de retourner la taille de la vague
-		@code
-			v2.tailleVague();
-		@endcode	
-	*/
+
+		/**
+			@brief Fonction: tailleVague
+			Permet de retourner la taille de la vague
+			@return Entier
+			@code
+				v2.tailleVague();
+			@endcode	
+		*/
 		unsigned int tailleVague()const;
 
 
