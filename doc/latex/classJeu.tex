@@ -17,11 +17,11 @@ Class \hyperlink{classJeu}{Jeu} Classe de \hyperlink{classJeu}{Jeu} permettant d
 \mbox{\Hypertarget{classJeu_a9cd19e73df169d7f09397be61ba8548c}\label{classJeu_a9cd19e73df169d7f09397be61ba8548c}} 
 \hyperlink{classJeu_a9cd19e73df169d7f09397be61ba8548c}{$\sim$\+Jeu} ()
 \begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire le jeu. \end{DoxyCompactList}\item 
-void \hyperlink{classJeu_a4f8c73b225819fb5a6ba342adc2f1fa4}{affiche\+Carte\+Dispo} ()
+void \hyperlink{classJeu_a7528edef2101b0abda334ca1d78ea92e}{affiche\+Carte\+Dispo} () const
 \begin{DoxyCompactList}\small\item\em Procédure\+: affiche\+Carte\+Dispo Permet d\textquotesingle{}afficher la carte. \end{DoxyCompactList}\item 
 \hyperlink{classNiveau}{Niveau} $\ast$ \hyperlink{classJeu_a71bf0b5329ade330d95318b50d1e2f12}{get\+Niveau} ()
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Niveau Permet de retourner le pointeur de niveau. \end{DoxyCompactList}\item 
-void \hyperlink{classJeu_a8d2a0773d8edcb42d5e055785ad4b71a}{action\+Auto} (float delta)
+void \hyperlink{classJeu_ad6c999b7a302fde5d2f32d88cbb8563c}{action\+Auto} (const float \&delta)
 \begin{DoxyCompactList}\small\item\em Procédure\+: action\+Auto Permet d\textquotesingle{}avoir des actions automatiques. \end{DoxyCompactList}\item 
 void \hyperlink{classJeu_a6a95f56b4cdcf94806237e672de41d7f}{clique} (const int \&x, const int \&y, const int \&taille)
 \begin{DoxyCompactList}\small\item\em Procédure\+: clique Permet de savoir si le curseur est sur le jeu ou pas. \end{DoxyCompactList}\item 
@@ -31,21 +31,21 @@ std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ $\ast$ \hyperlink{classJeu_
 \begin{DoxyCompactList}\small\item\em Tableau de \hyperlink{classBouton}{Bouton}\+: renvoie\+Bouton\+Amelioration Permet de retourner un tableau de bouton. \end{DoxyCompactList}\item 
 std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ $\ast$ \hyperlink{classJeu_aea4394fb2f268e68eb8118d32286e8d7}{renvoie\+Bouton\+Tour} ()
 \begin{DoxyCompactList}\small\item\em Tableau de \hyperlink{classBouton}{Bouton}\+: renvoie\+Bouton\+Tour Permet de retourner un tableau de bouton. \end{DoxyCompactList}\item 
-void \hyperlink{classJeu_ada22a232d25c271778a3a0b0ecdd61c9}{changer\+Map} (int m)
+void \hyperlink{classJeu_a87235796c5774f1e75a358a0b62602db}{changer\+Map} (const int \&m)
 \begin{DoxyCompactList}\small\item\em Procédure\+: changer\+Map Permet d\textquotesingle{}avoir de changer de carte. \end{DoxyCompactList}\item 
-bool \hyperlink{classJeu_abcee93768971be5db133648851a0219e}{get\+Pause} ()
+bool \hyperlink{classJeu_af4cfcc4e37dc2365e657fadc8c046e95}{get\+Pause} () const
 \begin{DoxyCompactList}\small\item\em Booléen\+: get\+Pause Permet de savoir si le jeu est en pause. \end{DoxyCompactList}\item 
-\hyperlink{classBouton}{Bouton} \hyperlink{classJeu_a550a74e12dedc1170162141fa9356fb6}{get\+Bouton\+Pause} ()
+\hyperlink{classBouton}{Bouton} \hyperlink{classJeu_a19a19081c6f398937f5a5f9b6d606f1f}{get\+Bouton\+Pause} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Bouton\+Pause Permet de retourner un bouton. \end{DoxyCompactList}\item 
 void \hyperlink{classJeu_a825bd1ef8b91c70e468966f6985a2ee3}{Pause} ()
 \begin{DoxyCompactList}\small\item\em Procédure\+: Pause Permet de mettre en pause. \end{DoxyCompactList}\item 
-std\+::string \hyperlink{classJeu_a01d73851016ee4edb6742231d4084ad7}{get\+Image\+Map} ()
+std\+::string \hyperlink{classJeu_aa6c8ca3f336af956e4f7ba9f630c7e30}{get\+Image\+Map} () const
 \begin{DoxyCompactList}\small\item\em Chaine de caractère\+: get\+Image\+Maps Permet de retourner le nom de l\textquotesingle{}image de la map sélectionnée. \end{DoxyCompactList}\item 
-\hyperlink{classMenu}{Menu} \hyperlink{classJeu_a53db67d1ac9622db7f13297e398f2730}{get\+Menu\+Map} ()
+\hyperlink{classMenu}{Menu} \hyperlink{classJeu_a4cbd54926ccb9f9481643d536378b7c7}{get\+Menu\+Map} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Menu\+Map Permet de retourner le menu. \end{DoxyCompactList}\item 
-bool \hyperlink{classJeu_a1dee637787fc6976f2b504631780bf38}{get\+Gagner} ()
+bool \hyperlink{classJeu_a4656f397fa4ad510a3e5ecceeb4dcc56}{get\+Gagner} () const
 \begin{DoxyCompactList}\small\item\em Booléen\+: get\+Gagner Permet de savoir si la partie a été gagnée. \end{DoxyCompactList}\item 
-bool \hyperlink{classJeu_a344c165558c9ab3aa815404179351156}{get\+Perdue} ()
+bool \hyperlink{classJeu_aca82760e6c37895401e1ecaa706014ea}{get\+Perdue} () const
 \begin{DoxyCompactList}\small\item\em Booléen\+: get\+Perdue Permet de savoir si la partie a été perdue. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -70,11 +70,11 @@ Constructeur par défaut\+: \hyperlink{classJeu}{Jeu} Permet de créer le jeu pa
  
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classJeu_a8d2a0773d8edcb42d5e055785ad4b71a}\label{classJeu_a8d2a0773d8edcb42d5e055785ad4b71a}} 
+\mbox{\Hypertarget{classJeu_ad6c999b7a302fde5d2f32d88cbb8563c}\label{classJeu_ad6c999b7a302fde5d2f32d88cbb8563c}} 
 \index{Jeu@{Jeu}!action\+Auto@{action\+Auto}}
 \index{action\+Auto@{action\+Auto}!Jeu@{Jeu}}
 \subsubsection{\texorpdfstring{action\+Auto()}{actionAuto()}}
-{\footnotesize\ttfamily void Jeu\+::action\+Auto (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Jeu\+::action\+Auto (\begin{DoxyParamCaption}\item[{const float \&}]{delta }\end{DoxyParamCaption})}
 
 
 
@@ -89,11 +89,11 @@ i2.actionAuto();
  \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classJeu_a4f8c73b225819fb5a6ba342adc2f1fa4}\label{classJeu_a4f8c73b225819fb5a6ba342adc2f1fa4}} 
+\mbox{\Hypertarget{classJeu_a7528edef2101b0abda334ca1d78ea92e}\label{classJeu_a7528edef2101b0abda334ca1d78ea92e}} 
 \index{Jeu@{Jeu}!affiche\+Carte\+Dispo@{affiche\+Carte\+Dispo}}
 \index{affiche\+Carte\+Dispo@{affiche\+Carte\+Dispo}!Jeu@{Jeu}}
 \subsubsection{\texorpdfstring{affiche\+Carte\+Dispo()}{afficheCarteDispo()}}
-{\footnotesize\ttfamily void Jeu\+::affiche\+Carte\+Dispo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Jeu\+::affiche\+Carte\+Dispo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -103,11 +103,11 @@ Procédure\+: affiche\+Carte\+Dispo Permet d\textquotesingle{}afficher la carte.
 \begin{DoxyCode}
 j2.afficheCarteDispo();
 \end{DoxyCode}
- \mbox{\Hypertarget{classJeu_ada22a232d25c271778a3a0b0ecdd61c9}\label{classJeu_ada22a232d25c271778a3a0b0ecdd61c9}} 
+ \mbox{\Hypertarget{classJeu_a87235796c5774f1e75a358a0b62602db}\label{classJeu_a87235796c5774f1e75a358a0b62602db}} 
 \index{Jeu@{Jeu}!changer\+Map@{changer\+Map}}
 \index{changer\+Map@{changer\+Map}!Jeu@{Jeu}}
 \subsubsection{\texorpdfstring{changer\+Map()}{changerMap()}}
-{\footnotesize\ttfamily void Jeu\+::changer\+Map (\begin{DoxyParamCaption}\item[{int}]{m }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Jeu\+::changer\+Map (\begin{DoxyParamCaption}\item[{const int \&}]{m }\end{DoxyParamCaption})}
 
 
 
@@ -141,11 +141,11 @@ i2.clique(x,y,taille);
  \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classJeu_a550a74e12dedc1170162141fa9356fb6}\label{classJeu_a550a74e12dedc1170162141fa9356fb6}} 
+\mbox{\Hypertarget{classJeu_a19a19081c6f398937f5a5f9b6d606f1f}\label{classJeu_a19a19081c6f398937f5a5f9b6d606f1f}} 
 \index{Jeu@{Jeu}!get\+Bouton\+Pause@{get\+Bouton\+Pause}}
 \index{get\+Bouton\+Pause@{get\+Bouton\+Pause}!Jeu@{Jeu}}
 \subsubsection{\texorpdfstring{get\+Bouton\+Pause()}{getBoutonPause()}}
-{\footnotesize\ttfamily \hyperlink{classBouton}{Bouton} Jeu\+::get\+Bouton\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classBouton}{Bouton} Jeu\+::get\+Bouton\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -158,11 +158,11 @@ i2.getBoutonPause();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classJeu_a1dee637787fc6976f2b504631780bf38}\label{classJeu_a1dee637787fc6976f2b504631780bf38}} 
+\mbox{\Hypertarget{classJeu_a4656f397fa4ad510a3e5ecceeb4dcc56}\label{classJeu_a4656f397fa4ad510a3e5ecceeb4dcc56}} 
 \index{Jeu@{Jeu}!get\+Gagner@{get\+Gagner}}
 \index{get\+Gagner@{get\+Gagner}!Jeu@{Jeu}}
 \subsubsection{\texorpdfstring{get\+Gagner()}{getGagner()}}
-{\footnotesize\ttfamily bool Jeu\+::get\+Gagner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Jeu\+::get\+Gagner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -172,11 +172,11 @@ Booléen\+: get\+Gagner Permet de savoir si la partie a été gagnée.
 \begin{DoxyCode}
 i2.getGagner();
 \end{DoxyCode}
- \mbox{\Hypertarget{classJeu_a01d73851016ee4edb6742231d4084ad7}\label{classJeu_a01d73851016ee4edb6742231d4084ad7}} 
+ \mbox{\Hypertarget{classJeu_aa6c8ca3f336af956e4f7ba9f630c7e30}\label{classJeu_aa6c8ca3f336af956e4f7ba9f630c7e30}} 
 \index{Jeu@{Jeu}!get\+Image\+Map@{get\+Image\+Map}}
 \index{get\+Image\+Map@{get\+Image\+Map}!Jeu@{Jeu}}
 \subsubsection{\texorpdfstring{get\+Image\+Map()}{getImageMap()}}
-{\footnotesize\ttfamily std\+::string Jeu\+::get\+Image\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::string Jeu\+::get\+Image\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -189,11 +189,11 @@ i2.getImageMap();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classJeu_a53db67d1ac9622db7f13297e398f2730}\label{classJeu_a53db67d1ac9622db7f13297e398f2730}} 
+\mbox{\Hypertarget{classJeu_a4cbd54926ccb9f9481643d536378b7c7}\label{classJeu_a4cbd54926ccb9f9481643d536378b7c7}} 
 \index{Jeu@{Jeu}!get\+Menu\+Map@{get\+Menu\+Map}}
 \index{get\+Menu\+Map@{get\+Menu\+Map}!Jeu@{Jeu}}
 \subsubsection{\texorpdfstring{get\+Menu\+Map()}{getMenuMap()}}
-{\footnotesize\ttfamily \hyperlink{classMenu}{Menu} Jeu\+::get\+Menu\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classMenu}{Menu} Jeu\+::get\+Menu\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -223,11 +223,11 @@ j2->getNiveau();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classJeu_abcee93768971be5db133648851a0219e}\label{classJeu_abcee93768971be5db133648851a0219e}} 
+\mbox{\Hypertarget{classJeu_af4cfcc4e37dc2365e657fadc8c046e95}\label{classJeu_af4cfcc4e37dc2365e657fadc8c046e95}} 
 \index{Jeu@{Jeu}!get\+Pause@{get\+Pause}}
 \index{get\+Pause@{get\+Pause}!Jeu@{Jeu}}
 \subsubsection{\texorpdfstring{get\+Pause()}{getPause()}}
-{\footnotesize\ttfamily bool Jeu\+::get\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Jeu\+::get\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -237,11 +237,11 @@ Booléen\+: get\+Pause Permet de savoir si le jeu est en pause.
 \begin{DoxyCode}
 i2.getPause();
 \end{DoxyCode}
- \mbox{\Hypertarget{classJeu_a344c165558c9ab3aa815404179351156}\label{classJeu_a344c165558c9ab3aa815404179351156}} 
+ \mbox{\Hypertarget{classJeu_aca82760e6c37895401e1ecaa706014ea}\label{classJeu_aca82760e6c37895401e1ecaa706014ea}} 
 \index{Jeu@{Jeu}!get\+Perdue@{get\+Perdue}}
 \index{get\+Perdue@{get\+Perdue}!Jeu@{Jeu}}
 \subsubsection{\texorpdfstring{get\+Perdue()}{getPerdue()}}
-{\footnotesize\ttfamily bool Jeu\+::get\+Perdue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Jeu\+::get\+Perdue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 

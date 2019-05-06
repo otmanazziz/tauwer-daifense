@@ -21,9 +21,9 @@ Class \hyperlink{classBase}{Base} Classe de \hyperlink{classBase}{Base}, permett
 \mbox{\Hypertarget{classBase_a722da881b6c70cfcbde9243abcfbf334}\label{classBase_a722da881b6c70cfcbde9243abcfbf334}} 
 \hyperlink{classBase_a722da881b6c70cfcbde9243abcfbf334}{$\sim$\+Base} ()
 \begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire la base. \end{DoxyCompactList}\item 
-int \hyperlink{classBase_a922b45a3578821dd6ab666206b1a637e}{get\+Vie} ()
+int \hyperlink{classBase_ac5eaf0382ca793fe38997c53480fb056}{get\+Vie} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Vie Permet de retourner l\textquotesingle{}entier de la vie. \end{DoxyCompactList}\item 
-\hyperlink{classVect}{Vect} \hyperlink{classBase_a16d0ed1836dfedfb51d54308d22b4a38}{get\+Position} ()
+\hyperlink{classVect}{Vect} \hyperlink{classBase_ab4e98e615e7659abd847a41ca40c11cc}{get\+Position} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Position Permet de retourner le vecteur position. \end{DoxyCompactList}\item 
 void \hyperlink{classBase_a92e0991ffd34efb2f2d6db3f3bd4093d}{set\+Vie} (const int \&\+\_\+vie)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Vie Permet de modifier l\textquotesingle{}entier représentant la vie de la base. \end{DoxyCompactList}\item 
@@ -31,7 +31,7 @@ void \hyperlink{classBase_afe9eb29bdaf866dc20af0b833209e29e}{set\+Position} (con
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Position Permet de modifier le vecteur position de la base. \end{DoxyCompactList}\item 
 void \hyperlink{classBase_a0471688678ab6e2aba5ee69d290c2e20}{perdre\+Vie} (const int \&vie\+Perdue)
 \begin{DoxyCompactList}\small\item\em Procédure\+: perdre\+Vie Permet de modifier la vie de la base. \end{DoxyCompactList}\item 
-void \hyperlink{classBase_a90f460bea595fc507cab1b6a2131350c}{affiche} ()
+void \hyperlink{classBase_a75f96a51a09c27378c609ebb328e24eb}{affiche} () const
 \begin{DoxyCompactList}\small\item\em Procédure\+: affiche Permet d\textquotesingle{}afficher les information de la base. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -94,11 +94,11 @@ Constructeur par copie\+: \hyperlink{classBase}{Base} Permet de créer par copie
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classBase_a90f460bea595fc507cab1b6a2131350c}\label{classBase_a90f460bea595fc507cab1b6a2131350c}} 
+\mbox{\Hypertarget{classBase_a75f96a51a09c27378c609ebb328e24eb}\label{classBase_a75f96a51a09c27378c609ebb328e24eb}} 
 \index{Base@{Base}!affiche@{affiche}}
 \index{affiche@{affiche}!Base@{Base}}
 \subsubsection{\texorpdfstring{affiche()}{affiche()}}
-{\footnotesize\ttfamily void Base\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Base\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -108,11 +108,11 @@ Procédure\+: affiche Permet d\textquotesingle{}afficher les information de la b
 \begin{DoxyCode}
 b2.affiche();
 \end{DoxyCode}
- \mbox{\Hypertarget{classBase_a16d0ed1836dfedfb51d54308d22b4a38}\label{classBase_a16d0ed1836dfedfb51d54308d22b4a38}} 
+ \mbox{\Hypertarget{classBase_ab4e98e615e7659abd847a41ca40c11cc}\label{classBase_ab4e98e615e7659abd847a41ca40c11cc}} 
 \index{Base@{Base}!get\+Position@{get\+Position}}
 \index{get\+Position@{get\+Position}!Base@{Base}}
 \subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
-{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Base\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Base\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -125,11 +125,11 @@ b2.getPosition();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classBase_a922b45a3578821dd6ab666206b1a637e}\label{classBase_a922b45a3578821dd6ab666206b1a637e}} 
+\mbox{\Hypertarget{classBase_ac5eaf0382ca793fe38997c53480fb056}\label{classBase_ac5eaf0382ca793fe38997c53480fb056}} 
 \index{Base@{Base}!get\+Vie@{get\+Vie}}
 \index{get\+Vie@{get\+Vie}!Base@{Base}}
 \subsubsection{\texorpdfstring{get\+Vie()}{getVie()}}
-{\footnotesize\ttfamily int Base\+::get\+Vie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int Base\+::get\+Vie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 

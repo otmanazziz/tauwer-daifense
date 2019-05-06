@@ -21,21 +21,21 @@ Class \hyperlink{classMenu}{Menu} Classe de \hyperlink{classMenu}{Menu}, permett
 \mbox{\Hypertarget{classMenu_a831387f51358cfb88cd018e1777bc980}\label{classMenu_a831387f51358cfb88cd018e1777bc980}} 
 \hyperlink{classMenu_a831387f51358cfb88cd018e1777bc980}{$\sim$\+Menu} ()
 \begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire le menu. \end{DoxyCompactList}\item 
-std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ \hyperlink{classMenu_a6d80af8bd800d44072ddb63a80b911cd}{get\+Tab\+Bouton} ()
+std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ \hyperlink{classMenu_a5614b2f97741d2d71177f40b49151bc8}{get\+Tab\+Bouton} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Tab\+Bouton Permet de retourner le tableau de bouton. \end{DoxyCompactList}\item 
 void \hyperlink{classMenu_a45b3fe1a4d7cca82acabd3102d8bfd7c}{set\+Tab\+Bouton} (const std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ \&\+\_\+tab\+Bouton)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Tab\+Bouton Permet de modifier le tableau de bouton. \end{DoxyCompactList}\item 
-void \hyperlink{classMenu_acedbb44af6fcc981aef033a585df2169}{set\+Bouton\+Indice} (const int \&indice, \hyperlink{classBouton}{Bouton} bouton)
+void \hyperlink{classMenu_a33304f235efdcaa1f500f944f23e8762}{set\+Bouton\+Indice} (const int \&indice, const \hyperlink{classBouton}{Bouton} \&bouton)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Bouton\+Indice Permet de modifier l\textquotesingle{}indice du bouton\textquotesingle{}. \end{DoxyCompactList}\item 
-\hyperlink{classBouton}{Bouton} \hyperlink{classMenu_a16bc4dffec20a0ce177f189f9c711e09}{get\+Bouton\+Indice} (const int \&indice)
+\hyperlink{classBouton}{Bouton} \hyperlink{classMenu_a892dd884c5e7675f8cfd9c59c3247f96}{get\+Bouton\+Indice} (const int \&indice) const
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Bouton\+Indice Permet de retourner l\textquotesingle{}indide du bouton. \end{DoxyCompactList}\item 
-void \hyperlink{classMenu_a429b2c8fcaed081553ce284ffa0637ab}{ajouter\+Bouton} (\hyperlink{classBouton}{Bouton} \+\_\+bouton)
+void \hyperlink{classMenu_a6f14df82f9e51a4fe61fefef62e31062}{ajouter\+Bouton} (const \hyperlink{classBouton}{Bouton} \&\+\_\+bouton)
 \begin{DoxyCompactList}\small\item\em Procédure\+: ajouter\+Bouton Permet d\textquotesingle{}ajouter un bouton dans le menu. \end{DoxyCompactList}\item 
 void \hyperlink{classMenu_a1ed5172963be698f6fbabcf5a87ff664}{supprimer\+Bouton\+Indice} (const int \&indice)
 \begin{DoxyCompactList}\small\item\em Procédure\+: supprimer\+Bouton\+Indice Permet de supprimer l\textquotesingle{}indice d\textquotesingle{}un bouton dans le menu. \end{DoxyCompactList}\item 
-void \hyperlink{classMenu_af01f5f26519658b6e0fd92fdb8eda6fe}{afficher\+Tab\+Bouton} ()
+void \hyperlink{classMenu_abf73624171efcb0b3605dffbf6fdd43e}{afficher\+Tab\+Bouton} () const
 \begin{DoxyCompactList}\small\item\em Procédure\+: affihcer\+Tab\+Bouton Permet d\textquotesingle{}afficher\textquotesingle{} un bouton dans le menu. \end{DoxyCompactList}\item 
-unsigned int \hyperlink{classMenu_a0a114609fcaf58b130a44a14e341117e}{get\+Taille} ()
+unsigned int \hyperlink{classMenu_a18df56bedec00d9a6a79ae1625c67329}{get\+Taille} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Taille Permet de retourner la taille du menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -98,11 +98,11 @@ Constructeur\+:\hyperlink{classMenu}{Menu} Permet de créer le constructeur du m
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classMenu_af01f5f26519658b6e0fd92fdb8eda6fe}\label{classMenu_af01f5f26519658b6e0fd92fdb8eda6fe}} 
+\mbox{\Hypertarget{classMenu_abf73624171efcb0b3605dffbf6fdd43e}\label{classMenu_abf73624171efcb0b3605dffbf6fdd43e}} 
 \index{Menu@{Menu}!afficher\+Tab\+Bouton@{afficher\+Tab\+Bouton}}
 \index{afficher\+Tab\+Bouton@{afficher\+Tab\+Bouton}!Menu@{Menu}}
 \subsubsection{\texorpdfstring{afficher\+Tab\+Bouton()}{afficherTabBouton()}}
-{\footnotesize\ttfamily void Menu\+::afficher\+Tab\+Bouton (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Menu\+::afficher\+Tab\+Bouton (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -113,11 +113,11 @@ Procédure\+: affihcer\+Tab\+Bouton Permet d\textquotesingle{}afficher\textquote
 {\em } & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classMenu_a429b2c8fcaed081553ce284ffa0637ab}\label{classMenu_a429b2c8fcaed081553ce284ffa0637ab}} 
+\mbox{\Hypertarget{classMenu_a6f14df82f9e51a4fe61fefef62e31062}\label{classMenu_a6f14df82f9e51a4fe61fefef62e31062}} 
 \index{Menu@{Menu}!ajouter\+Bouton@{ajouter\+Bouton}}
 \index{ajouter\+Bouton@{ajouter\+Bouton}!Menu@{Menu}}
 \subsubsection{\texorpdfstring{ajouter\+Bouton()}{ajouterBouton()}}
-{\footnotesize\ttfamily void Menu\+::ajouter\+Bouton (\begin{DoxyParamCaption}\item[{\hyperlink{classBouton}{Bouton}}]{\+\_\+bouton }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Menu\+::ajouter\+Bouton (\begin{DoxyParamCaption}\item[{const \hyperlink{classBouton}{Bouton} \&}]{\+\_\+bouton }\end{DoxyParamCaption})}
 
 
 
@@ -132,11 +132,11 @@ m2.ajouterBouton(\hyperlink{classBouton}{Bouton});
  \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classMenu_a16bc4dffec20a0ce177f189f9c711e09}\label{classMenu_a16bc4dffec20a0ce177f189f9c711e09}} 
+\mbox{\Hypertarget{classMenu_a892dd884c5e7675f8cfd9c59c3247f96}\label{classMenu_a892dd884c5e7675f8cfd9c59c3247f96}} 
 \index{Menu@{Menu}!get\+Bouton\+Indice@{get\+Bouton\+Indice}}
 \index{get\+Bouton\+Indice@{get\+Bouton\+Indice}!Menu@{Menu}}
 \subsubsection{\texorpdfstring{get\+Bouton\+Indice()}{getBoutonIndice()}}
-{\footnotesize\ttfamily \hyperlink{classBouton}{Bouton} Menu\+::get\+Bouton\+Indice (\begin{DoxyParamCaption}\item[{const int \&}]{indice }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classBouton}{Bouton} Menu\+::get\+Bouton\+Indice (\begin{DoxyParamCaption}\item[{const int \&}]{indice }\end{DoxyParamCaption}) const}
 
 
 
@@ -149,11 +149,11 @@ m2.getBoutonIndice();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classMenu_a6d80af8bd800d44072ddb63a80b911cd}\label{classMenu_a6d80af8bd800d44072ddb63a80b911cd}} 
+\mbox{\Hypertarget{classMenu_a5614b2f97741d2d71177f40b49151bc8}\label{classMenu_a5614b2f97741d2d71177f40b49151bc8}} 
 \index{Menu@{Menu}!get\+Tab\+Bouton@{get\+Tab\+Bouton}}
 \index{get\+Tab\+Bouton@{get\+Tab\+Bouton}!Menu@{Menu}}
 \subsubsection{\texorpdfstring{get\+Tab\+Bouton()}{getTabBouton()}}
-{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ Menu\+::get\+Tab\+Bouton (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{classBouton}{Bouton} $>$ Menu\+::get\+Tab\+Bouton (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -166,11 +166,11 @@ m2.getTabBouton();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classMenu_a0a114609fcaf58b130a44a14e341117e}\label{classMenu_a0a114609fcaf58b130a44a14e341117e}} 
+\mbox{\Hypertarget{classMenu_a18df56bedec00d9a6a79ae1625c67329}\label{classMenu_a18df56bedec00d9a6a79ae1625c67329}} 
 \index{Menu@{Menu}!get\+Taille@{get\+Taille}}
 \index{get\+Taille@{get\+Taille}!Menu@{Menu}}
 \subsubsection{\texorpdfstring{get\+Taille()}{getTaille()}}
-{\footnotesize\ttfamily unsigned int Menu\+::get\+Taille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily unsigned int Menu\+::get\+Taille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -183,11 +183,11 @@ m2.getTaille();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classMenu_acedbb44af6fcc981aef033a585df2169}\label{classMenu_acedbb44af6fcc981aef033a585df2169}} 
+\mbox{\Hypertarget{classMenu_a33304f235efdcaa1f500f944f23e8762}\label{classMenu_a33304f235efdcaa1f500f944f23e8762}} 
 \index{Menu@{Menu}!set\+Bouton\+Indice@{set\+Bouton\+Indice}}
 \index{set\+Bouton\+Indice@{set\+Bouton\+Indice}!Menu@{Menu}}
 \subsubsection{\texorpdfstring{set\+Bouton\+Indice()}{setBoutonIndice()}}
-{\footnotesize\ttfamily void Menu\+::set\+Bouton\+Indice (\begin{DoxyParamCaption}\item[{const int \&}]{indice,  }\item[{\hyperlink{classBouton}{Bouton}}]{bouton }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Menu\+::set\+Bouton\+Indice (\begin{DoxyParamCaption}\item[{const int \&}]{indice,  }\item[{const \hyperlink{classBouton}{Bouton} \&}]{bouton }\end{DoxyParamCaption})}
 
 
 

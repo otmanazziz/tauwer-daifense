@@ -49,13 +49,13 @@ bool \hyperlink{classMonstre_a810f2e49356248d02f7b0e9b8ea16d85}{get\+Spawn} () c
 \begin{DoxyCompactList}\small\item\em Booléen\+: get\+Spawn Permet de savoir si le monstre réapparaît. \end{DoxyCompactList}\item 
 void \hyperlink{classMonstre_a26db17b29af1a99278e7d21bc91f1532}{spawner} ()
 \begin{DoxyCompactList}\small\item\em Procédure\+: spawner Permet d\textquotesingle{}avoir un endroit où les monstres apparaissent. \end{DoxyCompactList}\item 
-void \hyperlink{classMonstre_a5fed7574a7a621251d313219c0831b09}{avancer} (const \hyperlink{classVect}{Vect} \&v, float delta)
+void \hyperlink{classMonstre_ac8c771a6d9f612716b917688df56905f}{avancer} (const \hyperlink{classVect}{Vect} \&v, const float \&delta)
 \begin{DoxyCompactList}\small\item\em Procédure\+: avancer Permet de faire avancer les monstres. \end{DoxyCompactList}\item 
-void \hyperlink{classMonstre_a4f22d17531f5ca164355740d035485ee}{test} ()
+void \hyperlink{classMonstre_a82b15e169ab7a45dc9dc229256f89029}{test} () const
 \begin{DoxyCompactList}\small\item\em Procédure\+: test Permet de tester la perte de vie d\textquotesingle{}un monstre. \end{DoxyCompactList}\item 
-void \hyperlink{classMonstre_ac6700482d005ec983746983f76ad0088}{affiche} ()
+void \hyperlink{classMonstre_ad6fe422be19d7989676ef0707924c8f9}{affiche} () const
 \begin{DoxyCompactList}\small\item\em Procédure\+: affiche Permet d\textquotesingle{}afficher toutes les informations d\textquotesingle{}un monstre. \end{DoxyCompactList}\item 
-void \hyperlink{classMonstre_a74cb4551bed1c53c3071b965907050b0}{set\+Est\+Attaquer} (bool b)
+void \hyperlink{classMonstre_af426bb7333d4b59352997435b4b6f890}{set\+Est\+Attaquer} (const bool \&b)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Est\+Attaquer Permet de modifier la cible attaquée. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -118,11 +118,11 @@ Constructeur par copie\+: \hyperlink{classMonstre}{Monstre} Construit par copie 
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classMonstre_ac6700482d005ec983746983f76ad0088}\label{classMonstre_ac6700482d005ec983746983f76ad0088}} 
+\mbox{\Hypertarget{classMonstre_ad6fe422be19d7989676ef0707924c8f9}\label{classMonstre_ad6fe422be19d7989676ef0707924c8f9}} 
 \index{Monstre@{Monstre}!affiche@{affiche}}
 \index{affiche@{affiche}!Monstre@{Monstre}}
 \subsubsection{\texorpdfstring{affiche()}{affiche()}}
-{\footnotesize\ttfamily void Monstre\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Monstre\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -130,13 +130,13 @@ Procédure\+: affiche Permet d\textquotesingle{}afficher toutes les informations
 
 
 \begin{DoxyCode}
-m.\hyperlink{classMonstre_ac6700482d005ec983746983f76ad0088}{affiche}();
+m.\hyperlink{classMonstre_ad6fe422be19d7989676ef0707924c8f9}{affiche}();
 \end{DoxyCode}
- \mbox{\Hypertarget{classMonstre_a5fed7574a7a621251d313219c0831b09}\label{classMonstre_a5fed7574a7a621251d313219c0831b09}} 
+ \mbox{\Hypertarget{classMonstre_ac8c771a6d9f612716b917688df56905f}\label{classMonstre_ac8c771a6d9f612716b917688df56905f}} 
 \index{Monstre@{Monstre}!avancer@{avancer}}
 \index{avancer@{avancer}!Monstre@{Monstre}}
 \subsubsection{\texorpdfstring{avancer()}{avancer()}}
-{\footnotesize\ttfamily void Monstre\+::avancer (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{v,  }\item[{float}]{delta }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Monstre\+::avancer (\begin{DoxyParamCaption}\item[{const \hyperlink{classVect}{Vect} \&}]{v,  }\item[{const float \&}]{delta }\end{DoxyParamCaption})}
 
 
 
@@ -146,7 +146,7 @@ Procédure\+: avancer Permet de faire avancer les monstres.
 \begin{DoxyParams}{Parameters}
 {\em Vecteur} & v 
 \begin{DoxyCode}
-m.\hyperlink{classMonstre_a5fed7574a7a621251d313219c0831b09}{avancer}(v);
+m.\hyperlink{classMonstre_ac8c771a6d9f612716b917688df56905f}{avancer}(v);
 \end{DoxyCode}
  \\
 \hline
@@ -306,11 +306,11 @@ m.\hyperlink{classMonstre_af6d0a1f276465d12d50db387855e62d3}{perdreVie}(15);
  \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classMonstre_a74cb4551bed1c53c3071b965907050b0}\label{classMonstre_a74cb4551bed1c53c3071b965907050b0}} 
+\mbox{\Hypertarget{classMonstre_af426bb7333d4b59352997435b4b6f890}\label{classMonstre_af426bb7333d4b59352997435b4b6f890}} 
 \index{Monstre@{Monstre}!set\+Est\+Attaquer@{set\+Est\+Attaquer}}
 \index{set\+Est\+Attaquer@{set\+Est\+Attaquer}!Monstre@{Monstre}}
 \subsubsection{\texorpdfstring{set\+Est\+Attaquer()}{setEstAttaquer()}}
-{\footnotesize\ttfamily void Monstre\+::set\+Est\+Attaquer (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Monstre\+::set\+Est\+Attaquer (\begin{DoxyParamCaption}\item[{const bool \&}]{b }\end{DoxyParamCaption})}
 
 
 
@@ -415,11 +415,11 @@ Procédure\+: spawner Permet d\textquotesingle{}avoir un endroit où les monstre
 \begin{DoxyCode}
 m.\hyperlink{classMonstre_a26db17b29af1a99278e7d21bc91f1532}{spawner}();
 \end{DoxyCode}
- \mbox{\Hypertarget{classMonstre_a4f22d17531f5ca164355740d035485ee}\label{classMonstre_a4f22d17531f5ca164355740d035485ee}} 
+ \mbox{\Hypertarget{classMonstre_a82b15e169ab7a45dc9dc229256f89029}\label{classMonstre_a82b15e169ab7a45dc9dc229256f89029}} 
 \index{Monstre@{Monstre}!test@{test}}
 \index{test@{test}!Monstre@{Monstre}}
 \subsubsection{\texorpdfstring{test()}{test()}}
-{\footnotesize\ttfamily void Monstre\+::test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Monstre\+::test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -427,7 +427,7 @@ Procédure\+: test Permet de tester la perte de vie d\textquotesingle{}un monstr
 
 
 \begin{DoxyCode}
-m.\hyperlink{classMonstre_a4f22d17531f5ca164355740d035485ee}{test}();
+m.\hyperlink{classMonstre_a82b15e169ab7a45dc9dc229256f89029}{test}();
 \end{DoxyCode}
  
 

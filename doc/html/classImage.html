@@ -66,40 +66,15 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Class <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> Classe d'<a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> permettant de gérer les couleurs de l'image et la taille.  
+<p>Class <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image, permettant de créer une image avec SDL2. ">Image</a> Classe d'<a class="el" href="classImage.html" title="Class Image Classe d&#39;Image, permettant de créer une image avec SDL2. ">Image</a>, permettant de créer une image avec SDL2.  
  <a href="classImage.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="Image_8h_source.html">Image.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="sdlJeu_8h_source.html">sdlJeu.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a58edd1c45b4faeb5f789b0d036d02313"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a58edd1c45b4faeb5f789b0d036d02313">Image</a> ()</td></tr>
-<tr class="memdesc:a58edd1c45b4faeb5f789b0d036d02313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut: <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> Permet de créer l'image par défaut.  <a href="#a58edd1c45b4faeb5f789b0d036d02313">More...</a><br /></td></tr>
-<tr class="separator:a58edd1c45b4faeb5f789b0d036d02313"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18dba28d7d81f51cabf37e0044bd2d6c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a18dba28d7d81f51cabf37e0044bd2d6c">Image</a> (const <a class="el" href="classImage.html">Image</a> &amp;_image)</td></tr>
-<tr class="memdesc:a18dba28d7d81f51cabf37e0044bd2d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par copie: <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> Permet de créer par copie une nouvelle image.  <a href="#a18dba28d7d81f51cabf37e0044bd2d6c">More...</a><br /></td></tr>
-<tr class="separator:a18dba28d7d81f51cabf37e0044bd2d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8b4bc2d9cf6b0591f9c16829e0b1dad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#ae8b4bc2d9cf6b0591f9c16829e0b1dad">Image</a> (const std::vectore&lt; Couleur &gt; &amp;_tabCouleur, const <a class="el" href="classVect.html">Vect</a> &amp;_dim)</td></tr>
-<tr class="memdesc:ae8b4bc2d9cf6b0591f9c16829e0b1dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par copie:<a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> Construit par copie la classe <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> avec les valeurs.  <a href="#ae8b4bc2d9cf6b0591f9c16829e0b1dad">More...</a><br /></td></tr>
-<tr class="separator:ae8b4bc2d9cf6b0591f9c16829e0b1dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0294f63700543e11c0f0da85601c7ae5"><td class="memItemLeft" align="right" valign="top"><a id="a0294f63700543e11c0f0da85601c7ae5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a0294f63700543e11c0f0da85601c7ae5">~Image</a> ()</td></tr>
-<tr class="memdesc:a0294f63700543e11c0f0da85601c7ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur: <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> Détruit la classe <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a>. <br /></td></tr>
-<tr class="separator:a0294f63700543e11c0f0da85601c7ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61a9499054fb7982ca74f7e408617df5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Couleur &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a61a9499054fb7982ca74f7e408617df5">getTabCouleur</a> ()</td></tr>
-<tr class="memdesc:a61a9499054fb7982ca74f7e408617df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tableau de Couleur: getTabCouleur Permet de retourner un tableau de couleur.  <a href="#a61a9499054fb7982ca74f7e408617df5">More...</a><br /></td></tr>
-<tr class="separator:a61a9499054fb7982ca74f7e408617df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19886e6e2f661123224101aebdab0659"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVect.html">Vect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a19886e6e2f661123224101aebdab0659">getDim</a> ()</td></tr>
-<tr class="memdesc:a19886e6e2f661123224101aebdab0659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe Vecteur: getDim Permet de retourner le vecteur de dim.  <a href="#a19886e6e2f661123224101aebdab0659">More...</a><br /></td></tr>
-<tr class="separator:a19886e6e2f661123224101aebdab0659"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17feecebcbde65970ffa419ba9f0465a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a17feecebcbde65970ffa419ba9f0465a">setTabCouleur</a> (const std::vector&lt; Couleur &gt; &amp;_tabCouleur)</td></tr>
-<tr class="memdesc:a17feecebcbde65970ffa419ba9f0465a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: setTabCouleur Permet de modifier le tableau de couleur.  <a href="#a17feecebcbde65970ffa419ba9f0465a">More...</a><br /></td></tr>
-<tr class="separator:a17feecebcbde65970ffa419ba9f0465a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9561b601b84ece813a9b87b881b8fc24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a9561b601b84ece813a9b87b881b8fc24">setDim</a> (const Vec &amp;_dim)</td></tr>
-<tr class="memdesc:a9561b601b84ece813a9b87b881b8fc24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: setDim Permet de modifier la dimension.  <a href="#a9561b601b84ece813a9b87b881b8fc24">More...</a><br /></td></tr>
-<tr class="separator:a9561b601b84ece813a9b87b881b8fc24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58edd1c45b4faeb5f789b0d036d02313"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a58edd1c45b4faeb5f789b0d036d02313">Image</a> ()</td></tr>
-<tr class="memdesc:a58edd1c45b4faeb5f789b0d036d02313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut: <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> Permet de créer l'image par défaut.  <a href="#a58edd1c45b4faeb5f789b0d036d02313">More...</a><br /></td></tr>
+<tr class="memdesc:a58edd1c45b4faeb5f789b0d036d02313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut: <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image, permettant de créer une image avec SDL2. ">Image</a> Permet de créer l'image par défaut.  <a href="#a58edd1c45b4faeb5f789b0d036d02313">More...</a><br /></td></tr>
 <tr class="separator:a58edd1c45b4faeb5f789b0d036d02313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa276b5183099671ddeaf8f083068046c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#aa276b5183099671ddeaf8f083068046c">loadFromFile</a> (const char *filename, SDL_Renderer *renderer)</td></tr>
 <tr class="memdesc:aa276b5183099671ddeaf8f083068046c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: loadFromFile Permet de charger une image à partir d'un fichier.  <a href="#aa276b5183099671ddeaf8f083068046c">More...</a><br /></td></tr>
@@ -118,11 +93,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a833f5d3b4b9f905320c6dffcc9b84b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> Classe d'<a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> permettant de gérer les couleurs de l'image et la taille. </p>
-<p>Class <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> Classe d'<a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a>, permettant de créer une image avec SDL2. </p>
+<div class="textblock"><p>Class <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image, permettant de créer une image avec SDL2. ">Image</a> Classe d'<a class="el" href="classImage.html" title="Class Image Classe d&#39;Image, permettant de créer une image avec SDL2. ">Image</a>, permettant de créer une image avec SDL2. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a58edd1c45b4faeb5f789b0d036d02313"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58edd1c45b4faeb5f789b0d036d02313">&#9670;&nbsp;</a></span>Image() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a58edd1c45b4faeb5f789b0d036d02313">&#9670;&nbsp;</a></span>Image()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,88 +110,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructeur par défaut: <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> Permet de créer l'image par défaut. </p>
-<div class="fragment"><div class="line"><a class="code" href="classImage.html">Image</a> i</div></div><!-- fragment --> 
-</div>
-</div>
-<a id="a18dba28d7d81f51cabf37e0044bd2d6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18dba28d7d81f51cabf37e0044bd2d6c">&#9670;&nbsp;</a></span>Image() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Image::Image </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classImage.html">Image</a> &amp;&#160;</td>
-          <td class="paramname"><em>_image</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructeur par copie: <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> Permet de créer par copie une nouvelle image. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Classe</td><td><a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> <div class="fragment"><div class="line"><a class="code" href="classImage.html">Image</a> i1(i);</div></div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ae8b4bc2d9cf6b0591f9c16829e0b1dad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8b4bc2d9cf6b0591f9c16829e0b1dad">&#9670;&nbsp;</a></span>Image() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Image::Image </td>
-          <td>(</td>
-          <td class="paramtype">const std::vectore&lt; Couleur &gt; &amp;&#160;</td>
-          <td class="paramname"><em>_tabCouleur</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classVect.html">Vect</a> &amp;&#160;</td>
-          <td class="paramname"><em>_dim</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructeur par copie:<a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> Construit par copie la classe <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> avec les valeurs. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Tableau</td><td>de Couleur, Vecteur dimension <div class="fragment"><div class="line"><a class="code" href="classImage.html">Image</a> i2( Tableau de couleur, dimension);</div></div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a58edd1c45b4faeb5f789b0d036d02313"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58edd1c45b4faeb5f789b0d036d02313">&#9670;&nbsp;</a></span>Image() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Image::Image </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructeur par défaut: <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image permettant de gérer les couleurs de l&#39;image et la taille. ">Image</a> Permet de créer l'image par défaut. </p>
+<p>Constructeur par défaut: <a class="el" href="classImage.html" title="Class Image Classe d&#39;Image, permettant de créer une image avec SDL2. ">Image</a> Permet de créer l'image par défaut. </p>
 <div class="fragment"><div class="line"><a class="code" href="classImage.html">Image</a> i</div></div><!-- fragment --> 
 </div>
 </div>
@@ -273,46 +166,6 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a19886e6e2f661123224101aebdab0659"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19886e6e2f661123224101aebdab0659">&#9670;&nbsp;</a></span>getDim()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classVect.html">Vect</a> Image::getDim </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Classe Vecteur: getDim Permet de retourner le vecteur de dim. </p>
-<dl class="section return"><dt>Returns</dt><dd>Vecteur dim <div class="fragment"><div class="line">i2.getDim();</div></div><!-- fragment --> </dd></dl>
-
-</div>
-</div>
-<a id="a61a9499054fb7982ca74f7e408617df5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61a9499054fb7982ca74f7e408617df5">&#9670;&nbsp;</a></span>getTabCouleur()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; Couleur &gt; Image::getTabCouleur </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Tableau de Couleur: getTabCouleur Permet de retourner un tableau de couleur. </p>
-<dl class="section return"><dt>Returns</dt><dd>Tableau de Couleur <div class="fragment"><div class="line">i2.getTabCouleur();</div></div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -398,32 +251,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9561b601b84ece813a9b87b881b8fc24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9561b601b84ece813a9b87b881b8fc24">&#9670;&nbsp;</a></span>setDim()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Image::setDim </td>
-          <td>(</td>
-          <td class="paramtype">const Vec &amp;&#160;</td>
-          <td class="paramname"><em>_dim</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Procédure: setDim Permet de modifier la dimension. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Vecteur</td><td>dim <div class="fragment"><div class="line">i2.setDim(dim);</div></div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a833f5d3b4b9f905320c6dffcc9b84b95"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a833f5d3b4b9f905320c6dffcc9b84b95">&#9670;&nbsp;</a></span>setSurface()</h2>
 
@@ -450,36 +277,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a17feecebcbde65970ffa419ba9f0465a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17feecebcbde65970ffa419ba9f0465a">&#9670;&nbsp;</a></span>setTabCouleur()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Image::setTabCouleur </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; Couleur &gt; &amp;&#160;</td>
-          <td class="paramname"><em>_tabCouleur</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Procédure: setTabCouleur Permet de modifier le tableau de couleur. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Tableau</td><td>de couleur <div class="fragment"><div class="line">i2.setTabCouleur(Tabl de Couleur);</div></div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/core/<a class="el" href="Image_8h_source.html">Image.h</a></li>
 <li>src/sdl2/<a class="el" href="sdlJeu_8h_source.html">sdlJeu.h</a></li>
-<li>src/core/Image.cpp</li>
 <li>src/sdl2/sdlJeu.cpp</li>
 </ul>
 </div><!-- contents -->

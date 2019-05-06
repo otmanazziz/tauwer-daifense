@@ -7,7 +7,6 @@ var searchData=
   ['_7echemin',['~Chemin',['../classChemin.html#a0024ec1de3487b44a51c095aca1b83dc',1,'Chemin']]],
   ['_7eeffet',['~Effet',['../classEffet.html#a8bacc915cc7c148661bde9c9c732b6dd',1,'Effet']]],
   ['_7ehero',['~Hero',['../classHero.html#a5aeef41ede5a80dc29c5acd7b553c4da',1,'Hero']]],
-  ['_7eimage',['~Image',['../classImage.html#a0294f63700543e11c0f0da85601c7ae5',1,'Image']]],
   ['_7ejeu',['~Jeu',['../classJeu.html#a9cd19e73df169d7f09397be61ba8548c',1,'Jeu']]],
   ['_7emenu',['~Menu',['../classMenu.html#a831387f51358cfb88cd018e1777bc980',1,'Menu']]],
   ['_7emonstre',['~Monstre',['../classMonstre.html#a8e736b63ae1f561904dad7767448156e',1,'Monstre']]],

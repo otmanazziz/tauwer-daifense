@@ -43,11 +43,11 @@ int \hyperlink{classVague_ad732fb032c4b02416946736b1e25dcc8}{ennemi\+Mort} (cons
 \begin{DoxyCompactList}\small\item\em Procédure\+: ennemi\+Mort Permet de retourner l\textquotesingle{}or du monstre qui meurt (en plus de la supprimer dans le tableau de monstres actuel) \end{DoxyCompactList}\item 
 void \hyperlink{classVague_ab61cff7242c22ec90c6cb4858b5a0bc6}{avancement\+Etape} (std\+::vector$<$ \hyperlink{classChemin}{Chemin} $>$ \&tab\+Chemin)
 \begin{DoxyCompactList}\small\item\em Procédure\+: avancement\+Etape Permet de vérifier l\textquotesingle{}avancement des étapes des ennemis en fonction de son chemin à prendre. \end{DoxyCompactList}\item 
-void \hyperlink{classVague_a2a81df1228dfa2ad84109612ef378d4c}{avancer\+Monstre} (const std\+::vector$<$ \hyperlink{classChemin}{Chemin} $>$ \&tab\+Chemin, float delta)
+void \hyperlink{classVague_a4753f9895677bc4050fdf0c8fc90984b}{avancer\+Monstre} (const std\+::vector$<$ \hyperlink{classChemin}{Chemin} $>$ \&tab\+Chemin, const float \&delta)
 \begin{DoxyCompactList}\small\item\em Procédure\+: avancer\+Monstre Permet de faire avancer le monstre. \end{DoxyCompactList}\item 
-void \hyperlink{classVague_a08f321266ddbf3e852b9d48975849f98}{spawner\+Monstre} (float delta)
+void \hyperlink{classVague_a2479faa494f68587eebb3c9e74407761}{spawner\+Monstre} (const float \&delta)
 \begin{DoxyCompactList}\small\item\em Procédure\+: spawner\+Monstre Permet de faire apparaitre des monstres dans la vague actuelle. \end{DoxyCompactList}\item 
-void \hyperlink{classVague_adec201ad91a86f65bf6aaf0ddb73bd20}{affiche} ()
+void \hyperlink{classVague_ae4f544e35c46d10f4545cd768c9af386}{affiche} () const
 \begin{DoxyCompactList}\small\item\em Procédure\+: affiche Permet d\textquotesingle{}afficher des monstre dans la vague. \end{DoxyCompactList}\item 
 void \hyperlink{classVague_ad9d543a1eafc579d8a4de88d278a53a7}{monstres\+Base} (\hyperlink{classBase}{Base} \&b)
 \begin{DoxyCompactList}\small\item\em Procédure\+: monstres\+Base Permet de faire disparaitre le monstre quand il arrive à la base et d\textquotesingle{}enlever un point de vie à la base. \end{DoxyCompactList}\item 
@@ -136,11 +136,11 @@ v2.addrGetIndiceMonstre(4);
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classVague_adec201ad91a86f65bf6aaf0ddb73bd20}\label{classVague_adec201ad91a86f65bf6aaf0ddb73bd20}} 
+\mbox{\Hypertarget{classVague_ae4f544e35c46d10f4545cd768c9af386}\label{classVague_ae4f544e35c46d10f4545cd768c9af386}} 
 \index{Vague@{Vague}!affiche@{affiche}}
 \index{affiche@{affiche}!Vague@{Vague}}
 \subsubsection{\texorpdfstring{affiche()}{affiche()}}
-{\footnotesize\ttfamily void Vague\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Vague\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -169,11 +169,11 @@ v2.avancementEtape(tabChemin2);
  \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classVague_a2a81df1228dfa2ad84109612ef378d4c}\label{classVague_a2a81df1228dfa2ad84109612ef378d4c}} 
+\mbox{\Hypertarget{classVague_a4753f9895677bc4050fdf0c8fc90984b}\label{classVague_a4753f9895677bc4050fdf0c8fc90984b}} 
 \index{Vague@{Vague}!avancer\+Monstre@{avancer\+Monstre}}
 \index{avancer\+Monstre@{avancer\+Monstre}!Vague@{Vague}}
 \subsubsection{\texorpdfstring{avancer\+Monstre()}{avancerMonstre()}}
-{\footnotesize\ttfamily void Vague\+::avancer\+Monstre (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classChemin}{Chemin} $>$ \&}]{tab\+Chemin,  }\item[{float}]{delta }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Vague\+::avancer\+Monstre (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{classChemin}{Chemin} $>$ \&}]{tab\+Chemin,  }\item[{const float \&}]{delta }\end{DoxyParamCaption})}
 
 
 
@@ -356,11 +356,11 @@ v2.getNbMonstreRestant();
  \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classVague_a08f321266ddbf3e852b9d48975849f98}\label{classVague_a08f321266ddbf3e852b9d48975849f98}} 
+\mbox{\Hypertarget{classVague_a2479faa494f68587eebb3c9e74407761}\label{classVague_a2479faa494f68587eebb3c9e74407761}} 
 \index{Vague@{Vague}!spawner\+Monstre@{spawner\+Monstre}}
 \index{spawner\+Monstre@{spawner\+Monstre}!Vague@{Vague}}
 \subsubsection{\texorpdfstring{spawner\+Monstre()}{spawnerMonstre()}}
-{\footnotesize\ttfamily void Vague\+::spawner\+Monstre (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Vague\+::spawner\+Monstre (\begin{DoxyParamCaption}\item[{const float \&}]{delta }\end{DoxyParamCaption})}
 
 
 

@@ -80,15 +80,15 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a9cd19e73df169d7f09397be61ba8548c">~Jeu</a> ()</td></tr>
 <tr class="memdesc:a9cd19e73df169d7f09397be61ba8548c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur Permet de détruire le jeu. <br /></td></tr>
 <tr class="separator:a9cd19e73df169d7f09397be61ba8548c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f8c73b225819fb5a6ba342adc2f1fa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a4f8c73b225819fb5a6ba342adc2f1fa4">afficheCarteDispo</a> ()</td></tr>
-<tr class="memdesc:a4f8c73b225819fb5a6ba342adc2f1fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: afficheCarteDispo Permet d'afficher la carte.  <a href="#a4f8c73b225819fb5a6ba342adc2f1fa4">More...</a><br /></td></tr>
-<tr class="separator:a4f8c73b225819fb5a6ba342adc2f1fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7528edef2101b0abda334ca1d78ea92e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a7528edef2101b0abda334ca1d78ea92e">afficheCarteDispo</a> () const</td></tr>
+<tr class="memdesc:a7528edef2101b0abda334ca1d78ea92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: afficheCarteDispo Permet d'afficher la carte.  <a href="#a7528edef2101b0abda334ca1d78ea92e">More...</a><br /></td></tr>
+<tr class="separator:a7528edef2101b0abda334ca1d78ea92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71bf0b5329ade330d95318b50d1e2f12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNiveau.html">Niveau</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a71bf0b5329ade330d95318b50d1e2f12">getNiveau</a> ()</td></tr>
 <tr class="memdesc:a71bf0b5329ade330d95318b50d1e2f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction: getNiveau Permet de retourner le pointeur de niveau.  <a href="#a71bf0b5329ade330d95318b50d1e2f12">More...</a><br /></td></tr>
 <tr class="separator:a71bf0b5329ade330d95318b50d1e2f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d2a0773d8edcb42d5e055785ad4b71a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a8d2a0773d8edcb42d5e055785ad4b71a">actionAuto</a> (float delta)</td></tr>
-<tr class="memdesc:a8d2a0773d8edcb42d5e055785ad4b71a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: actionAuto Permet d'avoir des actions automatiques.  <a href="#a8d2a0773d8edcb42d5e055785ad4b71a">More...</a><br /></td></tr>
-<tr class="separator:a8d2a0773d8edcb42d5e055785ad4b71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6c999b7a302fde5d2f32d88cbb8563c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#ad6c999b7a302fde5d2f32d88cbb8563c">actionAuto</a> (const float &amp;delta)</td></tr>
+<tr class="memdesc:ad6c999b7a302fde5d2f32d88cbb8563c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: actionAuto Permet d'avoir des actions automatiques.  <a href="#ad6c999b7a302fde5d2f32d88cbb8563c">More...</a><br /></td></tr>
+<tr class="separator:ad6c999b7a302fde5d2f32d88cbb8563c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a95f56b4cdcf94806237e672de41d7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a6a95f56b4cdcf94806237e672de41d7f">clique</a> (const int &amp;x, const int &amp;y, const int &amp;taille)</td></tr>
 <tr class="memdesc:a6a95f56b4cdcf94806237e672de41d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: clique Permet de savoir si le curseur est sur le jeu ou pas.  <a href="#a6a95f56b4cdcf94806237e672de41d7f">More...</a><br /></td></tr>
 <tr class="separator:a6a95f56b4cdcf94806237e672de41d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,30 +101,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea4394fb2f268e68eb8118d32286e8d7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classBouton.html">Bouton</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#aea4394fb2f268e68eb8118d32286e8d7">renvoieBoutonTour</a> ()</td></tr>
 <tr class="memdesc:aea4394fb2f268e68eb8118d32286e8d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tableau de <a class="el" href="classBouton.html" title="Class Bouton Classe de boutons, permettant de gérer les positions des boutons, leurs tailles et le no...">Bouton</a>: renvoieBoutonTour Permet de retourner un tableau de bouton.  <a href="#aea4394fb2f268e68eb8118d32286e8d7">More...</a><br /></td></tr>
 <tr class="separator:aea4394fb2f268e68eb8118d32286e8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada22a232d25c271778a3a0b0ecdd61c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#ada22a232d25c271778a3a0b0ecdd61c9">changerMap</a> (int m)</td></tr>
-<tr class="memdesc:ada22a232d25c271778a3a0b0ecdd61c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: changerMap Permet d'avoir de changer de carte.  <a href="#ada22a232d25c271778a3a0b0ecdd61c9">More...</a><br /></td></tr>
-<tr class="separator:ada22a232d25c271778a3a0b0ecdd61c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcee93768971be5db133648851a0219e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#abcee93768971be5db133648851a0219e">getPause</a> ()</td></tr>
-<tr class="memdesc:abcee93768971be5db133648851a0219e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen: getPause Permet de savoir si le jeu est en pause.  <a href="#abcee93768971be5db133648851a0219e">More...</a><br /></td></tr>
-<tr class="separator:abcee93768971be5db133648851a0219e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a550a74e12dedc1170162141fa9356fb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBouton.html">Bouton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a550a74e12dedc1170162141fa9356fb6">getBoutonPause</a> ()</td></tr>
-<tr class="memdesc:a550a74e12dedc1170162141fa9356fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction: getBoutonPause Permet de retourner un bouton.  <a href="#a550a74e12dedc1170162141fa9356fb6">More...</a><br /></td></tr>
-<tr class="separator:a550a74e12dedc1170162141fa9356fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87235796c5774f1e75a358a0b62602db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a87235796c5774f1e75a358a0b62602db">changerMap</a> (const int &amp;m)</td></tr>
+<tr class="memdesc:a87235796c5774f1e75a358a0b62602db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: changerMap Permet d'avoir de changer de carte.  <a href="#a87235796c5774f1e75a358a0b62602db">More...</a><br /></td></tr>
+<tr class="separator:a87235796c5774f1e75a358a0b62602db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4cfcc4e37dc2365e657fadc8c046e95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#af4cfcc4e37dc2365e657fadc8c046e95">getPause</a> () const</td></tr>
+<tr class="memdesc:af4cfcc4e37dc2365e657fadc8c046e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen: getPause Permet de savoir si le jeu est en pause.  <a href="#af4cfcc4e37dc2365e657fadc8c046e95">More...</a><br /></td></tr>
+<tr class="separator:af4cfcc4e37dc2365e657fadc8c046e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a19081c6f398937f5a5f9b6d606f1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBouton.html">Bouton</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a19a19081c6f398937f5a5f9b6d606f1f">getBoutonPause</a> () const</td></tr>
+<tr class="memdesc:a19a19081c6f398937f5a5f9b6d606f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction: getBoutonPause Permet de retourner un bouton.  <a href="#a19a19081c6f398937f5a5f9b6d606f1f">More...</a><br /></td></tr>
+<tr class="separator:a19a19081c6f398937f5a5f9b6d606f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a825bd1ef8b91c70e468966f6985a2ee3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a825bd1ef8b91c70e468966f6985a2ee3">Pause</a> ()</td></tr>
 <tr class="memdesc:a825bd1ef8b91c70e468966f6985a2ee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: Pause Permet de mettre en pause.  <a href="#a825bd1ef8b91c70e468966f6985a2ee3">More...</a><br /></td></tr>
 <tr class="separator:a825bd1ef8b91c70e468966f6985a2ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01d73851016ee4edb6742231d4084ad7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a01d73851016ee4edb6742231d4084ad7">getImageMap</a> ()</td></tr>
-<tr class="memdesc:a01d73851016ee4edb6742231d4084ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chaine de caractère: getImageMaps Permet de retourner le nom de l'image de la map sélectionnée.  <a href="#a01d73851016ee4edb6742231d4084ad7">More...</a><br /></td></tr>
-<tr class="separator:a01d73851016ee4edb6742231d4084ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53db67d1ac9622db7f13297e398f2730"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMenu.html">Menu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a53db67d1ac9622db7f13297e398f2730">getMenuMap</a> ()</td></tr>
-<tr class="memdesc:a53db67d1ac9622db7f13297e398f2730"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction: getMenuMap Permet de retourner le menu.  <a href="#a53db67d1ac9622db7f13297e398f2730">More...</a><br /></td></tr>
-<tr class="separator:a53db67d1ac9622db7f13297e398f2730"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dee637787fc6976f2b504631780bf38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a1dee637787fc6976f2b504631780bf38">getGagner</a> ()</td></tr>
-<tr class="memdesc:a1dee637787fc6976f2b504631780bf38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen: getGagner Permet de savoir si la partie a été gagnée.  <a href="#a1dee637787fc6976f2b504631780bf38">More...</a><br /></td></tr>
-<tr class="separator:a1dee637787fc6976f2b504631780bf38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a344c165558c9ab3aa815404179351156"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a344c165558c9ab3aa815404179351156">getPerdue</a> ()</td></tr>
-<tr class="memdesc:a344c165558c9ab3aa815404179351156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen: getPerdue Permet de savoir si la partie a été perdue.  <a href="#a344c165558c9ab3aa815404179351156">More...</a><br /></td></tr>
-<tr class="separator:a344c165558c9ab3aa815404179351156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6c8ca3f336af956e4f7ba9f630c7e30"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#aa6c8ca3f336af956e4f7ba9f630c7e30">getImageMap</a> () const</td></tr>
+<tr class="memdesc:aa6c8ca3f336af956e4f7ba9f630c7e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chaine de caractère: getImageMaps Permet de retourner le nom de l'image de la map sélectionnée.  <a href="#aa6c8ca3f336af956e4f7ba9f630c7e30">More...</a><br /></td></tr>
+<tr class="separator:aa6c8ca3f336af956e4f7ba9f630c7e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cbd54926ccb9f9481643d536378b7c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMenu.html">Menu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a4cbd54926ccb9f9481643d536378b7c7">getMenuMap</a> () const</td></tr>
+<tr class="memdesc:a4cbd54926ccb9f9481643d536378b7c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction: getMenuMap Permet de retourner le menu.  <a href="#a4cbd54926ccb9f9481643d536378b7c7">More...</a><br /></td></tr>
+<tr class="separator:a4cbd54926ccb9f9481643d536378b7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4656f397fa4ad510a3e5ecceeb4dcc56"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#a4656f397fa4ad510a3e5ecceeb4dcc56">getGagner</a> () const</td></tr>
+<tr class="memdesc:a4656f397fa4ad510a3e5ecceeb4dcc56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen: getGagner Permet de savoir si la partie a été gagnée.  <a href="#a4656f397fa4ad510a3e5ecceeb4dcc56">More...</a><br /></td></tr>
+<tr class="separator:a4656f397fa4ad510a3e5ecceeb4dcc56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca82760e6c37895401e1ecaa706014ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJeu.html#aca82760e6c37895401e1ecaa706014ea">getPerdue</a> () const</td></tr>
+<tr class="memdesc:aca82760e6c37895401e1ecaa706014ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen: getPerdue Permet de savoir si la partie a été perdue.  <a href="#aca82760e6c37895401e1ecaa706014ea">More...</a><br /></td></tr>
+<tr class="separator:aca82760e6c37895401e1ecaa706014ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class <a class="el" href="classJeu.html" title="Class Jeu Classe de Jeu permettant de gérer le menu, les cartes et les niveaux. ">Jeu</a> Classe de <a class="el" href="classJeu.html" title="Class Jeu Classe de Jeu permettant de gérer le menu, les cartes et les niveaux. ">Jeu</a> permettant de gérer le menu, les cartes et les niveaux. </p>
@@ -149,8 +149,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8d2a0773d8edcb42d5e055785ad4b71a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d2a0773d8edcb42d5e055785ad4b71a">&#9670;&nbsp;</a></span>actionAuto()</h2>
+<a id="ad6c999b7a302fde5d2f32d88cbb8563c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6c999b7a302fde5d2f32d88cbb8563c">&#9670;&nbsp;</a></span>actionAuto()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -158,7 +158,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Jeu::actionAuto </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
+          <td class="paramtype">const float &amp;&#160;</td>
           <td class="paramname"><em>delta</em></td><td>)</td>
           <td></td>
         </tr>
@@ -175,8 +175,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4f8c73b225819fb5a6ba342adc2f1fa4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f8c73b225819fb5a6ba342adc2f1fa4">&#9670;&nbsp;</a></span>afficheCarteDispo()</h2>
+<a id="a7528edef2101b0abda334ca1d78ea92e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7528edef2101b0abda334ca1d78ea92e">&#9670;&nbsp;</a></span>afficheCarteDispo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +185,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void Jeu::afficheCarteDispo </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -194,8 +194,8 @@ Public Member Functions</h2></td></tr>
 <div class="fragment"><div class="line">j2.afficheCarteDispo();</div></div><!-- fragment --> 
 </div>
 </div>
-<a id="ada22a232d25c271778a3a0b0ecdd61c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada22a232d25c271778a3a0b0ecdd61c9">&#9670;&nbsp;</a></span>changerMap()</h2>
+<a id="a87235796c5774f1e75a358a0b62602db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87235796c5774f1e75a358a0b62602db">&#9670;&nbsp;</a></span>changerMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,7 +203,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Jeu::changerMap </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const int &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
         </tr>
@@ -262,8 +262,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a550a74e12dedc1170162141fa9356fb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a550a74e12dedc1170162141fa9356fb6">&#9670;&nbsp;</a></span>getBoutonPause()</h2>
+<a id="a19a19081c6f398937f5a5f9b6d606f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a19081c6f398937f5a5f9b6d606f1f">&#9670;&nbsp;</a></span>getBoutonPause()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +272,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classBouton.html">Bouton</a> Jeu::getBoutonPause </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -282,8 +282,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1dee637787fc6976f2b504631780bf38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dee637787fc6976f2b504631780bf38">&#9670;&nbsp;</a></span>getGagner()</h2>
+<a id="a4656f397fa4ad510a3e5ecceeb4dcc56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4656f397fa4ad510a3e5ecceeb4dcc56">&#9670;&nbsp;</a></span>getGagner()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,7 +292,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool Jeu::getGagner </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -301,8 +301,8 @@ Public Member Functions</h2></td></tr>
 <div class="fragment"><div class="line">i2.getGagner();</div></div><!-- fragment --> 
 </div>
 </div>
-<a id="a01d73851016ee4edb6742231d4084ad7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01d73851016ee4edb6742231d4084ad7">&#9670;&nbsp;</a></span>getImageMap()</h2>
+<a id="aa6c8ca3f336af956e4f7ba9f630c7e30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6c8ca3f336af956e4f7ba9f630c7e30">&#9670;&nbsp;</a></span>getImageMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,7 +311,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">std::string Jeu::getImageMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -321,8 +321,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a53db67d1ac9622db7f13297e398f2730"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53db67d1ac9622db7f13297e398f2730">&#9670;&nbsp;</a></span>getMenuMap()</h2>
+<a id="a4cbd54926ccb9f9481643d536378b7c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cbd54926ccb9f9481643d536378b7c7">&#9670;&nbsp;</a></span>getMenuMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,7 +331,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classMenu.html">Menu</a> Jeu::getMenuMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -361,8 +361,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abcee93768971be5db133648851a0219e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcee93768971be5db133648851a0219e">&#9670;&nbsp;</a></span>getPause()</h2>
+<a id="af4cfcc4e37dc2365e657fadc8c046e95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4cfcc4e37dc2365e657fadc8c046e95">&#9670;&nbsp;</a></span>getPause()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -371,7 +371,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool Jeu::getPause </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -380,8 +380,8 @@ Public Member Functions</h2></td></tr>
 <div class="fragment"><div class="line">i2.getPause();</div></div><!-- fragment --> 
 </div>
 </div>
-<a id="a344c165558c9ab3aa815404179351156"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a344c165558c9ab3aa815404179351156">&#9670;&nbsp;</a></span>getPerdue()</h2>
+<a id="aca82760e6c37895401e1ecaa706014ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca82760e6c37895401e1ecaa706014ea">&#9670;&nbsp;</a></span>getPerdue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -390,7 +390,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool Jeu::getPerdue </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">

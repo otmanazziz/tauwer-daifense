@@ -16,23 +16,23 @@ Class \hyperlink{classNiveau}{Niveau} Classe de \hyperlink{classNiveau}{Niveau} 
 \begin{DoxyCompactList}\small\item\em Constructeur par défaut\+: \hyperlink{classNiveau}{Niveau} Permet de créer le niveau par défaut. \end{DoxyCompactList}\item 
 \hyperlink{classNiveau_a5f59a46da066f15b0c21154cbf583490}{Niveau} (const std\+::string \&f)
 \begin{DoxyCompactList}\small\item\em Constructeur par copie\+: \hyperlink{classNiveau}{Niveau} Permet de créer par copie un nouveau niveau. \end{DoxyCompactList}\item 
-\hyperlink{classCarte}{Carte} \hyperlink{classNiveau_a503e0b7db795e1f9bf3ea76cc4fd9e99}{get\+Carte} ()
+\hyperlink{classCarte}{Carte} \hyperlink{classNiveau_aa73cc05c792c580821b06e21e8eab4b1}{get\+Carte} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Carte Permet de retourner la carte. \end{DoxyCompactList}\item 
-unsigned int \hyperlink{classNiveau_a86202965dadd70b9f13c4e5e78a46542}{get\+Or} ()
+unsigned int \hyperlink{classNiveau_a2ec4d0acee314e00c509b603c580b13b}{get\+Or} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Or Permet de retourner le nombre d\textquotesingle{}or. \end{DoxyCompactList}\item 
 \hyperlink{classCarte}{Carte} $\ast$ \hyperlink{classNiveau_a47ea8b8f36e27be8ad0d3f534a956260}{addr\+Get\+Carte} ()
 \begin{DoxyCompactList}\small\item\em Fonction\+: addr\+Get\+Carte Permet de retourner le pointeur de carte. \end{DoxyCompactList}\item 
-void \hyperlink{classNiveau_a4434c142b17c0299d2d7744b2ea11e99}{maj} (float delta)
+void \hyperlink{classNiveau_a3d1e0f0ec2d7b72eae985d0448c17dd5}{maj} (const float \&delta)
 \begin{DoxyCompactList}\small\item\em Procédure\+: maj Permet de faire la mise à jour de la carte. \end{DoxyCompactList}\item 
-void \hyperlink{classNiveau_aca63b4ff95491069ebf5a8931ffc6d03}{ajouter\+Or} (unsigned int o)
+void \hyperlink{classNiveau_adf4df9af322f4354ca4a9adeffd5eb29}{ajouter\+Or} (const unsigned int \&o)
 \begin{DoxyCompactList}\small\item\em Procédure\+: ajouter\+Or Permet de gagner de l\textquotesingle{}or en tuant des ennemis. \end{DoxyCompactList}\item 
-void \hyperlink{classNiveau_a3192b7514716cfddac9ff465f9ad1f2f}{retirer\+Or} (unsigned int o)
+void \hyperlink{classNiveau_a11f7ce4e0918a94d41c66459394cdd49}{retirer\+Or} (const unsigned int \&o)
 \begin{DoxyCompactList}\small\item\em Procédure\+: retirer\+Or Permet de perdre de l\textquotesingle{}or en tuant des ennemis. \end{DoxyCompactList}\item 
-void \hyperlink{classNiveau_a945a71fd635f9ab1e15dbae04afa5e5d}{affiche} ()
+void \hyperlink{classNiveau_ac0aff25fcdea980ff740344f58be0bbc}{affiche} () const
 \begin{DoxyCompactList}\small\item\em Procédure\+: affiche Permet d\textquotesingle{}afficher le niveau. \end{DoxyCompactList}\item 
-bool \hyperlink{classNiveau_a749c4fbb42a1f47bff1b0b845a214d1a}{perdue} ()
+bool \hyperlink{classNiveau_ad1345f4f482fdd18213cab3b4cd8b8dc}{perdue} () const
 \begin{DoxyCompactList}\small\item\em Booléen\+: perdue Permet de savoir si le niveau est perdue ou non. \end{DoxyCompactList}\item 
-bool \hyperlink{classNiveau_ab43feae8b186ed6167b5cadaf2d01cac}{fin\+Niveau} ()
+bool \hyperlink{classNiveau_aa94199eb0d75ab0d17c05272667e07a3}{fin\+Niveau} () const
 \begin{DoxyCompactList}\small\item\em Booléen\+: fin\+Niveau Permet de savoir si le niveau est finie ou non. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -93,11 +93,11 @@ n2->addrGetCarte();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classNiveau_a945a71fd635f9ab1e15dbae04afa5e5d}\label{classNiveau_a945a71fd635f9ab1e15dbae04afa5e5d}} 
+\mbox{\Hypertarget{classNiveau_ac0aff25fcdea980ff740344f58be0bbc}\label{classNiveau_ac0aff25fcdea980ff740344f58be0bbc}} 
 \index{Niveau@{Niveau}!affiche@{affiche}}
 \index{affiche@{affiche}!Niveau@{Niveau}}
 \subsubsection{\texorpdfstring{affiche()}{affiche()}}
-{\footnotesize\ttfamily void Niveau\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Niveau\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -107,11 +107,11 @@ Procédure\+: affiche Permet d\textquotesingle{}afficher le niveau.
 \begin{DoxyCode}
 n2.affiche();
 \end{DoxyCode}
- \mbox{\Hypertarget{classNiveau_aca63b4ff95491069ebf5a8931ffc6d03}\label{classNiveau_aca63b4ff95491069ebf5a8931ffc6d03}} 
+ \mbox{\Hypertarget{classNiveau_adf4df9af322f4354ca4a9adeffd5eb29}\label{classNiveau_adf4df9af322f4354ca4a9adeffd5eb29}} 
 \index{Niveau@{Niveau}!ajouter\+Or@{ajouter\+Or}}
 \index{ajouter\+Or@{ajouter\+Or}!Niveau@{Niveau}}
 \subsubsection{\texorpdfstring{ajouter\+Or()}{ajouterOr()}}
-{\footnotesize\ttfamily void Niveau\+::ajouter\+Or (\begin{DoxyParamCaption}\item[{unsigned int}]{o }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Niveau\+::ajouter\+Or (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{o }\end{DoxyParamCaption})}
 
 
 
@@ -126,11 +126,11 @@ n2.ajouterOr(o);
  \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classNiveau_ab43feae8b186ed6167b5cadaf2d01cac}\label{classNiveau_ab43feae8b186ed6167b5cadaf2d01cac}} 
+\mbox{\Hypertarget{classNiveau_aa94199eb0d75ab0d17c05272667e07a3}\label{classNiveau_aa94199eb0d75ab0d17c05272667e07a3}} 
 \index{Niveau@{Niveau}!fin\+Niveau@{fin\+Niveau}}
 \index{fin\+Niveau@{fin\+Niveau}!Niveau@{Niveau}}
 \subsubsection{\texorpdfstring{fin\+Niveau()}{finNiveau()}}
-{\footnotesize\ttfamily bool Niveau\+::fin\+Niveau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Niveau\+::fin\+Niveau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -140,11 +140,11 @@ Booléen\+: fin\+Niveau Permet de savoir si le niveau est finie ou non.
 \begin{DoxyCode}
 n2.finNiveau();
 \end{DoxyCode}
- \mbox{\Hypertarget{classNiveau_a503e0b7db795e1f9bf3ea76cc4fd9e99}\label{classNiveau_a503e0b7db795e1f9bf3ea76cc4fd9e99}} 
+ \mbox{\Hypertarget{classNiveau_aa73cc05c792c580821b06e21e8eab4b1}\label{classNiveau_aa73cc05c792c580821b06e21e8eab4b1}} 
 \index{Niveau@{Niveau}!get\+Carte@{get\+Carte}}
 \index{get\+Carte@{get\+Carte}!Niveau@{Niveau}}
 \subsubsection{\texorpdfstring{get\+Carte()}{getCarte()}}
-{\footnotesize\ttfamily \hyperlink{classCarte}{Carte} Niveau\+::get\+Carte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classCarte}{Carte} Niveau\+::get\+Carte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -157,11 +157,11 @@ n2.getCarte();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classNiveau_a86202965dadd70b9f13c4e5e78a46542}\label{classNiveau_a86202965dadd70b9f13c4e5e78a46542}} 
+\mbox{\Hypertarget{classNiveau_a2ec4d0acee314e00c509b603c580b13b}\label{classNiveau_a2ec4d0acee314e00c509b603c580b13b}} 
 \index{Niveau@{Niveau}!get\+Or@{get\+Or}}
 \index{get\+Or@{get\+Or}!Niveau@{Niveau}}
 \subsubsection{\texorpdfstring{get\+Or()}{getOr()}}
-{\footnotesize\ttfamily unsigned int Niveau\+::get\+Or (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily unsigned int Niveau\+::get\+Or (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -174,11 +174,11 @@ n2.getOr();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classNiveau_a4434c142b17c0299d2d7744b2ea11e99}\label{classNiveau_a4434c142b17c0299d2d7744b2ea11e99}} 
+\mbox{\Hypertarget{classNiveau_a3d1e0f0ec2d7b72eae985d0448c17dd5}\label{classNiveau_a3d1e0f0ec2d7b72eae985d0448c17dd5}} 
 \index{Niveau@{Niveau}!maj@{maj}}
 \index{maj@{maj}!Niveau@{Niveau}}
 \subsubsection{\texorpdfstring{maj()}{maj()}}
-{\footnotesize\ttfamily void Niveau\+::maj (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Niveau\+::maj (\begin{DoxyParamCaption}\item[{const float \&}]{delta }\end{DoxyParamCaption})}
 
 
 
@@ -193,11 +193,11 @@ n2.maj(delta);
  \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classNiveau_a749c4fbb42a1f47bff1b0b845a214d1a}\label{classNiveau_a749c4fbb42a1f47bff1b0b845a214d1a}} 
+\mbox{\Hypertarget{classNiveau_ad1345f4f482fdd18213cab3b4cd8b8dc}\label{classNiveau_ad1345f4f482fdd18213cab3b4cd8b8dc}} 
 \index{Niveau@{Niveau}!perdue@{perdue}}
 \index{perdue@{perdue}!Niveau@{Niveau}}
 \subsubsection{\texorpdfstring{perdue()}{perdue()}}
-{\footnotesize\ttfamily bool Niveau\+::perdue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Niveau\+::perdue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -207,11 +207,11 @@ Booléen\+: perdue Permet de savoir si le niveau est perdue ou non.
 \begin{DoxyCode}
 n2.perdue();
 \end{DoxyCode}
- \mbox{\Hypertarget{classNiveau_a3192b7514716cfddac9ff465f9ad1f2f}\label{classNiveau_a3192b7514716cfddac9ff465f9ad1f2f}} 
+ \mbox{\Hypertarget{classNiveau_a11f7ce4e0918a94d41c66459394cdd49}\label{classNiveau_a11f7ce4e0918a94d41c66459394cdd49}} 
 \index{Niveau@{Niveau}!retirer\+Or@{retirer\+Or}}
 \index{retirer\+Or@{retirer\+Or}!Niveau@{Niveau}}
 \subsubsection{\texorpdfstring{retirer\+Or()}{retirerOr()}}
-{\footnotesize\ttfamily void Niveau\+::retirer\+Or (\begin{DoxyParamCaption}\item[{unsigned int}]{o }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Niveau\+::retirer\+Or (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{o }\end{DoxyParamCaption})}
 
 
 

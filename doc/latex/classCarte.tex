@@ -23,17 +23,17 @@ Class \hyperlink{classCarte}{Carte} Classe de carte, permettant de gérer les in
 \begin{DoxyCompactList}\small\item\em Destructeur Permet de détruire la carte. \end{DoxyCompactList}\item 
 bool \hyperlink{classCarte_a80741d7228490a91565f33977355da92}{reinit} ()
 \begin{DoxyCompactList}\small\item\em Booléen\+: reinit Permet de savoir si la carte a été réinitialisé \end{DoxyCompactList}\item 
-\hyperlink{classTour}{Tour} \hyperlink{classCarte_ae4eaa2ff8488218767a9f68232f066d4}{tour\+Indice} (const int \&i)
+\hyperlink{classTour}{Tour} \hyperlink{classCarte_ace227aeaf1d279b2ac3504639816ce1b}{tour\+Indice} (const int \&i) const
 \begin{DoxyCompactList}\small\item\em Fonction\+: tour\+Indice Permet de retourner la tour à l\textquotesingle{}indice i. \end{DoxyCompactList}\item 
-\hyperlink{classVague}{Vague} \hyperlink{classCarte_a042044f8d54a0f85953a5f61a0d38c86}{vague\+Indice} (const int \&i)
+\hyperlink{classVague}{Vague} \hyperlink{classCarte_ac8403e6b71fd024843cbd24df8a21b82}{vague\+Indice} (const int \&i) const
 \begin{DoxyCompactList}\small\item\em Fonction\+: vague\+Indice Permet de retourner la vague à l\textquotesingle{}indice i. \end{DoxyCompactList}\item 
-\hyperlink{classChemin}{Chemin} \hyperlink{classCarte_aaab8126dc81caed5a8e38772d84b60e4}{chemin\+Indice} (const int \&i)
+\hyperlink{classChemin}{Chemin} \hyperlink{classCarte_a6cef034e71ce9b1d39f8ddd73dbaa746}{chemin\+Indice} (const int \&i) const
 \begin{DoxyCompactList}\small\item\em Fonction\+: chemin\+Indice Permet de retourner le chemin à l\textquotesingle{}indice i. \end{DoxyCompactList}\item 
-unsigned int \hyperlink{classCarte_a34264cb9ab59c19b9bd7ad1eeae324b0}{taille\+Tab\+Tour} ()
+unsigned int \hyperlink{classCarte_ab42ddff6b684b5d3e1942c4b637e41fd}{taille\+Tab\+Tour} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: taille\+Tab\+Tour Permet de retourner la taille du tableau de tour (nombre de tour) \end{DoxyCompactList}\item 
-unsigned int \hyperlink{classCarte_aa55a81ad0d51af69b0a34dcc544b678d}{taille\+Tab\+Chemin} ()
+unsigned int \hyperlink{classCarte_ab8f4fcaae33cf96d72eca6d819eb48c5}{taille\+Tab\+Chemin} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: taille\+Tab\+Chemin Permet de retourner la taille du tableau de chemin (nombre de chemin) \end{DoxyCompactList}\item 
-unsigned int \hyperlink{classCarte_a17cf9a92bb7d81cf3279b50bb40b0891}{taille\+Tab\+Vague} ()
+unsigned int \hyperlink{classCarte_aaca62745b070091a5b1aed99205001d0}{taille\+Tab\+Vague} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: taille\+Tab\+Vague Permet de retourner la taille du tableau de vague (nombre de vague) \end{DoxyCompactList}\item 
 \hyperlink{classTour}{Tour} $\ast$ \hyperlink{classCarte_a573a9aa2b9917152357b710fe0be6ecc}{addr\+Tour\+Indice} (const int \&i)
 \begin{DoxyCompactList}\small\item\em Fonction\+: addr\+Tour\+Indice Permet de retourner le pointeur de la tour à l\textquotesingle{}indice i. \end{DoxyCompactList}\item 
@@ -41,13 +41,13 @@ unsigned int \hyperlink{classCarte_a17cf9a92bb7d81cf3279b50bb40b0891}{taille\+Ta
 \begin{DoxyCompactList}\small\item\em Fonction\+: addr\+Vague\+Indice Permet de retourner le pointeur de la vague à l\textquotesingle{}indice i. \end{DoxyCompactList}\item 
 \hyperlink{classChemin}{Chemin} $\ast$ \hyperlink{classCarte_a16a507cb5eb10f57f0d34052db75689c}{addr\+Chemin\+Indice} (const int \&i)
 \begin{DoxyCompactList}\small\item\em Fonction\+: addr\+Chemin\+Indice Permet de retourner le pointeur du chemin à l\textquotesingle{}indice i. \end{DoxyCompactList}\item 
-void \hyperlink{classCarte_a6d721dfc81b3a45f038c73d20e80d545}{maj} (\hyperlink{classNiveau}{Niveau} \&n, float delta)
+void \hyperlink{classCarte_acab09788089999f806da300dd9b162ff}{maj} (\hyperlink{classNiveau}{Niveau} \&n, const float \&delta)
 \begin{DoxyCompactList}\small\item\em Procédure\+: maj Permet de mettre à jour la carte. \end{DoxyCompactList}\item 
-\hyperlink{classBase}{Base} \hyperlink{classCarte_af76239ad9a307cf94ba0916ea477a331}{get\+Base} ()
+\hyperlink{classBase}{Base} \hyperlink{classCarte_ae849d9931469bda9845a90791a2067de}{get\+Base} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: get\+Base Permet de retourner la base. \end{DoxyCompactList}\item 
 void \hyperlink{classCarte_a66c41e01a4a8730630bd77b6dd1b670e}{set\+Fichier} (const std\+::string \&f)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Fichier Permet de changer de fichiers. \end{DoxyCompactList}\item 
-void \hyperlink{classCarte_aef8696f9e6017496583bf32fb7cceb80}{affiche} ()
+void \hyperlink{classCarte_ac665513f49b01111c18e7f482eb346d2}{affiche} () const
 \begin{DoxyCompactList}\small\item\em Procédure\+: affiche Permet d\textquotesingle{}afficher la carte. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -171,11 +171,11 @@ c2.addrVagueIndice(i);
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classCarte_aef8696f9e6017496583bf32fb7cceb80}\label{classCarte_aef8696f9e6017496583bf32fb7cceb80}} 
+\mbox{\Hypertarget{classCarte_ac665513f49b01111c18e7f482eb346d2}\label{classCarte_ac665513f49b01111c18e7f482eb346d2}} 
 \index{Carte@{Carte}!affiche@{affiche}}
 \index{affiche@{affiche}!Carte@{Carte}}
 \subsubsection{\texorpdfstring{affiche()}{affiche()}}
-{\footnotesize\ttfamily void Carte\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Carte\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -185,11 +185,11 @@ Procédure\+: affiche Permet d\textquotesingle{}afficher la carte.
 \begin{DoxyCode}
 c2.affiche();
 \end{DoxyCode}
- \mbox{\Hypertarget{classCarte_aaab8126dc81caed5a8e38772d84b60e4}\label{classCarte_aaab8126dc81caed5a8e38772d84b60e4}} 
+ \mbox{\Hypertarget{classCarte_a6cef034e71ce9b1d39f8ddd73dbaa746}\label{classCarte_a6cef034e71ce9b1d39f8ddd73dbaa746}} 
 \index{Carte@{Carte}!chemin\+Indice@{chemin\+Indice}}
 \index{chemin\+Indice@{chemin\+Indice}!Carte@{Carte}}
 \subsubsection{\texorpdfstring{chemin\+Indice()}{cheminIndice()}}
-{\footnotesize\ttfamily \hyperlink{classChemin}{Chemin} Carte\+::chemin\+Indice (\begin{DoxyParamCaption}\item[{const int \&}]{i }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classChemin}{Chemin} Carte\+::chemin\+Indice (\begin{DoxyParamCaption}\item[{const int \&}]{i }\end{DoxyParamCaption}) const}
 
 
 
@@ -207,11 +207,11 @@ c2.cheminIndice(i);
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classCarte_af76239ad9a307cf94ba0916ea477a331}\label{classCarte_af76239ad9a307cf94ba0916ea477a331}} 
+\mbox{\Hypertarget{classCarte_ae849d9931469bda9845a90791a2067de}\label{classCarte_ae849d9931469bda9845a90791a2067de}} 
 \index{Carte@{Carte}!get\+Base@{get\+Base}}
 \index{get\+Base@{get\+Base}!Carte@{Carte}}
 \subsubsection{\texorpdfstring{get\+Base()}{getBase()}}
-{\footnotesize\ttfamily \hyperlink{classBase}{Base} Carte\+::get\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classBase}{Base} Carte\+::get\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -224,11 +224,11 @@ c2.getBase(i);
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classCarte_a6d721dfc81b3a45f038c73d20e80d545}\label{classCarte_a6d721dfc81b3a45f038c73d20e80d545}} 
+\mbox{\Hypertarget{classCarte_acab09788089999f806da300dd9b162ff}\label{classCarte_acab09788089999f806da300dd9b162ff}} 
 \index{Carte@{Carte}!maj@{maj}}
 \index{maj@{maj}!Carte@{Carte}}
 \subsubsection{\texorpdfstring{maj()}{maj()}}
-{\footnotesize\ttfamily void Carte\+::maj (\begin{DoxyParamCaption}\item[{\hyperlink{classNiveau}{Niveau} \&}]{n,  }\item[{float}]{delta }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Carte\+::maj (\begin{DoxyParamCaption}\item[{\hyperlink{classNiveau}{Niveau} \&}]{n,  }\item[{const float \&}]{delta }\end{DoxyParamCaption})}
 
 
 
@@ -276,11 +276,11 @@ c2.setFichier(f);
  \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classCarte_aa55a81ad0d51af69b0a34dcc544b678d}\label{classCarte_aa55a81ad0d51af69b0a34dcc544b678d}} 
+\mbox{\Hypertarget{classCarte_ab8f4fcaae33cf96d72eca6d819eb48c5}\label{classCarte_ab8f4fcaae33cf96d72eca6d819eb48c5}} 
 \index{Carte@{Carte}!taille\+Tab\+Chemin@{taille\+Tab\+Chemin}}
 \index{taille\+Tab\+Chemin@{taille\+Tab\+Chemin}!Carte@{Carte}}
 \subsubsection{\texorpdfstring{taille\+Tab\+Chemin()}{tailleTabChemin()}}
-{\footnotesize\ttfamily unsigned int Carte\+::taille\+Tab\+Chemin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily unsigned int Carte\+::taille\+Tab\+Chemin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -293,11 +293,11 @@ c2.tailleTabChemin();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classCarte_a34264cb9ab59c19b9bd7ad1eeae324b0}\label{classCarte_a34264cb9ab59c19b9bd7ad1eeae324b0}} 
+\mbox{\Hypertarget{classCarte_ab42ddff6b684b5d3e1942c4b637e41fd}\label{classCarte_ab42ddff6b684b5d3e1942c4b637e41fd}} 
 \index{Carte@{Carte}!taille\+Tab\+Tour@{taille\+Tab\+Tour}}
 \index{taille\+Tab\+Tour@{taille\+Tab\+Tour}!Carte@{Carte}}
 \subsubsection{\texorpdfstring{taille\+Tab\+Tour()}{tailleTabTour()}}
-{\footnotesize\ttfamily unsigned int Carte\+::taille\+Tab\+Tour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily unsigned int Carte\+::taille\+Tab\+Tour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -310,11 +310,11 @@ c2.tailleTabTour();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classCarte_a17cf9a92bb7d81cf3279b50bb40b0891}\label{classCarte_a17cf9a92bb7d81cf3279b50bb40b0891}} 
+\mbox{\Hypertarget{classCarte_aaca62745b070091a5b1aed99205001d0}\label{classCarte_aaca62745b070091a5b1aed99205001d0}} 
 \index{Carte@{Carte}!taille\+Tab\+Vague@{taille\+Tab\+Vague}}
 \index{taille\+Tab\+Vague@{taille\+Tab\+Vague}!Carte@{Carte}}
 \subsubsection{\texorpdfstring{taille\+Tab\+Vague()}{tailleTabVague()}}
-{\footnotesize\ttfamily unsigned int Carte\+::taille\+Tab\+Vague (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily unsigned int Carte\+::taille\+Tab\+Vague (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -327,11 +327,11 @@ c2.tailleTabVague();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classCarte_ae4eaa2ff8488218767a9f68232f066d4}\label{classCarte_ae4eaa2ff8488218767a9f68232f066d4}} 
+\mbox{\Hypertarget{classCarte_ace227aeaf1d279b2ac3504639816ce1b}\label{classCarte_ace227aeaf1d279b2ac3504639816ce1b}} 
 \index{Carte@{Carte}!tour\+Indice@{tour\+Indice}}
 \index{tour\+Indice@{tour\+Indice}!Carte@{Carte}}
 \subsubsection{\texorpdfstring{tour\+Indice()}{tourIndice()}}
-{\footnotesize\ttfamily \hyperlink{classTour}{Tour} Carte\+::tour\+Indice (\begin{DoxyParamCaption}\item[{const int \&}]{i }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classTour}{Tour} Carte\+::tour\+Indice (\begin{DoxyParamCaption}\item[{const int \&}]{i }\end{DoxyParamCaption}) const}
 
 
 
@@ -349,11 +349,11 @@ c2.tourIndice(i);
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classCarte_a042044f8d54a0f85953a5f61a0d38c86}\label{classCarte_a042044f8d54a0f85953a5f61a0d38c86}} 
+\mbox{\Hypertarget{classCarte_ac8403e6b71fd024843cbd24df8a21b82}\label{classCarte_ac8403e6b71fd024843cbd24df8a21b82}} 
 \index{Carte@{Carte}!vague\+Indice@{vague\+Indice}}
 \index{vague\+Indice@{vague\+Indice}!Carte@{Carte}}
 \subsubsection{\texorpdfstring{vague\+Indice()}{vagueIndice()}}
-{\footnotesize\ttfamily \hyperlink{classVague}{Vague} Carte\+::vague\+Indice (\begin{DoxyParamCaption}\item[{const int \&}]{i }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{classVague}{Vague} Carte\+::vague\+Indice (\begin{DoxyParamCaption}\item[{const int \&}]{i }\end{DoxyParamCaption}) const}
 
 
 

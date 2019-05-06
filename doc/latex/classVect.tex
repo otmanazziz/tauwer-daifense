@@ -39,15 +39,15 @@ float \hyperlink{classVect_a2e44111683aae147cd053ac6002f5992}{getY} () const
 \begin{DoxyCompactList}\small\item\em Fonction\+: getY Permet de retourner le vecteur Y. \end{DoxyCompactList}\item 
 void \hyperlink{classVect_a28408435bc900905d3416aef70140cd9}{set\+Vect} (const \hyperlink{classVect}{Vect} \&vector)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Vect Permet de définir le vecteur privé \end{DoxyCompactList}\item 
-void \hyperlink{classVect_afba6ce27d6700dddeb9272cdf39c66e3}{affiche\+Vect} ()
+void \hyperlink{classVect_a11f0af5e83cd9c4605c37e0b98eff8c0}{affiche\+Vect} () const
 \begin{DoxyCompactList}\small\item\em Procédure\+: affiche\+Vect Permet d\textquotesingle{}afficher les coordonnées du vecteur. \end{DoxyCompactList}\item 
 float \hyperlink{classVect_aa61c71b79a4d2f2cda092648a7268c4f}{module} () const
 \begin{DoxyCompactList}\small\item\em Réel\+: module Retourne le module d\textquotesingle{}un vecteur. \end{DoxyCompactList}\item 
 void \hyperlink{classVect_a734074001bba32f3d76e5cee612864f1}{test\+Regression} ()
 \begin{DoxyCompactList}\small\item\em Procédure\+: test\+Regression Fait des tests de Régression. \end{DoxyCompactList}\item 
-\hyperlink{classVect}{Vect} \hyperlink{classVect_a81581552ec69c7a0006837148141232e}{operator$\ast$} (float f) const
+\hyperlink{classVect}{Vect} \hyperlink{classVect_a449279327576b48553f88bcaa5027d40}{operator$\ast$} (const float \&f) const
 \begin{DoxyCompactList}\small\item\em Vecteur\+: operator $\ast$ Permet de retourner le produit d\textquotesingle{}un vect et d\textquotesingle{}un réel. \end{DoxyCompactList}\item 
-\hyperlink{classVect}{Vect} \hyperlink{classVect_a5fcad4106fa5eb9826f7259f3509599e}{operator/} (float f) const
+\hyperlink{classVect}{Vect} \hyperlink{classVect_ada922ed2e27088a85db483e04d93492f}{operator/} (const float \&f) const
 \begin{DoxyCompactList}\small\item\em Vecteur\+: operator / Permet de retourner la division d\textquotesingle{}un vect et d\textquotesingle{}un réel. \end{DoxyCompactList}\item 
 \hyperlink{classVect}{Vect} \hyperlink{classVect_a7c95db0096c212593a83992d8c9cc42a}{operator\%} (const int \&i) const
 \begin{DoxyCompactList}\small\item\em Vecteur\+: operator \% Permet de retourner le reste de la division euclidienne d\textquotesingle{}un vect et d\textquotesingle{}un entier sur chaque composante. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -112,11 +112,11 @@ Constructeur\+: \hyperlink{classVect}{Vect} Permet de créer le vecteur avec des
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classVect_afba6ce27d6700dddeb9272cdf39c66e3}\label{classVect_afba6ce27d6700dddeb9272cdf39c66e3}} 
+\mbox{\Hypertarget{classVect_a11f0af5e83cd9c4605c37e0b98eff8c0}\label{classVect_a11f0af5e83cd9c4605c37e0b98eff8c0}} 
 \index{Vect@{Vect}!affiche\+Vect@{affiche\+Vect}}
 \index{affiche\+Vect@{affiche\+Vect}!Vect@{Vect}}
 \subsubsection{\texorpdfstring{affiche\+Vect()}{afficheVect()}}
-{\footnotesize\ttfamily void Vect\+::affiche\+Vect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Vect\+::affiche\+Vect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -124,7 +124,7 @@ Procédure\+: affiche\+Vect Permet d\textquotesingle{}afficher les coordonnées 
 
 
 \begin{DoxyCode}
-v.\hyperlink{classVect_afba6ce27d6700dddeb9272cdf39c66e3}{afficheVect}();
+v.\hyperlink{classVect_a11f0af5e83cd9c4605c37e0b98eff8c0}{afficheVect}();
 \end{DoxyCode}
  \mbox{\Hypertarget{classVect_a8925192fe8666b52b2385ff006ab3213}\label{classVect_a8925192fe8666b52b2385ff006ab3213}} 
 \index{Vect@{Vect}!getX@{getX}}
@@ -225,17 +225,17 @@ Vecteur\+: Opérateur $\ast$ Permet de retourner le produit de 2 vecteurs.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-La somme de 2 vecteurs 
+Le produit de 2 vecteurs 
 \begin{DoxyCode}
 \hyperlink{classVect}{Vect} v3 = v1 * v2;
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classVect_a81581552ec69c7a0006837148141232e}\label{classVect_a81581552ec69c7a0006837148141232e}} 
+\mbox{\Hypertarget{classVect_a449279327576b48553f88bcaa5027d40}\label{classVect_a449279327576b48553f88bcaa5027d40}} 
 \index{Vect@{Vect}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!Vect@{Vect}}
 \subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const float \&}]{f }\end{DoxyParamCaption}) const}
 
 
 
@@ -319,11 +319,11 @@ La division de 2 vecteurs
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classVect_a5fcad4106fa5eb9826f7259f3509599e}\label{classVect_a5fcad4106fa5eb9826f7259f3509599e}} 
+\mbox{\Hypertarget{classVect_ada922ed2e27088a85db483e04d93492f}\label{classVect_ada922ed2e27088a85db483e04d93492f}} 
 \index{Vect@{Vect}!operator/@{operator/}}
 \index{operator/@{operator/}!Vect@{Vect}}
 \subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator/ (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \hyperlink{classVect}{Vect} Vect\+::operator/ (\begin{DoxyParamCaption}\item[{const float \&}]{f }\end{DoxyParamCaption}) const}
 
 
 
