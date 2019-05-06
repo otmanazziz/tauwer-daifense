@@ -126,7 +126,13 @@ public:
 		@endcode	
 	*/
 	void setOpacity(const float &_opacity);
-
+	/**
+		@brief Procédure: testRegression
+		Permet d'effectuer un test de régression
+		@code
+			c2.testRegression();
+		@endcode	
+	*/
 	void testRegression();
 };
 

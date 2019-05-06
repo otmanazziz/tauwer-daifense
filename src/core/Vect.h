@@ -68,7 +68,7 @@ class Vect{
 		@brief Vecteur: Opérateur -
 		Permet de retourner la différence de 2 vecteurs
 		@param vector2: Un autre vecteur
-		@return La somme de 2 vecteurs
+		@return La soustraction de 2 vecteurs
 		@code
 			Vect v3 = v1 - v2;
 		@endcode
@@ -78,7 +78,7 @@ class Vect{
 		@brief Vecteur: Opérateur /
 		Permet de retourner le quotient de 2 vecteurs
 		@param vector2: Un autre vecteur
-		@return La somme de 2 vecteurs
+		@return La division de 2 vecteurs
 		@code
 			Vect v3 = v1 / v2;
 		@endcode
@@ -159,8 +159,35 @@ class Vect{
 		@endcode
 		*/
 		void testRegression();
+		/**
+		@brief Vecteur: operator *
+		Permet de retourner le produit d'un vect et d'un réel
+		@param float f
+		@return Le produit d'un vecteur et d'un réel
+		@code
+			Vect v3 = v1 * f;
+		@endcode
+		*/
 		Vect operator*(float f)const;
+		/**
+		@brief Vecteur: operator /
+		Permet de retourner la division d'un vect et d'un réel
+		@param float f
+		@return Le division d'un vecteur et d'un réel
+		@code
+			Vect v3 = v1 / f;
+		@endcode
+		*/
 		Vect operator/(float f)const;
+		/**
+		@brief Vecteur: operator %
+		Permet de retourner le reste de la division euclidienne d'un vect et d'un réel
+		@param Entier i
+		@return Le reste de la division euclidienne d'un vect et d'un réel
+		@code
+			Vect v3 = v1 % f;
+		@endcode
+		*/
 		Vect operator%(const int & i)const;
 };
 

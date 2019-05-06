@@ -130,23 +130,95 @@ public:
 	*/
 	void affiche();
 	/**
-	@brief Booléen: estAPortee
-	Vérifie si la tour a détecté un ennemi (ici des coordonnées d'un vecteur) dans sa portée
-	@param Classe Vect
-	@return Booléen
-	@code
-		t.estAPortee(v);
-	@endcode
+		@brief Booléen: estAPortee
+		Vérifie si la tour a détecté un ennemi (ici des coordonnées d'un vecteur) dans sa portée
+		@param Classe Vect
+		@return Booléen
+		@code
+			t2.estAPortee(v);
+		@endcode
 	*/
 	bool estAPortee(const Vect &pos)const;
+	/**
+		@brief Fonction: getDegat
+		Permet de retourner l'entier des dégats de la tour
+		@return Entier
+		@code
+			t2.getDegat();
+		@endcode
+	*/
 	int getDegat();
+	/**
+		@brief Attaque: getAttaque
+		Permet de retourner l'attaque de la tour
+		@return Attaque
+		@code
+			t2.getAttaque();
+		@endcode
+	*/
 	Attaque getAttaque();
+	/**
+		@brief Procédure: setAAttaquer
+		Permet de modifier l'attaque de la tour
+		@param Booléen b
+		@code
+			t2.setAAttaquer(b);
+		@endcode
+	*/
 	void setAAttaquer(bool b);
+	/**
+		@brief Procédure: addDegat
+		Permet d'ajouter des dégats à la tour
+		@param Entier d
+		@code
+			t2.addDegat(d);
+		@endcode
+	*/
 	void addDegat(int d);
+	/**
+		@brief Procédure: addVitAtq
+		Permet d'ajouter de la vitesse d'attaque à la tour
+		@param Réel f
+		@code
+			t2.addVitAtq(f);
+		@endcode
+	*/
 	void addVitAtq(float f);
+	/**
+		@brief Procédure: addPortee
+		Permet d'ajouter de la portée à la tour
+		@param Entier p
+		@code
+			t2.addPortee(p);
+		@endcode
+	*/
 	void addPortee(int p);
+	/**
+		@brief Booléen: peutTirer
+		Permet de savoir si la tour peut tirer ou non
+		@param Réel d
+		@code
+			t2.peutTirer(d);
+		@endcode
+	*/
 	bool peutTirer(float d);
+	/**
+		@brief Procédure: setSpawn
+		Permet de modifier l'endroit où apparaît la tour
+		@param Booléen b
+		@code
+			t2.setSpawn(b);
+		@endcode
+	*/
 	void setSpawn(const bool & b );
+	/**
+		@brief Procédure: addZone
+		Permet d'ajouter une zone
+		@param Réel f
+		@code
+			t2.addZone(f);
+		@endcode
+	*/
 	void addZone(const float & f);
 };
 

@@ -51,7 +51,13 @@ class Chemin{
 		@endcode	
 	*/
 		unsigned int tailleChemin();
-		
+	/**
+		@brief Procédure: affiche
+		Permet d'afficher les chemins
+		@code
+			c1.affiche();
+		@endcode	
+	*/	
 	void affiche();
 	
 };

@@ -203,6 +203,14 @@ public:
 			@endcode	
 	*/
 	void affiche();
+	/**
+		@brief Procédure: setEstAttaquer
+		Permet de modifier la cible attaquée
+		@param Booléen b
+		@code
+			m.setAttaquer(b);
+		@endcode
+	*/
 
 	void setEstAttaquer(bool b);
 };

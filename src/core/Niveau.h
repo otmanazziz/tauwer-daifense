@@ -95,7 +95,21 @@ class Niveau{
 		@endcode	
 	*/		
 		void affiche();
+	/**
+		@brief Booléen: perdue
+		Permet de savoir si le niveau est perdue ou non
+		@code
+			n2.perdue();
+		@endcode	
+	*/
 		bool perdue();
+	/**
+		@brief Booléen: finNiveau
+		Permet de savoir si le niveau est finie ou non
+		@code
+			n2.finNiveau();
+		@endcode	
+	*/
 		bool finNiveau();
 
 };
