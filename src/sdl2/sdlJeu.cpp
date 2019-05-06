@@ -207,6 +207,11 @@ void sdlJeu::sdlCircle(const Vect & vec,const int & radius ,const  int & width){
 }
 void sdlJeu::sdlAff () {
 	//Remplir l'écran de blanc
+    Image f;
+        SDL_Rect pos;
+
+        int res;
+        int res2;
     SDL_SetRenderDrawColor(renderer, 230, 255, 240, 255);
     SDL_RenderClear(renderer);
     if(jeu.getNiveau() != NULL){
@@ -264,11 +269,7 @@ void sdlJeu::sdlAff () {
             TAILLE_SPRITE*2,
             TAILLE_SPRITE*2);
         
-        Image f;
-        SDL_Rect pos;
-
-        int res;
-        int res2;
+        
 
         if(jeu.tourSelect() != NULL){
             unsigned int nbGoldDegats = jeu.tourSelect()->getAttaque().getDegats();
@@ -409,7 +410,7 @@ void sdlJeu::sdlAff () {
 
 
         coin.draw(renderer, 0, 60, 60, 60);
-         SDL_Surface * textOr = TTF_RenderText_Solid(font,to_string(jeu.getNiveau()->getOr()).c_str(),font_color);
+        SDL_Surface * textOr = TTF_RenderText_Solid(font,to_string(jeu.getNiveau()->getOr()).c_str(),font_color);
         f.setSurface(textOr);
         f.loadFromCurrentSurface(renderer); 
         
@@ -431,6 +432,23 @@ void sdlJeu::sdlAff () {
     else{
         affBouton(jeu.getBoutonPause(), img_play);
         
+        res = jeu.getNiveau()->getScore();
+
+        res2 = 1;
+        while (res >= 10){
+            res2 ++ ;
+            res = res / 10.0;
+        }
+
+        SDL_Surface * textScore = TTF_RenderText_Solid(font, ("Score - "+ to_string(jeu.getNiveau()->getScore())).c_str(),font_color);
+        f.setSurface(textScore);
+        f.loadFromCurrentSurface(renderer); 
+        
+        pos.x = 200; pos.y =0; pos.w = 80+10 * res2; pos.h = 30;
+        SDL_RenderCopy(renderer,f.getTexture(),NULL,&pos);
+        SDL_DestroyTexture(f.getTexture());
+        SDL_FreeSurface(textScore); 
+
         if(jeu.getGagner()){
             SDL_Rect r ;
         r.x = 0;

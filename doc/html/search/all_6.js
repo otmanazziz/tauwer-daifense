@@ -22,6 +22,7 @@ var searchData=
   ['getportee',['getPortee',['../classTour.html#a5673a20fed27ffce9d299344dbe87d8d',1,'Tour']]],
   ['getpos',['getPos',['../classBouton.html#aed3d0897774100bd880276bd2e73db27',1,'Bouton::getPos()'],['../classMonstre.html#adbe0edd5d97aef18fb44ef163f368be6',1,'Monstre::getPos()']]],
   ['getposition',['getPosition',['../classBase.html#ab4e98e615e7659abd847a41ca40c11cc',1,'Base::getPosition()'],['../classTour.html#a4645c52ba7bf31afcf6d80f04f382db9',1,'Tour::getPosition()']]],
+  ['getscore',['getScore',['../classNiveau.html#a8428b988346e7a5cf4cb2add69f8b16d',1,'Niveau']]],
   ['getspawn',['getSpawn',['../classMonstre.html#a810f2e49356248d02f7b0e9b8ea16d85',1,'Monstre::getSpawn()'],['../classTour.html#ac37676f670ba4235601de5c3c4ff791c',1,'Tour::getSpawn()']]],
   ['gettabbouton',['getTabBouton',['../classMenu.html#a5614b2f97741d2d71177f40b49151bc8',1,'Menu']]],
   ['gettabsort',['getTabSort',['../classHero.html#ab596535fb4e3aeb836bd23780220455b',1,'Hero']]],

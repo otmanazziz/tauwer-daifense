@@ -29,6 +29,7 @@ Carte *Niveau::addrGetCarte(){
 
 void Niveau::ajouterOr(const unsigned int & o){
 	Or += o;
+	score += o;
 }
 
 void Niveau::retirerOr(const unsigned int &o){
@@ -51,4 +52,8 @@ bool Niveau::perdue()const{
 
 bool Niveau::finNiveau()const{
 	return carte.tailleTabVague() <= 0;
+}
+
+unsigned int Niveau::getScore()const{
+	return score;
 }

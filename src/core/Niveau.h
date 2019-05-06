@@ -14,7 +14,7 @@ class Niveau{
 	private : 
 		Carte carte;
 		unsigned int Or;
-		int score;
+		unsigned int score;
 	public :
 	/**
 		@brief Constructeur par défaut: Niveau
@@ -111,6 +111,14 @@ class Niveau{
 		@endcode	
 	*/
 		bool finNiveau()const;
+	/**
+		@brief Entier : getScore() 
+		Retourne le score
+		@code
+			n2.finNiveau();
+		@endcode	
+	*/
+		unsigned int getScore()const;
 
 };
 
