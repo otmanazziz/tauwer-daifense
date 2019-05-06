@@ -49,8 +49,8 @@ Les documents suivants contiennent
 
 ===== Génération de la documentation doxygen =====
 Pour la génération de la documentation doxygen, il faut:
- - Se mettre dans le dossier doc/
- - Taper la commande (à l'aide du terminal): doxygen doxyfile
+ - Se mettre à la racine du projet (lifap4)
+ - Taper la commande (à l'aide du terminal): doxygen doc/doxyfile
 
 La documentation est générée, vous pouvez la visualiser sur internet en le cherchant dans le fichier doc/html/index.html
 
@@ -69,15 +69,15 @@ Dans le cas ou vous ne possédez pas ces librairies, il faut:
  - Taper la commande (à l'aide du terminal): sudo apt install doxygenlibsdl2-dev libsdl2 libsdl2-image-dev libsdl2-ttf-dev libsdl2-mixer-dev
 
 Pour compiler le programme, il faut:
- - Se mettre dans le dossier lifap4
+ - Se mettre à la racine du projet (lifap4)
  - Taper la commande (à l'aide du terminal): make
 
 Pour lancer le programme (avec l'affichage du fichier texte), il faut:
- - Se mettre dans le dossier lifap4
+ - Se mettre à la racine du projet (lifap4)
  - Taper la commande (à l'aide du terminal): bin/txt
 
 Pour lancer le programme (avec l'affichage de la SDL), il faut:
- - Se mettre dans le dossier lifap4
+ - Se mettre à la racine du projet (lifap4)
  - Taper la commande (à l'aide du terminal): bin/sdl
 
 ========================================================================
