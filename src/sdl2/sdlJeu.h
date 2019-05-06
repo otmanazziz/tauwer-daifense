@@ -91,7 +91,6 @@ private :
 
     SDL_Window * window;
     SDL_Renderer * renderer;
-    SDL_Surface * textTampon;
     TTF_Font * font;
     SDL_Color font_color;
 
