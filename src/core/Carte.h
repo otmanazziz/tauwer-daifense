@@ -120,15 +120,73 @@ class Carte{
 		@endcode	
 	*/
 		unsigned int tailleTabVague();
+	/**
+		@brief Fonction: addrTourIndice
+		Permet de retourner l'indice de la tour
+		@param Entier i
+		@return Tour
+		@code
+			c2.addrTourIndice(i);
+		@endcode	
+	*/
 
 		Tour * addrTourIndice(const int & i);
+	/**
+		@brief Fonction: addrVagueIndice
+		Permet de retourner l'indice de la vague
+		@param Entier i
+		@return Vague
+		@code
+			c2.addrVagueIndice(i);
+		@endcode	
+	*/
 
 		Vague * addrVagueIndice(const int & i);
+	/**
+		@brief Fonction: addrCheminIndice
+		Permet de retourner l'indice du chemin
+		@param Entier i
+		@return Chemin
+		@code
+			c2.addrCheminIndice(i);
+		@endcode	
+	*/
 
 		Chemin * addrCheminIndice(const int & i);
+	/**
+		@brief Procédure: maj			
+		Permet de mettre à jour la carte
+		@param Niveau n, Réel delta
+		@code
+			c2.maj(n,delta);
+		@endcode
+	*/
 		void maj(Niveau & n, float delta);
+	/**
+		@brief Fonction: getBase
+		Permet de retourner la base
+		@return Base
+		@code
+			c2.getBase(i);
+		@endcode	
+	*/
 		Base getBase();
+	/**
+		@brief Procédure: setFichier		
+		Permet de changer de fichiers
+		@param Chaîne de caractère f
+		@code
+			c2.setFichier(f);
+		@endcode
+	*/
 		void setFichier(const std::string & f);
+	/**
+		@brief Procédure: affiche
+		Permet d'afficher la carte
+		@code
+			c2.affiche();
+		@endcode	
+	*/	
 		void affiche();
 };
 

@@ -85,7 +85,25 @@ public:
 	*/
 
 	void setDegats(const int &_degats);
+	/**
+		@brief Procédure: addDegats
+		Permet de modifier l'entier des dégats
+		@param Entier
+		@code
+			a2.addDegats(7);
+		@endcode	
+
+	*/
 	void addDegat(const int &d);
+	/**
+		@brief Procédure: addZone
+		Permet de modifier l'entier de la zone
+		@param Réel
+		@code
+			a2.addZone(2);
+		@endcode	
+
+	*/
 	void addZone(const float &f);
 
 };

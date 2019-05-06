@@ -104,7 +104,7 @@ public:
 	*/	
 	void supprimerBoutonIndice(const int &indice);
 	/**
-		@brief Procédure: ajouterBouton
+		@brief Procédure: affihcerTabBouton
 		Permet d'afficher' un bouton dans le menu
 		@param 
 		@code
@@ -114,6 +114,14 @@ public:
 	*/
 
 	void afficherTabBouton();
+	/**
+		@brief Fonction: getTaille
+		Permet de retourner la taille du menu
+		@return Entier positif
+		@code
+			m2.getTaille();
+		@endcode	
+	*/
 	unsigned int getTaille();
 
 };

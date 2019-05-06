@@ -77,7 +77,7 @@ public:
 	/**
 		@brief Procédure: setNom
 		Permet de modifier le nom du bouton
-		@param Chaîne de caractère nom
+		@param Chaîne de caractère Nom
 		@code
 			b2.setNom(Nom);
 		@endcode	
