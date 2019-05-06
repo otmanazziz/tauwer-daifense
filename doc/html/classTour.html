@@ -134,15 +134,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6ead0d33253a3400b65efb1a576d215"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTour.html#af6ead0d33253a3400b65efb1a576d215">addPortee</a> (int p)</td></tr>
 <tr class="memdesc:af6ead0d33253a3400b65efb1a576d215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: addPortee Permet d'ajouter de la portée à la tour.  <a href="#af6ead0d33253a3400b65efb1a576d215">More...</a><br /></td></tr>
 <tr class="separator:af6ead0d33253a3400b65efb1a576d215"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5f5b265668dfa44b23e48a1dbf1e322"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTour.html#ad5f5b265668dfa44b23e48a1dbf1e322">peutTirer</a> (float d)</td></tr>
-<tr class="memdesc:ad5f5b265668dfa44b23e48a1dbf1e322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen: peutTirer Permet de savoir si la tour peut tirer ou non.  <a href="#ad5f5b265668dfa44b23e48a1dbf1e322">More...</a><br /></td></tr>
-<tr class="separator:ad5f5b265668dfa44b23e48a1dbf1e322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f95f1a87befc1c47c5904c7dba213e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTour.html#ab9f95f1a87befc1c47c5904c7dba213e">peutTirer</a> ()</td></tr>
+<tr class="memdesc:ab9f95f1a87befc1c47c5904c7dba213e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Booléen: peutTirer Permet de savoir si la tour peut tirer ou non.  <a href="#ab9f95f1a87befc1c47c5904c7dba213e">More...</a><br /></td></tr>
+<tr class="separator:ab9f95f1a87befc1c47c5904c7dba213e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a896b0ab5f8a022d7deb6d599de8d4642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTour.html#a896b0ab5f8a022d7deb6d599de8d4642">setSpawn</a> (const bool &amp;b)</td></tr>
 <tr class="memdesc:a896b0ab5f8a022d7deb6d599de8d4642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: setSpawn Permet de modifier l'endroit où apparaît la tour.  <a href="#a896b0ab5f8a022d7deb6d599de8d4642">More...</a><br /></td></tr>
 <tr class="separator:a896b0ab5f8a022d7deb6d599de8d4642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c3050640d16281913269f73af884ad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTour.html#a6c3050640d16281913269f73af884ad6">addZone</a> (const float &amp;f)</td></tr>
 <tr class="memdesc:a6c3050640d16281913269f73af884ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procédure: addZone Permet d'ajouter une zone.  <a href="#a6c3050640d16281913269f73af884ad6">More...</a><br /></td></tr>
 <tr class="separator:a6c3050640d16281913269f73af884ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba02ec8874bcce13e97837da971f29e"><td class="memItemLeft" align="right" valign="top"><a id="a6ba02ec8874bcce13e97837da971f29e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>cooldown</b> (const float &amp;f)</td></tr>
+<tr class="separator:a6ba02ec8874bcce13e97837da971f29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class <a class="el" href="classTour.html" title="Class Tour Classe de Tour permettant de gérer la vitesse d&#39;attaque, la portée, la position et l&#39;attaq...">Tour</a> Classe de <a class="el" href="classTour.html" title="Class Tour Classe de Tour permettant de gérer la vitesse d&#39;attaque, la portée, la position et l&#39;attaq...">Tour</a> permettant de gérer la vitesse d'attaque, la portée, la position et l'attaque d'une tour. </p>
@@ -517,8 +520,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad5f5b265668dfa44b23e48a1dbf1e322"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5f5b265668dfa44b23e48a1dbf1e322">&#9670;&nbsp;</a></span>peutTirer()</h2>
+<a id="ab9f95f1a87befc1c47c5904c7dba213e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f95f1a87befc1c47c5904c7dba213e">&#9670;&nbsp;</a></span>peutTirer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -526,21 +529,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool Tour::peutTirer </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>d</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Booléen: peutTirer Permet de savoir si la tour peut tirer ou non. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Réel</td><td>d <div class="fragment"><div class="line">t2.peutTirer(d);</div></div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+<div class="fragment"><div class="line">t2.peutTirer();</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="a045dac5adb162b2b5089507b445edae6"></a>

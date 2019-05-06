@@ -53,12 +53,15 @@ void \hyperlink{classTour_a954d1151a9fbc182adde53b28fc7cc26}{add\+Vit\+Atq} (flo
 \begin{DoxyCompactList}\small\item\em Procédure\+: add\+Vit\+Atq Permet d\textquotesingle{}ajouter de la vitesse d\textquotesingle{}attaque à la tour. \end{DoxyCompactList}\item 
 void \hyperlink{classTour_af6ead0d33253a3400b65efb1a576d215}{add\+Portee} (int p)
 \begin{DoxyCompactList}\small\item\em Procédure\+: add\+Portee Permet d\textquotesingle{}ajouter de la portée à la tour. \end{DoxyCompactList}\item 
-bool \hyperlink{classTour_ad5f5b265668dfa44b23e48a1dbf1e322}{peut\+Tirer} (float d)
+bool \hyperlink{classTour_ab9f95f1a87befc1c47c5904c7dba213e}{peut\+Tirer} ()
 \begin{DoxyCompactList}\small\item\em Booléen\+: peut\+Tirer Permet de savoir si la tour peut tirer ou non. \end{DoxyCompactList}\item 
 void \hyperlink{classTour_a896b0ab5f8a022d7deb6d599de8d4642}{set\+Spawn} (const bool \&b)
 \begin{DoxyCompactList}\small\item\em Procédure\+: set\+Spawn Permet de modifier l\textquotesingle{}endroit où apparaît la tour. \end{DoxyCompactList}\item 
 void \hyperlink{classTour_a6c3050640d16281913269f73af884ad6}{add\+Zone} (const float \&f)
-\begin{DoxyCompactList}\small\item\em Procédure\+: add\+Zone Permet d\textquotesingle{}ajouter une zone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Procédure\+: add\+Zone Permet d\textquotesingle{}ajouter une zone. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTour_a6ba02ec8874bcce13e97837da971f29e}\label{classTour_a6ba02ec8874bcce13e97837da971f29e}} 
+void {\bfseries cooldown} (const float \&f)
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -334,26 +337,21 @@ t2.getVitAtq();
 \end{DoxyCode}
  
 \end{DoxyReturn}
-\mbox{\Hypertarget{classTour_ad5f5b265668dfa44b23e48a1dbf1e322}\label{classTour_ad5f5b265668dfa44b23e48a1dbf1e322}} 
+\mbox{\Hypertarget{classTour_ab9f95f1a87befc1c47c5904c7dba213e}\label{classTour_ab9f95f1a87befc1c47c5904c7dba213e}} 
 \index{Tour@{Tour}!peut\+Tirer@{peut\+Tirer}}
 \index{peut\+Tirer@{peut\+Tirer}!Tour@{Tour}}
 \subsubsection{\texorpdfstring{peut\+Tirer()}{peutTirer()}}
-{\footnotesize\ttfamily bool Tour\+::peut\+Tirer (\begin{DoxyParamCaption}\item[{float}]{d }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Tour\+::peut\+Tirer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Booléen\+: peut\+Tirer Permet de savoir si la tour peut tirer ou non. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em Réel} & d 
 \begin{DoxyCode}
-t2.peutTirer(d);
+t2.peutTirer();
 \end{DoxyCode}
- \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{classTour_a045dac5adb162b2b5089507b445edae6}\label{classTour_a045dac5adb162b2b5089507b445edae6}} 
+ \mbox{\Hypertarget{classTour_a045dac5adb162b2b5089507b445edae6}\label{classTour_a045dac5adb162b2b5089507b445edae6}} 
 \index{Tour@{Tour}!set\+A\+Attaquer@{set\+A\+Attaquer}}
 \index{set\+A\+Attaquer@{set\+A\+Attaquer}!Tour@{Tour}}
 \subsubsection{\texorpdfstring{set\+A\+Attaquer()}{setAAttaquer()}}

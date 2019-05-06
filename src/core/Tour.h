@@ -196,12 +196,11 @@ public:
 	/**
 		@brief Booléen: peutTirer
 		Permet de savoir si la tour peut tirer ou non
-		@param Réel d
 		@code
-			t2.peutTirer(d);
+			t2.peutTirer();
 		@endcode
 	*/
-	bool peutTirer(float d);
+	bool peutTirer();
 	/**
 		@brief Procédure: setSpawn
 		Permet de modifier l'endroit où apparaît la tour
@@ -220,6 +219,7 @@ public:
 		@endcode
 	*/
 	void addZone(const float & f);
+	void cooldown(const float & f);
 };
 
 

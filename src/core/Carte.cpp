@@ -167,12 +167,14 @@ void Carte::maj(Niveau & n , float delta){
 	for (unsigned int j = 0; j < tabVague[0].tailleVague(); j++) tabVague[0].getVague()[j].setEstAttaquer(false);
 	for (unsigned int k = 0; k < tabTour.size(); k++) tabTour[k].setAAttaquer(false);
 	for (unsigned int k = 0; k < tabTour.size(); k++){
-		if(tabTour[k].getSpawn()&& tabTour[k].peutTirer(delta)){
+		
+		if(tabTour[k].getSpawn()){
+			tabTour[k].cooldown(delta);
 			Vect posMonstreViser;
 			for (unsigned int j = 0; j < tabVague[0].tailleVague(); j++){
 				posMonstreViser = tabVague[0].getVague()[j].getPos();
-				if (tabTour[k].estAPortee(tabVague[0].getVague()[j].getPos())  ){
-					tabTour[k].setAAttaquer(true);std::cout<<"test"<<std::endl;
+				if (tabTour[k].estAPortee(tabVague[0].getVague()[j].getPos()) && tabTour[k].peutTirer()  ){
+					tabTour[k].setAAttaquer(true);
 					attaque = tabTour[k].getAttaque();
 					if (attaque.getZone() > 0.0){//cas ou la tour tape en zone 
 						

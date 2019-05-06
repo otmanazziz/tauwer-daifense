@@ -91,17 +91,21 @@
 		portee += p;
 	}
 
-	bool Tour::peutTirer(float d){
-		cooldownAtq -= d;
-		std::cout<<"Dcooldown"<<cooldownAtq<<std::endl;
+	bool Tour::peutTirer(){
+		//cooldownAtq -= d;
+		
 		if(cooldownAtq <= 0 ){
 			
 			cooldownAtq = 1/vitesseAtq;
-			std::cout<<"Acooldown"<<cooldownAtq<<std::endl;
 			return true;
 		}
 		else return false;
 	} 
+
+	void Tour::cooldown(const float & f){
+		cooldownAtq -= f;
+		if(cooldownAtq < 0 ) cooldownAtq = 0;
+	}
 
 	void Tour::setSpawn(const bool & b ){
 		spawn = b;
